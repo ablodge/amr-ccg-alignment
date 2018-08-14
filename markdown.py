@@ -22,12 +22,13 @@ with open(amr_file, 'r', encoding='utf8') as f:
         elif is_amr and not line.strip():
             is_amr = False
             finished = set()
-            for node in NODE_RE.finditer(AMR):
+            TMP_AMR = AMR
+            for node in NODE_RE.finditer(TMP_AMR):
                 node = node.group()
                 if not node in finished:
                     AMR = AMR.replace(node,'<span:SPACE:style="color:green">'+node+'</span>')
                     finished.add(node)
-            for edge in EDGE_RE.finditer(AMR):
+            for edge in EDGE_RE.finditer(TMP_AMR):
                 edge = edge.group()
                 if not edge in finished:
                     AMR = AMR.replace(edge,'<span:SPACE:style="color:blue">'+edge+'</span>')
