@@ -12,6 +12,8 @@ EDGE_RE = re.compile(':[A-Za-z0-9-]+')
 
 with open(amr_file, 'r', encoding='utf8') as f:
     for line in f:
+        if line.startswith('101. '):
+            break
         if re.match('^[(][a-z]', line):
             is_amr = True
             AMR += line
@@ -30,7 +32,6 @@ with open(amr_file, 'r', encoding='utf8') as f:
                 if not edge in finished:
                     AMR = AMR.replace(edge,'<font color="blue">'+edge+'</font>')
                     finished.add(edge)
-
             md_output += "```\n"+AMR+"```\n"
             AMR = ''
         else:
