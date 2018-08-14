@@ -7,6 +7,9 @@ AMR = ''
 is_amr = False
 md_output = ''
 
+NODE_RE = re.compile('(?P<node>[a-z0-9]+)( )?/( )?(?P<concept>[a-z]+(-[0-9]+)?)')
+EDGE_RE = re.compile(':[A-Za-z0-9-]+')
+
 with open(amr_file, 'r', encoding='utf8') as f:
     for line in f:
         if re.match('^[(][a-z]', line):
@@ -16,6 +19,11 @@ with open(amr_file, 'r', encoding='utf8') as f:
             AMR += line
         elif is_amr and not line.strip():
             is_amr = False
+            for node in NODE_RE.finditer(AMR):
+                AMR = AMR.replace(node.group(),'<font color="green">'+node.group()+'</font>',1)
+            for edge in EDGE_RE.finditer(AMR):
+                AMR = AMR.replace(edge.group(),'<font color="blue">'+edge.group()+'</font>',1)
+
             md_output += "```\n"+AMR+"```\n"
             AMR = ''
         else:
