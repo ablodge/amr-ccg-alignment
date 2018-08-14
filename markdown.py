@@ -19,10 +19,17 @@ with open(amr_file, 'r', encoding='utf8') as f:
             AMR += line
         elif is_amr and not line.strip():
             is_amr = False
+            finished = set()
             for node in NODE_RE.finditer(AMR):
-                AMR = AMR.replace(node.group(),'<font color="green">'+node.group()+'</font>',1)
+                node = node.group()
+                if not node in finished:
+                    AMR = AMR.replace(node,'<font color="green">'+node+'</font>')
+                    finished.add(node)
             for edge in EDGE_RE.finditer(AMR):
-                AMR = AMR.replace(edge.group(),'<font color="blue">'+edge.group()+'</font>',1)
+                edge = edge.group()
+                if not edge in finished:
+                    AMR = AMR.replace(edge,'<font color="blue">'+edge+'</font>')
+                    finished.add(edge)
 
             md_output += "```\n"+AMR+"```\n"
             AMR = ''
