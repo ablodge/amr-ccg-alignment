@@ -6,7 +6,7 @@ Version 1.6 - March 14, 2016
 (c / chapter
   :mod 1)
 
-2. Once when I was six years old I saw a magnificent picture in a book , called True Stories from Nature , about the primeval forest . (lpp_1943.2)
+#2. Once when I was six years old I saw a magnificent picture in a book , called True Stories from Nature , about the primeval forest . (lpp_1943.2)
 
 (s / see-01
       :ARG0 (i / i)
@@ -22,7 +22,7 @@ Version 1.6 - March 14, 2016
             :ARG2 (t / temporal-quantity :quant 6
                   :unit (y / year))))
 
-3. It was a picture of a boa constrictor in the act of swallowing an animal . (lpp_1943.3)
+#3. It was a picture of a boa constrictor in the act of swallowing an animal . (lpp_1943.3)
 
 (p / picture
   :domain (i / it)
@@ -31,7 +31,7 @@ Version 1.6 - March 14, 2016
            :ARG0-of (s / swallow-01
                       :ARG1 (a / animal))))
 
-4. Here is a copy of the drawing . (lpp_1943.4)
+#4. Here is a copy of the drawing . (lpp_1943.4)
 
 (b / be-located-at-91
       :ARG1 (t2 / thing
