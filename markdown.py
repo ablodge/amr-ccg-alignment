@@ -32,7 +32,8 @@ with open(amr_file, 'r', encoding='utf8') as f:
                 if not edge in finished:
                     AMR = AMR.replace(edge,'<font color="blue">'+edge+'</font>')
                     finished.add(edge)
-            md_output += "```\n"+AMR+"```\n"
+            md_output += "\n"+AMR+"\n"
+            AMR.replace(' ','&nbsp;')
             AMR = ''
         else:
             md_output += line
