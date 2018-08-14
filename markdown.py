@@ -26,17 +26,17 @@ with open(amr_file, 'r', encoding='utf8') as f:
             for node in NODE_RE.finditer(TMP_AMR):
                 node = node.group()
                 if not node in finished:
-                    AMR = AMR.replace(node,'<span:SPACE:style="color:green">'+node+'</span>')
+                    AMR = AMR.replace(node,'<span:SPACE:style="color:green">*'+node+'*</span>')
                     finished.add(node)
             for edge in EDGE_RE.finditer(TMP_AMR):
                 edge = edge.group()
                 if not edge in finished:
-                    AMR = AMR.replace(edge,'<span:SPACE:style="color:blue">'+edge+'</span>')
+                    AMR = AMR.replace(edge,'<span:SPACE:style="color:blue">**'+edge+'**</span>')
                     finished.add(edge)
             AMR = AMR.replace(' ', '&nbsp;')
             AMR = AMR.replace('\n', '\n<br />')
             AMR = AMR.replace(':SPACE:', ' ')
-            md_output += "\n"+AMR+"\n"
+            md_output += "\n"+AMR+"\n\n"
             AMR = ''
         else:
             md_output += line
