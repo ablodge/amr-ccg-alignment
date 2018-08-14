@@ -7,8 +7,8 @@ AMR = ''
 is_amr = False
 md_output = ''
 
-NODE_RE = re.compile('(?P<node>[a-z0-9]+)( )?/( )?(?P<concept>[a-z]+(-[0-9]+)?)')
-EDGE_RE = re.compile(':[A-Za-z0-9-]+')
+NODE_RE = re.compile('(?P<node>[a-z0-9]+)( )?/( )?(?P<concept>[a-z-]+([0-9]+)?)')
+EDGE_RE = re.compile(':([A-Za-z0-9]|-)+(-of)?')
 
 with open(amr_file, 'r', encoding='utf8') as f:
     for line in f:
@@ -24,21 +24,11 @@ with open(amr_file, 'r', encoding='utf8') as f:
             AMR += line
         elif is_amr and not line.strip():
             is_amr = False
-            finished = set()
             # add AMR
-            TMP_AMR = AMR
-            for node in NODE_RE.finditer(TMP_AMR):
-                node = node.group()
-                if not node in finished:
-                    AMR = AMR.replace(node,'<span style="color:green"><i>'+node+'</i></span>')
-                    finished.add(node)
-            for edge in EDGE_RE.finditer(TMP_AMR):
-                edge = edge.group()
-                if not edge in finished:
-                    AMR = AMR.replace(edge,'<span style="color:blue"><b>'+edge+'</b></span>')
-                    finished.add(edge)
+            AMR = EDGE_RE.sub(repl=lambda edge: '<span style="color:blue">' + edge.group() + '</span>', string=AMR)
+            AMR = NODE_RE.sub(repl=lambda node:'<span style="color:green">'+node.group()+'</span>', string=AMR)
             AMR = AMR.replace('\n', '<br />\n')
-            md_output += "\n"+AMR+"\n\n"
+            md_output += "<br />\n"+AMR+"<br />\n"
             AMR = ''
         else:
             md_output += line
