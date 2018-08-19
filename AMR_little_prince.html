@@ -15,11 +15,20 @@
 </style>
 </head>
 <body>
+Lexical Alignments:<br />
 <br />
 <span class="blue">Chapter</span> <span class="green">1</span> .<br />
 (<span class="blue">c / chapter</span><br />
 &nbsp;&nbsp;:mod <span class="green">1</span>)<br />
 <br />
+Structural Alignments 1:<br />
+['c/chapter', 'c :mod 1', '1']<br />
+<br />
+<span class="red">Chapter</span> <span class="red">1</span> .<br />
+(<span class="red">c / chapter</span><br />
+&nbsp;&nbsp;<span class="red">:mod</span> <span class="red">1</span>)<br />
+<br />
+Lexical Alignments:<br />
 <br />
 <span class="green">I</span> would <span class="blue">try</span> to <span class="grey">find</span> <span class="grey">out</span> , so , <span class="green">if</span> <span class="purple">this</span> was a <span class="red">person</span> of <span class="grey">true</span> <span class="yellow">understanding</span> .<br />
 (<span class="blue">t / try-01</span><br />
@@ -31,259 +40,122 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="purple">t2 / this</span>))<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="grey">t3 / true-01</span>))))<br />
 <br />
+Structural Alignments 1:<br />
+['t/try', 't :ARG1 f', 'f/find-out']<br />
 <br />
-<span class="grey">That</span> , <span class="blue">however</span> , is <span class="green">not</span> <span class="red">my</span> <span class="purple">fault</span> .<br />
-(<span class="blue">c / contrast-01</span><br />
-&nbsp;&nbsp;:ARG2 (<span class="purple">f / fault-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 (<span class="grey">t / that</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:polarity <span class="green">-</span>))<br />
+I would <span class="orange">try</span> to <span class="orange">find</span> <span class="orange">out</span> , so , if this was a person of true understanding .<br />
+(<span class="orange">t / try-01</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">:ARG1</span> (<span class="orange">f / find-out-03</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (u2 / understand-01 :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 2:<br />
+['f/find-out', 'f :ARG0 i', 'i/i']<br />
 <br />
-The <span class="yellow">little</span> <span class="blue">prince</span> , who <span class="grey">asked</span> <span class="yellow">me</span> <span class="grey">so</span> <span class="purple">many</span> <span class="red">questions</span> , <span class="orange">never</span> <span class="blue">seemed</span> to <span class="green">hear</span> the <span class="red">ones</span> <span class="yellow">I</span> <span class="purple">asked</span> <span class="blue">him</span> .<br />
-(<span class="blue">s / seem-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">h / hear-01</span> :polarity -<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="blue">p / prince</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="yellow">l / little</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0-of (<span class="red">q / question-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 (<span class="yellow">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:quant (<span class="purple">m / many</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="grey">s2 / so</span>))))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">o / one</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="purple">a2 / ask-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="yellow">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 <span class="blue">p</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (<span class="orange">e2 / ever</span>)))<br />
-<br />
-<br />
-<span class="blue">And</span> <span class="green">he</span> <span class="purple">sank</span> into a <span class="grey">reverie</span> , which lasted a <span class="red">long</span> time .<br />
-(<span class="blue">a / and</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op2 (<span class="purple">s / sink-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="green">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG4 (<span class="grey">r / reverie</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="red">l / long-03</span>))))<br />
-<br />
-<br />
-<span class="red">I</span> shall <span class="green">certainly</span> <span class="blue">try</span> to <span class="yellow">make</span> <span class="red">my</span> <span class="grey">portraits</span> <span class="red">as</span> <span class="orange">true</span> to <span class="blue">life</span> as <span class="green">possible</span> .<br />
-(<span class="blue">t / try-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="yellow">m / make-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="red">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="orange">t2 / true-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="grey">p / portrait</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:topic <span class="red">i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 (<span class="blue">l / life</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="red">m2 / most</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:compared-to (<span class="green">p2 / possible-01</span>)))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="green">c / certain</span>))<br />
-<br />
-<br />
-If <span class="purple">it</span> is <span class="orange">only</span> a <span class="red">sprout</span> of <span class="purple">radish</span> <span class="blue">or</span> the <span class="orange">sprig</span> of a <span class="green">rose</span> - <span class="yellow">bush</span> , <span class="blue">one</span> would <span class="blue">let</span> <span class="purple">it</span> <span class="red">grow</span> wherever <span class="purple">it</span> <span class="green">might</span> <span class="grey">wish</span> .<br />
-(<span class="blue">a / allow-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="blue">o / one</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">g / grow-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="purple">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:location (<span class="grey">w2 / wish-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="purple">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="green">p / possible-01</span>)))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:condition (<span class="blue">o2 / or</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op1 (<span class="red">s / sprout</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:part-of (<span class="purple">r / radish</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op2 (<span class="orange">s2 / sprig</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:part-of (<span class="yellow">b2 / bush</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="green">r2 / rose</span>)))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="orange">o3 / only</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:domain (<span class="purple">i / it</span>)))<br />
-<br />
-<br />
-<span class="grey">At</span> <span class="grey">first</span> <span class="grey">you</span> <span class="purple">seemed</span> to be <span class="blue">very</span> <span class="red">much</span> <span class="green">surprised</span> .<br />
-(<span class="purple">s / seem-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">s2 / surprise-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="grey">y / you</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="red">m / much</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="blue">v / very</span>)))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (<span class="grey">a / at-first</span>))<br />
-<br />
-<br />
-<span class="blue">I</span> do <span class="purple">n't</span> <span class="red">believe</span> <span class="green">anything</span> .<br />
-(<span class="red">b2 / believe-01</span> :polarity <span class="purple">-</span><br />
+<span class="blue">I</span> would try to <span class="blue">find</span> <span class="blue">out</span> , so , if this was a person of true understanding .<br />
+(t / try-01<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="blue">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">a2 / anything</span>))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">f / find-out-03</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">:ARG0</span> <span class="blue">i</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (u2 / understand-01 :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 3:<br />
+['p/person', 'p :mod t2', 't2/this']<br />
 <br />
-<span class="red">He</span> has <span class="blue">never</span> <span class="purple">looked</span> at a <span class="grey">star</span> .<br />
-(<span class="purple">l / look-01</span> :polarity <span class="blue">-</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="red">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="grey">s / star</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (<span class="blue">e / ever</span>))<br />
+I would try to find out , so , if <span class="green">this</span> was a <span class="green">person</span> of true understanding .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (f / find-out-03<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (u2 / understand-01 :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="green">p / person</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">:mod</span> (<span class="green">t2 / this</span>))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 4:<br />
+['t/try', 't :ARG0 i', 'i/i']<br />
 <br />
-It <span class="red">seems</span> that <span class="purple">they</span> are <span class="blue">very</span> <span class="green">beautiful</span> .<br />
-(<span class="red">s / seem-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">b / beautiful-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="purple">t2 / they</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="blue">v2 / very</span>)))<br />
+<span class="red">I</span> would <span class="red">try</span> to find out , so , if this was a person of true understanding .<br />
+(<span class="red">t / try-01</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">:ARG0</span> (<span class="red">i / i</span>)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (f / find-out-03<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="red">i</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (u2 / understand-01 :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 5:<br />
+['f/find-out']<br />
 <br />
-For <span class="yellow">she</span> did <span class="grey">not</span> <span class="blue">want</span> <span class="red">him</span> to <span class="purple">see</span> <span class="yellow">her</span> <span class="green">crying</span> .<br />
-(<span class="blue">w / want-01</span> :polarity <span class="grey">-</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="yellow">s / she</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="purple">s2 / see-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="red">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">c / cry-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="yellow">s</span>)))<br />
+I would try to <span class="purple">find</span> <span class="purple">out</span> , so , if this was a person of true understanding .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="purple">f / find-out-03</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (u2 / understand-01 :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 6:<br />
+['u2/understand', 'u2 :ARG1-of t3', 't3/true']<br />
 <br />
-" <span class="red">Over</span> <span class="purple">all</span> <span class="grey">that</span> , " the <span class="green">king</span> <span class="blue">answered</span> .<br />
-(<span class="blue">a / answer-01</span><br />
-&nbsp;&nbsp;:ARG0 (<span class="green">k / king</span>)<br />
-&nbsp;&nbsp;:ARG2 (<span class="red">o / over</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op1 (<span class="grey">t / that</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="purple">a2 / all</span>))))<br />
+I would try to find out , so , if this was a person of <span class="orange">true</span> <span class="orange">understanding</span> .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (f / find-out-03<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="orange">u2 / understand-01</span> :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="orange">:ARG1-of</span> (<span class="orange">t3 / true-01</span>))))<br />
 <br />
+Structural Alignments 7:<br />
+['p/person', 'p :ARG0-of u2', 'u2/understand']<br />
 <br />
-For , to <span class="red">conceited</span> <span class="orange">men</span> , <span class="green">all</span> <span class="grey">other</span> <span class="purple">men</span> are <span class="yellow">admirers</span> .<br />
-(o2 / opine-01<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="orange">m2 / man</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="red">c / conceit</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (p2 / person<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0-of (<span class="yellow">a3 / admire-01</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:domain (<span class="purple">m / man</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="grey">o / other</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="green">a / all</span>))))<br />
+I would try to find out , so , if this was a <span class="blue">person</span> <span class="blue">of</span> true <span class="blue">understanding</span> .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (f / find-out-03<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">u2 / understand-01</span> :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="blue">p / person</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 8:<br />
+['interrogative', 'u2/understanding', 'u2 :ARG0 p', 'p/person']<br />
 <br />
-<span class="green">I</span> <span class="purple">have</span> <span class="grey">so</span> <span class="red">much</span> to <span class="blue">do</span> !<br />
-(<span class="purple">o / obligate-01</span><br />
-&nbsp;&nbsp;:ARG1 (<span class="green">i / i</span>)<br />
-&nbsp;&nbsp;:ARG2 (<span class="blue">d / do-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">m / much</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:degree (<span class="grey">s / so</span>))))<br />
+I would try to find out , so , <span class="red">if</span> this was a <span class="red">person</span> <span class="red">of</span> true <span class="red">understanding</span> .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (f / find-out-03<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">u2 / understand-01</span> :mode <span class="red">interrogative</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">:ARG0</span> (<span class="red">p / person</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
+Structural Alignments 9:<br />
+['f/find-out', 'f :ARG1 u2', 'u2/understanding', 'f :ARG0 p', 'u2 :ARG0 p', 'p/person']<br />
 <br />
-<span class="grey">This</span> was a <span class="orange">merchant</span> who <span class="yellow">sold</span> <span class="green">pills</span> that had been <span class="red">invented</span> to <span class="purple">quench</span> <span class="blue">thirst</span> .<br />
-(<span class="yellow">s / sell-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (p / person<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0-of (<span class="orange">m / merchandise-01</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:domain (<span class="grey">t2 / this</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">p2 / pill</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="red">i / invent-01</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:purpose (<span class="purple">q / quench-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="green">p2</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">t / thirst-01</span>))))<br />
-<br />
-<br />
-<span class="red">I</span> made a <span class="blue">gesture</span> of <span class="green">weariness</span> .<br />
-(<span class="blue">g2 / gesture-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">w / weary-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="red">i</span>))<br />
-<br />
-<br />
-<span class="purple">I</span> <span class="blue">felt</span> <span class="yellow">deeply</span> <span class="grey">moved</span> , <span class="red">and</span> <span class="green">stirred</span> .<br />
-(<span class="blue">f / feel-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="purple">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">a / and</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op1 (<span class="grey">m / move-05</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="purple">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="yellow">d / deep-02</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op2 (<span class="green">s / stir-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="purple">i</span>)))<br />
-<br />
-<br />
-<span class="red">I</span> did <span class="grey">not</span> <span class="green">want</span> <span class="purple">him</span> to <span class="blue">tire</span> <span class="purple">himself</span> with the <span class="yellow">rope</span> .<br />
-(<span class="green">w / want-01</span><br />
-&nbsp;&nbsp;:ARG0 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;:ARG1 (<span class="blue">t / tire-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="purple">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="purple">h</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:instrument (<span class="yellow">r / rope</span>))<br />
-&nbsp;&nbsp;:polarity <span class="grey">-</span>)<br />
-<br />
-<br />
-At <span class="purple">no</span> time did <span class="green">I</span> <span class="yellow">see</span> <span class="orange">or</span> <span class="red">hear</span> <span class="blue">anyone</span> .<br />
-(<span class="orange">o / or</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op1 (<span class="yellow">s / see-01</span> :polarity <span class="purple">-</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="green">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">a / anyone</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op2 (<span class="red">h / hear-01</span> :polarity <span class="purple">-</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="green">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="blue">a</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (e / ever))<br />
-<br />
-<br />
-<span class="orange">You</span> <span class="purple">have</span> <span class="blue">nothing</span> to <span class="grey">do</span> <span class="blue">but</span> <span class="green">wait</span> for <span class="red">me</span> <span class="yellow">there</span> .<br />
-(<span class="purple">h2 / have-03</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="orange">y / you</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">n / nothing</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="grey">d / do-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="orange">y</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="blue">c / contrast-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 (<span class="green">w2 / wait-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 <span class="orange">y</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:location (<span class="yellow">t2 / there</span>)))))<br />
-<br />
-<br />
-<span class="red">I</span> had <span class="yellow">loosened</span> the <span class="orange">golden</span> <span class="grey">muffler</span> that <span class="purple">he</span> <span class="blue">always</span> <span class="green">wore</span> .<br />
-(<span class="yellow">l / loosen-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="red">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="grey">m / muffler</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:consist-of (<span class="orange">g / gold</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="green">w / wear-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="purple">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (<span class="blue">a / always</span>))))<br />
-<br />
-<br />
-<span class="purple">I</span> had <span class="green">moistened</span> <span class="grey">his</span> <span class="blue">temples</span> , <span class="green">and</span> had <span class="blue">given</span> <span class="grey">him</span> <span class="red">some</span> <span class="red">water</span> to <span class="orange">drink</span> .<br />
-(<span class="green">a / and</span><br />
-&nbsp;&nbsp;:op1 (<span class="green">m / moisten-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="purple">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="blue">t / temple</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:poss (<span class="grey">h / he</span>)))<br />
-&nbsp;&nbsp;:op2 (<span class="blue">g / give-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="purple">i</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">w / water</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:quant (<span class="red">s / some</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:purpose (<span class="orange">d / drink-01</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG2 <span class="grey">h</span>))<br />
-<br />
-<br />
-For <span class="red">some</span> , who are <span class="purple">travelers</span> , the <span class="blue">stars</span> are <span class="green">guides</span> .<br />
-(<span class="green">g / guide-01</span><br />
-&nbsp;&nbsp;:ARG0 (<span class="blue">s / star</span>)<br />
-&nbsp;&nbsp;:ARG1 (<span class="red">s2 / some</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0-of (<span class="purple">t / travel-01</span>)))<br />
-<br />
-<br />
-<span class="green">That</span> <span class="blue">night</span> <span class="purple">I</span> did <span class="red">not</span> <span class="purple">see</span> <span class="blue">him</span> <span class="yellow">set</span> <span class="yellow">out</span> on <span class="blue">his</span> <span class="red">way</span> .<br />
-(<span class="purple">s / see-01</span> :polarity <span class="red">-</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="purple">i / i</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="yellow">s2 / set-out-07</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="blue">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="red">w / way</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:poss <span class="blue">h</span>))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:time (d / date-entity<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:dayperiod (<span class="blue">n / night</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="green">t / that</span>)))<br />
-<br />
-<br />
-<span class="green">All</span> the <span class="blue">stars</span> will be <span class="red">wells</span> with a <span class="grey">rusty</span> <span class="purple">pulley</span> .<br />
-(<span class="blue">s / star</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:domain (<span class="red">w / well</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0-of (h / have-03<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="purple">p / pulley</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="grey">r / rust</span>))))<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (<span class="green">a / all</span>))<br />
-<br />
-<br />
-<span class="blue">And</span> <span class="green">he</span> <span class="orange">sat</span> <span class="orange">down</span> , <span class="purple">because</span> <span class="green">he</span> was <span class="grey">afraid</span> .<br />
-(<span class="blue">a / and</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:op2 (<span class="orange">s / sit-down-02</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="green">h / he</span>)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (<span class="purple">c / cause-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (<span class="grey">f / fear-01</span><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 <span class="green">h</span>))))<br />
+I would try to <span class="purple">find</span> out , so , if this was a <span class="purple">person</span> <span class="purple">of</span> true <span class="purple">understanding</span> .<br />
+(t / try-01<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 (i / i)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1 (<span class="purple">f / find-out-03</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG0 i<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">:ARG1</span> (<span class="purple">u2 / understand-01</span> :mode interrogative<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="purple">:ARG0</span> (<span class="purple">p / person</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:mod (t2 / this))<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:ARG1-of (t3 / true-01))))<br />
 <br />
 
 </body>
