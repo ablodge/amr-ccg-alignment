@@ -14,17 +14,9 @@ html_start = '''
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.grey { text-decoration: none; background-color: #eee; }
-.red { text-decoration: none; background-color: #f5b7b1; }
-.orange { text-decoration: none; background-color: #f5cba7; }
-.yellow { text-decoration: none; background-color: #f9e79f; }
-.green { text-decoration: none; background-color: #abebc6; }
-.blue { text-decoration: none; background-color: #aed6f1; }
-.purple { text-decoration: none; background-color: #d7bde2; }
-.black { text-decoration: none; background-color: #566573; }
-.none { }
-</style>
+<link rel="stylesheet" href="color_alignments.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="color_alignments.js"></script>
 </head>
 <body>
 '''
@@ -32,22 +24,18 @@ html_end = '''
 </body>
 </html> 
 '''
+def html_elem(type, content, cls=None, id=None):
+    cls = ' class="'+cls+'"' if cls else ''
+    id = ' id="'+id+'"' if id else ''
+    return '<'+type+cls+id+'>' + content + '</'+type+'>'
 
 
 class AMR_Structure:
     NODE_RE = re.compile('([a-z][0-9]*|none[0-9]+)( ?/ ?[A-Za-z-]+[0-9]*)')
     EDGE_RE = re.compile('(:([A-Za-z0-9]|-)+(-of)?)')
-    amr = None
-    amr_split = None
-    structure = None
-    nodes = None
-    edges = None
-    edge_from_index = None
-    sentence = ''
 
-    colors = None
-
-    def __init__(self, string, sentence):
+    def __init__(self, string, sentence, id):
+        self.id = id
         self.sentence = sentence
         self.amr = string.replace('&nbsp;',' ')
         self.amr_split = [x[0] for x in re.findall('('+self.NODE_RE.pattern + '|' + self.EDGE_RE.pattern + '|' + '[()]' + '|[^\s()]+|\s+)', self.amr)]
@@ -84,37 +72,53 @@ class AMR_Structure:
                 self.edge_from_index[i] = src+x+trg
 
 
-    def __str__(self):
+    def html(self):
+        sentence_id = str(self.id)
         # sentence
-        sentence = self.sentence.split()
-        for i, x in enumerate(sentence):
+        words = self.sentence.split()
+        for i, x in enumerate(words):
             if str(i) in self.colors:
-                sentence[i] = '<span class="'+self.colors[str(i)]+'">'+ x + '</span>'
+                color_ids = ['tok-' + sentence_id + '-' + x for x in set(self.colors[str(i)])]
+                words[i] = html_elem('span', x, cls=' '.join(['tok','tok-'+sentence_id]+color_ids))
         # amr
-        split = self.amr_split
-        # make line breaks html safe (<br />)
-        split = [x.replace('\n','<br />\n') for x in split]
-        # make leading spaces html safe (&nbsp;)
-        for i,x in enumerate(split):
+        amr_split = self.amr_split
+        amr_split = [x.replace('\n','<br />\n') for x in amr_split]
+        for i,x in enumerate(amr_split):
             if '\n' in x:
-                split[i] = x[:x.index('\n')] + x[x.index('\n'):].replace(' ', '&nbsp;')
+                amr_split[i] = x[:x.index('\n')] + x[x.index('\n'):].replace(' ', '&nbsp;')
         # convert nodes and edges to the right color
-        for i, x in enumerate(split):
+        buttons = []
+        for i, x in enumerate(amr_split):
             key = self.normalize_node(x)
             if i in self.edge_from_index:
                 key = self.edge_from_index[i]
             if key in self.colors:
-                split[i] = '<span class="'+self.colors[key]+'">'+ x + '</span>'
-        return ' '.join(sentence)+'<br />\n'+''.join(split)
+                color_ids = ['tok-'+sentence_id+'-'+x for x in set(self.colors[key])]
+                amr_split[i] = html_elem('span', x, cls=' '.join(['tok','tok-'+sentence_id]+color_ids))
+                buttons += self.colors[key]
+        sentence_html = html_elem('p', ' '.join([sentence_id+'.']+words), cls='sentence sentence-'+sentence_id, id=sentence_id) + '<br />\n'
+        buttons_html = [html_elem('button', 'lexical' if 'lex' in b else 'structural', cls='button-'+sentence_id+'-'+b, id=str(i)) for i,b in enumerate(sorted(set(buttons)))]
+        amr_html =      html_elem('p', ''.join(amr_split), cls='amr amr-'+sentence_id) + '<br />\n'
+        return sentence_html +\
+               '<div class="btn-group">'+''.join(buttons_html)+'</div><br />\n'+\
+               amr_html
 
     def assign_node_color(self, node, color):
-        self.colors[self.normalize_node(node)] = color
+        node = self.normalize_node(node)
+        if not node in self.colors:
+            self.colors[node] = []
+        self.colors[node].append(color)
 
     def assign_edge_color(self, edge, color):
-        self.colors[edge] = color
+        if not edge in self.colors:
+            self.colors[edge] = []
+        self.colors[edge].append(color)
 
     def assign_word_color(self, index, color):
-        self.colors[str(index)] = color
+        index = str(index)
+        if not index in self.colors:
+            self.colors[index] = []
+        self.colors[index].append(color)
 
     def normalize_node(cls, node):
         return node.split('/')[0].strip()
@@ -146,11 +150,11 @@ class AMR_UD_Alignment:
 
     def __init__(self, string):
         self.amr_lex = {}
-        self.amr_struct = []
+        self.amr_struct = {}
         self.ud_lex = {}
-        self.ud_struct = []
+        self.ud_struct = {}
         self.sent_lex = {}
-        self.sent_struct = []
+        self.sent_struct = {}
 
         for index, line in enumerate(string.split('\n')):
             if not '    #    ' in line:
@@ -168,8 +172,8 @@ class AMR_UD_Alignment:
                 self.amr_lex[amr_align] = index
                 self.ud_lex[ud_align] = index
                 self.sent_lex[ud_align.split('/')[0]] = index
-                print(line)
-                print(self.amr_lex, self.ud_lex)
+                # print(line)
+                # print(self.amr_lex, self.ud_lex)
             # structural alignment
             else:
                 # split amr align into edges and nodes
@@ -180,7 +184,9 @@ class AMR_UD_Alignment:
                         node_list.append(x)
                     if not AMR_Structure.EDGE_RE.match(x):
                         node = x
-                        self.amr_struct.append((node, index))
+                        if not node in self.amr_struct:
+                            self.amr_struct[node] = []
+                        self.amr_struct[node].append(index)
                     if AMR_Structure.EDGE_RE.match(x):
                         edge = None
                         if len(align_split)>i+1 and not AMR_Structure.EDGE_RE.match(align_split[i+1]):
@@ -189,20 +195,22 @@ class AMR_UD_Alignment:
                             edge = x
                         for node in node_list:
                             e = node.split('/')[0].strip()+' '+edge
-                            self.amr_struct.append((e, index))
+                            if not e in self.amr_struct:
+                                self.amr_struct[e] = []
+                            self.amr_struct[e].append(index)
                 # split ud align into edges and nodes
                 ud_split = [x for x in re.findall('(' + self.UD_NODE_RE.pattern + '|' + self.UD_EDGE_RE.pattern + '|[^\s|()]+)',ud_align)]
                 for i, x in enumerate(ud_split):
                     if self.UD_NODE_RE.match(x):
-                        self.ud_struct.append((x, index))
-                        self.sent_struct.append((x.split('/')[0], index))
-                print(line)
-                print(self.amr_struct, self.ud_struct)
-
-
-def get_color(index):
-    colors = {0:'blue',1:'green',2:'red',3:'purple',4:'grey',5:'yellow',6:'orange'}
-    return colors[int(index)%7]
+                        if not x in self.ud_struct:
+                            self.ud_struct[x] = []
+                        self.ud_struct[x].append(index)
+                        x = x.split('/')[0]
+                        if not x in self.sent_struct:
+                            self.sent_struct[x] = []
+                        self.sent_struct[x].append(index)
+                # print(line)
+                # print(self.amr_struct, self.ud_struct)
 
 ALIGN = {}
 with open(align_file, 'r', encoding='utf8') as f:
@@ -220,6 +228,7 @@ with open(align_file, 'r', encoding='utf8') as f:
 
 with open(amr_file, 'r', encoding='utf8') as f:
     sentence = ''
+    amr_index = 1
     for line in f:
         # sentence regex
         x = re.match('^[0-9]+[.] (?P<snt>.*) [(]lpp_1943[.][0-9]+[)]', line)
@@ -236,30 +245,23 @@ with open(amr_file, 'r', encoding='utf8') as f:
                 align = ALIGN[sentence]
                 # add AMR
                 # lexical alignments
-                html_output += "Lexical Alignments:<br />\n"
-                amr = AMR_Structure(AMR, sentence)
+                amr = AMR_Structure(AMR, sentence, amr_index)
                 for node in align.amr_lex:
-                    amr.assign_node_color(node, get_color(align.amr_lex[node]))
+                    amr.assign_node_color(node, 'lex'+str(align.amr_lex[node]))
                 for word in align.sent_lex:
-                    amr.assign_word_color(int(word)-1, get_color(align.sent_lex[word]))
-                html_output += "<br />\n"+str(amr)+"<br />\n"
+                    amr.assign_word_color(int(word)-1, 'lex'+str(align.sent_lex[word]))
                 # structural alignments
-                index = 1
-                for i in set([i for x,i in align.amr_struct]):
-                    html_output += "Structural Alignments "+str(index)+":<br />\n"
-                    html_output += str([x for x,j in align.amr_struct if j==i])+"<br />\n"
-                    amr = AMR_Structure(AMR, sentence)
-                    for x,j in align.amr_struct:
-                        if j==i:
-                            if not ' ' in x:
-                                amr.assign_node_color(x, get_color(i))
-                            else:
-                                amr.assign_edge_color(x, get_color(i))
-                    for word,j in align.sent_struct:
-                        if j == i:
-                            amr.assign_word_color(int(word) - 1, get_color(i))
-                    html_output += "<br />\n" + str(amr) + "<br />\n"
-                    index += 1
+                for x in align.amr_struct:
+                    for i in align.amr_struct[x]:
+                        if not ' ' in x:
+                            amr.assign_node_color(x, 's'+str(i))
+                        else:
+                            amr.assign_edge_color(x, 's'+str(i))
+                for word in align.sent_struct:
+                    for i in align.sent_struct[word]:
+                        amr.assign_word_color(int(word) - 1, 's'+str(i))
+                html_output += amr.html()
+                amr_index += 1
             AMR = ''
 
 
