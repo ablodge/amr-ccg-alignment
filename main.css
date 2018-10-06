@@ -1,0 +1,55 @@
+
+h1 {
+	font-size:30px;
+}
+
+button {
+    background-color: #eee; 
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+} 
+
+button.align {
+    background-color: grey; 
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+} 
+
+amr {
+	font-family: "Cambria Math";
+	font-size: 14px;
+}
+
+amr-node {
+	color : black;
+}
+
+amr-edge {
+	color : grey;
+}
+
+word {
+	font-family: "Calibri";
+	font-size: 16px;
+}
+tok {
+	font-family: "Calibri";
+	color : #D3D3D3;
+}
+
+input[type=text] {
+    border: 2px solid black;
+    border-radius: 4px;
+	width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+} 
