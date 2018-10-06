@@ -8,7 +8,7 @@ sentences = []
 amr_file = r'data/aligned_amrs.txt'
 sent_file = r'data/amr_sentences.txt'
 template_file = r'template.html'
-html_file = r'main.html'
+html_file = r'demo_v1.html'
 
 def main():
     # AMRs
@@ -42,7 +42,7 @@ def main():
         i += 1
 
     content = ''.join(content)
-    html = html.replace('{}', content)
+    html = html.replace('{}', content).replace('demo.js', 'demo_v1.js')
     with open(html_file, 'w', encoding='utf8') as f:
         f.write(html)
 if __name__ == "__main__":
