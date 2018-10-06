@@ -90,8 +90,15 @@ function click_element(){
 		alignment = "~"
 	}
 	if ($(this).attr('on')=='1') {
-		$(this).attr('on','0')
-		alignment = alignment.replace(element_id, '').replace('  ', ' ');
+		$(this).attr('on','0');
+		aligns = alignment.split(' ');
+		for (let i=0; i<aligns.length; i++){
+			if (aligns[i]==element_id){
+				aligns[i] = '';
+				break;
+			}
+		}
+		alignment = aligns.join(' ').replace('  ', ' ');
 		$("input."+div_id).val(alignment)
 	}
 	else{
