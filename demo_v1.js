@@ -91,7 +91,7 @@ function click_element(){
 	}
 	if ($(this).attr('on')=='1') {
 		$(this).attr('on','0');
-		aligns = alignment.split(' ');
+		aligns = alignment.replace('~',' ~ ').split(' ');
 		for (let i=0; i<aligns.length; i++){
 			if (aligns[i]==element_id){
 				aligns[i] = '';
