@@ -44,6 +44,9 @@ tok {
 	font-family: "Calibri";
 	color : #D3D3D3;
 }
+tag {
+	font-size: 14px;
+}
 
 input[type=text] {
     border: 2px solid black;
@@ -53,3 +56,13 @@ input[type=text] {
     margin: 8px 0;
     box-sizing: border-box;
 } 
+
+table {
+  border-spacing: 10px 0;
+}
+
+td{
+	text-align:center;
+
+	
+}
