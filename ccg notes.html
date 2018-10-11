@@ -62,14 +62,14 @@ L .  .                                               ~
 # CCG lexical alignments
 L (S/<span style="color:green">S</span>)/<span style="color:blue">NP</span>  With                                     ~ <span style="color:green">(2)</span> :ARG0-of <span style="color:blue">(1)</span>
 L N  headquarters                                    ~ h / headquarters
-L S[pss]\<span style="color:blue">NP</span>  established                       ~ e / establish-01 :ARG1 <span style="color:blue">(1)</span>
+L S[pss]\<span style="color:blue">NP</span>  established                             ~ e / establish-01 :ARG1 <span style="color:blue">(1)</span>
 L ((S\NP)\<span style="color:green">(S\NP)</span>)/<span style="color:blue">NP</span>  in                             ~ <span style="color:green">(2)</span> :location <span style="color:blue">(1)</span>
 L N  Canada                                          ~ c / country :name (n / name :op1 "Canada")
 L ,  ,                                               ~ 
 L N  GreenKel                                        ~ c / company :name (n / name :op1 "GreenKel")
 L (S[dcl]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  is                                 ~ <span style="color:blue">(1)</span> :domain <span style="color:green">(2)</span>
 L NP[nb]/<span style="color:blue">N</span>  a                                        ~ <span style="color:blue">(1)</span>
-L N/<span style="color:blue">N</span>  large               *should be (N/N)/(N/N)    ~ <span style="color:blue">(1)</span> :mod (l / large)
+L N/<span style="color:blue">N</span>  large                                         ~ <span style="color:blue">(1)</span> :mod (l / large)
 L :  -                                               ~ 
 L N/<span style="color:blue">N</span>  scale                                         ~ <span style="color:blue">(1)</span> :mod (s / scale)
 L N/<span style="color:blue">N</span>  multi-national                                ~ <span style="color:blue">(1)</span> :mod (m / multi-national)
@@ -79,7 +79,7 @@ L S[ng]\<span style="color:blue">NP</span>  manufacturing   *should be S[ng]\NP/
 L conj  and                                          ~         [bind (m :ARG1) to (s :ARG1)]
 L N/<span style="color:blue">N</span>  selling         *should be S[ng]\NP/NP        ~ s / sell-01 :ARG0 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
 L N  fluorine                                        ~ f / flourine
-L (NP\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  -                                     ~ <span style="color:green">(2)</span> :ARG2 <span style="color:blue">(1)</span>
+L (NP\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  -                                      ~ <span style="color:green">(2)</span> :ARG2 <span style="color:blue">(1)</span>
 L N/<span style="color:blue">N</span>  free                                          ~ <span style="color:blue">(1)</span> :ARG1-of (f / free-41) 
 L N  coolant                                         ~ c /coolant
 L .  .                                               ~ 
@@ -115,7 +115,7 @@ L (S[b]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span> 
 L NP[nb]/<span style="color:blue">N</span>  her                                      ~ <span style="color:blue">(1)</span> :poss (s / she)        [coref s to p / person]
 L N  glee                                            ~ g / glee
 L conj  and                                          ~ a / and :op1 <span style="color:green">(?)</span> :op2 <span style="color:blue">(?)</span>   [conj can be replaced with X\X/X for any X]
-L N  lack                                            ~ l / lack-01 :ARG0 (?)                  [coref ? to p / person]
+L N  lack                                            ~ l / lack-01 :ARG0 <span style="color:blue">(?)</span>                  [coref ? to p / person]
 L (NP\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  of                                     ~ <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
 L N  conscience.                                     ~ c / conscience
                                                      *semantic args with no syntactic arg marked with (?)
