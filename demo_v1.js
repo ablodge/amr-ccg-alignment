@@ -1,6 +1,6 @@
 
 function get_color(index){
-	colors = ["#abebc6", "#aed6f1", "#d7bde2", "#f5b7b1", "#f9e79f"]
+	colors = ["#abebc6", "#aed6f1", "#d7bde2", "#f5b7b1", "#f9e79f"];
 	return colors[index%colors.length]
 }
 
@@ -17,16 +17,16 @@ function reset_colors(){
 }
 
 function parse_alignment(align){
-	elements = []
+	elements = [];
 	// add amr elements
-	amr_align = $.trim(align.split('~')[0]).split(' ')
+	amr_align = $.trim(align.split('~')[0]).split(' ');
 	for (let elem of amr_align) {
 		if (elem.length>0) {
 			elements.push($("amr."+div_id+" ."+elem.replace(':','')));
 		}
 	}
 	// add sentence elements
-	sent_align = $.trim(align.split('~')[1]).split(' ')
+	sent_align = $.trim(align.split('~')[1]).split(' ');
 	for (let elem of sent_align) {
 		if (elem.length>0) {
 			elements.push($("sentence."+div_id+" word."+elem));
@@ -68,7 +68,7 @@ function color_button2(){
 	alignment = $(this).attr('alignment');
 	// color button
 	color = get_color(color_id);
-	if ($(this).attr('on')=='1') {
+	if ($(this).attr('on')==='1') {
 		reset_colors();
 	}
 	else {
@@ -86,14 +86,14 @@ function click_element(){
 	element_id = $(this).attr('class').replace('aligned ','');
 	div_id = get_div_id(this);
 	alignment = $("input."+div_id).val();
-	if (alignment=="") {
+	if (alignment==="") {
 		alignment = "~"
 	}
-	if ($(this).attr('on')=='1') {
+	if ($(this).attr('on')==='1') {
 		$(this).attr('on','0');
 		aligns = alignment.split(' ');
 		for (let i=0; i<aligns.length; i++){
-			if (aligns[i]==element_id){
+			if (aligns[i]===element_id){
 				aligns[i] = '';
 				break;
 			}
@@ -102,7 +102,7 @@ function click_element(){
 		$("input."+div_id).val(alignment)
 	}
 	else{
-		$(this).attr('on','1')
+		$(this).attr('on','1');
 		if ($(this).parent().parent().is('amr')){
 			$("input."+div_id).val(alignment.replace('~',element_id+' ~'))
 		}

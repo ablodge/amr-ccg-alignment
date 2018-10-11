@@ -1,0 +1,122 @@
+<pre>
+# ::id lpp_1943.105 ::date 2012-07-31T07:42:19 ::annotator ISI-AMR-05 ::preferred
+# ::snt The little prince , who asked me so many questions , never seemed to hear the ones I asked him .
+# ::save-date Wed Apr 8, 2015 ::file lpp_1943_105.txt
+(s / seem-01
+      :ARG1 (h / hear-01 :polarity -
+            :ARG0 (p / prince
+                  :mod (l / little)
+                  :ARG0-of (a / ask-01
+                        :ARG2 (i / i)
+                        :ARG1 (q / question
+                              :quant (m / many
+                                    :degree (s2 / so)))))
+            :ARG1 (o / one
+                  :ARG1-of (a2 / ask-01
+                        :ARG0 i
+                        :ARG2 p))
+            :time (e2 / ever)))
+# CCG lexical alignments
+L NP[nb]/<span style="color:blue">N</span>  The                                      ~ <span style="color:blue">(1)</span>
+L N/<span style="color:blue">N</span>  little                                        ~ <span style="color:blue">(1)</span> :mod (l / little)
+L N  prince                                          ~ p / prince
+L ,  ,                                               ~ 
+L (NP\<span style="color:green">NP</span>)/<span style="color:blue">(S[dcl]\NP)</span>  who                           ~ <span style="color:green">(2)</span> :ARG0-of <span style="color:blue">(1)</span>
+L ((S[dcl]\<span style="color:red">NP</span>)/<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  asked                         ~ a / ask-01 :ARG0 <span style="color:red">(3)</span> :ARG2 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L NP  me                                             ~ i / i
+L (N/N)/<span style="color:blue">(N/N)</span>  so                                    ~ <span style="color:blue">(1)</span> :degree (s / so)
+L N/<span style="color:blue">N</span>  many                                          ~ <span style="color:blue">(1)</span> :quant (m / many)
+L N  questions                                       ~ q / question
+L ,  ,                                               ~ 
+L (S\NP)/<span style="color:blue">(S\NP)</span>  never                               ~ <span style="color:blue">(1)</span> :polarity - :time (e / ever)
+L (S[dcl]\<span style="color:green">NP</span>)/<span style="color:blue">(S[to]\NP)</span>  seemed                     ~ s / seem-01 :ARG1 (<span style="color:blue">(1)</span> :ARG0 <span style="color:green">(2)</span>)
+L (S[to]\NP)/<span style="color:blue">(S[b]\NP)</span>  to                           ~ <span style="color:blue">(1)</span>
+L (S[b]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  hear                                 ~ h / hear-01 :ARG0 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L NP[nb]/<span style="color:blue">N</span>  the                                      ~ <span style="color:blue">(1)</span>
+L N  ones                                            ~ o / one
+L NP  I                                              ~ [coref to (i / i)]
+L ((S[dcl]\<span style="color:red">NP</span>)/<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  asked                         ~ a / ask-01 :ARG0 <span style="color:red">(3)</span> :ARG2 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>*
+L NP  him                                            ~ [coref to (p / prince)]
+L .  .                                               ~ 
+                                                     * "ones I asked him" includes an edge :ARG1-of which has no lexical item
+
+        
+# ::id nw.chtb_0156.3 ::date 2012-11-05T07:40:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt With headquarters established in Canada , GreenKel is a large - scale multi-national group company manufacturing and selling fluorine - free coolant .
+# ::save-date Thu Dec 19, 2013 ::file nw_chtb_0156_3.txt
+(c3 / company
+      :mod (g2 / group)
+      :mod (m2 / multi-national)
+      :mod (s2 / scale
+            :mod (l / large))
+      :ARG0-of (e / establish-01
+            :ARG1 (h / headquarters)
+            :location (c4 / country :name (n2 / name :op1 "Canada")))
+      :ARG0-of (m / manufacture-01
+            :ARG1 (c5 / coolant
+                  :ARG1-of (f2 / free-41
+                        :ARG2 (f / fluorine))))
+      :ARG0-of (s / sell-01
+            :ARG1 c5)
+      :domain (c / company :name (n / name :op1 "GreenKel")))
+# CCG lexical alignments
+L (S/<span style="color:green">S</span>)/<span style="color:blue">NP</span>  With                                     ~ <span style="color:green">(2)</span> :ARG0-of <span style="color:blue">(1)</span>
+L N  headquarters                                    ~ h / headquarters
+L S[pss]\<span style="color:blue">NP</span>  established                       ~ e / establish-01 :ARG1 <span style="color:blue">(1)</span>
+L ((S\NP)\<span style="color:green">(S\NP)</span>)/<span style="color:blue">NP</span>  in                             ~ <span style="color:green">(2)</span> :location <span style="color:blue">(1)</span>
+L N  Canada                                          ~ c / country :name (n / name :op1 "Canada")
+L ,  ,                                               ~ 
+L N  GreenKel                                        ~ c / company :name (n / name :op1 "GreenKel")
+L (S[dcl]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  is                                 ~ <span style="color:blue">(1)</span> :domain <span style="color:green">(2)</span>
+L NP[nb]/<span style="color:blue">N</span>  a                                        ~ <span style="color:blue">(1)</span>
+L N/<span style="color:blue">N</span>  large               *should be (N/N)/(N/N)    ~ <span style="color:blue">(1)</span> :mod (l / large)
+L :  -                                               ~ 
+L N/<span style="color:blue">N</span>  scale                                         ~ <span style="color:blue">(1)</span> :mod (s / scale)
+L N/<span style="color:blue">N</span>  multi-national                                ~ <span style="color:blue">(1)</span> :mod (m / multi-national)
+L N/<span style="color:blue">N</span>  group                                         ~ <span style="color:blue">(1)</span> :mod (g / group)
+L N  company                                         ~ c / company
+L S[ng]\<span style="color:blue">NP</span>  manufacturing   *should be S[ng]\NP/NP   ~ m / manufacture-01 :ARG0 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L conj  and                                          ~         [bind (m :ARG1) to (s :ARG1)]
+L N/<span style="color:blue">N</span>  selling         *should be S[ng]\NP/NP        ~ s / sell-01 :ARG0 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L N  fluorine                                        ~ f / flourine
+L (NP\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  -                                     ~ <span style="color:green">(2)</span> :ARG2 <span style="color:blue">(1)</span>
+L N/<span style="color:blue">N</span>  free                                          ~ <span style="color:blue">(1)</span> :ARG1-of (f / free-41) 
+L N  coolant                                         ~ c /coolant
+L .  .                                               ~ 
+                                                     * 3 :ARG0-of edges with no lexical item
+    
+
+# ::id NATHANS_EXAMPLE ::date 2017-06-06T04:25:05 ::snt-type body ::annotator SDL-AMR-09 ::preferred
+# ::snt In the story, evildoer Cruella de Vil makes no attempt to conceal her glee and lack of conscience.
+# ::save-date Tue Jun 6, 2017
+(a / attempt-01 :polarity -
+      :location (s / story)
+      :ARG0 (p / person
+            :ARG0-of (d / do-02 :ARG1 (t / thing :mod (e / evil)))
+            :name (n / name :op1 "Cruella" :op2 "de" :op3 "Vil"))
+      :ARG1 (c / conceal-01 
+            :ARG0 p 
+            :ARG1 (a2 / and
+                  :op1 (g / glee :poss p)
+                  :op2 (l / lack-01
+                        :ARG0 p
+                        :ARG1 (c2 / conscience)))))
+# CCG lexical alignments
+L (S/<span style="color:green">S</span>)/<span style="color:blue">NP</span>  In                                       ~ <span style="color:green">(2)</span> :location <span style="color:blue">(1)</span>
+L NP[nb]/<span style="color:blue">N</span>  the                                      ~ <span style="color:blue">(1)</span>
+L N  story,                                          ~ s / story 
+L N/<span style="color:blue">N</span>  evildoer                                      ~ <span style="color:blue">(1)</span> :ARG0-of (d / do-02 :ARG1 (t / thing :mod (e / evil)))
+L N  Cruella_de_Vil                                  ~ p / person :name (n / name :op1 "Cruella" :op2 "de" :op3 "Vil"))
+L (S[dcl]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  makes                              ~ <span style="color:blue">(1)</span> :ARG0 <span style="color:green">(2)</span>
+L NP[nb]/<span style="color:blue">N</span>  no                                       ~ <span style="color:blue">(1)</span> :polarity -
+L N  attempt         *should be N/<span style="color:blue">(S[to]\NP)</span>         ~ a / attempt-01 :ARG0 <span style="color:green">(?)</span> :ARG1 (<span style="color:blue">(1)</span> :ARG0 <span style="color:green">(?)</span>)  
+L (S[to]\<span style="color:green">NP</span>)/(S[b]\NP)  to                           ~ <span style="color:blue">(1)</span>
+L (S[b]\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  conceal                              ~ c / conceal-01 :ARG0 <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L NP[nb]/<span style="color:blue">N</span>  her                                      ~ <span style="color:blue">(1)</span> :poss (s / she)        [coref s to p / person]
+L N  glee                                            ~ g / glee
+L conj  and                                          ~ a / and :op1 <span style="color:green">(?)</span> :op2 <span style="color:blue">(?)</span>   [conj can be replaced with X\X/X for any X]
+L N  lack                                            ~ l / lack-01 :ARG0 (?)                  [coref ? to p / person]
+L (NP\<span style="color:green">NP</span>)/<span style="color:blue">NP</span>  of                                     ~ <span style="color:green">(2)</span> :ARG1 <span style="color:blue">(1)</span>
+L N  conscience.                                     ~ c / conscience
+                                                     *semantic args with no syntactic arg marked with (?)
+</pre>
