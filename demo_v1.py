@@ -31,12 +31,12 @@ def main():
     for s, a in zip(sentences, amrs):
         content.append(
             f"""
-            <div id ="{i}" class="aligner">
-            <h1>{i}. </h1><input type="text" class="{i}"></input>
-            <button class="align {1}">Add Alignment</button>
-            <div class="btn-group {i}"></div><br/>
-            <sentence class="{i}">{s}</sentence>
-            <amr class="{i}">{a}</amr>
+            <div amr-id ="{i}" class="aligner">
+            <h1>{i}. </h1><input  amr-id ="{i}" type="text"></input>
+            <button amr-id ="{i}" class="align">Add Alignment</button>
+            <div amr-id ="{i}" class="btn-group"></div><br/>
+            <sentence amr-id ="{i}">{s}</sentence>
+            <amr amr-id ="{i}">{a}</amr>
             </div>
             """)
         i += 1

@@ -69,10 +69,10 @@ class AMR(TXT):
     def elements_html(self):
         elem = self.elements()
         for i, n in self.nodes():
-            elem[i] = f'<amr-node class="aligned {n}">{elem[i]}</amr-node>'
+            elem[i] = f'<amr-node class="aligned" tok-id="{n}">{elem[i]}</amr-node>'
         for i, e in self.edges():
             e = e.replace(':','')
-            elem[i] = f'<amr-edge class="aligned {e}">{elem[i]}</amr-edge>'
+            elem[i] = f'<amr-edge class="aligned" tok-id="{e}">{elem[i]}</amr-edge>'
         return elem
 
     @staticmethod

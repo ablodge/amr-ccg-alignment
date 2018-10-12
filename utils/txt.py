@@ -23,7 +23,7 @@ class TXT:
         j = 0
         for i, e in enumerate(elem):
             if e.strip():
-                elem[i] = f'<word class="aligned {j}"><tok>{j}/</tok>{e}</word> '
+                elem[i] = f'<word class="aligned" tok-id="{j}"><tok>{j}/</tok>{e}</word> '
                 j += 1
         return elem
 
