@@ -37,8 +37,8 @@ class CCG_Lexical(TXT):
             if re.match('<L.*?>',e):
                 e = e.split()[1]
                 w, t = e.split(':')[0],e.split(':')[1]
-                w = f'<td><word class="aligned {j}"><tok>{j}/</tok>{w}</word> </td>'
-                t = f'<td><tag class="{j}">{t}</tag></td>'
+                w = f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>'
+                t = f'<td><tag class="aligned" tok-id="{j}">{t}</tag></td>'
                 j += 1
                 words.append(w)
                 tags.append(t)

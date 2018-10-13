@@ -4,24 +4,47 @@ h1 {
 }
 
 button {
-    background-color: #eee; 
     border: 1px solid white;
     color: white;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+button.color {
+    background-color: #eee; 
 } 
 
 button.align {
     background-color: grey; 
-    border: 1px solid white;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
 } 
+
+div.options {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button.download {
+    background-color: #5666e6;
+	width: 10%;
+} 
+
+button.save {
+    background-color: #ff464a;
+	width: 10%;
+}
+
+button.showall {
+    background-color: #2aff82;
+    width: 10%;
+}
+
+.padding {
+    width: 35%;
+}
 
 amr {
 	font-family: "Cambria Math";
