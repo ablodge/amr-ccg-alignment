@@ -34,8 +34,20 @@ function get_color(index) {
 function reset_colors() {
     $("button.color").css('background-color', '#eee')
                      .attr('on', '0');
-    $(".aligned").css('background-color', '')
-                 .attr('on', '0');
+    $(".aligned").css({'background': '', 'border': ''})
+                 .attr({'on': '0', 'colors':'0'});
+}
+
+function add_stripes(elem, color1, color2){
+    // background: repeating-linear-gradient(
+    //     to right,
+    //     #f6ba52,
+    //     #f6ba52 10px,
+    //     #ffd180 10px,
+    //     #ffd180 20px)
+    gradient = 'repeating-linear-gradient( to right, '+color1+', '+color1+' 10px, '+color2+' 10px, '+color2+' 20px)';
+    elem.css('background',gradient);
+    // elem.css('background-color', '')
 }
 
 function color_alignment(amr_id, alignment, color_id) {
@@ -44,7 +56,18 @@ function color_alignment(amr_id, alignment, color_id) {
            .css('background-color', color);
     // color elements
     for (let elem of parse_alignment(amr_id, alignment)) {
-        elem.css('background-color', color);
+        if (elem.attr('colors')==="1"){
+            elem.attr('colors','2');
+            add_stripes(elem, elem.css('background-color'),color)
+        }
+        else if (elem.attr('colors')==="0"){
+            elem.attr('colors','1');
+            elem.css('background-color', color);
+        }
+        else {
+            elem.attr('colors','3+');
+            elem.css('border', 'solid 3px '+color);
+        }
     }
 }
 
@@ -54,7 +77,7 @@ function parse_alignment(amr_id, alignment) {
     elements = [];
     align = alignment.split('~');
     // add amr elements
-    amr_align = $.trim(align[0]).split(' ');
+    amr_align = $.trim(align[1]).split(' ');
     for (let elem of amr_align) {
         if (elem) {
             tok_id = elem.replace(':', '');
@@ -62,7 +85,7 @@ function parse_alignment(amr_id, alignment) {
         }
     }
     // add sentence elements
-    sent_align = $.trim(align[1]).split(' ');
+    sent_align = $.trim(align[0]).split(' ');
     for (let elem of sent_align) {
         if (elem) {
             tok_id = elem;
@@ -72,18 +95,25 @@ function parse_alignment(amr_id, alignment) {
     return elements;
 }
 
+function test_alignment(alignment){
+    return alignment.includes('~')
+}
+
 function add_alignment(amr_id, alignment) {
     text_field(amr_id).val("");
-    if (alignment.includes('~')) {
+    if (test_alignment(alignment)) {
         btngroup = btn_group(amr_id);
-        color_id = btngroup.children().length + 1;
+        if (btngroup.children().length===0){ color_id = 1; }
+        else { color_id = (parseInt(btngroup.children().last().attr('color-id'))+1).toString(); }
         button = '<button color-id="'+color_id+'" class="color" alignment="' + alignment + '" on="0">' + color_id + '</button>'
         b = $(button).on(
             {
                 click: function(){
                     if($(this).attr('on') === '0'){
+                        alignment = $(this).attr("alignment");
+                        amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
+                        color_id = $(this).attr("color-id");
                         reset_colors();
-
                         color_alignment.bind($(this))(amr_id, alignment, color_id);
                     }
                     else {
@@ -110,10 +140,10 @@ function select_element(amr_id, tok_id) {
     }
     $(this).attr('on', '1');
     if ($(this).parents("amr").length>0) {
-        alignment = alignment.replace('~', tok_id + ' ~')
+        alignment = alignment + ' ' + tok_id;
     }
     else {
-        alignment = alignment + ' ' + tok_id
+        alignment = alignment.replace('~', tok_id + ' ~');
     }
     reset_colors();
     text_field(amr_id).val(alignment);
@@ -128,11 +158,11 @@ function unselect_element(amr_id, tok_id) {
 
     if ($(this).parents("amr").length>0) {
         amr_tok(amr_id, tok_id).attr('on', '0')
-            .css('background-color', '#fff');
+            .css('background-color', '');
     }
     else {
         sent_tok(amr_id, tok_id).attr('on', '0')
-            .css('background-color', '#fff');
+            .css('background-color', '');
     }
     aligns = alignment.split(' ');
     for (let i = 0; i < aligns.length; i++) {
@@ -145,43 +175,74 @@ function unselect_element(amr_id, tok_id) {
     text_field(amr_id).val(alignment);
 }
 
+// Options --------------------------------------------------------------------------------------
+
+function download(){
+    aligns = {};
+    $("amr").each(function(index){
+        amr_id = $(this).attr("amr-id");
+        aligns[amr_id] = [];
+    });
+    $("button.color").each(function( index ) {
+        alignment = $(this).attr("alignment");
+        amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
+        aligns[amr_id].push(alignment);
+    });
+    out = "";
+    for (let amr_id in aligns){
+        out += '#'+amr_id+'\n';
+        out += aligns[amr_id].join('\n')+'\n';
+        out += '\n';
+    }
+    var a = window.document.createElement('a');
+    a.href = window.URL.createObjectURL(new Blob([out], {type: 'text/plain;charset=utf-8'}));
+    a.download = 'amr-alignments.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function load(){
+    file_in = $('input:file');
+    file = file_in.prop('files')[0];
+    f = new FileReader();
+    f.onload = function(e) {
+        text = e.target.result;
+        text = text.replace('\r','');
+        text = text.split(/\n\n+/);
+        for (let t of text){
+            t = $.trim(t);
+            amr_id = /^#[0-9]+/.exec(t)[0];
+            t = $.trim(t.replace(amr_id,''));
+            amr_id = amr_id.replace('#','');
+            aligns = t.split('\n');
+            for (let align of aligns){
+                if (!align) continue;
+                add_alignment(amr_id,align)
+            }
+        }
+    };
+    f.readAsText(file);
+}
+
+function showall(){
+    reset_colors();
+    $("button.color").each(function( index ) {
+        alignment = $(this).attr("alignment");
+        color_id = $(this).attr("color-id");
+        amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
+        color_alignment.bind($(this))(amr_id, alignment, color_id);
+    });
+}
 
 $(document).ready(function () {
     $("input").val("");
     // Download button
-    $("button.download").on("click", function(){
-        aligns = {};
-        $("amr").each(function(index){
-            amr_id = $(this).attr("amr-id");
-            aligns[amr_id] = [];
-        });
-        $("button.color").each(function( index ) {
-            alignment = $(this).attr("alignment");
-            amr_id = $(this).parents("[amr-id]").attr("amr-id");
-            aligns[amr_id].push(alignment);
-        });
-        out = "";
-        for (let amr_id in aligns){
-            out += '#'+amr_id+'\n';
-            out += aligns[amr_id].join('\n')+'\n';
-            out += '\n';
-        }
-        var a = window.document.createElement('a');
-        a.href = window.URL.createObjectURL(new Blob([out], {type: 'text/plain;charset=utf-8'}));
-        a.download = 'amr-alignments.txt';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    });
+    $("button.download").on("click", download);
+    // Load button
+    $("button.load").on("click", load);
     // Show All button
-    $("button.showall").on("click", function(){
-        $("button.color").each(function( index ) {
-            alignment = $(this).attr("alignment");
-            color_id = $(this).attr("color-id");
-            amr_id = $(this).parents("[amr-id]").attr("amr-id");
-            color_alignment.bind($(this))(amr_id, alignment, color_id);
-        });
-    });
+    $("button.showall").on("click", showall);
     // Add Alignment button
     $("button.align").on("click", function(){
         amr_id = $(this).attr("amr-id");
@@ -191,7 +252,7 @@ $(document).ready(function () {
     // elements in AMR or sentence
     $(".aligned").on({
         click: function(){
-            amr_id = $(this).parents("[amr-id]").attr("amr-id");
+            amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
             tok_id = $(this).attr("tok-id");
 
             if($(this).attr('on') === '0'){
@@ -202,7 +263,7 @@ $(document).ready(function () {
             }
         },
         dblclick: function(){
-            amr_id = $(this).parents("[amr-id]").attr("amr-id");
+            amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
             alignment = $("input[amr-id='" + amr_id + "']").val();
             tok_id = $(this).attr("tok-id");
 

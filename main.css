@@ -17,7 +17,7 @@ button.color {
 } 
 
 button.align {
-    background-color: grey; 
+    background-color: grey;
 } 
 
 div.options {
@@ -30,9 +30,9 @@ div.options {
 button.download {
     background-color: #5666e6;
 	width: 10%;
-} 
+}
 
-button.save {
+button.load {
     background-color: #ff464a;
 	width: 10%;
 }
@@ -42,8 +42,8 @@ button.showall {
     width: 10%;
 }
 
-.padding {
-    width: 35%;
+input[type=file] {
+    width: 12%;
 }
 
 amr {
