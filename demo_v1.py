@@ -11,7 +11,7 @@ html_file = r'demo_v1.html'
 
 
 def main():
-    generate_html(TXT, amr_file, sent_file, template_file, html_file)
+    generate_html(TXT, amr_file, sent_file, template_file, html_file, "Sentence")
 if __name__ == "__main__":
     main()
 

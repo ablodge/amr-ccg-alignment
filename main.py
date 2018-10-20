@@ -1,7 +1,7 @@
 import os, re
 from utils.amr import *
 
-def generate_html(cl, amr_file, sent_file, template_file, html_file):
+def generate_html(cl, amr_file, sent_file, template_file, html_file, name):
     amrs = []
     sentences = []
 
@@ -26,7 +26,7 @@ def generate_html(cl, amr_file, sent_file, template_file, html_file):
         content.append(
             f"""
             <div amr-id ="{i}" class="aligner">
-            <h1>{i}. </h1><input  amr-id ="{i}" type="text"></input>
+            <h1>{i}. </h1><input  amr-id ="{i}" type="text" class="cmdline"/>
             <button amr-id ="{i}" class="align">Add Alignment</button>
             <div amr-id ="{i}" class="btn-group"></div><br/>
             <sentence amr-id ="{i}">{s}</sentence>
@@ -36,7 +36,7 @@ def generate_html(cl, amr_file, sent_file, template_file, html_file):
         i += 1
 
     content = ''.join(content)
-    html = html.replace('{}', content)
+    html = html.replace('{}', content).replace('{NAME}',name)
     with open(html_file, 'w', encoding='utf8') as f:
         f.write(html)
 

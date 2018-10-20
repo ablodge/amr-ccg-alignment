@@ -1,5 +1,6 @@
 
 h1 {
+    font-family: "HelveticaNeue-Light", sans-serif;
 	font-size:30px;
 }
 
@@ -88,4 +89,8 @@ td{
 	text-align:center;
 
 	
+}
+
+.instructions{
+    font-family: "HelveticaNeue-Light", sans-serif;
 }

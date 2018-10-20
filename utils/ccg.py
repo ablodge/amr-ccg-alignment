@@ -38,11 +38,63 @@ class CCG_Lexical(TXT):
                 e = e.split()[1]
                 w, t = e.split(':')[0],e.split(':')[1]
                 w = f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>'
+                t = self.clean_tag(t)
                 t = f'<td><tag class="aligned" tok-id="{j}">{t}</tag></td>'
                 j += 1
                 words.append(w)
                 tags.append(t)
         return ['<table><tr>']+words+['</tr><tr>']+tags+['</tr></table>']
+
+    def clean_tag(self, tag):
+        Paren_RE = re.compile('^(?P<pre>([^()])*)(?P<paren>[()])')
+        i = 0
+        max = 0
+        while Paren_RE.match(tag):
+            s = Paren_RE.match(tag).group('pre')
+            p = Paren_RE.match(tag).group('paren')
+            if p=='(':
+                i += 1
+                if i>max:
+                    max = i
+                tag = Paren_RE.sub(s + f'<{i}>', tag, 1)
+            else:
+                tag = Paren_RE.sub(s + f'</{i}>', tag, 1)
+                i -= 1
+        j = max
+        while j > 0:
+            Left_RE = re.compile(f'^(?P<pre>(<[0-9]+>)*)<{j}>(?P<a>.*?)</{j}>')
+            Right_RE = re.compile(f'<{j}>(?P<a>.*?)</{j}>')
+            Modifier_RE = re.compile(fr'<{j}>(?P<a>.*?)</{j}>(?P<slash>[/\\])<{j}>(?P<b>.*?)</{j}>')
+            while re.search(f'<{j}>',tag):
+                mod = Modifier_RE.search(tag)
+                if mod and mod.group('a')==mod.group('b'):
+                    a = mod.group('a')
+                    b = mod.group('b')
+                    slash = mod.group('slash')
+                    tag = Modifier_RE.sub('('+a+')'+slash+'('+b+')',tag,1)
+                elif Left_RE.match(tag):
+                    x = Left_RE.match(tag)
+                    pre = x.group('pre')
+                    a = x.group('a')
+                    tag = Left_RE.sub(pre + a, tag, 1)
+                elif Right_RE.search(tag):
+                    x = Right_RE.search(tag)
+                    a = x.group('a')
+                    tag = Right_RE.sub('(' +a+ ')', tag, 1)
+            j -= 1
+        arg_count = 0
+        x = tag
+        Paren_RE = re.compile('[(].*?[)]')
+        while Paren_RE.search(x):
+            x = Paren_RE.sub('X', x)
+        arg_count = len(re.findall(r'[/\\]', x))
+
+        if arg_count>0:
+            tag = tag+':'+str(arg_count)
+        if tag=='conj':
+            tag='conj:2'
+        # print(tag)
+        return tag
 
     @staticmethod
     def test(text):
