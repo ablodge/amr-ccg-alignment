@@ -30,7 +30,7 @@ class AMR_Alignment{
 
     parse() {
         let elements = [];
-        let align = this.alignment.split('~');
+        let align = this.clean().split('~');
         // add amr elements
         let amr_align = $.trim(align[1]).split(' ');
         for (let elem of amr_align) {
@@ -54,7 +54,7 @@ class AMR_Alignment{
 
     clean(){
         let s = this.alignment;
-        if ($.trim(s).length==0)
+        if (!$.trim(s))
             s = "~";
         if (s.indexOf('#') > -1)
             s = s.split('#')[0];
@@ -64,25 +64,30 @@ class AMR_Alignment{
         return s;
     }
 
-    comment(){ return this.alignment.substr(this.alignment.indexOf('#')); }
+    comment(){
+        let c = '';
+        if (this.alignment.indexOf('#')>-1)
+            c = this.alignment.substr(this.alignment.indexOf('#'));
+        if (!this.is_connected())
+            c += '# ✘disconnected ';
+        if (this.is_isomorphic())
+            c += '#  ✔sem args = syn args ';
+        return '     '+c;
+    }
 
     add_left(tok_id){
-        var comment = this.comment();
-        comment = comment ? '   '+comment : '';
-        this.alignment = this.clean().replace('~', tok_id + ' ~')+'   '+comment;
+        this.alignment = this.clean().replace('~', tok_id + ' ~');
+        this.alignment += this.comment();
         return this.alignment;
     }
 
     add_right(tok_id){
-        let comment = this.comment();
-        comment = comment ? '   '+comment : '';
-        this.alignment = this.clean() + ' ' + tok_id+'   '+comment;
+        this.alignment = this.clean() + ' ' + tok_id;
+        this.alignment += this.comment();
         return this.alignment;
     }
 
     remove(tok_id){
-        let comment = this.comment();
-        comment = comment ? '   '+comment : '';
         let aligns = this.clean().split(' ');
         for (let i = 0; i < aligns.length; i++) {
             if (aligns[i] === tok_id) {
@@ -90,8 +95,112 @@ class AMR_Alignment{
                 break;
             }
         }
-        this.alignment = $.trim(aligns.join(' ')).replace('  ', ' ') + comment;
+        this.alignment = $.trim(aligns.join(' ')).replace('  ', ' ');
+        this.alignment += this.comment();
         return this.alignment;
+    }
+
+    is_connected(){
+        let elements = [];
+        let align = this.alignment.split('~');
+        let amr_align = $.trim(align[1]).split(' ');
+        if (amr_align.length<=1)
+            return true;
+        let nodes = [];
+        let edges = [];
+        for (let elem of amr_align){
+            if (elem.includes('_'))
+                edges.push(elem);
+            else
+                nodes.push(elem)
+        }
+        // every node is connected to an edge
+        let test1 = nodes.every(
+            (n)=>edges.some(
+                (e)=>e.split('_').indexOf(n) > -1
+            )
+        );
+        // every edge is connected to a node
+        if (!test1)
+            return false;
+        let test2 = edges.every(
+            (e)=>nodes.some(
+                (n)=>e.split('_').indexOf(n) > -1
+            )
+        );
+        return test2;
+    }
+
+    is_isomorphic(){
+        // number of semantic args equals the number of syntactic args
+        if($('args').length===0)
+            return false;
+        if(!$.trim(this.clean().split('~')[0]) || !$.trim(this.clean().split('~')[1]))
+            return false;
+
+        let sem_count = 0;
+        let syn_count = 0;
+        let align = this.clean().split('~');
+        let amr_align = $.trim(align[1]).split(' ');
+        let sent_align = $.trim(align[0]).split(' ');
+        // get nodes and edges
+        let nodes = [];
+        let edges = [];
+        for (let elem of amr_align){
+            if (elem.includes('_'))
+                edges.push(elem);
+            else
+                nodes.push(elem)
+        }
+        // get number of semantic args
+        let sem_args = [];
+        for (let e of edges){
+            let a = e.split('_')[0];
+            let b = e.split('_')[2];
+            sem_args.push(a);
+            sem_args.push(b);
+        }
+        sem_args = new Set(sem_args);
+        for (let n of sem_args){
+            if (nodes.indexOf(n)===-1)
+                sem_count += 1;
+        }
+        // get number of syntactic args
+        for (let w of sent_align){
+            let selector = $(`sentence[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
+            if (selector.length>0)
+                syn_count += parseInt(selector.html());
+        }
+        return sem_count===syn_count;
+    }
+
+    readible(){
+        let r = '';
+        let align = this.clean().split('~');
+
+        // add sentence elements
+        let sent_align = $.trim(align[0]).split(' ');
+        for (let a of sent_align) {
+            if (!a) continue;
+            let tok_id = a;
+            let selector = $(`sentence[amr-id='${this.amr_id}'] word[tok-id='${tok_id}']`);
+            for (let elem of selector.toArray())
+                r += $(elem).html()
+                            .replace(/<tok>.*?<\/tok>/g,'')
+                            .replace(/<.*?>/g,'')+' ';
+
+        }
+        r += '~ ';
+        // add amr elements
+        let amr_align = $.trim(align[1]).split(' ');
+        for (let a of amr_align) {
+            if (!a) continue;
+            let tok_id = a.replace(':','');
+            let selector = $(`amr[amr-id='${this.amr_id}'] [tok-id='${tok_id}']`);
+            for (let elem of selector.toArray())
+                r += $(elem).html().replace(/<.*?>/,'')+' ';
+        }
+        return r;
     }
 }
 class CmdLine {
@@ -280,10 +389,37 @@ function download(){
         amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
         aligns[amr_id].push(alignment);
     });
+
+    let comment_out = function(string){
+        string = string.replace(/<.*?>/g,'')
+        string = $.trim(string)
+        split = string.split('\n');
+        comment = '';
+        for (let s of split)
+            comment += '# '+s+'\n'
+        return comment;
+    }
+
     let out = "";
     for (let amr_id in aligns){
+        let amr = $(`amr[amr-id='${amr_id}']`).html()
+            .replace(/<.*?>/g,'');
+        amr = comment_out(amr);
+        let sent = $(`sentence[amr-id='${amr_id}']`).html()
+            .replace(/<.*?>/g,'')
+            .replace(/ /g,'\t');
+        sent = comment_out(sent);
         out += '#'+amr_id+'\n';
-        out += aligns[amr_id].join('\n')+'\n';
+        out += '# AMR:\n'+amr;
+        out += '# CCG:\n'+sent;
+        out += '# Alignments:\n'
+        for (let align of aligns[amr_id]){
+            let amr_alignment = new AMR_Alignment(amr_id, align);
+            out += '# '+amr_alignment.readible()+'\n';
+        }
+        for (let align of aligns[amr_id]){
+            out += align+'\n';
+        }
         out += '\n';
     }
     let a = window.document.createElement('a');
@@ -311,8 +447,8 @@ function load(){
                     continue;
                 if ($.trim(line).startsWith('#'))
                     continue;
-                align = line;
-                add_alignment(amr_id,align);
+                align = $.trim(line);
+                add_alignment(amr_id, align);
             }
         }
     };
@@ -357,12 +493,10 @@ $(document).ready(function () {
                 unselect_element.bind($(this))();
         },
         dblclick: function(){
+            select_element.bind($(this))();
+
             let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
             let alignment = $("input[amr-id='" + amr_id + "']").val();
-
-            if($(this).attr('on') === '0'){
-                select_element.bind($(this))();
-            }
             add_alignment(amr_id,alignment);
         }
     }).attr("on", "0");

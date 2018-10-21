@@ -91,6 +91,12 @@ td{
 	
 }
 
+math {
+    font-family: "Cambria Math";
+    font-size: 14.5px;
+    color: grey;
+}
+
 .instructions{
     font-family: "HelveticaNeue-Light", sans-serif;
 }

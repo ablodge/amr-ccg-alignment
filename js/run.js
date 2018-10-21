@@ -112,10 +112,37 @@ function download(){
         amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
         aligns[amr_id].push(alignment);
     });
+
+    let comment_out = function(string){
+        string = string.replace(/<.*?>/g,'')
+        string = $.trim(string)
+        split = string.split('\n');
+        comment = '';
+        for (let s of split)
+            comment += '# '+s+'\n'
+        return comment;
+    }
+
     let out = "";
     for (let amr_id in aligns){
+        let amr = $(`amr[amr-id='${amr_id}']`).html()
+            .replace(/<.*?>/g,'');
+        amr = comment_out(amr);
+        let sent = $(`sentence[amr-id='${amr_id}']`).html()
+            .replace(/<.*?>/g,'')
+            .replace(/ /g,'\t');
+        sent = comment_out(sent);
         out += '#'+amr_id+'\n';
-        out += aligns[amr_id].join('\n')+'\n';
+        out += '# AMR:\n'+amr;
+        out += '# CCG:\n'+sent;
+        out += '# Alignments:\n'
+        for (let align of aligns[amr_id]){
+            let amr_alignment = new AMR_Alignment(amr_id, align);
+            out += '# '+amr_alignment.readible()+'\n';
+        }
+        for (let align of aligns[amr_id]){
+            out += align+'\n';
+        }
         out += '\n';
     }
     let a = window.document.createElement('a');
@@ -143,8 +170,8 @@ function load(){
                     continue;
                 if ($.trim(line).startsWith('#'))
                     continue;
-                align = line;
-                add_alignment(amr_id,align);
+                align = $.trim(line);
+                add_alignment(amr_id, align);
             }
         }
     };
@@ -189,12 +216,10 @@ $(document).ready(function () {
                 unselect_element.bind($(this))();
         },
         dblclick: function(){
+            select_element.bind($(this))();
+
             let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
             let alignment = $("input[amr-id='" + amr_id + "']").val();
-
-            if($(this).attr('on') === '0'){
-                select_element.bind($(this))();
-            }
             add_alignment(amr_id,alignment);
         }
     }).attr("on", "0");

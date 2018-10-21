@@ -39,11 +39,11 @@ class CCG_Lexical(TXT):
                 w, t = e.split(':')[0],e.split(':')[1]
                 w = f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>'
                 t = self.clean_tag(t)
-                t = f'<td><tag class="aligned" tok-id="{j}">{t}</tag></td>'
+                t = f'<td><tag class="aligned" tok-id="{j}">{t}</tag> </td>'
                 j += 1
                 words.append(w)
                 tags.append(t)
-        return ['<table><tr>']+words+['</tr><tr>']+tags+['</tr></table>']
+        return ['<table>\n<tr>']+words+['</tr>\n<tr>']+tags+['</tr>\n</table>']
 
     def clean_tag(self, tag):
         Paren_RE = re.compile('^(?P<pre>([^()])*)(?P<paren>[()])')
@@ -90,9 +90,9 @@ class CCG_Lexical(TXT):
         arg_count = len(re.findall(r'[/\\]', x))
 
         if arg_count>0:
-            tag = tag+':'+str(arg_count)
-        if tag=='conj':
-            tag='conj:2'
+            tag = tag+':'+'<args>'+str(arg_count)+'</args>'
+        elif tag=='conj':
+            tag='conj:<args>2</args>'
         # print(tag)
         return tag
 
