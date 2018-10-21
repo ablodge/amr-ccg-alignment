@@ -114,14 +114,14 @@ function download(){
     });
 
     let comment_out = function(string){
-        string = string.replace(/<.*?>/g,'')
-        string = $.trim(string)
+        string = string.replace(/<.*?>/g,'');
+        string = $.trim(string);
         split = string.split('\n');
         comment = '';
         for (let s of split)
             comment += '# '+s+'\n'
         return comment;
-    }
+    };
 
     let out = "";
     for (let amr_id in aligns){
@@ -132,10 +132,11 @@ function download(){
             .replace(/<.*?>/g,'')
             .replace(/ /g,'\t');
         sent = comment_out(sent);
+        let sent_type = $(`sentence[amr-id='${amr_id}']`).attr('class');
         out += '#'+amr_id+'\n';
         out += '# AMR:\n'+amr;
-        out += '# CCG:\n'+sent;
-        out += '# Alignments:\n'
+        out += `# ${sent_type}:\n`+sent;
+        out += '# Alignments:\n';
         for (let align of aligns[amr_id]){
             let amr_alignment = new AMR_Alignment(amr_id, align);
             out += '# '+amr_alignment.readible()+'\n';

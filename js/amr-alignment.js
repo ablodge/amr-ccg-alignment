@@ -70,8 +70,9 @@ class AMR_Alignment{
             c = this.alignment.substr(this.alignment.indexOf('#'));
         if (!this.is_connected())
             c += '# ✘disconnected ';
-        if (this.is_isomorphic())
-            c += '#  ✔sem args = syn args ';
+        let type = $(`sentence[amr-id='${this.amr_id}']`).attr('class');
+        if (type==='CCG' && !this.is_isomorphic())
+            c += '# ✘sem args!=syn args ';
         return '     '+c;
     }
 
@@ -133,8 +134,6 @@ class AMR_Alignment{
 
     is_isomorphic(){
         // number of semantic args equals the number of syntactic args
-        if($('args').length===0)
-            return false;
         if(!$.trim(this.clean().split('~')[0]) || !$.trim(this.clean().split('~')[1]))
             return false;
 

@@ -29,7 +29,7 @@ def generate_html(cl, amr_file, sent_file, template_file, html_file, name):
             <h1>{i}. </h1><input  amr-id ="{i}" type="text" class="cmdline"/>
             <button amr-id ="{i}" class="align">Add Alignment</button>
             <div amr-id ="{i}" class="btn-group"></div><br/>
-            <sentence amr-id ="{i}">{s}</sentence>
+            <sentence amr-id ="{i}" class="{name}">{s}</sentence>
             <amr amr-id ="{i}">{a}</amr>
             </div>
             """)
