@@ -71,8 +71,8 @@ class AMR_Alignment{
         if (!this.is_connected())
             c += '# ✘disconnected ';
         let type = $(`sentence[amr-id='${this.amr_id}']`).attr('class');
-        if (type==='CCG' && !this.is_isomorphic())
-            c += '# ✘sem args!=syn args ';
+        if (type==='CCG' && this.is_isomorphic())
+            c += '# ✓sem args = syn args ';
         return '     '+c;
     }
 

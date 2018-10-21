@@ -1,0 +1,27 @@
+table.visccg { text-align: center; margin: 20px auto;
+
+	border-collapse: separate; border-spacing: 30px 0px; }
+
+table.visccg td { position: relative; }
+
+/*table.visccg td:not(.constit) { font-weight: bold; color: #0ae !*#f70*!; } !* words *!*/
+
+table.visccg td.constit { border: none; white-space: nowrap; }
+
+table.visccg td.ccg-parse:hover { /*color: #f07;*/ background-color: #0ee0ee; }
+
+table.visccg td.ccg-parse { color: grey; }
+
+/*table.visccg td.constit .sem { color: #f93; !*#6d9*! !*#96c*! } !* semantics *!*/
+
+table.visccg.wordsbelow td.constit { border-bottom: solid 1px grey; }
+
+table.visccg.wordsabove td.constit { border-top: solid 1px grey; }
+
+table.visccg span.combinator { font-size: 80%; min-width: 25px; 
+
+	border-radius: 5px; background-color: #777; color: #fff; }
+
+table.visccg.wordsbelow span.combinator { position: absolute; bottom: -8px; right: -25px; }
+
+table.visccg.wordsabove span.combinator { position: absolute; top: -8px; right: -25px; }

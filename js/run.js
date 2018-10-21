@@ -129,6 +129,10 @@ function download(){
             .replace(/<.*?>/g,'');
         amr = comment_out(amr);
         let sent = $(`sentence[amr-id='${amr_id}']`).html()
+            .replace(/<sub>/g,'[')
+            .replace(/<\/sub>/g,']')
+            .replace(/<tr class="expand".*?<\/tr>/g,'')
+            .replace(/<button .*?<\/button>/g,'')
             .replace(/<.*?>/g,'')
             .replace(/ /g,'\t');
         sent = comment_out(sent);
@@ -224,6 +228,21 @@ $(document).ready(function () {
             add_alignment(amr_id,alignment);
         }
     }).attr("on", "0");
+    $("button.expand").on({
+        click:function(){
+            let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
+            let elem = $(`sentence[amr-id='${amr_id}'] tr.expand`);
+            if (elem.css('display')==='none'){
+                elem.css('display','');
+                $(this).text('CCG parse ▼');
+            }
+            else {
+                elem.css('display','none');
+                $(this).text('CCG parse ▲');
+            }
+        }
+    });
+    $('tr.expand').css('display','none');
 });
 
 

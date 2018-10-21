@@ -70,8 +70,9 @@ class AMR_Alignment{
             c = this.alignment.substr(this.alignment.indexOf('#'));
         if (!this.is_connected())
             c += '# ✘disconnected ';
-        if (this.is_isomorphic())
-            c += '#  ✔sem args = syn args ';
+        let type = $(`sentence[amr-id='${this.amr_id}']`).attr('class');
+        if (type==='CCG' && this.is_isomorphic())
+            c += '# ✓sem args = syn args ';
         return '     '+c;
     }
 
@@ -133,8 +134,6 @@ class AMR_Alignment{
 
     is_isomorphic(){
         // number of semantic args equals the number of syntactic args
-        if($('args').length===0)
-            return false;
         if(!$.trim(this.clean().split('~')[0]) || !$.trim(this.clean().split('~')[1]))
             return false;
 
@@ -391,14 +390,14 @@ function download(){
     });
 
     let comment_out = function(string){
-        string = string.replace(/<.*?>/g,'')
-        string = $.trim(string)
+        string = string.replace(/<.*?>/g,'');
+        string = $.trim(string);
         split = string.split('\n');
         comment = '';
         for (let s of split)
             comment += '# '+s+'\n'
         return comment;
-    }
+    };
 
     let out = "";
     for (let amr_id in aligns){
@@ -406,13 +405,18 @@ function download(){
             .replace(/<.*?>/g,'');
         amr = comment_out(amr);
         let sent = $(`sentence[amr-id='${amr_id}']`).html()
+            .replace(/<sub>/g,'[')
+            .replace(/<\/sub>/g,']')
+            .replace(/<tr class="expand".*?<\/tr>/g,'')
+            .replace(/<button .*?<\/button>/g,'')
             .replace(/<.*?>/g,'')
             .replace(/ /g,'\t');
         sent = comment_out(sent);
+        let sent_type = $(`sentence[amr-id='${amr_id}']`).attr('class');
         out += '#'+amr_id+'\n';
         out += '# AMR:\n'+amr;
-        out += '# CCG:\n'+sent;
-        out += '# Alignments:\n'
+        out += `# ${sent_type}:\n`+sent;
+        out += '# Alignments:\n';
         for (let align of aligns[amr_id]){
             let amr_alignment = new AMR_Alignment(amr_id, align);
             out += '# '+amr_alignment.readible()+'\n';
@@ -500,6 +504,21 @@ $(document).ready(function () {
             add_alignment(amr_id,alignment);
         }
     }).attr("on", "0");
+    $("button.expand").on({
+        click:function(){
+            let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
+            let elem = $(`sentence[amr-id='${amr_id}'] tr.expand`);
+            if (elem.css('display')==='none'){
+                elem.css('display','');
+                $(this).text('CCG parse ▼');
+            }
+            else {
+                elem.css('display','none');
+                $(this).text('CCG parse ▲');
+            }
+        }
+    });
+    $('tr.expand').css('display','none');
 });
 
 
