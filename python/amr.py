@@ -1,6 +1,6 @@
 import re, sys, html
 sys.path.append("..")
-from utils.txt import *
+from python.txt import *
 
 
 class AMR(TXT):

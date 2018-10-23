@@ -101,10 +101,6 @@ math {
     font-family: "HelveticaNeue-Light", sans-serif;
 }
 
-.ccg-parse{
-    visibility: visible;
-}
-
 button.expand {
     background-color: #eee;
     border-radius: 20px;

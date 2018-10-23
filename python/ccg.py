@@ -1,7 +1,7 @@
 import re, sys, html
 
 sys.path.append("..")
-from utils.txt import *
+from python.txt import *
 
 
 class CCG_Lexical(TXT):
@@ -227,7 +227,7 @@ class CCG(CCG_Lexical):
         ccg_parse = ['<tr class="expand">'+''.join(c) +'</tr>\n' for c in constits]
         ccg_parse.reverse()
         html_elems = []
-        html_elems += ['<button class="expand">CCG parse ▲</button>']
+        html_elems += ['<button class="expand">CCG parse ▲</button><br/>']
         html_elems += ['<table class="visccg wordsbelow"><tbody>\n']
         html_elems += ccg_parse
         html_elems += ['<tr>\n'] + tags + ['</tr>\n']

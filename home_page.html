@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/home_page.css">
+<script src="home_page.js"></script>
+<script type="text/javascript"
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython.js">
+</script>
+</head>
+<body onload="brython()">
+<center><h1>Welcome to the AMR-Anything Aligner Tool</h1></center>
+<center>
+<div class='instructions'>
+<h3>*currently support for AMR-Sentence and AMR-CCG</h3>
+<br/>
+<h2>Instructions</h2>
+<div name="description">Choose a type of data to align.</div>
+<br/><br/>
+<div class="btn-group options">
+  <button type="button" class="choice amr-text">AMR-Sentence</button>
+  <button type="button" class="choice amr-ccg">AMR-CCG</button>
+  <button type="button" class="choice amr-ud">AMR-UD</button>
+  <button type="button" class="choice amr-amr">AMR-AMR</button>
+</div> 
+<br/>
+<h3>Upload data.</h3>
+All data formats should have examples separated by empty lines.<br/>
+<b>AMR data</b>: the standard format (with parentheses)<br/>
+<b>Sentence data</b>: tokens separated by spaces<br/>
+<b>CCG data</b>: CCGbank machine-readible format<br/>
+<b>UD data</b>: CoNLL format<br/>
+<br/>
+<div class="btn-group options">
+  <button type="button" class="amr-upload">Upload AMRs</button>
+  <button type="button" class="any-upload">Upload Anything</button>
+</div> 
+<br/>
+<div class="options">
+  <input type="file" class="amr-upload">
+  <input type="file" class="any-upload">
+</div>
+<br/>
+<div class="btn-group options">
+  <button type="button" class="launch">Launch</button>
+</div> 
+<br/>
+</div>
+</center>
+<script type="text/python" src="test.py"/>
+</body>
+</html> 

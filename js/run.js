@@ -128,7 +128,7 @@ function download(){
         let amr = $(`amr[amr-id='${amr_id}']`).html()
             .replace(/<.*?>/g,'');
         amr = comment_out(amr);
-        let sent = $(`sentence[amr-id='${amr_id}']`).html()
+        let sent = $(`anything[amr-id='${amr_id}']`).html()
             .replace(/<sub>/g,'[')
             .replace(/<\/sub>/g,']')
             .replace(/<tr class="expand".*?<\/tr>/g,'')
@@ -136,7 +136,7 @@ function download(){
             .replace(/<.*?>/g,'')
             .replace(/ /g,'\t');
         sent = comment_out(sent);
-        let sent_type = $(`sentence[amr-id='${amr_id}']`).attr('class');
+        let sent_type = $(`anything[amr-id='${amr_id}']`).attr('class');
         out += '#'+amr_id+'\n';
         out += '# AMR:\n'+amr;
         out += `# ${sent_type}:\n`+sent;
@@ -163,9 +163,10 @@ function load(){
     let f = new FileReader();
     f.onload = function(e) {
         let text = e.target.result;
-        text = text.replace('\r','');
-        text = text.split(/\n\n+/);
+        text = text.replace(/\r/g,'').replace(/\n\n+/g,'\n\n');
+        text = text.split('\n\n');
         for (let t of text){
+            alert(t);
             t = $.trim(t);
             let amr_id = /^#[0-9]+/.exec(t)[0];
             amr_id = amr_id.replace('#','');
@@ -175,7 +176,7 @@ function load(){
                     continue;
                 if ($.trim(line).startsWith('#'))
                     continue;
-                align = $.trim(line);
+                let align = $.trim(line);
                 add_alignment(amr_id, align);
             }
         }
@@ -231,7 +232,7 @@ $(document).ready(function () {
     $("button.expand").on({
         click:function(){
             let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
-            let elem = $(`sentence[amr-id='${amr_id}'] tr.expand`);
+            let elem = $(`anything[amr-id='${amr_id}'] tr.expand`);
             if (elem.css('display')==='none'){
                 elem.css('display','');
                 $(this).text('CCG parse ▼');

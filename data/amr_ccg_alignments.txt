@@ -1,0 +1,1322 @@
+#1
+1 ~ q     # (converted from ud)
+10 ~ b2     # (converted from ud)
+16 ~ t     # (converted from ud)
+18 ~ t2     # (converted from ud)
+6 ~ w     # (converted from ud)
+14 ~ d     # (converted from ud)
+
+#3
+7 ~ b b_:ARG1_t     # Predicate (converted from ud)
+5 ~ t     # (converted from ud)
+
+#4
+11 ~ m2     # (converted from ud)
+7 ~ e2 a6_:mod_e2     # Modifier (converted from ud)
+20 ~ p3     # (converted from ud)
+0 ~ c c_:ARG1_a     # Predicate (converted from ud)
+19 ~ g p3_:mod_g     # Modifier (converted from ud)
+15 ~ h     # (converted from ud)
+5 ~ m     # (converted from ud)
+17 ~ n p3_:mod_n     # Modifier (converted from ud)
+24 ~ p u_:mod_p     # Modifier (converted from ud)
+9 ~ w m2_:mod_w     # Modifier (converted from ud)
+
+#5
+8 ~ s3     # (converted from ud)
+9 ~ h h_:ARG0_o     # Predicate (converted from ud)
+5 ~ s     # (converted from ud)
+
+#7
+11 ~ c     # (converted from ud)
+16 ~ b     # (converted from ud)
+8 ~ e     # (converted from ud)
+2 ~ f f_:ARG2_m     # Predicate (converted from ud)
+1 ~ m     # (converted from ud)
+4 ~ m     # (converted from ud)
+13 ~ p     # (converted from ud)
+7 ~ m2 e_:mod_m2     # Modifier (converted from ud)
+
+#8
+6 ~ f r_:mod_f     # Modifier (converted from ud)
+0 ~ h     # (converted from ud)
+18 ~ d3     # (converted from ud)
+3 ~ s s_:ARG1_e     # Predicate (converted from ud)
+7 ~ r     # (converted from ud)
+11 ~ s2     # (converted from ud)
+1 ~ d2 d2_:ARG0_h d2_:ARG1_s     # Predicate (converted from ud)
+
+#9
+5 ~ p2     # (converted from ud)
+4 ~ c p2_:mod_c     # Modifier (converted from ud)
+6 ~ e     # (converted from ud)
+1 ~ l     # (converted from ud)
+10 ~ t     # (converted from ud)
+
+#10
+25 ~ a     # (converted from ud)
+12 ~ e     # (converted from ud)
+6 ~ k     # (converted from ud)
+10 ~ e2     # (converted from ud)
+17 ~ s     # (converted from ud)
+
+#11
+2 ~ d2     # (converted from ud)
+25 ~ c s_:mod_c     # Modifier (converted from ud)
+12 ~ d     # (converted from ud)
+7 ~ m m_:ARG1_d3     # Predicate (converted from ud)
+16 ~ q     # (converted from ud)
+
+#12
+5 ~ e     # (converted from ud)
+3 ~ o o_:ARG0_s2     # Predicate (converted from ud)
+6 ~ s s_:ARG0_e s_:ARG1_r     # Predicate (converted from ud)
+7 ~ r r_:ARG0_e r_:ARG1_p     # Predicate (converted from ud)
+9 ~ w     # (converted from ud)
+4 ~ e2 e_:mod_e2     # Modifier (converted from ud)
+
+#13
+1 ~ f2     # (converted from ud)
+0 ~ d f2_:mod_d     # Modifier (converted from ud)
+4 ~ f f_:ARG0_i f_:ARG1_w     # Predicate (converted from ud)
+3 ~ i     # (converted from ud)
+12 ~ m     # (converted from ud)
+6 ~ s     # (converted from ud)
+9 ~ w     # (converted from ud)
+17 ~ h     # (converted from ud)
+
+#14
+6 ~ t2 m_:mod_t2     # Modifier (converted from ud)
+24 ~ o2 o2_:ARG0_c     # Predicate (converted from ud)
+14 ~ a     # (converted from ud)
+8 ~ h t3_:mod_h     # Modifier (converted from ud)
+9 ~ m     # (converted from ud)
+9 ~ m2     # (converted from ud)
+9 ~ m3     # (converted from ud)
+8 ~ t3 m_:mod_t3     # Modifier (converted from ud)
+20 ~ s     # (converted from ud)
+4 ~ y     # (converted from ud)
+
+#15
+23 ~ c     # (converted from ud)
+4 ~ b     # (converted from ud)
+14 ~ f l2_:mod_f     # Modifier (converted from ud)
+11 ~ m l2_:mod_m     # Modifier (converted from ud)
+28 ~ f3     # (converted from ud)
+0 ~ l     # (converted from ud)
+9 ~ l4     # (converted from ud)
+6 ~ r     # (converted from ud)
+15 ~ l2     # (converted from ud)
+26 ~ f2     # (converted from ud)
+8 ~ a2 l4_:mod_a2     # Modifier (converted from ud)
+20 ~ l3 b2_:mod_l3     # Modifier (converted from ud)
+
+#16
+
+#17
+25 ~ d2     # (converted from ud)
+14 ~ o2 o2_:ARG1_g     # Predicate (converted from ud)
+16 ~ c3 c3_:ARG0_p c3_:ARG1_m     # Predicate (converted from ud)
+23 ~ c4     # (converted from ud)
+20 ~ d m_:mod_d     # Modifier (converted from ud)
+18 ~ i m_:mod_i     # Modifier (converted from ud)
+21 ~ m     # (converted from ud)
+6 ~ l     # (converted from ud)
+7 ~ l2 d3_:mod_l2     # Modifier (converted from ud)
+
+#18
+7 ~ l     # (converted from ud)
+3 ~ w     # (converted from ud)
+
+#19
+17 ~ s2 r3_:mod_s2     # Modifier (converted from ud)
+12 ~ a4     # (converted from ud)
+19 ~ a6 a6_:ARG0_p     # Predicate (converted from ud)
+7 ~ a a_:ARG1_e     # Predicate (converted from ud)
+4 ~ e     # (converted from ud)
+18 ~ r3     # (converted from ud)
+15 ~ m     # (converted from ud)
+26 ~ w     # (converted from ud)
+
+#20
+4 ~ g     # (converted from ud)
+2 ~ h m_:mod_h     # Modifier (converted from ud)
+7 ~ r     # (converted from ud)
+
+#21
+7 ~ d t_:mod_d     # Modifier (converted from ud)
+1 ~ l     # (converted from ud)
+5 ~ p     # (converted from ud)
+2 ~ s s_:ARG0_l s_:ARG1_p     # Predicate (converted from ud)
+8 ~ t     # (converted from ud)
+
+#22
+1 ~ t     # (converted from ud)
+
+#23
+10 ~ p2     # (converted from ud)
+12 ~ a     # (converted from ud)
+4 ~ c     # (converted from ud)
+8 ~ f f_:ARG1_c f_:ARG2_p2     # Predicate (converted from ud)
+1 ~ s s_:ARG0_p s_:ARG1_f     # Predicate (converted from ud)
+12 ~ c2     # (converted from ud)
+
+#24
+1 ~ c     # (converted from ud)
+6 ~ f     # (converted from ud)
+12 ~ s     # (converted from ud)
+9 ~ w     # (converted from ud)
+
+#25
+29 ~ s3     # (converted from ud)
+6 ~ s2 s2_:ARG0_p s2_:ARG1_b     # Predicate (converted from ud)
+14 ~ m2     # (converted from ud)
+13 ~ p2     # (converted from ud)
+20 ~ p3     # (converted from ud)
+5 ~ c     # (converted from ud)
+9 ~ b b_:ARG0_m2 b_:ARG1_c2     # Predicate (converted from ud)
+18 ~ g g_:ARG0_c2 g_:ARG1_p3     # Predicate (converted from ud)
+19 ~ f p3_:mod_f     # Modifier (converted from ud)
+27 ~ t2     # (converted from ud)
+3 ~ s s_:ARG0_n s_:ARG1_s2     # Predicate (converted from ud)
+24 ~ t     # (converted from ud)
+
+#26
+22 ~ d3     # (converted from ud)
+15 ~ s3     # (converted from ud)
+27 ~ c3     # (converted from ud)
+6 ~ p3     # (converted from ud)
+4 ~ i i_:ARG0_p i_:ARG1_p2     # Predicate (converted from ud)
+1 ~ o     # (converted from ud)
+2 ~ s s_:ARG0_p4 s_:ARG1_i     # Predicate (converted from ud)
+14 ~ n2 s3_:mod_n2     # Modifier (converted from ud)
+14 ~ n4 w_:mod_n4     # Modifier (converted from ud)
+
+#27
+
+#28
+1 ~ f f_:ARG0_c f_:ARG1_o     # Predicate (converted from ud)
+3 ~ r o_:mod_r     # Modifier (converted from ud)
+
+#29
+18 ~ p2     # (converted from ud)
+10 ~ m     # (converted from ud)
+17 ~ m3 m3_:ARG1_s2     # Predicate (converted from ud)
+12 ~ m2     # (converted from ud)
+4 ~ d2     # (converted from ud)
+
+#30
+9 ~ e     # (converted from ud)
+3 ~ e e_:ARG1_w     # Predicate (converted from ud)
+14 ~ d2 c4_:mod_d2     # Modifier (converted from ud)
+7 ~ w     # (converted from ud)
+2 ~ n3     # (converted from ud)
+15 ~ c4     # (converted from ud)
+
+#31
+4 ~ c     # (converted from ud)
+10 ~ h2     # (converted from ud)
+5 ~ h h_:ARG0_c h_:ARG1_l     # Predicate (converted from ud)
+8 ~ o     # (converted from ud)
+1 ~ s s_:ARG0_p2 s_:ARG1_h     # Predicate (converted from ud)
+3 ~ t c_:mod_t     # Modifier (converted from ud)
+13 ~ s2     # (converted from ud)
+
+#32
+9 ~ h     # (converted from ud)
+6 ~ t2 s_:mod_t2     # Modifier (converted from ud)
+19 ~ o     # (converted from ud)
+14 ~ p     # (converted from ud)
+7 ~ s     # (converted from ud)
+0 ~ t t_:ARG0_w     # Predicate (converted from ud)
+
+#33
+24 ~ d3     # (converted from ud)
+12 ~ m2 h_:mod_m2     # Modifier (converted from ud)
+20 ~ v2     # (converted from ud)
+19 ~ a2 v2_:mod_a2     # Modifier (converted from ud)
+23 ~ c2 c2_:ARG1_t     # Predicate (converted from ud)
+5 ~ i     # (converted from ud)
+13 ~ h     # (converted from ud)
+22 ~ o d3_:mod_o     # Modifier (converted from ud)
+10 ~ p     # (converted from ud)
+
+#34
+2 ~ a a_:ARG0_o2 a_:ARG1_t     # Predicate (converted from ud)
+12 ~ e     # (converted from ud)
+5 ~ d     # (converted from ud)
+9 ~ i i_:ARG0_o2 i_:ARG1_e     # Predicate (converted from ud)
+7 ~ t2     # (converted from ud)
+11 ~ s s_:ARG0_o2     # Predicate (converted from ud)
+
+#35
+2 ~ c     # (converted from ud)
+5 ~ b     # (converted from ud)
+9 ~ p     # (converted from ud)
+3 ~ s s_:ARG0_c s_:ARG1_l     # Predicate (converted from ud)
+7 ~ u u_:ARG0_a     # Predicate (converted from ud)
+15 ~ t     # (converted from ud)
+11 ~ c2     # (converted from ud)
+
+#36
+
+#37
+
+#38
+5 ~ a2 a2_:ARG0_m a2_:ARG1_c2     # Predicate (converted from ud)
+12 ~ c3     # (converted from ud)
+7 ~ c2     # (converted from ud)
+18 ~ c5     # (converted from ud)
+27 ~ d     # (converted from ud)
+3 ~ m     # (converted from ud)
+20 ~ s x1_:mod_s     # Modifier (converted from ud)
+6 ~ r c2_:mod_r     # Modifier (converted from ud)
+21 ~ v     # (converted from ud)
+
+#39
+
+#40
+20 ~ s3     # (converted from ud)
+9 ~ s2 s2_:ARG0_g s2_:ARG1_m     # Predicate (converted from ud)
+12 ~ p2     # (converted from ud)
+2 ~ g2     # (converted from ud)
+15 ~ c5 c4_:mod_c5     # Modifier (converted from ud)
+17 ~ c4     # (converted from ud)
+16 ~ f c4_:mod_f     # Modifier (converted from ud)
+7 ~ i     # (converted from ud)
+19 ~ m m_:ARG1_p m_:ARG2_s3     # Predicate (converted from ud)
+18 ~ o m_:mod_o     # Modifier (converted from ud)
+24 ~ p p_:ARG0_c2 p_:ARG1_c4     # Predicate (converted from ud)
+26 ~ w     # (converted from ud)
+25 ~ n4 w_:mod_n4     # Modifier (converted from ud)
+
+#41
+25 ~ f2     # (converted from ud)
+24 ~ f3 f2_:mod_f3     # Modifier (converted from ud)
+12 ~ a f_:mod_a     # Modifier (converted from ud)
+19 ~ c3 c3_:ARG0_f c3_:ARG1_c4     # Predicate (converted from ud)
+9 ~ c2 u_:mod_c2     # Modifier (converted from ud)
+21 ~ c4     # (converted from ud)
+1 ~ p3     # (converted from ud)
+6 ~ p2 p2_:ARG0_p3 p2_:ARG1_u     # Predicate (converted from ud)
+13 ~ f     # (converted from ud)
+17 ~ l     # (converted from ud)
+10 ~ u     # (converted from ud)
+8 ~ y c2_:mod_y     # Modifier (converted from ud)
+
+#42
+2 ~ a d_:mod_a     # Modifier (converted from ud)
+11 ~ e     # (converted from ud)
+3 ~ d     # (converted from ud)
+15 ~ s     # (converted from ud)
+9 ~ c2 c2_:ARG0_m c2_:ARG1_e     # Predicate (converted from ud)
+
+#43
+
+#44
+4 ~ b b_:ARG1_d b_:ARG2_i     # Predicate (converted from ud)
+2 ~ d     # (converted from ud)
+8 ~ m     # (converted from ud)
+1 ~ o x0_:mod_o     # Modifier (converted from ud)
+8 ~ d2     # (converted from ud)
+
+#45
+1 ~ p2     # (converted from ud)
+4 ~ c     # (converted from ud)
+6 ~ p p_:ARG1_p2     # Predicate (converted from ud)
+
+#46
+
+#47
+9 ~ l     # (converted from ud)
+3 ~ p     # (converted from ud)
+4 ~ r r_:ARG0_p r_:ARG1_l     # Predicate (converted from ud)
+0 ~ l3 w_:mod_l3     # Modifier (converted from ud)
+15 ~ n4     # (converted from ud)
+
+#48
+4 ~ h2     # (converted from ud)
+
+#49
+8 ~ m m_:ARG0_c m_:ARG1_b     # Predicate (converted from ud)
+15 ~ o o_:ARG1_c2 o_:ARG2_c4     # Predicate (converted from ud)
+2 ~ s s_:ARG0_p s_:ARG1_a     # Predicate (converted from ud)
+
+#50
+20 ~ s3 s3_:ARG1_a2     # Predicate (converted from ud)
+13 ~ a2     # (converted from ud)
+28 ~ c3     # (converted from ud)
+24 ~ c2 c2_:ARG0_c3     # Predicate (converted from ud)
+8 ~ c2 c2_:ARG0_c3     # Predicate (converted from ud)
+5 ~ e l_:mod_e     # Modifier (converted from ud)
+27 ~ p c3_:mod_p     # Modifier (converted from ud)
+23 ~ l2     # (converted from ud)
+
+#51
+9 ~ a a_:ARG1_f     # Predicate (converted from ud)
+8 ~ a3 d_:mod_a3     # Modifier (converted from ud)
+13 ~ d     # (converted from ud)
+6 ~ f     # (converted from ud)
+12 ~ p3 d_:mod_p3     # Modifier (converted from ud)
+25 ~ p5     # (converted from ud)
+22 ~ f2     # (converted from ud)
+5 ~ p p_:ARG1_p2     # Predicate (converted from ud)
+1 ~ s s_:ARG0_c s_:ARG1_a     # Predicate (converted from ud)
+10 ~ c3 c3_:ARG0_d     # Predicate (converted from ud)
+24 ~ n4 p5_:mod_n4     # Modifier (converted from ud)
+19 ~ d2     # (converted from ud)
+
+#52
+10 ~ b f_:mod_b     # Modifier (converted from ud)
+7 ~ e     # (converted from ud)
+12 ~ s2     # (converted from ud)
+2 ~ s s_:ARG1_p     # Predicate (converted from ud)
+9 ~ r r_:ARG0_a r_:ARG1_s2     # Predicate (converted from ud)
+3 ~ u     # (converted from ud)
+
+#53
+5 ~ c c_:ARG0_s c_:ARG1_a2     # Predicate (converted from ud)
+10 ~ b     # (converted from ud)
+7 ~ d     # (converted from ud)
+2 ~ f s_:mod_f     # Modifier (converted from ud)
+3 ~ s     # (converted from ud)
+13 ~ c2     # (converted from ud)
+
+#54
+
+#55
+15 ~ s2 s2_:ARG1_t s2_:ARG2_h     # Predicate (converted from ud)
+10 ~ c2     # (converted from ud)
+3 ~ i     # (converted from ud)
+18 ~ h     # (converted from ud)
+17 ~ n h_:mod_n     # Modifier (converted from ud)
+11 ~ s s_:ARG0_a     # Predicate (converted from ud)
+6 ~ r     # (converted from ud)
+
+#56
+2 ~ g2     # (converted from ud)
+16 ~ s3     # (converted from ud)
+15 ~ i a_:mod_i     # Modifier (converted from ud)
+8 ~ p     # (converted from ud)
+11 ~ s     # (converted from ud)
+18 ~ c2     # (converted from ud)
+10 ~ n2 s_:mod_n2     # Modifier (converted from ud)
+
+#57
+1 ~ d     # (converted from ud)
+0 ~ i p_:mod_i     # Modifier (converted from ud)
+4 ~ i2     # (converted from ud)
+2 ~ w w_:ARG0_p w_:ARG1_i2     # Predicate (converted from ud)
+
+#58
+14 ~ s2 s2_:ARG0_s s2_:ARG1_o     # Predicate (converted from ud)
+11 ~ m2 a_:mod_m2     # Modifier (converted from ud)
+23 ~ a     # (converted from ud)
+21 ~ f f_:ARG0_c2 f_:ARG1_a     # Predicate (converted from ud)
+11 ~ m s_:mod_m     # Modifier (converted from ud)
+0 ~ l w_:mod_l     # Modifier (converted from ud)
+17 ~ o o_:ARG1_c2 o_:ARG2_o2     # Predicate (converted from ud)
+8 ~ n     # (converted from ud)
+9 ~ q q_:ARG0_n q_:ARG1_s q_:ARG2_s2     # Predicate (converted from ud)
+12 ~ s     # (converted from ud)
+18 ~ r r_:ARG0_c2 r_:ARG1_c     # Predicate (converted from ud)
+26 ~ y     # (converted from ud)
+
+#59
+8 ~ e     # (converted from ud)
+7 ~ g g_:ARG0_p g_:ARG1_e     # Predicate (converted from ud)
+2 ~ p     # (converted from ud)
+5 ~ r r_:ARG1_p r_:ARG2_g     # Predicate (converted from ud)
+11 ~ y     # (converted from ud)
+
+#60
+1 ~ t2     # (converted from ud)
+
+#61
+5 ~ b b_:ARG1_m     # Predicate (converted from ud)
+3 ~ m     # (converted from ud)
+3 ~ m2     # (converted from ud)
+9 ~ v     # (converted from ud)
+
+#62
+2 ~ p     # (converted from ud)
+5 ~ r r_:ARG0_p r_:ARG1_p2     # Predicate (converted from ud)
+
+#64
+5 ~ d d_:ARG0_c d_:ARG1_g d_:ARG2_s     # Predicate (converted from ud)
+7 ~ g     # (converted from ud)
+11 ~ p     # (converted from ud)
+9 ~ s     # (converted from ud)
+13 ~ t     # (converted from ud)
+15 ~ w     # (converted from ud)
+
+#65
+
+#66
+4 ~ w2     # (converted from ud)
+0 ~ w     # (converted from ud)
+7 ~ t     # (converted from ud)
+
+#67
+
+#68
+18 ~ w2     # (converted from ud)
+21 ~ d2     # (converted from ud)
+5 ~ c3     # (converted from ud)
+8 ~ c5     # (converted from ud)
+16 ~ p     # (converted from ud)
+
+#69
+3 ~ e e_:ARG1_t e_:ARG2_c     # Predicate (converted from ud)
+5 ~ e     # (converted from ud)
+12 ~ d d_:ARG0_c d_:ARG1_s2     # Predicate (converted from ud)
+14 ~ s2     # (converted from ud)
+1 ~ s s_:ARG0_c s_:ARG1_e     # Predicate (converted from ud)
+10 ~ t     # (converted from ud)
+
+#70
+20 ~ a     # (converted from ud)
+18 ~ f f_:ARG0_i f_:ARG1_a     # Predicate (converted from ud)
+1 ~ i     # (converted from ud)
+16 ~ m     # (converted from ud)
+12 ~ s     # (converted from ud)
+19 ~ r r_:ARG2_t     # Predicate (converted from ud)
+15 ~ c2 c2_:ARG0_i c2_:ARG1_m     # Predicate (converted from ud)
+
+#71
+18 ~ p2     # (converted from ud)
+5 ~ g     # (converted from ud)
+7 ~ h     # (converted from ud)
+12 ~ k     # (converted from ud)
+0 ~ p     # (converted from ud)
+20 ~ c3 c2_:mod_c3     # Modifier (converted from ud)
+14 ~ o2     # (converted from ud)
+
+#72
+14 ~ i     # (converted from ud)
+15 ~ h h_:ARG0_p2     # Predicate (converted from ud)
+18 ~ t2 p2_:mod_t2     # Modifier (converted from ud)
+19 ~ o o_:ARG1_t     # Predicate (converted from ud)
+3 ~ s s_:ARG1_p     # Predicate (converted from ud)
+5 ~ w     # (converted from ud)
+
+#73
+7 ~ m     # (converted from ud)
+4 ~ w2     # (converted from ud)
+
+#74
+
+#75
+
+#76
+3 ~ c3     # (converted from ud)
+
+#77
+
+#78
+10 ~ w3     # (converted from ud)
+12 ~ w2     # (converted from ud)
+2 ~ b2 b2_:ARG0_c b2_:ARG1_a     # Predicate (converted from ud)
+19 ~ s2     # (converted from ud)
+6 ~ g2     # (converted from ud)
+22 ~ a5     # (converted from ud)
+21 ~ c2 a5_:mod_c2     # Modifier (converted from ud)
+3 ~ a     # (converted from ud)
+5 ~ k w_:mod_k     # Modifier (converted from ud)
+16 ~ o     # (converted from ud)
+9 ~ p w3_:mod_p     # Modifier (converted from ud)
+10 ~ w     # (converted from ud)
+1 ~ b b_:ARG0_c b_:ARG1_b2     # Predicate (converted from ud)
+
+#79
+0 ~ a     # (converted from ud)
+2 ~ c w_:mod_c     # Modifier (converted from ud)
+3 ~ w     # (converted from ud)
+
+#80
+0 ~ m     # (converted from ud)
+1 ~ t     # (converted from ud)
+
+#81
+13 ~ c     # (converted from ud)
+10 ~ d     # (converted from ud)
+1 ~ s s_:ARG0_p3 s_:ARG1_r     # Predicate (converted from ud)
+6 ~ c2 c2_:ARG1_p4 c2_:ARG2_a     # Predicate (converted from ud)
+13 ~ c4     # (converted from ud)
+
+#82
+3 ~ c c_:ARG0_h c_:ARG1_m     # Predicate (converted from ud)
+5 ~ b s_:mod_b     # Modifier (converted from ud)
+0 ~ h     # (converted from ud)
+1 ~ n n_:ARG0_h n_:ARG1_c     # Predicate (converted from ud)
+6 ~ s     # (converted from ud)
+
+#83
+4 ~ h     # (converted from ud)
+3 ~ u h_:mod_u     # Modifier (converted from ud)
+
+#84
+4 ~ s     # (converted from ud)
+3 ~ r s_:mod_r     # Modifier (converted from ud)
+8 ~ t     # (converted from ud)
+10 ~ y     # (converted from ud)
+
+#85
+11 ~ d     # (converted from ud)
+1 ~ i     # (converted from ud)
+9 ~ s2     # (converted from ud)
+4 ~ i2     # (converted from ud)
+7 ~ m p_:mod_m     # Modifier (converted from ud)
+
+#86
+17 ~ c c_:ARG0_i2 c_:ARG1_t     # Predicate (converted from ud)
+2 ~ d     # (converted from ud)
+14 ~ i     # (converted from ud)
+18 ~ t2     # (converted from ud)
+6 ~ p     # (converted from ud)
+9 ~ r m_:mod_r     # Modifier (converted from ud)
+19 ~ t     # (converted from ud)
+8 ~ w     # (converted from ud)
+
+#87
+12 ~ r2     # (converted from ud)
+7 ~ r r_:ARG1_c     # Predicate (converted from ud)
+6 ~ w     # (converted from ud)
+
+#88
+14 ~ e e_:ARG0_p2     # Predicate (converted from ud)
+12 ~ p3     # (converted from ud)
+11 ~ i p3_:mod_i     # Modifier (converted from ud)
+3 ~ s     # (converted from ud)
+14 ~ a2 e_:mod_a2     # Modifier (converted from ud)
+18 ~ w w_:ARG0_p2 w_:ARG1_e     # Predicate (converted from ud)
+7 ~ s2     # (converted from ud)
+
+#89
+10 ~ e e_:ARG1_m     # Predicate (converted from ud)
+1 ~ m     # (converted from ud)
+7 ~ m     # (converted from ud)
+8 ~ r r_:ARG1_m     # Predicate (converted from ud)
+4 ~ t     # (converted from ud)
+
+#90
+3 ~ i     # (converted from ud)
+4 ~ t t_:ARG0_i t_:ARG1_c     # Predicate (converted from ud)
+7 ~ y     # (converted from ud)
+
+#94
+2 ~ a     # (converted from ud)
+10 ~ i     # (converted from ud)
+9 ~ o a_:mod_o     # Modifier (converted from ud)
+4 ~ p p_:mod_p     # Modifier (converted from ud)
+0 ~ o2 i_:mod_o2     # Modifier (converted from ud)
+1 ~ o2 i_:mod_o2     # Modifier (converted from ud)
+
+#95
+13 ~ e     # (converted from ud)
+0 ~ i     # (converted from ud)
+10 ~ s2     # (converted from ud)
+7 ~ s s_:ARG0_y s_:ARG1_s2     # Predicate (converted from ud)
+1 ~ t t_:ARG0_i t_:ARG1_s     # Predicate (converted from ud)
+3 ~ y     # (converted from ud)
+
+#96
+3 ~ m m_:ARG0_p m_:ARG1_t2     # Predicate (converted from ud)
+
+#97
+7 ~ p2     # (converted from ud)
+18 ~ i e2_:mod_i     # Modifier (converted from ud)
+16 ~ i3 a2_:mod_i3     # Modifier (converted from ud)
+5 ~ s s_:ARG0_y s_:ARG1_a2     # Predicate (converted from ud)
+10 ~ a3     # (converted from ud)
+2 ~ v v_:ARG0_y v_:ARG1_a2     # Predicate (converted from ud)
+0 ~ y     # (converted from ud)
+13 ~ c2 i3_:mod_c2     # Modifier (converted from ud)
+15 ~ o2 i3_:mod_o2     # Modifier (converted from ud)
+19 ~ e2 a2_:mod_e2     # Modifier (converted from ud)
+
+#98
+0 ~ c c_:ARG1_d c_:ARG2_a3     # Predicate (converted from ud)
+1 ~ i     # (converted from ud)
+10 ~ i2     # (converted from ud)
+18 ~ m     # (converted from ud)
+15 ~ b2     # (converted from ud)
+21 ~ r r_:ARG1_m     # Predicate (converted from ud)
+7 ~ a4 w_:mod_a4     # Modifier (converted from ud)
+14 ~ y     # (converted from ud)
+15 ~ n2     # (converted from ud)
+4 ~ y2     # (converted from ud)
+
+#99
+12 ~ p2     # (converted from ud)
+6 ~ d     # (converted from ud)
+9 ~ g g_:ARG1_p2 g_:ARG2_d     # Predicate (converted from ud)
+1 ~ i     # (converted from ud)
+5 ~ t t_:ARG0_y t_:ARG1_p     # Predicate (converted from ud)
+4 ~ y     # (converted from ud)
+
+#100
+0 ~ c     # (converted from ud)
+
+#101
+2 ~ c c_:ARG2_f     # Predicate (converted from ud)
+7 ~ f     # (converted from ud)
+0 ~ t     # (converted from ud)
+
+#102
+1 ~ h     # (converted from ud)
+5 ~ r     # (converted from ud)
+
+#103
+0 ~ t     # (converted from ud)
+
+#104
+19 ~ a a_:ARG0_o a_:ARG1_g     # Predicate (converted from ud)
+13 ~ r2     # (converted from ud)
+21 ~ g g_:ARG1_i     # Predicate (converted from ud)
+20 ~ i     # (converted from ud)
+1 ~ i     # (converted from ud)
+23 ~ i     # (converted from ud)
+17 ~ o     # (converted from ud)
+5 ~ s     # (converted from ud)
+7 ~ r     # (converted from ud)
+25 ~ w2 w2_:ARG0_i     # Predicate (converted from ud)
+15 ~ b2     # (converted from ud)
+3 ~ o3 o2_:mod_o3     # Modifier (converted from ud)
+
+#105
+0 ~ i     # (converted from ud)
+4 ~ a2     # (converted from ud)
+
+#106
+2 ~ c     # (converted from ud)
+0 ~ m     # (converted from ud)
+
+#107
+0 ~ h     # (converted from ud)
+6 ~ s     # (converted from ud)
+
+#108
+4 ~ g g_:ARG0_f g_:ARG1_t     # Predicate (converted from ud)
+1 ~ f     # (converted from ud)
+5 ~ t     # (converted from ud)
+9 ~ y     # (converted from ud)
+
+#109
+0 ~ c c_:ARG2_s     # Predicate (converted from ud)
+3 ~ h     # (converted from ud)
+6 ~ o     # (converted from ud)
+
+#110
+3 ~ f     # (converted from ud)
+9 ~ i2     # (converted from ud)
+12 ~ w     # (converted from ud)
+5 ~ y     # (converted from ud)
+
+#113
+6 ~ i     # (converted from ud)
+8 ~ o o_:ARG1_i     # Predicate (converted from ud)
+3 ~ s s_:ARG0_y s_:ARG1_o     # Predicate (converted from ud)
+1 ~ y     # (converted from ud)
+
+#114
+6 ~ a m_:mod_a     # Modifier (converted from ud)
+3 ~ c m2_:mod_c     # Modifier (converted from ud)
+8 ~ m     # (converted from ud)
+7 ~ o m_:mod_o     # Modifier (converted from ud)
+10 ~ a3     # (converted from ud)
+4 ~ m2     # (converted from ud)
+
+#115
+0 ~ i     # (converted from ud)
+1 ~ o o_:ARG1_i o_:ARG2_d     # Predicate (converted from ud)
+
+#116
+0 ~ i     # (converted from ud)
+5 ~ m     # (converted from ud)
+
+#117
+0 ~ i     # (converted from ud)
+7 ~ h     # (converted from ud)
+5 ~ m     # (converted from ud)
+2 ~ l l_:ARG0_i l_:ARG1_m     # Predicate (converted from ud)
+
+#118
+10 ~ v c2_:mod_v     # Modifier (converted from ud)
+0 ~ h     # (converted from ud)
+1 ~ s s_:ARG0_h s_:ARG1_p     # Predicate (converted from ud)
+11 ~ c2     # (converted from ud)
+
+#119
+4 ~ d     # (converted from ud)
+7 ~ t     # (converted from ud)
+11 ~ p     # (converted from ud)
+6 ~ c c_:ARG1_d c_:ARG2_p     # Predicate (converted from ud)
+
+#120
+8 ~ a     # (converted from ud)
+4 ~ i     # (converted from ud)
+
+#121
+2 ~ n     # (converted from ud)
+6 ~ w2 w2_:ARG1_y w2_:ARG2_i     # Predicate (converted from ud)
+1 ~ h2 h2_:ARG0_y h2_:ARG1_n     # Predicate (converted from ud)
+0 ~ y     # (converted from ud)
+
+#122
+0 ~ i     # (converted from ud)
+1 ~ w w_:ARG0_i w_:ARG1_g     # Predicate (converted from ud)
+3 ~ g g_:ARG0_i g_:ARG2_r     # Predicate (converted from ud)
+7 ~ w2     # (converted from ud)
+
+#123
+4 ~ t     # (converted from ud)
+11 ~ w     # (converted from ud)
+0 ~ i     # (converted from ud)
+8 ~ g g_:ARG0_i g_:ARG1_w g_:ARG2_h     # Predicate (converted from ud)
+2 ~ m m_:ARG0_i m_:ARG1_t     # Predicate (converted from ud)
+
+#124
+3 ~ k k_:ARG0_y k_:ARG1_t     # Predicate (converted from ud)
+5 ~ t     # (converted from ud)
+2 ~ y     # (converted from ud)
+
+#125
+7 ~ s2     # (converted from ud)
+1 ~ l     # (converted from ud)
+
+#126
+8 ~ s     # (converted from ud)
+10 ~ g     # (converted from ud)
+1 ~ s2     # (converted from ud)
+5 ~ t     # (converted from ud)
+
+#127
+0 ~ t d_:mod_t     # Modifier (converted from ud)
+11 ~ w     # (converted from ud)
+2 ~ i     # (converted from ud)
+
+#128
+2 ~ s     # (converted from ud)
+0 ~ a s_:mod_a     # Modifier (converted from ud)
+9 ~ p     # (converted from ud)
+8 ~ r p_:mod_r     # Modifier (converted from ud)
+
+#129
+6 ~ h     # (converted from ud)
+1 ~ h     # (converted from ud)
+8 ~ f f_:ARG0_h     # Predicate (converted from ud)
+3 ~ s s_:ARG1_h     # Predicate (converted from ud)
+
+#130
+3 ~ t     # (converted from ud)
+15 ~ a w_:mod_a     # Modifier (converted from ud)
+17 ~ w     # (converted from ud)
+12 ~ p p_:ARG0_t p_:ARG1_s p_:ARG2_w     # Predicate (converted from ud)
+0 ~ s     # (converted from ud)
+7 ~ u     # (converted from ud)
+13 ~ s     # (converted from ud)
+
+#131
+0 ~ i     # (converted from ud)
+10 ~ r     # (converted from ud)
+7 ~ h     # (converted from ud)
+
+#132
+7 ~ t t_:ARG0_h2     # Predicate (converted from ud)
+5 ~ h h_:ARG0_h2     # Predicate (converted from ud)
+0 ~ h2     # (converted from ud)
+
+#133
+3 ~ g2     # (converted from ud)
+5 ~ w     # (converted from ud)
+0 ~ i     # (converted from ud)
+
+#134
+6 ~ s s_:ARG1_i     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+3 ~ m m_:ARG1_i     # Predicate (converted from ud)
+
+#135
+13 ~ t     # (converted from ud)
+6 ~ p2     # (converted from ud)
+0 ~ t2     # (converted from ud)
+3 ~ m     # (converted from ud)
+
+#136
+16 ~ o     # (converted from ud)
+17 ~ i     # (converted from ud)
+17 ~ i     # (converted from ud)
+2 ~ p     # (converted from ud)
+9 ~ q     # (converted from ud)
+1 ~ l p_:mod_l     # Modifier (converted from ud)
+
+#137
+8 ~ s2 s2_:ARG1_y     # Predicate (converted from ud)
+2 ~ y     # (converted from ud)
+1 ~ a     # (converted from ud)
+
+#138
+6 ~ b b_:ARG1_t2     # Predicate (converted from ud)
+3 ~ t2     # (converted from ud)
+
+#139
+9 ~ c     # (converted from ud)
+7 ~ s2 s2_:ARG0_h s2_:ARG1_c     # Predicate (converted from ud)
+1 ~ s     # (converted from ud)
+1 ~ s     # (converted from ud)
+
+#140
+0 ~ p p_:ARG1_c     # Predicate (converted from ud)
+3 ~ c c_:ARG0_t     # Predicate (converted from ud)
+8 ~ s     # (converted from ud)
+6 ~ t t_:ARG0_h t_:ARG2_s     # Predicate (converted from ud)
+4 ~ h     # (converted from ud)
+11 ~ h     # (converted from ud)
+9 ~ e s_:mod_e     # Modifier (converted from ud)
+
+#141
+2 ~ y     # (converted from ud)
+3 ~ d2 d2_:ARG0_y d2_:ARG1_a     # Predicate (converted from ud)
+
+#142
+2 ~ t t_:ARG0_i t_:ARG1_f     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+13 ~ p     # (converted from ud)
+10 ~ t2     # (converted from ud)
+16 ~ u2     # (converted from ud)
+4 ~ f f_:ARG0_i f_:ARG1_u2     # Predicate (converted from ud)
+
+#143
+3 ~ t t_:ARG0_i t_:ARG1_m     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+7 ~ p     # (converted from ud)
+5 ~ m m_:ARG0_i m_:ARG1_t2     # Predicate (converted from ud)
+9 ~ t2 t2_:ARG1_p t2_:ARG2_l     # Predicate (converted from ud)
+11 ~ l     # (converted from ud)
+2 ~ c t_:mod_c     # Modifier (converted from ud)
+
+#144
+2 ~ t t_:ARG0_y t_:ARG1_o     # Predicate (converted from ud)
+11 ~ g2 d_:mod_g2     # Modifier (converted from ud)
+9 ~ h h_:ARG0_s h_:ARG1_g     # Predicate (converted from ud)
+7 ~ o o_:ARG1_s o_:ARG2_h     # Predicate (converted from ud)
+12 ~ d     # (converted from ud)
+14 ~ g     # (converted from ud)
+4 ~ t2 s_:mod_t2     # Modifier (converted from ud)
+5 ~ s     # (converted from ud)
+1 ~ y     # (converted from ud)
+
+#145
+2 ~ c c_:ARG0_h c_:ARG1_b     # Predicate (converted from ud)
+1 ~ h     # (converted from ud)
+
+#146
+11 ~ y2     # (converted from ud)
+1 ~ y     # (converted from ud)
+6 ~ t e_:mod_t     # Modifier (converted from ud)
+4 ~ r r_:ARG0_y r_:ARG1_b     # Predicate (converted from ud)
+7 ~ e     # (converted from ud)
+2 ~ o o_:ARG1_y o_:ARG2_r     # Predicate (converted from ud)
+0 ~ c c_:ARG2_o     # Predicate (converted from ud)
+9 ~ b     # (converted from ud)
+
+#147
+8 ~ b     # (converted from ud)
+7 ~ s3 b_:mod_s3     # Modifier (converted from ud)
+15 ~ c4     # (converted from ud)
+18 ~ d     # (converted from ud)
+1 ~ f g4_:mod_f     # Modifier (converted from ud)
+3 ~ s s_:ARG0_g4 s_:ARG1_s2     # Predicate (converted from ud)
+13 ~ l l_:ARG0_g3 l_:ARG1_c4     # Predicate (converted from ud)
+4 ~ s2     # (converted from ud)
+2 ~ g     # (converted from ud)
+
+#148
+2 ~ c     # (converted from ud)
+3 ~ d d_:ARG0_c d_:ARG1_t     # Predicate (converted from ud)
+7 ~ g     # (converted from ud)
+13 ~ s     # (converted from ud)
+10 ~ r     # (converted from ud)
+12 ~ r2 s_:mod_r2     # Modifier (converted from ud)
+16 ~ o2     # (converted from ud)
+
+#149
+14 ~ d2     # (converted from ud)
+12 ~ c     # (converted from ud)
+9 ~ s2     # (converted from ud)
+6 ~ e     # (converted from ud)
+7 ~ d d_:ARG0_p2 d_:ARG1_a     # Predicate (converted from ud)
+2 ~ r     # (converted from ud)
+8 ~ r3 r3_:ARG2_d3     # Predicate (converted from ud)
+
+#150
+1 ~ i     # (converted from ud)
+16 ~ e     # (converted from ud)
+5 ~ p     # (converted from ud)
+4 ~ d p_:mod_d     # Modifier (converted from ud)
+13 ~ c3     # (converted from ud)
+8 ~ b     # (converted from ud)
+8 ~ m     # (converted from ud)
+
+#151
+6 ~ n n_:ARG0_y n_:ARG1_p     # Predicate (converted from ud)
+5 ~ y     # (converted from ud)
+1 ~ b b_:ARG1_p b_:ARG2_a     # Predicate (converted from ud)
+
+#153
+2 ~ i     # (converted from ud)
+
+#154
+4 ~ w w_:ARG1_x1     # Predicate (converted from ud)
+0 ~ y     # (converted from ud)
+
+#155
+13 ~ a4 a4_:ARG0_c a4_:ARG1_o     # Predicate (converted from ud)
+1 ~ c     # (converted from ud)
+6 ~ a2 a2_:ARG0_c a2_:ARG1_s     # Predicate (converted from ud)
+11 ~ a3 a3_:ARG0_c a3_:ARG2_a4     # Predicate (converted from ud)
+9 ~ s     # (converted from ud)
+3 ~ r r_:ARG0_c r_:ARG1_a2 r_:ARG2_c     # Predicate (converted from ud)
+14 ~ o     # (converted from ud)
+10 ~ c     # (converted from ud)
+4 ~ c     # (converted from ud)
+
+#156
+6 ~ p p_:ARG1_a     # Predicate (converted from ud)
+
+#157
+10 ~ n     # (converted from ud)
+0 ~ h     # (converted from ud)
+7 ~ g     # (converted from ud)
+5 ~ s     # (converted from ud)
+3 ~ r r_:ARG0_p r_:ARG1_a     # Predicate (converted from ud)
+2 ~ p     # (converted from ud)
+9 ~ t n_:mod_t     # Modifier (converted from ud)
+12 ~ r2     # (converted from ud)
+
+#158
+2 ~ e e_:ARG0_h e_:ARG1_a e_:ARG2_f     # Predicate (converted from ud)
+0 ~ h     # (converted from ud)
+6 ~ a a_:ARG0_h a_:ARG1_c a_:ARG2_f     # Predicate (converted from ud)
+10 ~ i     # (converted from ud)
+4 ~ f     # (converted from ud)
+7 ~ f     # (converted from ud)
+3 ~ t f_:mod_t     # Modifier (converted from ud)
+
+#159
+14 ~ w2     # (converted from ud)
+9 ~ w     # (converted from ud)
+12 ~ e     # (converted from ud)
+2 ~ g     # (converted from ud)
+5 ~ p     # (converted from ud)
+11 ~ r r_:ARG0_p r_:ARG1_w2     # Predicate (converted from ud)
+
+#160
+5 ~ c c_:ARG0_s2 c_:ARG1_c2     # Predicate (converted from ud)
+14 ~ s2     # (converted from ud)
+9 ~ t2 t_:mod_t2     # Modifier (converted from ud)
+7 ~ c2     # (converted from ud)
+10 ~ s     # (converted from ud)
+
+#161
+1 ~ t     # (converted from ud)
+6 ~ w w_:ARG1_t w_:ARG2_s2     # Predicate (converted from ud)
+10 ~ s2 s2_:ARG0_w2     # Predicate (converted from ud)
+4 ~ t2     # (converted from ud)
+2 ~ s x0_:mod_s     # Modifier (converted from ud)
+
+#162
+6 ~ t     # (converted from ud)
+11 ~ c c_:ARG0_i c_:ARG1_c2     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+4 ~ o c2_:mod_o     # Modifier (converted from ud)
+1 ~ a2 h_:mod_a2     # Modifier (converted from ud)
+
+#163
+19 ~ c c_:ARG1_c3     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+3 ~ l     # (converted from ud)
+7 ~ r     # (converted from ud)
+6 ~ c2 c2_:ARG0_i     # Predicate (converted from ud)
+11 ~ m     # (converted from ud)
+
+#164
+5 ~ w2 w2_:ARG0_e     # Predicate (converted from ud)
+0 ~ w     # (converted from ud)
+4 ~ d     # (converted from ud)
+9 ~ e     # (converted from ud)
+
+#165
+2 ~ p2 e4_:mod_p2     # Modifier (converted from ud)
+16 ~ a     # (converted from ud)
+14 ~ l2     # (converted from ud)
+8 ~ r b_:mod_r     # Modifier (converted from ud)
+3 ~ e4     # (converted from ud)
+6 ~ p     # (converted from ud)
+11 ~ r2 r2_:ARG2_t4     # Predicate (converted from ud)
+
+#166
+13 ~ v v_:ARG0_d v_:ARG1_l2     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+8 ~ e     # (converted from ud)
+12 ~ d     # (converted from ud)
+17 ~ a2 v_:mod_a2     # Modifier (converted from ud)
+6 ~ o o_:ARG0_p2 o_:ARG1_e     # Predicate (converted from ud)
+16 ~ l2     # (converted from ud)
+
+#167
+11 ~ s4     # (converted from ud)
+6 ~ s2 s2_:ARG1_f     # Predicate (converted from ud)
+7 ~ f     # (converted from ud)
+1 ~ a2     # (converted from ud)
+
+#168
+3 ~ t     # (converted from ud)
+10 ~ a     # (converted from ud)
+8 ~ p3 t_:mod_p3     # Modifier (converted from ud)
+0 ~ h     # (converted from ud)
+0 ~ h     # (converted from ud)
+2 ~ m4 m4_:ARG0_h m4_:ARG1_a2     # Predicate (converted from ud)
+2 ~ m m_:ARG0_h m_:ARG1_t     # Predicate (converted from ud)
+17 ~ a2     # (converted from ud)
+11 ~ c c_:ARG1_p c_:ARG2_p2     # Predicate (converted from ud)
+
+#169
+4 ~ c c_:ARG0_p2 c_:ARG1_b     # Predicate (converted from ud)
+3 ~ p     # (converted from ud)
+
+#170
+9 ~ d d_:ARG1_y     # Predicate (converted from ud)
+1 ~ y     # (converted from ud)
+8 ~ y     # (converted from ud)
+6 ~ h     # (converted from ud)
+
+#171
+3 ~ s s_:ARG0_t s_:ARG1_i     # Predicate (converted from ud)
+2 ~ t     # (converted from ud)
+4 ~ i     # (converted from ud)
+
+#172
+3 ~ v t2_:mod_v     # Modifier (converted from ud)
+2 ~ h h_:ARG0_e h_:ARG1_s2     # Predicate (converted from ud)
+1 ~ e     # (converted from ud)
+7 ~ s2     # (converted from ud)
+4 ~ t2     # (converted from ud)
+6 ~ p     # (converted from ud)
+14 ~ v2 v2_:ARG2_q     # Predicate (converted from ud)
+0 ~ t e_:mod_t     # Modifier (converted from ud)
+0 ~ s t_:mod_s     # Modifier (converted from ud)
+11 ~ l l_:ARG2_l2     # Predicate (converted from ud)
+
+#173
+0 ~ n d_:mod_n     # Modifier (converted from ud)
+4 ~ p2 p2_:ARG1_d     # Predicate (converted from ud)
+8 ~ b     # (converted from ud)
+1 ~ d     # (converted from ud)
+7 ~ s b_:mod_s     # Modifier (converted from ud)
+5 ~ c c_:ARG1_p c_:ARG2_r     # Predicate (converted from ud)
+
+#174
+4 ~ u2     # (converted from ud)
+4 ~ u2     # (converted from ud)
+2 ~ f u2_:mod_f     # Modifier (converted from ud)
+9 ~ y p_:mod_y     # Modifier (converted from ud)
+4 ~ u     # (converted from ud)
+4 ~ u     # (converted from ud)
+10 ~ e     # (converted from ud)
+
+#175
+0 ~ f f_:ARG0_a2 f_:ARG1_p     # Predicate (converted from ud)
+2 ~ r     # (converted from ud)
+4 ~ h2     # (converted from ud)
+15 ~ a a_:ARG0_p a_:ARG1_p     # Predicate (converted from ud)
+
+#176
+11 ~ n n_:ARG0_g n_:ARG1_g3     # Predicate (converted from ud)
+15 ~ w     # (converted from ud)
+4 ~ i     # (converted from ud)
+5 ~ h h_:ARG0_i h_:ARG1_a h_:ARG2_g     # Predicate (converted from ud)
+13 ~ g3     # (converted from ud)
+9 ~ r r_:ARG0_g r_:ARG1_g3     # Predicate (converted from ud)
+7 ~ g2     # (converted from ud)
+
+#177
+3 ~ b2     # (converted from ud)
+3 ~ b     # (converted from ud)
+6 ~ p p_:ARG1_b2     # Predicate (converted from ud)
+2 ~ u b2_:mod_u     # Modifier (converted from ud)
+8 ~ l b_:mod_l     # Modifier (converted from ud)
+
+#178
+13 ~ e     # (converted from ud)
+7 ~ t     # (converted from ud)
+3 ~ h     # (converted from ud)
+9 ~ p     # (converted from ud)
+16 ~ d     # (converted from ud)
+6 ~ r t_:mod_r     # Modifier (converted from ud)
+12 ~ g t2_:mod_g     # Modifier (converted from ud)
+19 ~ s     # (converted from ud)
+
+#179
+4 ~ h     # (converted from ud)
+6 ~ y     # (converted from ud)
+0 ~ t2 h_:mod_t2     # Modifier (converted from ud)
+
+#180
+3 ~ l l_:ARG0_y l_:ARG1_t     # Predicate (converted from ud)
+8 ~ t     # (converted from ud)
+11 ~ b     # (converted from ud)
+5 ~ s     # (converted from ud)
+2 ~ y     # (converted from ud)
+
+#181
+2 ~ w w_:ARG0_h     # Predicate (converted from ud)
+8 ~ g g_:ARG0_h g_:ARG1_h2     # Predicate (converted from ud)
+11 ~ h2     # (converted from ud)
+7 ~ h     # (converted from ud)
+1 ~ h     # (converted from ud)
+4 ~ y     # (converted from ud)
+2 ~ w2 w2_:ARG0_y     # Predicate (converted from ud)
+5 ~ m m_:ARG1_w m_:ARG2_g     # Predicate (converted from ud)
+
+#182
+9 ~ s s_:ARG0_y s_:ARG1_i     # Predicate (converted from ud)
+1 ~ y     # (converted from ud)
+2 ~ l l_:ARG0_y     # Predicate (converted from ud)
+6 ~ w     # (converted from ud)
+5 ~ o2 w_:mod_o2     # Modifier (converted from ud)
+10 ~ i     # (converted from ud)
+7 ~ p p_:ARG1_s     # Predicate (converted from ud)
+
+#183
+1 ~ t t_:ARG0_i t_:ARG1_h     # Predicate (converted from ud)
+0 ~ i     # (converted from ud)
+2 ~ t2     # (converted from ud)
+10 ~ w     # (converted from ud)
+
+#184
+7 ~ k     # (converted from ud)
+9 ~ k2 k2_:ARG0_p     # Predicate (converted from ud)
+2 ~ k3     # (converted from ud)
+3 ~ p2     # (converted from ud)
+
+#185
+3 ~ t t_:ARG0_y t_:ARG1_t2     # Predicate (converted from ud)
+7 ~ s s_:ARG0_y s_:ARG1_t2 s_:ARG2_h     # Predicate (converted from ud)
+2 ~ y     # (converted from ud)
+4 ~ t2     # (converted from ud)
+8 ~ t2     # (converted from ud)
+10 ~ h     # (converted from ud)
+
+#186
+1 ~ g g_:ARG0_i g_:ARG1_l     # Predicate (converted from ud)
+3 ~ l l_:ARG0_p l_:ARG1_p2     # Predicate (converted from ud)
+8 ~ h     # (converted from ud)
+0 ~ i     # (converted from ud)
+
+#187
+3 ~ a     # (converted from ud)
+0 ~ y     # (converted from ud)
+4 ~ e a_:mod_e     # Modifier (converted from ud)
+6 ~ p p_:ARG1_a p_:ARG2_b     # Predicate (converted from ud)
+9 ~ b     # (converted from ud)
+
+#188
+3 ~ c c_:ARG1_y c_:ARG4_h     # Predicate (converted from ud)
+10 ~ b     # (converted from ud)
+2 ~ y     # (converted from ud)
+
+#189
+0 ~ i     # (converted from ud)
+7 ~ t     # (converted from ud)
+6 ~ r t_:mod_r     # Modifier (converted from ud)
+5 ~ c t_:mod_c     # Modifier (converted from ud)
+
+#190
+2 ~ e e_:ARG0_h e_:ARG1_a e_:ARG2_f     # Predicate (converted from ud)
+0 ~ h     # (converted from ud)
+6 ~ a a_:ARG0_h a_:ARG1_c a_:ARG2_f     # Predicate (converted from ud)
+10 ~ i     # (converted from ud)
+4 ~ f     # (converted from ud)
+7 ~ f     # (converted from ud)
+3 ~ t f_:mod_t     # Modifier (converted from ud)
+
+#191
+2 ~ q q_:ARG0_n q_:ARG1_s q_:ARG2_e     # Predicate (converted from ud)
+7 ~ s     # (converted from ud)
+6 ~ g2 g2_:ARG1_c     # Predicate (converted from ud)
+15 ~ e e_:ARG1_g3 e_:ARG2_a     # Predicate (converted from ud)
+13 ~ g4     # (converted from ud)
+19 ~ a     # (converted from ud)
+17 ~ h a_:mod_h     # Modifier (converted from ud)
+
+#192
+1 ~ c c_:ARG0_g c_:ARG1_l     # Predicate (converted from ud)
+7 ~ h h_:ARG0_c2 h_:ARG1_w2     # Predicate (converted from ud)
+8 ~ w2     # (converted from ud)
+11 ~ d     # (converted from ud)
+
+#193
+2 ~ e2     # (converted from ud)
+17 ~ p4     # (converted from ud)
+16 ~ l4 p4_:mod_l4     # Modifier (converted from ud)
+21 ~ s5     # (converted from ud)
+
+#194
+7 ~ d d_:ARG0_h d_:ARG1_h2     # Predicate (converted from ud)
+5 ~ h     # (converted from ud)
+10 ~ t     # (converted from ud)
+9 ~ n t_:mod_n     # Modifier (converted from ud)
+17 ~ w     # (converted from ud)
+16 ~ c w_:mod_c     # Modifier (converted from ud)
+6 ~ a d_:mod_a     # Modifier (converted from ud)
+3 ~ t2     # (converted from ud)
+
+#195
+10 ~ c2     # (converted from ud)
+18 ~ s     # (converted from ud)
+18 ~ s3     # (converted from ud)
+13 ~ p     # (converted from ud)
+22 ~ l2 l2_:ARG1_c2 l2_:ARG2_f     # Predicate (converted from ud)
+26 ~ s2     # (converted from ud)
+29 ~ f2     # (converted from ud)
+
+#196
+2 ~ s s_:ARG0_p s_:ARG1_c2     # Predicate (converted from ud)
+12 ~ n2     # (converted from ud)
+5 ~ v     # (converted from ud)
+8 ~ t     # (converted from ud)
+17 ~ f     # (converted from ud)
+16 ~ p2 f_:mod_p2     # Modifier (converted from ud)
+
+#197
+6 ~ c c_:ARG1_t     # Predicate (converted from ud)
+1 ~ t     # (converted from ud)
+10 ~ t     # (converted from ud)
+15 ~ u u_:ARG1_t     # Predicate (converted from ud)
+
+#198
+4 ~ r r_:ARG1_p r_:ARG2_a     # Predicate (converted from ud)
+5 ~ p p_:ARG0_a p_:ARG1_a2 p_:ARG2_p2     # Predicate (converted from ud)
+6 ~ a2     # (converted from ud)
+11 ~ c3     # (converted from ud)
+13 ~ b     # (converted from ud)
+9 ~ k     # (converted from ud)
+8 ~ t k_:mod_t     # Modifier (converted from ud)
+3 ~ a3 p_:mod_a3     # Modifier (converted from ud)
+2 ~ a     # (converted from ud)
+
+#199
+1 ~ i     # (converted from ud)
+4 ~ t     # (converted from ud)
+
+#200
+9 ~ a     # (converted from ud)
+2 ~ s     # (converted from ud)
+3 ~ e t_:mod_e     # Modifier (converted from ud)
+11 ~ c c_:ARG0_p c_:ARG1_a2     # Predicate (converted from ud)
+13 ~ g     # (converted from ud)
+15 ~ l     # (converted from ud)
+17 ~ c2     # (converted from ud)
+

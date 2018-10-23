@@ -1,7 +1,20 @@
 import os, re
-from utils.amr import *
+from python.amr import *
+from python.txt import *
+from python.ccg import *
+import sys
 
-def generate_html(cl, amr_file, sent_file, template_file, html_file, name):
+
+CLASSES = {'0':TXT, '1':CCG}
+
+name, html_file, amr_file, sent_file, classnum = sys.argv[1:]
+template_file = 'template.html'
+
+
+
+cl = CLASSES[classnum]
+
+def main():
     amrs = []
     sentences = []
 
@@ -25,14 +38,13 @@ def generate_html(cl, amr_file, sent_file, template_file, html_file, name):
     for s, a in zip(sentences, amrs):
         content.append(
             f"""
-            <div amr-id ="{i}" class="aligner">
-            <h1>{i}. </h1><input  amr-id ="{i}" type="text" class="cmdline"/>
-            <button amr-id ="{i}" class="align">Add Alignment</button>
-            <div amr-id ="{i}" class="btn-group"></div><br/>
-            <sentence amr-id ="{i}" class="{name}">{s}</sentence>
-            <amr amr-id ="{i}">{a}</amr>
-            </div>
-            """)
+<div amr-id ="{i}" class="aligner">
+<h1>{i}. </h1><input  amr-id ="{i}" type="text" class="cmdline"/>
+<button amr-id ="{i}" class="align">Add Alignment</button>
+<div amr-id ="{i}" class="btn-group"></div><br/>
+<anything amr-id ="{i}" class="{name}">{s}</anything>
+<amr amr-id ="{i}">{a}</amr>
+</div>""")
         i += 1
 
     content = ''.join(content)
@@ -41,4 +53,5 @@ def generate_html(cl, amr_file, sent_file, template_file, html_file, name):
         f.write(html)
 
 
-
+if __name__=="__main__":
+    main()

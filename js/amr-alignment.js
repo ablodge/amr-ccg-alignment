@@ -44,7 +44,7 @@ class AMR_Alignment{
         for (let elem of sent_align) {
             if (elem) {
                 let tok_id = elem;
-                elements.push($(`sentence[amr-id='${this.amr_id}'] [tok-id='${tok_id}']`));
+                elements.push($(`anything[amr-id='${this.amr_id}'] [tok-id='${tok_id}']`));
             }
         }
         return elements;
@@ -70,7 +70,7 @@ class AMR_Alignment{
             c = this.alignment.substr(this.alignment.indexOf('#'));
         if (!this.is_connected())
             c += '# ✘disconnected ';
-        let type = $(`sentence[amr-id='${this.amr_id}']`).attr('class');
+        let type = $(`anything[amr-id='${this.amr_id}']`).attr('class');
         if (type==='CCG' && this.is_isomorphic())
             c += '# ✓sem args = syn args ';
         return '     '+c;
@@ -166,7 +166,7 @@ class AMR_Alignment{
         }
         // get number of syntactic args
         for (let w of sent_align){
-            let selector = $(`sentence[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
+            let selector = $(`anything[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
             if (selector.length>0)
                 syn_count += parseInt(selector.html());
         }
@@ -182,7 +182,7 @@ class AMR_Alignment{
         for (let a of sent_align) {
             if (!a) continue;
             let tok_id = a;
-            let selector = $(`sentence[amr-id='${this.amr_id}'] word[tok-id='${tok_id}']`);
+            let selector = $(`anything[amr-id='${this.amr_id}'] word[tok-id='${tok_id}']`);
             for (let elem of selector.toArray())
                 r += $(elem).html()
                             .replace(/<tok>.*?<\/tok>/g,'')

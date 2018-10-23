@@ -1,0 +1,75 @@
+
+h1 {
+    font-family: "HelveticaNeue-Light", sans-serif;
+	font-size:30px;
+}
+
+button {
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button {
+    width: 10%;
+    border-width: 3px;
+}
+
+button.any-upload {
+    background-color: #5666e6;
+}
+
+button.amr-upload {
+    background-color: #ff464a;
+}
+
+button.launch {
+    background-color: #ffaf2d;
+}
+
+button.amr-text[on='1'] {
+    background-color: #13c5ee;
+}
+button.amr-text:hover {
+    background-color: #13c5ee;
+}
+
+button.amr-ccg[on='1'] {
+    background-color: #53eb99;
+}
+button.amr-ccg:hover {
+    background-color: #53eb99;
+}
+
+button.amr-ud[on='1'] {
+    border-color: #c19ae2;
+    border-width: 3px;
+}
+button.amr-ud:hover {
+    border-color: #c19ae2;
+    border-width: 3px;
+}
+button.amr-amr[on='1'] {
+    border-color: #ffc741;
+    border-width: 3px;
+}
+button.amr-amr:hover {
+    border-color: #ffc741;
+    border-width: 3px;
+}
+input[type=file] {
+    width: 12%;
+}
+
+math {
+    font-family: "Cambria Math";
+    font-size: 14.5px;
+    color: grey;
+}
+
+.instructions{
+    font-family: "HelveticaNeue-Light", sans-serif;
+}

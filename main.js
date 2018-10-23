@@ -44,7 +44,7 @@ class AMR_Alignment{
         for (let elem of sent_align) {
             if (elem) {
                 let tok_id = elem;
-                elements.push($(`sentence[amr-id='${this.amr_id}'] [tok-id='${tok_id}']`));
+                elements.push($(`anything[amr-id='${this.amr_id}'] [tok-id='${tok_id}']`));
             }
         }
         return elements;
@@ -70,7 +70,7 @@ class AMR_Alignment{
             c = this.alignment.substr(this.alignment.indexOf('#'));
         if (!this.is_connected())
             c += '# ✘disconnected ';
-        let type = $(`sentence[amr-id='${this.amr_id}']`).attr('class');
+        let type = $(`anything[amr-id='${this.amr_id}']`).attr('class');
         if (type==='CCG' && this.is_isomorphic())
             c += '# ✓sem args = syn args ';
         return '     '+c;
@@ -166,7 +166,7 @@ class AMR_Alignment{
         }
         // get number of syntactic args
         for (let w of sent_align){
-            let selector = $(`sentence[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
+            let selector = $(`anything[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
             if (selector.length>0)
                 syn_count += parseInt(selector.html());
         }
@@ -182,7 +182,7 @@ class AMR_Alignment{
         for (let a of sent_align) {
             if (!a) continue;
             let tok_id = a;
-            let selector = $(`sentence[amr-id='${this.amr_id}'] word[tok-id='${tok_id}']`);
+            let selector = $(`anything[amr-id='${this.amr_id}'] word[tok-id='${tok_id}']`);
             for (let elem of selector.toArray())
                 r += $(elem).html()
                             .replace(/<tok>.*?<\/tok>/g,'')
@@ -404,7 +404,7 @@ function download(){
         let amr = $(`amr[amr-id='${amr_id}']`).html()
             .replace(/<.*?>/g,'');
         amr = comment_out(amr);
-        let sent = $(`sentence[amr-id='${amr_id}']`).html()
+        let sent = $(`anything[amr-id='${amr_id}']`).html()
             .replace(/<sub>/g,'[')
             .replace(/<\/sub>/g,']')
             .replace(/<tr class="expand".*?<\/tr>/g,'')
@@ -412,7 +412,7 @@ function download(){
             .replace(/<.*?>/g,'')
             .replace(/ /g,'\t');
         sent = comment_out(sent);
-        let sent_type = $(`sentence[amr-id='${amr_id}']`).attr('class');
+        let sent_type = $(`anything[amr-id='${amr_id}']`).attr('class');
         out += '#'+amr_id+'\n';
         out += '# AMR:\n'+amr;
         out += `# ${sent_type}:\n`+sent;
@@ -439,9 +439,10 @@ function load(){
     let f = new FileReader();
     f.onload = function(e) {
         let text = e.target.result;
-        text = text.replace('\r','');
-        text = text.split(/\n\n+/);
+        text = text.replace(/\r/g,'').replace(/\n\n+/g,'\n\n');
+        text = text.split('\n\n');
         for (let t of text){
+            alert(t);
             t = $.trim(t);
             let amr_id = /^#[0-9]+/.exec(t)[0];
             amr_id = amr_id.replace('#','');
@@ -451,7 +452,7 @@ function load(){
                     continue;
                 if ($.trim(line).startsWith('#'))
                     continue;
-                align = $.trim(line);
+                let align = $.trim(line);
                 add_alignment(amr_id, align);
             }
         }
@@ -507,7 +508,7 @@ $(document).ready(function () {
     $("button.expand").on({
         click:function(){
             let amr_id = $(this).parents("[amr-id]").first().attr("amr-id");
-            let elem = $(`sentence[amr-id='${amr_id}'] tr.expand`);
+            let elem = $(`anything[amr-id='${amr_id}'] tr.expand`);
             if (elem.css('display')==='none'){
                 elem.css('display','');
                 $(this).text('CCG parse ▼');
