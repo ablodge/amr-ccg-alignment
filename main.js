@@ -286,7 +286,9 @@ function reset_colors() {
     $("button.reactive-onoff").css('background-color', '#eee')
                      .attr('on', '0');
     $(".aligned").css({'background': '', 'border': ''})
-                 .attr({'on': '0', 'colors':'0'});
+                 .attr({'on': '0', 'colors':'0'})
+                 .removeClass('selected');
+
 }
 
 // Alignments --------------------------------------------------------------------------------------------------------
@@ -330,6 +332,11 @@ function add_alignment(amr_id, alignment) {
             }
         });
         onoff.turn_on();
+        amr_alignment = new AMR_Alignment(amr_id,alignment);
+        for (let elem of amr_alignment.parse()) {
+            $(elem).attr('on', '1')
+                .addClass('covered');
+        }
     }
 }
 
@@ -352,7 +359,7 @@ function select_element() {
     amr_alignment = new AMR_Alignment(amr_id,alignment);
     for (let elem of amr_alignment.parse()) {
         $(elem).attr('on', '1')
-            .css('background-color', '#eee');
+            .addClass('selected');
     }
 }
 
@@ -371,7 +378,7 @@ function unselect_element() {
     amr_alignment = new AMR_Alignment(amr_id, alignment);
     for (let elem of amr_alignment.parse()) {
         $(elem).attr('on', '1')
-            .css('background-color', '#eee');
+            .addClass('selected')
     }
 }
 
@@ -442,7 +449,6 @@ function load(){
         text = text.replace(/\r/g,'').replace(/\n\n+/g,'\n\n');
         text = text.split('\n\n');
         for (let t of text){
-            alert(t);
             t = $.trim(t);
             let amr_id = /^#[0-9]+/.exec(t)[0];
             amr_id = amr_id.replace('#','');
@@ -482,6 +488,11 @@ $(document).ready(function () {
     $("button.load").on("click", load);
     // Show All button
     $("button.showall").on("click", showall);
+    $(document).keydown(function (e) {
+            if (e.ctrlKey && e.key === 'x') {
+                showall()
+            }
+    });
     // Add Alignment button
     $("button.align").on("click", function(){
         let amr_id = $(this).attr("amr-id");

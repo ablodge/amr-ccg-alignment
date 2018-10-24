@@ -106,3 +106,12 @@ button.expand {
     border-radius: 20px;
     font-size: 10px;
 }
+
+.selected {
+    color: white;
+    background-color: grey !important;
+}
+
+.covered {
+    background-color: #eee;
+}

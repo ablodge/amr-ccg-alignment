@@ -97,7 +97,7 @@ for sent_num in sents:
         is_modifier = any(Mod_RE.match(e) and syn_args==1 for i,e in amr.edges())
         # if is_modifier:
         #      print(word)
-        ARG_RE = re.compile(f'^{amr_node}_:?ARG[0-9]_[a-z][0-9]*$')
+        ARG_RE = re.compile(f'^({amr_node}_:?ARG[0-9]_[a-z][0-9]*|[a-z][0-9]*_:?ARG[0-9]-of_{amr_node})$')
         sem_args = [e for i, e in amr.edges() if ARG_RE.match(e)]
         has_args = len(sem_args)==syn_args and sem_args
         # if has_args and sem_args:
