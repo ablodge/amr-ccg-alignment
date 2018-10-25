@@ -148,7 +148,6 @@ class CCG(CCG_Lexical):
         tags = []
         constits = []
         j = 0
-        depth = max = 0
         elems = self.elements()
         for i,e in enumerate(elems):
             if re.match('<L.*?>', e):
@@ -161,16 +160,23 @@ class CCG(CCG_Lexical):
                 j += 1
                 words.append(w)
                 tags.append(t)
-            elif e =='(':
-                depth+=1
-                if depth>max: max = depth
-                elems[i] = f'<{depth}>'
-            elif e==')':
-                elems[i] = f'</{depth}>'
-                depth-=1
+            elif not e in ['(',')',' ']:
+                elems[i] = elems[i].replace('(','<*>')
+                elems[i] = elems[i].replace(')', '</*>')
+
         elems = ''.join(elems)
-        j = max
-        while j > 0:
+        Parens_RE = re.compile('[(](?P<text>[^()]*)[)]')
+        i = 1
+        while '(' in elems:
+            for p in Parens_RE.finditer(elems):
+                text = p.group('text')
+                elems = elems.replace(p.group(), f'<{i}>{text}</{i}>', 1)
+            i += 1
+        elems = elems.replace('<*>', '(')
+        elems = elems.replace('</*>', ')')
+        max = i
+        j = 1
+        while j <= max:
             constits.append([])
             Word_RE = re.compile(f'<{j}>(?P<a>[0-9]+)</{j}>')
             Unary_RE = re.compile(f'<{j}>U:(?P<tag>\S+) (?P<a>[0-9]+(:[0-9]+)?) ?</{j}>')
@@ -192,7 +198,7 @@ class CCG(CCG_Lexical):
                         start, end = int(a), int(a)+1
                         size = 1
                     c = f'<td class="constit ccg-parse" colspan="{size}" span="{start}:{end}">{tag}<span class="combinator">TR</span></td>'
-                    constits[max-j].append(c)
+                    constits[j-1].append(c)
                 elif Binary_RE.match(regex):
                     x = Binary_RE.match(regex)
                     tag = x.group('tag')
@@ -210,10 +216,10 @@ class CCG(CCG_Lexical):
                     elems = Binary_RE.sub(a+':'+b, elems, 1)
                     size = int(b) - int(a)
                     c = f'<td class="constit ccg-parse" colspan="{size}" span="{a}:{b}">{tag}<span class="combinator">{lg}</span></td>'
-                    constits[max - j].append(c)
+                    constits[j-1].append(c)
                 else:
-                    print(j, elems)
-            j -= 1
+                    print(j, regex)
+            j += 1
         Span_RE = re.compile('span="(?P<a>[0-9]+):(?P<b>[0-9]+)"')
         for i,row in enumerate(constits):
             span_end = 0
@@ -243,9 +249,9 @@ def main():
     test_file = r'../data/ccg.txt'
 
     with open(test_file, 'r', encoding='utf8') as f:
-        for ccg in CCG_Lexical.finditer(f.read()):
-            ccg = CCG_Lexical(ccg)
-            print(ccg.html())
+        for ccg in CCG.finditer(f.read()):
+            ccg = CCG(ccg)
+            ccg.html()
 
 
 if __name__ == "__main__":
