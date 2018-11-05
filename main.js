@@ -329,10 +329,18 @@ function add_alignment(amr_id, alignment) {
             dblclick: function() {
                 $(this).remove();
                 reset_colors();
+                for (let elem of amr_align.parse())
+                    elem.removeClass('covered');
+                for (let btn of btngroup.children()) {
+                    let a = $(btn).attr('alignment');
+                    let amr_alignment = new AMR_Alignment(amr_id, a);
+                    for (let elem of amr_alignment.parse())
+                        elem.addClass('covered');
+                }
             }
         });
         onoff.turn_on();
-        amr_alignment = new AMR_Alignment(amr_id,alignment);
+        let amr_alignment = new AMR_Alignment(amr_id,alignment);
         for (let elem of amr_alignment.parse()) {
             $(elem).attr('on', '1')
                 .addClass('covered');
