@@ -13,7 +13,7 @@
 #                   :ARG2 (b2 / bit)))
 #       :time (n / now))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP:1	(S\NP)\(S\NP):1	,	S[dcl]/(S[b]\NP)/NP:2	NP	S[b]\NP/NP:2	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/N:2	N	NP[nb]/N:1	N/N:1	N/N:1	N	NP[nb]/N\NP:2	N	NP\NP/NP:2	N	.	
+# NP/N:1	N	S[dcl]\NP:1	(S\NP)\(S\NP):1	,	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP/NP/PR:3	PR	(S\NP)\(S\NP)/N:2	N	NP/N:1	N/N:1	N/N:1	N	NP/(N/PP)\NP:2	N/PP/PP:2	PP/NP:1	N	.	
 # 
 # 0/The	1/question	2/is	3/now	4/,	5/can	6/we	7/broaden	8/out	9/a	10/bit	11/the	12/Audit	13/Office	14/director	15/'s	16/train	17/of	18/thought	19/?
 # Alignments:
@@ -34,7 +34,7 @@
 #             :location (c3 / city :name (n3 / name :op1 x5 / "Paris"))
 #             :mod (a3 / also)))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	,	conj:2	N/N:1	N	conj:2	N	(S\NP)/(S\NP):1	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	.	
+# NP	S[dcl]\NP/(S[to]\NP)/NP:3	NP/N:1	N/N:1	N/N:1	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/PR:2	PR	(S\NP)\(S\NP)/NP:2	NP/N:1	N	,	conj:2	N/N:1	N	conj:2	N	(S\NP)/(S\NP):1	S[dcl]\NP:1	(S\NP)\(S\NP)/NP:2	N	.	
 # 
 # 0/This	1/caused	2/the	3/momentous	4/May	5/4th	6/Movement	7/to	8/break	9/out	10/in	11/the	12/country	13/,	14/and	15/Xiao	16/Kejian	17/and	18/others	19/also	20/protested	21/in	22/Paris	23/.
 # Alignments:
@@ -45,7 +45,7 @@
 #       :domain (b / break-01
 #             :ARG1 (t / television)))
 # CCG:
-# S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	.	
+# S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	.	
 # 
 # 0/Could	1/it	2/be	3/that	4/the	5/television	6/is	7/broken	8/?
 # Alignments:
@@ -76,7 +76,7 @@
 #                                                 :ARG1 (e / economy))
 #                                           :mod (n / new))))))))
 # CCG:
-# S/S:1	,	S[ng]\NP/NP:2	NP[nb]/N:1	N/N:1	N	,	NP/NP:1	NP[nb]/N:1	N/N:1	N/N:1	N	,	S[ng]\NP/NP:2	N/N:1	N	conj:2	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
+# S/S:1	,	S[ng]\NP/NP:2	NP/N:1	N/N:1	N	,	NP/NP:1	NP/N:1	N/N:1	N/N:1	N	,	S[ng]\NP/NP:2	N/N:1	N	conj:2	N/N:1	(N/N)/(N/N):1	N/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
 # 0/Hence	1/,	2/activating	3/the	4/consumer	5/market	6/,	7/especially	8/the	9/wide	10/rural	11/market	12/,	13/cultivating	14/consumer	15/hotspots	16/and	17/new	18/economic	19/growth	20/points	21/appear	22/to	23/be	24/particularly	25/urgent	26/.
 # Alignments:
@@ -91,7 +91,7 @@
 #             :ARG1-of (h / hold-04
 #                   :ARG0 (o / organization :name (n2 / name :op1 x2 / "US" :op2 x3 / "Asian" :op3 x4 / "Foundation")))))
 # CCG:
-# N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	.	
+# N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP/N:1	N	S[pss]\NP/PP:2	PP/NP:1	NP/N:1	N	NP\NP/NP:2	N/N:1	N	.	
 # 
 # 0/Yongtu	1/Long	2/made	3/the	4/above	5/statement	6/during	7/a	8/speech	9/held	10/by	11/the	12/US	13/-	14/Asian	15/Foundation	16/.
 # Alignments:
@@ -114,7 +114,7 @@
 #             :ARG1 c5)
 #       :domain (c / company :name (n / name :op1 x1 / "GreenKel")))
 # CCG:
-# S/S/NP:2	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	,	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1		N/N:1	N/N:1	N/N:1	N	S[ng]\NP:1	conj:2	N/N:1	N	NP\NP/NP:2	N/N:1	N	.	
+# S/S/NP:2	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	,	N	S[dcl]\NP/NP:2	NP/N:1	N	NP\NP/NP:2	N/N:1	(N/N)/(N/N):1	N/N:1	N	S[ng]\NP/NP:2	conj:2	S[ng]\NP/NP:2	N	NP\NP/NP:2	N/N:1	N	.	
 # 
 # 0/With	1/headquarters	2/established	3/in	4/Canada	5/,	6/GreenKel	7/is	8/a	9/large	10/-	11/scale	12/multi-national	13/group	14/company	15/manufacturing	16/and	17/selling	18/fluorine	19/-	20/free	21/coolant	22/.
 # Alignments:
@@ -132,7 +132,7 @@
 #       :time (f / feed-01
 #             :ARG2 m))
 # CCG:
-# S/S/S[dcl]:2	N	S[dcl]\NP:1	,	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N	NP\NP/NP:2	NP[nb]/N:1	N	.	
+# S/S/S[dcl]:2	N	S[dcl]\NP:1	,	NP	S[dcl]\NP/PP/NP:3	NP/N:1	N/N:1	N	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N	N\N/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/When	1/mosquitoes	2/feed	3/,	4/they	5/suck	6/the	7/mold	8/element	9/from	10/the	11/cells	12/of	13/plants	14/into	15/their	16/bodies	17/.
 # Alignments:
@@ -153,7 +153,7 @@
 #                         :ARG2 (t3 / temporal-quantity :quant x0 / 10
 #                               :unit (d3 / day))))))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N/S[em]:1	S[em]/S[dcl]:1	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/NP:2	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	N/N:1	N	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	N/S[em]:1	S[em]/S[dcl]:1	NP/N:1	N/N:1	N	N\N/NP:2	NP/N:1	N/N:1	N	S[dcl]\NP/NP:2	(N/N)/(N/N):1	N/N:1	(N/N)\(N/N)/(N/N):2	(N/N)/(N/N):1	N/N:1	N	.	
 # 
 # 0/He	1/denied	2/the	3/statement	4/that	5/the	6/food	7/reserve	8/on	9/the	10/orbital	11/station	12/is	13/only	14/enough	15/to	16/last	17/10	18/days	19/.
 # Alignments:
@@ -169,9 +169,9 @@
 #                         :mod (c / common)))
 #             :ARG1 (t / that)))
 # CCG:
-# S/S/NP:2	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP	PP/NP:1	N	
+# S/S/NP:2	N/PP:1	PP/NP:1	NP/N:1	N/N:1	N	,	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	(S\NP)\(S\NP)/NP:2	N	.	
 # 
-# 0/From	1/leaders	2/to	3/the	4/common	5/people,	6/everyone	7/needs	8/to	9/keep	10/that	11/in	12/mind.
+# 0/From	1/leaders	2/to	3/the	4/common	5/people	6/,	7/everyone	8/needs	9/to	10/keep	11/that	12/in	13/mind	14/.
 # Alignments:
 
 #10
@@ -189,9 +189,9 @@
 #             :ARG2 (a / at-most
 #                   :op1 (o / or :op1 x2 / 7 :op2 x3 / 8))))
 # CCG:
-# S/S/NP:2	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/PP:2	PP/NP:1	N/N:1	N	(S\NP)\(S\NP)/PP:2	PP/NP:1	NP[nb]/N:1	N	NP[nb]/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	conj:2	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	
+# S/S/NP:2	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	(N/N)/(N/N):1	N/N:1	N	N\N/PP:2	PP/NP:1	NP/N:1	N	,	NP/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	,	conj:2	N	N\N/NP:2	NP/N:1	N	.	
 # 
-# 0/In	1/Chengdu,	2/which	3/is	4/over	5/100	6/kms	7/away	8/from	9/the	10/epicenter,	11/the	12/earthquake	13/should	14/not	15/have	16/an	17/intensity	18/of	19/over	20/7,	21/or	22/8	23/at	24/the	25/most.
+# 0/In	1/Chengdu	2/,	3/which	4/is	5/over	6/100	7/kms	8/away	9/from	10/the	11/epicenter	12/,	13/the	14/earthquake	15/should	16/not	17/have	18/an	19/intensity	20/of	21/over	22/7	23/,	24/or	25/8	26/at	27/the	28/most	29/.
 # Alignments:
 
 #11
@@ -213,9 +213,9 @@
 #                         :ARG2 (s / secretary
 #                               :mod (c / confidence))))))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	N/N:1	N/N[num]:1	N[num]	NP\NP:1	NP\NP/NP:2	N	NP\NP/NP:2	N/N:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	
+# S/S/NP:2	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N/N:1	N	,	N/N:1	N/N[num]:1	N[num]	,	N	N\N/NP:2	N	N\N/NP:2	N/N:1	N	NP/(N/PP)\NP:2	N/PP:1	S[dcl]\NP/NP:2	N/N:1	N	,	N/N:1	N	,	conj:2	N/N:1	N	NP/(N/PP)\NP:2	N/N:1	N/PP:1	,	N/N:1	N	.	
 # 
-# 0/On	1/the	2/day	3/of	4/the	5/Tangshan	6/Earthquake,	7/i.e.	8/July	9/28th,	10/those	11/on	12/duty	13/at	14/Mao	15/Zedong's	16/quarters	17/were	18/Wang	19/Dongxing,	20/Wang	21/Hongwen,	22/and	23/Mao	24/Zedong's	25/confidential	26/secretary,	27/Zhang	28/Yufeng.
+# 0/On	1/the	2/day	3/of	4/the	5/Tangshan	6/Earthquake	7/,	8/i.e.	9/July	10/28th	11/,	12/those	13/on	14/duty	15/at	16/Mao	17/Zedong	18/'s	19/quarters	20/were	21/Wang	22/Dongxing	23/,	24/Wang	25/Hongwen	26/,	27/and	28/Mao	29/Zedong	30/'s	31/confidential	32/secretary	33/,	34/Zhang	35/Yufeng	36/.
 # Alignments:
 
 #12
@@ -233,9 +233,9 @@
 #       :time (a / after
 #             :op1 (d / date-entity :decade x0 / 1990)))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N	N/N:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	
+# S/S/NP:2	NP/N:1	N	,	N/N:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	.	
 # 
-# 0/After	1/the	2/nineties,	3/state-owned	4/engineering	5/enterprises	6/stopped	7/recruiting	8/construction	9/workers.
+# 0/After	1/the	2/nineties	3/,	4/state-owned	5/engineering	6/enterprises	7/stopped	8/recruiting	9/construction	10/workers	11/.
 # Alignments:
 
 #13
@@ -257,9 +257,9 @@
 #       :ARG2 (f2 / friend
 #             :mod (d / dear)))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP/PP:2	(S\NP)\(S\NP)/NP:2	NP	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	PP/NP:1	NP[nb]/N:1	N	
+# N/N:1	N	,	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP/NP/PR:3	PR	NP/PP:1	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
-# 0/Dear	1/friends,	2/let	3/me	4/fill	5/in	6/some	7/of	8/the	9/words	10/for	11/the	12/melody	13/right	14/now	15/in	16/my	17/heart.
+# 0/Dear	1/friends	2/,	3/let	4/me	5/fill	6/in	7/some	8/of	9/the	10/words	11/for	12/the	13/melody	14/right	15/now	16/in	17/my	18/heart	19/.
 # Alignments:
 
 #14
@@ -285,9 +285,9 @@
 #             :duration (t / temporal-quantity :quant x5 / 10
 #                   :unit (y / year))))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N/N:1	N	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP:1	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/NP:2	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N/N:1	N	RRB	
+# S/S/NP:2	NP/N:1	N/N:1	N/N:1	N	,	S/S/NP:2	NP/N:1	N/N:1	N/N:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP:1	N	(S\NP)\(S\NP)\NP:2	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	S[dcl]\NP/NP:2	N/N:1	N/N:1	N	N\N:1	.	
 # 
-# 0/In	1/the	2/past	3/10	4/years,	5/behind	6/these	7/Chinese	8/high-tech	9/magnates	10/who	11/emerged	12/one	13/after	14/another	15/was	16/sure	17/to	18/be	19/the	20/shadow	21/of	22/the	23/U.S.	24/owned	25/International	26/Data	27/Group	28/(IDG).
+# 0/In	1/the	2/past	3/10	4/years	5/,	6/behind	7/these	8/Chinese	9/high-tech	10/magnates	11/who	12/emerged	13/one	14/after	15/another	16/was	17/sure	18/to	19/be	20/the	21/shadow	22/of	23/the	24/U.S.	25/owned	26/International	27/Data	28/Group	29/(IDG)	30/.
 # Alignments:
 
 #15
@@ -311,9 +311,9 @@
 #             :mod (m / more
 #                   :mod (e2 / even))))
 # CCG:
-# N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	NP\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/S[dcl]:2	NP[thr]	S[dcl]\NP[thr]/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N/N:1	N	conj:2	NP[nb]/N:1	N	conj:2	N	
+# N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP/N:1	N/PP:1	PP/NP:1	N	N\N/NP:2	NP/N:1	N	,	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/NP:2	NP/N:1	N/N:1	N	N\N/S[dcl]:2	NP[thr]	S[dcl]\NP[thr]/NP:2	NP/N:1	N/N:1	N	,	N/N:1	N	conj:2	NP/N:1	N	conj:2	N	.	
 # 
-# 0/Life	1/is	2/never	3/a	4/bed	5/of	6/roses	7/in	8/any	9/location,	10/even	11/more	12/in	13/a	14/foreign	15/land	16/where	17/there	18/is	19/a	20/language	21/barrier,	22/different	23/customs	24/and	25/no	26/family	27/or	28/friends.
+# 0/Life	1/is	2/never	3/a	4/bed	5/of	6/roses	7/in	8/any	9/location	10/,	11/even	12/more	13/in	14/a	15/foreign	16/land	17/where	18/there	19/is	20/a	21/language	22/barrier	23/,	24/different	25/customs	26/and	27/no	28/family	29/or	30/friends	31/.
 # Alignments:
 
 #16
@@ -323,7 +323,7 @@
 #           :op1 x0 / "Saudi"
 #           :op2 x1 / "Arabia"))
 # CCG:
-# N/N:1	N	RRB	
+# N/N:1	N	N\N:1	
 # 
 # 0/Saudi	1/Arabia	2/(SA)
 # Alignments:
@@ -351,9 +351,9 @@
 #       :time (d3 / date-entity :month x7 / 11
 #             :mod (l2 / last)))
 # CCG:
-# N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	(NP\NP)/(NP\NP):1	NP\NP:1	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	S[ng]\NP/PP:2	PP/NP:1	N/N:1	conj:2	N/N:1	N	NP\NP/NP:2	N	NP\NP/NP:2	N	
+# (N/N)/(N/N):1	N/N:1	N/N:1	N	S[dcl]\NP/PP/NP:3	NP/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	PP/NP:1	N/N:1	N	NP/N\NP:2	(N/N)/(N/N):1	N/N:1	N/N:1	N	S[ng]\NP/PP:2	PP/NP:1	N/N:1	conj:2	N/N:1	N/PP:1	PP/NP:1	N/PP:1	PP/NP:1	N	.	
 # 
-# 0/FIFA	1/president	2/Sepp	3/Blatter	4/sent	5/a	6/letter	7/last	8/November	9/to	10/South	11/Korea's	12/World	13/Cup	14/organizing	15/committee	16/calling	17/for	18/immediate	19/and	20/decisive	21/measures	22/against	23/cruelty	24/to	25/dogs.
+# 0/FIFA	1/president	2/Sepp	3/Blatter	4/sent	5/a	6/letter	7/last	8/November	9/to	10/South	11/Korea	12/'s	13/World	14/Cup	15/organizing	16/committee	17/calling	18/for	19/immediate	20/and	21/decisive	22/measures	23/against	24/cruelty	25/to	26/dogs	27/.
 # Alignments:
 
 #18
@@ -370,9 +370,9 @@
 #   :op6 (p / person
 #          :ARG0-of (l / lead-02)))
 # CCG:
-# N/N:1	N/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N	
+# N	;	N	;	N	;	N	conj:2	N	;	N	;	N	
 # 
-# 0/International;	1/Government;	2/terrorism;	3/war	4/and	5/conflict;	6/dissent;	7/leader
+# 0/International	1/;	2/Government	3/;	4/terrorism	5/;	6/war	7/and	8/conflict	9/;	10/dissent	11/;	12/leader
 # Alignments:
 
 #19
@@ -397,9 +397,9 @@
 #                   :time (w / weekend))
 #             :mod (s3 / severe)))
 # CCG:
-# S/S/NP:2	N	N/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	NP\NP/NP:2	N/N:1	N	conj:2	N/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	
+# (N/N)/(N/N):1	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	conj:2	N/N:1	N	S[pss]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP/N:1	N	.	
 # 
-# 0/Around	1/1400	2/alleged	3/religious	4/extremists	5/have	6/been	7/arrested	8/since	9/020112	10/under	11/severe	12/actions	13/against	14/Islamic	15/militants	16/and	17/sectarian	18/radicals	19/announced	20/by	21/President	22/Pervez	23/Musharraf	24/during	25/the	26/weekend.
+# 0/Around	1/1400	2/alleged	3/religious	4/extremists	5/have	6/been	7/arrested	8/since	9/020112	10/under	11/severe	12/actions	13/against	14/Islamic	15/militants	16/and	17/sectarian	18/radicals	19/announced	20/by	21/President	22/Pervez	23/Musharraf	24/during	25/the	26/weekend	27/.
 # Alignments:
 
 #20
@@ -415,9 +415,9 @@
 #             :op1 (o / organization :name (n3 / name :op1 x3 / "Lashkar-e-Taiba"))
 #             :op2 (o2 / organization :name (n4 / name :op1 x4 / "Jaish-e-Mohammad"))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N/N:1	N/N:1	N	S[ng]\NP/NP:2	N/N:1	N	NP\NP/NP:2	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	conj:2	N	
+# NP/N:1	N/N:1	N/N:1	N/N:1	N	S[ng]\NP/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N	S[dcl]\NP/NP:2	NP/N:1	N	conj:2	N	.	
 # 
-# 0/The	1/2	2/hardline	3/militant	4/groups	5/fighting	6/Indian	7/rule	8/in	9/Kashmir	10/are	11/the	12/Lashkar-e-Taiba	13/and	14/Jaish-e-Mohammad.
+# 0/The	1/2	2/hardline	3/militant	4/groups	5/fighting	6/Indian	7/rule	8/in	9/Kashmir	10/are	11/the	12/Lashkar-e-Taiba	13/and	14/Jaish-e-Mohammad	15/.
 # Alignments:
 
 #21
@@ -433,9 +433,9 @@
 #                   :mod (d / drug))
 #           :manner (d2 / die-01)))
 # CCG:
-# N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Iranian	1/law	2/states	3/the	4/death	5/penalty	6/for	7/drug	8/trafficking.
+# 0/Iranian	1/law	2/states	3/the	4/death	5/penalty	6/for	7/drug	8/trafficking	9/.
 # Alignments:
 
 #22
@@ -444,9 +444,9 @@
 #   :op1 (i / international)
 #   :op2 (t / terrorism))
 # CCG:
-# NP/NP:1	N	
+# N/N:1	;	N	
 # 
-# 0/International;	1/terrorism
+# 0/International	1/;	2/terrorism
 # Alignments:
 
 #23
@@ -462,9 +462,9 @@
 #                           :mod (c2 / cyber)))
 #           :degree (s2 / significant)))
 # CCG:
-# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	(S\NP)/(S\NP):1	S[pss]\NP/PP:2	PP/NP:1	N	NP\NP/NP:2	N	
+# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	(S\NP)/(S\NP):1	S[pss]\NP/PP:2	PP/NP:1	N/PP:1	PP/NP:1	N	.	
 # 
-# 0/Bradley	1/stated	2/that	3/the	4/company	5/has	6/been	7/significantly	8/focused	9/on	10/prevention	11/of	12/cyberattacks.
+# 0/Bradley	1/stated	2/that	3/the	4/company	5/has	6/been	7/significantly	8/focused	9/on	10/prevention	11/of	12/cyberattacks	13/.
 # Alignments:
 
 #24
@@ -478,9 +478,9 @@
 #                         :ARG1 (s / space-craft)
 #                         :quant (a / all)))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	N\N/NP:2	N/N:1	N	.	
 # 
-# 0/Power	1/cuts	2/could	3/lead	4/to	5/a	6/failure	7/of	8/all	9/work	10/with	11/space	12/craft.
+# 0/Power	1/cuts	2/could	3/lead	4/to	5/a	6/failure	7/of	8/all	9/work	10/with	11/space	12/craft	13/.
 # Alignments:
 
 #25
@@ -508,9 +508,9 @@
 #                                                 :ARG1 (t3 / technology))
 #                                           :op2 (s3 / subcontract-01))))))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	N	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	NP\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N	NP\NP/NP:2	N/N:1	N	conj:2	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP:2	(S\NP)\(S\NP):1	PP/NP:1	NP/N:1	N	N\N:1	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	N\N/NP:2	N	(S\NP)\(S\NP)/NP:2	N/PP:1	PP/NP:1	N/N:1	N	conj:2	N	.	
 # 
-# 0/The	1/Korea	2/Herald	3/stated	4/that	5/critics	6/say	7/Boeing	8/would	9/benefit	10/most	11/from	12/the	13/points	14/minimum	15/because	16/it	17/would	18/gain	19/fewer	20/points	21/than	22/Dassault	23/in	24/terms	25/of	26/technology	27/transfer	28/and	29/subcontracts.
+# 0/The	1/Korea	2/Herald	3/stated	4/that	5/critics	6/say	7/Boeing	8/would	9/benefit	10/most	11/from	12/the	13/points	14/minimum	15/because	16/it	17/would	18/gain	19/fewer	20/points	21/than	22/Dassault	23/in	24/terms	25/of	26/technology	27/transfer	28/and	29/subcontracts	30/.
 # Alignments:
 
 #26
@@ -537,16 +537,16 @@
 #                               :ARG1-of (c4 / close-41
 #                                     :ARG2 (c3 / conflict)))))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/S[dcl]:2	NP[nb]/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP:1	S[adj]\NP/PP:2	PP/NP:1	N	
+# N/N:1	N	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/S[dcl]:2	NP/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP/PP:2	PP/NP:1	NP/N:1	N/N:1	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	NP/N\NP:2	N/N:1	(N/N)/(N/N):1	N/N:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	N	.	
 # 
-# 0/Military	1/officials	2/said	3/Lim	4/intimated	5/the	6/problems	7/could	8/be	9/as	10/serious	11/as	12/a	13/940000	14/nuclear	15/standoff	16/over	17/North	18/Korea's	19/suspected	20/nuclear	21/weapons	22/development	23/that	24/came	25/close	26/to	27/conflict.
+# 0/Military	1/officials	2/said	3/Lim	4/intimated	5/the	6/problems	7/could	8/be	9/as	10/serious	11/as	12/a	13/940000	14/nuclear	15/standoff	16/over	17/North	18/Korea	19/'s	20/suspected	21/nuclear	22/weapons	23/development	24/that	25/came	26/close	27/to	28/conflict	29/.
 # Alignments:
 
 #27
 # AMR:
 # (c / country :name (n / name :op1 x0 / "India"))
 # CCG:
-# N	RRB	
+# N	N\N:1	
 # 
 # 0/India	1/(IN)
 # Alignments:
@@ -559,9 +559,9 @@
 #             :mod (r / rebel)
 #             :poss (c2 / country :name (n2 / name :op1 x3 / "Afghanistan"))))
 # CCG:
-# N	S[dcl]\NP/NP:2	N/N:1	N/N:1	N/N:1	N	
+# N	S[dcl]\NP/NP:2	N	NP/N\NP:2	N/N:1	N/N:1	N	.	
 # 
-# 0/Iran	1/funded	2/Afghanistan's	3/rebel	4/Northern	5/Alliance.
+# 0/Iran	1/funded	2/Afghanistan	3/'s	4/rebel	5/Northern	6/Alliance	7/.
 # Alignments:
 
 #29
@@ -579,9 +579,9 @@
 #                               :ARG1 (s2 / soap)))))
 #       :time (d / date-entity :year x2 / 1997))
 # CCG:
-# N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/NP:1	N	(S\NP)\(S\NP)/NP:2	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	S[pss]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N/N:1	N	
+# N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP/PP/PP:3	PP/NP:1	N	(S\NP)\(S\NP)/NP:2	N	PP/NP:1	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N	S[pss]\NP/PP:2	PP/NP:1	NP/N:1	(N/N)/(N/N):1	N/N:1	N	.	
 # 
-# 0/Chen	1/was	2/sentenced	3/to	4/death	5/in	6/1997	7/for	8/the	9/illegal	10/manufacture	11/of	12/methamphetamines	13/disguised	14/as	15/a	16/soap	17/manufacturing	18/plant.
+# 0/Chen	1/was	2/sentenced	3/to	4/death	5/in	6/1997	7/for	8/the	9/illegal	10/manufacture	11/of	12/methamphetamines	13/disguised	14/as	15/a	16/soap	17/manufacturing	18/plant	19/.
 # Alignments:
 
 #30
@@ -599,9 +599,9 @@
 #                   :accompanier c2))
 #       :time (d3 / date-entity :year x3 / 2000))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[pss]\NP:1	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/(S[dcl]\NP)/N:3	N	N\N/NP:2	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	
+# NP/N:1	N/N:1	N	S[pss]\NP:1	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	N\N/(S[dcl]\NP)/N:3	N	(S\NP)/(S\NP)/NP:2	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N	.	
 # 
-# 0/The	1/Western	2/national	3/executed	4/was	5/a	6/Vietnamese-Canadian	7/woman	8/whose	9/execution	10/in	11/2000	12/caused	13/a	14/diplomatic	15/controversy	16/with	17/Canada.
+# 0/The	1/Western	2/national	3/executed	4/was	5/a	6/Vietnamese-Canadian	7/woman	8/whose	9/execution	10/in	11/2000	12/caused	13/a	14/diplomatic	15/controversy	16/with	17/Canada	18/.
 # Alignments:
 
 #31
@@ -619,9 +619,9 @@
 #                   :compared-to (s2 / seed
 #                         :part-of o))))
 # CCG:
-# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/NP:2	(N/N)/(N/N):1	N/N:1	N	conj:2	N	NP\NP/NP:2	N/N:1	N	
+# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N	S[dcl]\NP/NP:2	(N/N)/(N/N):1	N/N:1	N	conj:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	.	
 # 
-# 0/Lemahieu	1/said	2/that	3/this	4/ceremony	5/had	6/less	7/processed	8/opium	9/and	10/heroin	11/than	12/opium	13/seeds.
+# 0/Lemahieu	1/said	2/that	3/this	4/ceremony	5/had	6/less	7/processed	8/opium	9/and	10/heroin	11/than	12/opium	13/seeds	14/.
 # Alignments:
 
 #32
@@ -643,9 +643,9 @@
 #                         :ARG1-of (c3 / consume-01
 #                               :location (w3 / world-region :name (n3 / name :op1 x2 / "Central" :op2 x3 / "Asia")))))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	NP\NP/NP:2	N	conj:2	NP[nb]/N:1	N	NP\NP/NP:2	NP/NP:1	NP/NP:1	NP[nb]/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/N:1	N/PP/PP:2	PP/NP:1	N	PP/NP:1	N	conj:2	NP/N:1	N/PP:1	PP/NP:1	NP/NP:1	NP/NP:1	NP/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	.	
 # 
-# 0/War-torn	1/Afghanistan	2/continues	3/to	4/be	5/the	6/top	7/supplier	8/of	9/heroin	10/to	11/Europe	12/and	13/the	14/producer	15/of	16/almost	17/all	18/the	19/opiates	20/consumed	21/in	22/Central	23/Asia.
+# 0/War-torn	1/Afghanistan	2/continues	3/to	4/be	5/the	6/top	7/supplier	8/of	9/heroin	10/to	11/Europe	12/and	13/the	14/producer	15/of	16/almost	17/all	18/the	19/opiates	20/consumed	21/in	22/Central	23/Asia	24/.
 # Alignments:
 
 #33
@@ -671,9 +671,9 @@
 #                                           :ARG1 (t / terrorism)))))))
 #       :manner (s / sharp))
 # CCG:
-# NP[thr]	S[dcl]\NP[thr]/(S[pt]\NP):2	S[pt]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N	
+# NP[thr]	S[dcl]\NP[thr]/(S[pt]\NP):2	S[pt]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N/N:1	N/N:1	N	NP/(N/PP)\NP:2	N/PP/PP:2	PP/NP:1	N/N:1	N	N\N/NP:2	N/N:1	N/N:1	N	,	N/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N	.	
 # 
-# 0/There	1/has	2/been	3/a	4/sharp	5/increase	6/in	7/Indian	8/Defense	9/Ministry's	10/purchases	11/of	12/military	13/hardware	14/including	15/night	16/vision	17/devices,	18/unmanned	19/aerial	20/vehicles	21/and	22/other	23/anti-terrorism	24/devices.
+# 0/There	1/has	2/been	3/a	4/sharp	5/increase	6/in	7/Indian	8/Defense	9/Ministry	10/'s	11/purchases	12/of	13/military	14/hardware	15/including	16/night	17/vision	18/devices	19/,	20/unmanned	21/aerial	22/vehicles	23/and	24/other	25/anti-terrorism	26/devices	27/.
 # Alignments:
 
 #34
@@ -692,9 +692,9 @@
 #                              :ARG1-of (s / share-01
 #                                         :ARG0 o2)))))
 # CCG:
-# N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	NP\NP/NP:2	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	
+# N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/N:1	N	.	
 # 
-# 0/ASEAN	1/must	2/agree	3/on	4/a	5/definition	6/of	7/terrorism	8/to	9/identify	10/the	11/common	12/enemy.
+# 0/ASEAN	1/must	2/agree	3/on	4/a	5/definition	6/of	7/terrorism	8/to	9/identify	10/the	11/common	12/enemy	13/.
 # Alignments:
 
 #35
@@ -715,9 +715,9 @@
 #                                           :ARG0-of (p2 / pursue-01)))
 #                               :frequency (f / frequent))))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N	(S\NP)/(S\NP):1	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	conj:2	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP:1	S[ng]\NP/NP:2	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N	(S\NP)/(S\NP):1	S[pss]\NP/PP:2	PP/NP:1	N	conj:2	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	S[ng]\NP/NP:2	N	.	
 # 
-# 0/The	1/3	2/countries	3/share	4/sea	5/borders	6/frequently	7/used	8/by	9/pirates	10/and	11/criminals	12/in	13/evading	14/pursuing	15/troops.
+# 0/The	1/3	2/countries	3/share	4/sea	5/borders	6/frequently	7/used	8/by	9/pirates	10/and	11/criminals	12/in	13/evading	14/pursuing	15/troops	16/.
 # Alignments:
 
 #36
@@ -733,7 +733,7 @@
 # AMR:
 # (c / country :name (n / name :op1 x0 / "Iraq"))
 # CCG:
-# N	RRB	
+# N	N\N:1	
 # 
 # 0/Iraq	1/(IQ)
 # Alignments:
@@ -763,16 +763,16 @@
 #             :ARG0 (c5 / concern-01
 #                   :ARG0 v)))
 # CCG:
-# N	S[dcl]\NP/(S[to]\NP)/NP:3	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	conj:2	(S\NP)/(S\NP):1	S[b]\NP/NP:2	N/N:1	N	conj:2	N/N:1	N	(S\NP)\(S\NP)/PP:2	PP/NP:1	N	NP\NP/NP:2	NP/NP:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	
+# N	S[dcl]\NP/(S[to]\NP)/NP:3	NP/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	conj:2	(S\NP)/(S\NP):1	S[b]\NP/NP:2	N	NP/(N/PP)\NP:2	N/PP:1	conj:2	N/N:1	N/PP:1	(S\NP)\(S\NP)/PP:2	PP/NP:1	N/PP:1	PP/NP:1	NP/NP:1	N	N\N/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Hasina	1/wants	2/the	3/military	4/to	5/arrest	6/real	7/criminals	8/and	9/not	10/violate	11/Bangladesh's	12/constitution	13/and	14/human	15/rights	16/because	17/of	18/concern	19/about	20/such	21/violations	22/in	23/the	24/name	25/of	26/anti-crime	27/drive.
+# 0/Hasina	1/wants	2/the	3/military	4/to	5/arrest	6/real	7/criminals	8/and	9/not	10/violate	11/Bangladesh	12/'s	13/constitution	14/and	15/human	16/rights	17/because	18/of	19/concern	20/about	21/such	22/violations	23/in	24/the	25/name	26/of	27/anti-crime	28/drive	29/.
 # Alignments:
 
 #39
 # AMR:
 # (c / country :name (n / name :op1 x0 / "China"))
 # CCG:
-# N	RRB	
+# N	N\N:1	
 # 
 # 0/China	1/(CN)
 # Alignments:
@@ -801,9 +801,9 @@
 #                               :mod (n4 / nucleus)))
 #                   :mod (o / only))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	N/N:1	N	conj:2	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	N	NP/(N/PP)\NP:2	N/PP:1	conj:2	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	NP/(N/PP)\NP:2	N/PP/PP:2	PP/NP:1	NP/N:1	N/N:1	N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	.	
 # 
-# 0/The	1/U.S.	2/government	3/was	4/skeptical	5/of	6/Iran's	7/intentions	8/and	9/stated	10/that	11/Iran's	12/pursuit	13/of	14/a	15/complete	16/fuel	17/cycle	18/only	19/made	20/sense	21/if	22/it	23/were	24/pursuing	25/nuclear	26/weapons.
+# 0/The	1/U.S.	2/government	3/was	4/skeptical	5/of	6/Iran	7/'s	8/intentions	9/and	10/stated	11/that	12/Iran	13/'s	14/pursuit	15/of	16/a	17/complete	18/fuel	19/cycle	20/only	21/made	22/sense	23/if	24/it	25/were	26/pursuing	27/nuclear	28/weapons	29/.
 # Alignments:
 
 #41
@@ -828,9 +828,9 @@
 #                               :degree (e / entire)
 #                               :location (c / country :name (n2 / name :op1 x3 / "Iran")))))))
 # CCG:
-# NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N/N:1	N/N:1	N	(S\NP)\(S\NP)/S[dcl]:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	N	
+# NP/N:1	N	N\N/NP:2	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	(N/N)/(N/N):1	N/N:1	N	(S\NP)\(S\NP)/S[dcl]:2	NP/N:1	N	N\N/NP:2	NP/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	N	.	
 # 
-# 0/The	1/plant	2/in	3/Yazd	4/Province	5/would	6/produce	7/concentrated	8/yellow	9/cake	10/uranium	11/while	12/another	13/facility	14/at	15/an	16/undisclosed	17/location	18/would	19/complete	20/the	21/cycle	22/by	23/producing	24/finished	25/fuel	26/made	27/entirely	28/in	29/Iran.
+# 0/The	1/plant	2/in	3/Yazd	4/Province	5/would	6/produce	7/concentrated	8/yellow	9/cake	10/uranium	11/while	12/another	13/facility	14/at	15/an	16/undisclosed	17/location	18/would	19/complete	20/the	21/cycle	22/by	23/producing	24/finished	25/fuel	26/made	27/entirely	28/in	29/Iran	30/.
 # Alignments:
 
 #42
@@ -849,9 +849,9 @@
 #                         :op1 (s / shore
 #                               :location (s2 / sea :name (n3 / name :op1 x3 / "Caspian" :op2 x4 / "Sea")))))))
 # CCG:
-# N/N:1	N/N:1	N/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N	
+# N	NP/(N/PP)\NP:2	N/N:1	N/N:1	N/PP:1	S[dcl]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N	NP/(N/PP)\NP:2	N/N:1	N/PP:1	S[dcl]\NP/NP/PR:3	PR	N	(S\NP)\(S\NP)/NP:2	NP/N:1	N/N:1	N	.	
 # 
-# 0/Kazakhstan's	1/increased	2/air	3/defenses	4/come	5/during	6/Kazakhstan's	7/air	8/force	9/carries	10/out	11/exercises	12/along	13/its	14/Caspian	15/shores.
+# 0/Kazakhstan	1/'s	2/increased	3/air	4/defenses	5/come	6/during	7/Kazakhstan	8/'s	9/air	10/force	11/carries	12/out	13/exercises	14/along	15/its	16/Caspian	17/shores	18/.
 # Alignments:
 
 #43
@@ -873,9 +873,9 @@
 #       :time (d2 / decade
 #             :quant (m / multiple)))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	(S\NP)\(S\NP)/NP:2	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	(S\NP)\(S\NP)/NP:2	N	.	
 # 
-# 0/No	1/other	2/drug	3/has	4/become	5/as	6/integral	7/in	8/decades.
+# 0/No	1/other	2/drug	3/has	4/become	5/as	6/integral	7/in	8/decades	9/.
 # Alignments:
 
 #45
@@ -886,16 +886,16 @@
 #       :ARG2 (m / monetary-quantity :quant x0 / 5
 #             :unit (c / cent)))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/(S[to]\NP)/NP:3	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	
+# NP/N:1	N	S[dcl]\NP/(S[to]\NP)/NP:3	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
 # 
-# 0/The	1/pill	2/costs	3/five	4/cents	5/to	6/produce.
+# 0/The	1/pill	2/costs	3/five	4/cents	5/to	6/produce	7/.
 # Alignments:
 
 #46
 # AMR:
 # (c / country :name (n / name :op1 x0 / "Pakistan"))
 # CCG:
-# N	RRB	
+# N	N\N:1	
 # 
 # 0/Pakistan	1/(PK)
 # Alignments:
@@ -915,9 +915,9 @@
 #       :time (w / week
 #             :mod (l3 / last)))
 # CCG:
-# (S/S)/(S/S):1	S/S:1	N/N:1	N	S[dcl]\NP/NP:2	S[adj]\NP:1	NP/NP\(S[adj]\NP):2	NP/NP:1	NP[nb]/N:1	N	S[pss]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N/N:1	N	NP\NP/NP:2	N	
+# (S/S)/(S/S):1	S/S:1	N/N:1	N	S[dcl]\NP/NP:2	N	N\N/NP:2	NP/N:1	N/N:1	N	S[pss]\NP/PP:2	PP/NP:1	NP/N:1	N	NP/N\NP:2	N/N:1	N	N\N/NP:2	N	.	
 # 
-# 0/Last	1/week	2/French	3/police	4/raided	5/more	6/than	7/a	8/dozen	9/locations	10/linked	11/to	12/the	13/People's	14/Mujahedeen	15/northwest	16/of	17/Paris.
+# 0/Last	1/week	2/French	3/police	4/raided	5/more	6/than	7/a	8/dozen	9/locations	10/linked	11/to	12/the	13/People	14/'s	15/Mujahedeen	16/northwest	17/of	18/Paris	19/.
 # Alignments:
 
 #48
@@ -943,9 +943,9 @@
 #                     :op1 x8 / "Wi"
 #                     :op2 x9 / "Sung-lac")))
 # CCG:
-# N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N/N:1	(N/N)/(N/N):1	N/N:1	N	NP\NP:1	
+# N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N	NP/N\NP:2	(N/N)/(N/N):1	N/N:1	N/N:1	N	.	
 # 
-# 0/Wi	1/Sung-lac	2/is	3/the	4/head	5/of	6/the	7/South	8/Korean	9/Foreign	10/Ministry's	11/North	12/American	13/Affairs	14/Bureau.
+# 0/Wi	1/Sung-lac	2/is	3/the	4/head	5/of	6/the	7/South	8/Korean	9/Foreign	10/Ministry	11/'s	12/North	13/American	14/Affairs	15/Bureau	16/.
 # Alignments:
 
 #49
@@ -966,9 +966,9 @@
 #                         :ARG1 (a3 / act-01
 #                                 :prep-toward c)))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	(S\NP)\(S\NP):1	S[ng]\NP/NP:2	NP[nb]/N:1	N/N:1	N	conj:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N	S[dcl]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	(S\NP)/(S\NP):1	S[ng]\NP/NP:2	NP/N:1	N/N:1	N	conj:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N	S[dcl]\NP/PP:2	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Kim	1/Myong-Chol	2/stated	3/that	4/North	5/Korea	6/is	7/carefully	8/monitoring	9/all	10/Australian	11/behavior	12/and	13/that	14/Australia	15/must	16/be	17/careful	18/how	19/Australia	20/acts	21/towards	22/North	23/Korea.
+# 0/Kim	1/Myong-Chol	2/stated	3/that	4/North	5/Korea	6/is	7/carefully	8/monitoring	9/all	10/Australian	11/behavior	12/and	13/that	14/Australia	15/must	16/be	17/careful	18/how	19/Australia	20/acts	21/towards	22/North	23/Korea	24/.
 # Alignments:
 
 #50
@@ -993,9 +993,9 @@
 #                         :ARG1-of (i / involve-01))))
 #       :ARG2 (p2 / publication :name (n2 / name :op1 x4 / "Agence" :op2 x5 / "France-Presse")))
 # CCG:
-# NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/PP:2	PP/NP:1	N/N:1	N/S[em]:1	S[em]/S[dcl]:1	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	S[adj]\NP:1	(S[adj]\NP)\(S[adj]\NP)/NP:2	NP[nb]/N:1	N/N:1	N	S[adj]\NP:1	
+# NP/N:1	N/PP:1	PP/NP:1	N	NP/(N/PP)\NP:2	N/N:1	N/N:1	N/PP:1	S[dcl]\NP/S[em]/PP:3	PP/NP:1	N/N:1	N	S[em]/S[dcl]:1	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	(S\NP)\(S\NP)/PP:2	PP/NP:1	NP/N:1	N/N:1	N	S[pss]\NP:1	.	
 # 
-# 0/A	1/spokeswoman	2/for	3/Germany's	4/Federal	5/exports	6/office	7/stated	8/to	9/Agence	10/France-Presse	11/that	12/the	13/application	14/for	15/an	16/export	17/licence	18/was	19/being	20/studied	21/at	22/ministerial	23/level	24/due	25/to	26/the	27/political	28/considerations	29/involved.
+# 0/A	1/spokeswoman	2/for	3/Germany	4/'s	5/Federal	6/exports	7/office	8/stated	9/to	10/Agence	11/France-Presse	12/that	13/the	14/application	15/for	16/an	17/export	18/licence	19/was	20/being	21/studied	22/at	23/ministerial	24/level	25/due	26/to	27/the	28/political	29/considerations	30/involved	31/.
 # Alignments:
 
 #51
@@ -1021,9 +1021,9 @@
 #                                      :ARG1-of (g / grow-01))
 #                              :mod (a3 / also)))))
 # CCG:
-# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	(S\NP)\(S\NP):1	S[pss]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	
+# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	(S\NP)\(S\NP):1	S[pss]\NP:1	(S\NP)\(S\NP)/PP:2	PP/NP:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N/PP:1	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Siemens	1/stated	2/that	3/the	4/Hanau	5/plutonium-processing	6/facility	7/was	8/also	9/abandoned	10/due	11/to	12/political	13/difficulties	14/at	15/a	16/time	17/of	18/growing	19/debate	20/about	21/the	22/future	23/of	24/nuclear	25/power.
+# 0/Siemens	1/stated	2/that	3/the	4/Hanau	5/plutonium-processing	6/facility	7/was	8/also	9/abandoned	10/due	11/to	12/political	13/difficulties	14/at	15/a	16/time	17/of	18/growing	19/debate	20/about	21/the	22/future	23/of	24/nuclear	25/power	26/.
 # Alignments:
 
 #52
@@ -1049,9 +1049,9 @@
 #                                          :name (n3 / name
 #                                                  :op1 x2 / "Asia"))))))
 # CCG:
-# N/N:1	N/N:1	N/N:1	N	(NP\NP)/(NP\NP):1	conj:2	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	N	
+# N/N:1	N/N:1	N	S[dcl]\NP/NP:2	N	conj:2	N/N:1	N/(S[to]\NP):1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	N	.	
 # 
-# 0/Live	1/poultry	2/smuggling	3/undermines	4/WHO	5/and	6/FAO	7/efforts	8/to	9/restrict	10/bird	11/flu	12/spread	13/in	14/Asia.
+# 0/Live	1/poultry	2/smuggling	3/undermines	4/WHO	5/and	6/FAO	7/efforts	8/to	9/restrict	10/bird	11/flu	12/spread	13/in	14/Asia	15/.
 # Alignments:
 
 #53
@@ -1065,9 +1065,9 @@
 #                   :ARG1-of (r2 / report-01)))
 #       :location (c2 / country :quant x2 / 10))
 # CCG:
-# NP[nb]/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	N/N:1	N	conj:2	S[dcl]\NP/NP:2	N	NP\NP/NP:2	N/N:1	N	
+# NP/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	N/N:1	N	conj:2	S[pt]\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	.	
 # 
-# 0/The	1/H5N1	2/flu	3/strain	4/has	5/caused	6/13	7/deaths	8/and	9/reported	10/outbreaks	11/in	12/10	13/countries.
+# 0/The	1/H5N1	2/flu	3/strain	4/has	5/caused	6/13	7/deaths	8/and	9/reported	10/outbreaks	11/in	12/10	13/countries	14/.
 # Alignments:
 
 #54
@@ -1106,9 +1106,9 @@
 #                                 :month x2 / 2
 #                                 :year x3 / 2004)))))
 # CCG:
-# (N/N)/(N/N):1	(N/N)/(N/N):1	N/N:1	N	conj:2	NP[nb]/N:1	N	conj:2	N/N:1	N/N:1	N	S[dcl]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	N\N:1	
+# (N/N)/(N/N):1	(N/N)/(N/N):1	N/N:1	N	conj:2	NP/(N/PP):1	N/PP:1	conj:2	N/N:1	N/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	N\N:1	.	
 # 
-# 0/Up	1/to	2/700	3/insurgents	4/and	5/their	6/relatives	7/and	8/8	9/rebel	10/commanders	11/surrendered	12/after	13/government	14/troops	15/surrounded	16/several	17/northern	18/holdouts	19/in	20/late	21/February	22/2004.
+# 0/Up	1/to	2/700	3/insurgents	4/and	5/their	6/relatives	7/and	8/8	9/rebel	10/commanders	11/surrendered	12/after	13/government	14/troops	15/surrounded	16/several	17/northern	18/holdouts	19/in	20/late	21/February	22/2004	23/.
 # Alignments:
 
 #56
@@ -1128,9 +1128,9 @@
 #                              :op2 (c2 / cooperate-01)
 #                              :mod (i / international)))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[ng]\NP):2	S[ng]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	conj:2	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[ng]\NP):2	S[ng]\NP/PP:2	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	conj:2	N	.	
 # 
-# 0/The	1/Albanian	2/Government	3/has	4/been	5/working	6/on	7/a	8/project	9/of	10/national	11/strategy	12/which	13/will	14/require	15/international	16/support	17/and	18/cooperation.
+# 0/The	1/Albanian	2/Government	3/has	4/been	5/working	6/on	7/a	8/project	9/of	10/national	11/strategy	12/which	13/will	14/require	15/international	16/support	17/and	18/cooperation	19/.
 # Alignments:
 
 #57
@@ -1142,9 +1142,9 @@
 #                   :ARG2 (d / diplomat)))
 #       :ARG1 (i2 / incinerate-01))
 # CCG:
-# N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	
+# N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N	.	
 # 
-# 0/International	1/diplomats	2/witnessed	3/the	4/incineration.
+# 0/International	1/diplomats	2/witnessed	3/the	4/incineration	5/.
 # Alignments:
 
 #58
@@ -1176,9 +1176,9 @@
 #       :time (w / week
 #             :mod (l / last)))
 # CCG:
-# (S/S)/(S/S):1	S/S:1	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/PP/NP:3	N/N:1	N/N:1	N	PP/(S[ng]\NP):1	S[ng]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	conj:2	S[b]\NP/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	
+# (S/S)/(S/S):1	S/S:1	N/N:1	N	NP/N\NP:2	N/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N	S[dcl]\NP/PP/NP:3	N/N:1	N/N:1	N	PP/(S[ng]\NP):1	S[ng]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	conj:2	S[b]\NP/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	.	
 # 
-# 0/Last	1/week	2/Hong	3/Kong's	4/Wen	5/Wei	6/Po	7/daily	8/newspaper	9/quoted	10/Chinese	11/military	12/sources	13/as	14/stating	15/that	16/Taiwan	17/must	18/rejoin	19/China	20/or	21/face	22/military	23/action	24/within	25/20	26/years.
+# 0/Last	1/week	2/Hong	3/Kong	4/'s	5/Wen	6/Wei	7/Po	8/daily	9/newspaper	10/quoted	11/Chinese	12/military	13/sources	14/as	15/stating	16/that	17/Taiwan	18/must	19/rejoin	20/China	21/or	22/face	23/military	24/action	25/within	26/20	27/years	28/.
 # Alignments:
 
 #59
@@ -1194,9 +1194,9 @@
 #             :quant (t / temporal-quantity :quant x1 / 7
 #                   :unit (y / year))))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	
+# NP/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N/N:1	N	.	
 # 
-# 0/The	1/second	2/plant	3/will	4/be	5/ready	6/to	7/generate	8/electricity	9/in	10/7	11/years.
+# 0/The	1/second	2/plant	3/will	4/be	5/ready	6/to	7/generate	8/electricity	9/in	10/7	11/years	12/.
 # Alignments:
 
 #60
@@ -1206,9 +1206,9 @@
 #       :op2 (t2 / technology)
 #       :op3 (t3 / telecommunication))
 # CCG:
-# N/N:1	N	NP\NP:1	
+# N	;	N	;	N	
 # 
-# 0/terrorism;	1/technology;	2/Telecom
+# 0/terrorism	1/;	2/technology	3/;	4/Telecom
 # Alignments:
 
 #61
@@ -1221,9 +1221,9 @@
 #             :op1 (v / village :quant x1 / 2
 #                   :mod (c / country :name (n / name :op1 x2 / "Turkey")))))
 # CCG:
-# N	NP\NP/NP:2	NP[nb]/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	(N/N)/(N/N):1	N/N:1	N/N:1	N	
+# NP/PP:1	PP/NP:1	NP/N:1	N	S[dcl]\NP/PR:2	PR	(S\NP)\(S\NP)/NP:2	N/N:1	N/N:1	N	.	
 # 
-# 0/One	1/of	2/the	3/missiles	4/broke	5/up	6/over	7/two	8/Turkish	9/villages.
+# 0/One	1/of	2/the	3/missiles	4/broke	5/up	6/over	7/two	8/Turkish	9/villages	10/.
 # Alignments:
 
 #62
@@ -1236,9 +1236,9 @@
 #           :name (n / name :op1 x2 / "Kaletra"))
 #   :time (c2 / current))
 # CCG:
-# S/S:1	N/N:1	N	NP\NP/NP:2	N	S[dcl]\NP/NP:2	N	
+# (N/N)/(N/N):1	N/N:1	N	N\N/NP:2	N	S[dcl]\NP/NP:2	N	.	
 # 
-# 0/Currently	1/24000	2/patients	3/in	4/Brazil	5/receive	6/Kaletra.
+# 0/Currently	1/24000	2/patients	3/in	4/Brazil	5/receive	6/Kaletra	7/.
 # Alignments:
 
 #63
@@ -1269,9 +1269,9 @@
 #             :op1 (d3 / date-entity :year x1 / 2005 :month x2 / 9 :day x3 / 17)
 #             :op2 (d4 / date-entity :year x4 / 2005 :month x5 / 9 :day x6 / 18)))
 # CCG:
-# S/S/NP:2	N/N:1	N	N\N:1	N	S[dcl]\NP/PP/NP:3	NP[nb]/N:1	N	PP/NP:1	N	NP\NP/NP:2	N	conj:2	N	NP\NP/NP:2	N	
+# S/S/NP:2	N/N:1	N	N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N	(S\NP)\(S\NP)/NP:2	N/PP:1	PP/NP:1	N/PP:1	conj:2	N/PP:1	PP/NP:1	N	.	
 # 
-# 0/on	1/17-18	2/September	3/2005	4/Spain	5/detained	6/the	7/group	8/on	9/suspicion	10/of	11/possession	12/and	13/trafficking	14/of	15/weapons.
+# 0/on	1/17-18	2/September	3/2005	4/Spain	5/detained	6/the	7/group	8/on	9/suspicion	10/of	11/possession	12/and	13/trafficking	14/of	15/weapons	16/.
 # Alignments:
 
 #65
@@ -1280,9 +1280,9 @@
 #       :op1 (c / country :name (n / name :op1 x0 / "India"))
 #       :op2 (c2 / country :name (n2 / name :op1 x1 / "Pakistan")))
 # CCG:
-# N/N:1	LRB	N	RRB	
+# N	N\N:1	;	N	N\N:1	
 # 
-# 0/India	1/(IN);	2/Pakistan	3/(PK)
+# 0/India	1/(IN)	2/;	3/Pakistan	4/(PK)
 # Alignments:
 
 #66
@@ -1297,9 +1297,9 @@
 #             :op2 (c / conflict-01))
 #       :op3 (t / terrorism))
 # CCG:
-# N	conj:2	N/N:1	N/N:1	N	conj:2	N/N:1	N	
+# N	conj:2	N/N:1	N	;	N	conj:2	N	;	N	
 # 
-# 0/weather	1/and	2/natural	3/disaster;	4/war	5/and	6/conflict;	7/terrorism
+# 0/weather	1/and	2/natural	3/disaster	4/;	5/war	6/and	7/conflict	8/;	9/terrorism
 # Alignments:
 
 #67
@@ -1342,9 +1342,9 @@
 #                                                 :degree (m2 / mass)))))
 #           :ARG1 a))
 # CCG:
-# N	conj:2	N/N:1	N/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	conj:2	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N	NP\NP/NP:2	N/N:1	N	
+# N	conj:2	(N/N)/(N/N):1	N/N:1	N/N:1	N/PP:1	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	conj:2	N	N\N/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Israel	1/and	2/South	3/Korea	4/share	5/concerns	6/over	7/the	8/connection	9/between	10/North	11/Korea	12/and	13/Iran	14/in	15/the	16/pursuit	17/of	18/weapons	19/of	20/mass	21/destruction.
+# 0/Israel	1/and	2/South	3/Korea	4/share	5/concerns	6/over	7/the	8/connection	9/between	10/North	11/Korea	12/and	13/Iran	14/in	15/the	16/pursuit	17/of	18/weapons	19/of	20/mass	21/destruction	22/.
 # Alignments:
 
 #69
@@ -1362,9 +1362,9 @@
 #                                  :ARG1 (s2 / satellite))))
 #           :ARG2 c))
 # CCG:
-# N	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	NP[nb]/N:1	N	
+# N	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP/N:1	N/(S[to]\NP):1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP/PR:3	PR	NP/N:1	N	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	NP/N:1	N	.	
 # 
-# 0/China	1/said	2/it	3/had	4/the	5/right	6/to	7/carry	8/out	9/the	10/test	11/after	12/destroying	13/the	14/satellite.
+# 0/China	1/said	2/it	3/had	4/the	5/right	6/to	7/carry	8/out	9/the	10/test	11/after	12/destroying	13/the	14/satellite	15/.
 # Alignments:
 
 #70
@@ -1385,9 +1385,9 @@
 #       :location (c / country :name (n / name :op1 x2 / "Saudi" :op2 x3 / "Arabia"))
 #       :time (d2 / date-entity :day x4 / 3 :month x5 / 2 :year x6 / 2007))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	RRB	N	NP\NP/NP:2	N	NP\NP/(S[ng]\NP):2	(S\NP)/(S\NP):1	S[ng]\NP/NP:2	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N[num]:1	N[num]	,	N	N\N/NP:2	N/PP:1	PP/(S[ng]\NP):1	(S\NP)/(S\NP):1	S[ng]\NP/NP:2	N	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	.	
 # 
-# 0/10	1/individuals	2/are	3/detained	4/in	5/Saudi	6/Arabia	7/on	8/February	9/3,	10/2007	11/for	12/suspicion	13/of	14/illegally	15/collecting	16/money	17/to	18/fund	19/terror-related	20/activities.
+# 0/10	1/individuals	2/are	3/detained	4/in	5/Saudi	6/Arabia	7/on	8/February	9/3	10/,	11/2007	12/for	13/suspicion	14/of	15/illegally	16/collecting	17/money	18/to	19/fund	20/terror-related	21/activities	22/.
 # Alignments:
 
 #71
@@ -1411,9 +1411,9 @@
 #                       :op1 x2 / "Vietnam")
 #               :mod (c3 / communism)))
 # CCG:
-# N	NP\NP/NP:2	S[adj]\NP:1	(N/N)/(N/N)\(S[adj]\NP):2	N/N:1	N	NP\NP/NP:2	N	conj:2	S[adj]\NP:1	(N/N)/(N/N)\(S[adj]\NP):2	N/N:1	N	NP\NP/NP:2	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N	
+# N/PP:1	PP/NP:1	S[adj]\NP:1	(N/N)/(N/N)\(S[adj]\NP):2	N/N:1	N/PP:1	PP/NP:1	N	conj:2	S[adj]\NP:1	(N/N)/(N/N)\(S[adj]\NP):2	N/N:1	N/PP:1	PP/NP:1	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	N\N/NP:2	N/N:1	N	.	
 # 
-# 0/Possession	1/of	2/more	3/than	4/600	5/grams	6/of	7/heroin	8/or	9/more	10/than	11/20	12/kilograms	13/of	14/opium	15/carries	16/the	17/death	18/penalty	19/in	20/communist	21/Vietnam.
+# 0/Possession	1/of	2/more	3/than	4/600	5/grams	6/of	7/heroin	8/or	9/more	10/than	11/20	12/kilograms	13/of	14/opium	15/carries	16/the	17/death	18/penalty	19/in	20/communist	21/Vietnam	22/.
 # Alignments:
 
 #72
@@ -1433,9 +1433,9 @@
 #                               :ARG1 (c / country :name (n3 / name :op1 x6 / "France"))
 #                               :ARG3 (j / judge-01))))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/N:2	N	((S\NP)\(S\NP))\((S\NP)\(S\NP))/NP:4	N/N:1	N	N\N:1	(S\NP)\(S\NP)/NP:2	N	NP\NP/NP:2	NP[nb]/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N/N:1	N	
+# NP/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/N:2	N/PP:1	PP/NP:1	N/N:1	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP/PP:1	PP/NP:1	NP/N:1	N	S[pss]\NP/PP:2	PP/NP:1	N	NP/N\NP:2	N/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N	.	
 # 
-# 0/The	1/Kurds	2/were	3/seized	4/the	5/week	6/of	7/4	8/February	9/2007	10/as	11/part	12/of	13/an	14/investigation	15/headed	16/by	17/France's	18/top	19/anti-terrorist	20/judge	21/Jean-Louis	22/Bruguiere.
+# 0/The	1/Kurds	2/were	3/seized	4/the	5/week	6/of	7/4	8/February	9/2007	10/as	11/part	12/of	13/an	14/investigation	15/headed	16/by	17/France	18/'s	19/top	20/anti-terrorist	21/judge	22/Jean-Louis	23/Bruguiere	24/.
 # Alignments:
 
 #73
@@ -1451,16 +1451,16 @@
 #             :op2 (c / conflict-01))
 #       :op6 (m / military))
 # CCG:
-# N/N:1	N/N:1	N/N:1	N/N:1	N	conj:2	N/N:1	N	
+# N	;	N	;	N	;	N	;	N	conj:2	N	;	N	
 # 
-# 0/International;	1/Government;	2/weapons;	3/proliferation;	4/war	5/and	6/conflict;	7/military
+# 0/International	1/;	2/Government	3/;	4/weapons	5/;	6/proliferation	7/;	8/war	9/and	10/conflict	11/;	12/military
 # Alignments:
 
 #74
 # AMR:
 # (c / country :name (n / name :op1 x0 / "Kenya"))
 # CCG:
-# N	RRB	
+# N	N\N:1	
 # 
 # 0/Kenya	1/(KE)
 # Alignments:
@@ -1472,9 +1472,9 @@
 #       :op2 (c2 / country :name (n2 / name :op1 x1 / "Islamic" :op2 x2 / "Republic" :op3 x3 / "of" :op4 x4 / "Iran"))
 #       :op3 (c3 / country :name (n3 / name :op1 x5 / "Democratic" :op2 x6 / "People's" :op3 x7 / "Republic" :op4 x8 / "of" :op5 x9 / "Korea")))
 # CCG:
-# N/N:1	LRB	N/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N	NP\NP/NP:2	N	
+# N	N\N:1	;	N	,	N/N:1	N	N\N/NP:2	N	;	N	,	N/N:1	N	NP/N\NP:2	N	N\N/NP:2	N	
 # 
-# 0/India	1/(IN);	2/Iran,	3/Islamic	4/Republic	5/of	6/(IR);	7/Korea,	8/Democratic	9/People's	10/Republic	11/of	12/(KP)
+# 0/India	1/(IN)	2/;	3/Iran	4/,	5/Islamic	6/Republic	7/of	8/(IR)	9/;	10/Korea	11/,	12/Democratic	13/People	14/'s	15/Republic	16/of	17/(KP)
 # Alignments:
 
 #76
@@ -1491,9 +1491,9 @@
 #                               :ARG1-of (h3 / have-org-role-91
 #                                     :ARG0 (p3 / person :name (n5 / name :op1 x12 / "Silvio" :op2 x13 / "Berlusconi"))))))))
 # CCG:
-# NP[nb]/N:1	(N/N)/(N/N):1	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	conj:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	N/N:1	N/N:1	N/N:1	N/N:1	N	
+# NP/N:1	N/N:1	N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N	N\N/NP:2	NP/N:1	N	N\N/NP:2	N/N:1	N	conj:2	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	NP/(N/PP)\NP:2	(N/N)/(N/N):1	N/N:1	N/PP:1	.	
 # 
-# 0/The	1/2	2/arrested	3/candidates	4/are	5/Leoluca	6/Lanza	7/of	8/the	9/Christian-Democrats	10/for	11/Independence	12/Party	13/and	14/Giovanni	15/riina	16/from	17/Silvio	18/Berlusconi's	19/Forza	20/Italia	21/party.
+# 0/The	1/2	2/arrested	3/candidates	4/are	5/Leoluca	6/Lanza	7/of	8/the	9/Christian-Democrats	10/for	11/Independence	12/Party	13/and	14/Giovanni	15/riina	16/from	17/Silvio	18/Berlusconi	19/'s	20/Forza	21/Italia	22/party	23/.
 # Alignments:
 
 #77
@@ -1503,9 +1503,9 @@
 #       :op2 (c2 / continent :name (n2 / name :op1 x1 / "Europe"))
 #       :op3 (c3 / country :name (n3 / name :op1 x2 / "Russian" :op2 x3 / "Federation")))
 # CCG:
-# N/N:1	LRB	N/N:1	N/N:1	N	RRB	
+# N	N\N:1	;	N	;	N/N:1	N	N\N:1	
 # 
-# 0/Estonia	1/(EE);	2/Europe;	3/Russian	4/Federation	5/(RU)
+# 0/Estonia	1/(EE)	2/;	3/Europe	4/;	5/Russian	6/Federation	7/(RU)
 # Alignments:
 
 #78
@@ -1534,9 +1534,9 @@
 #                         :mod (c2 / cyber)
 #                         :quant (s2 / series)))))
 # CCG:
-# N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N	NP\NP/NP:2	N/N:1	N	conj:2	(N/N)/(N/N):1	N/N:1	N	N/N:1	N	(S\NP)\(S\NP)\NP:2	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	NP\NP/NP:2	N	
+# N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/PP:1	PP/NP:1	N/N:1	N	conj:2	NP/N:1	N/N:1	N	N/N:1	N	(S\NP)\(S\NP)\NP:2	(S\NP)\(S\NP)/NP:2	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N/PP:1	PP/NP:1	N	.	
 # 
-# 0/Estonia	1/began	2/barring	3/access	4/to	5/key	6/government	7/and	8/some	9/private	10/websites	11/3	12/weeks	13/ago	14/after	15/the	16/onset	17/of	18/a	19/series	20/of	21/cyber	22/attacks	23/against	24/Estonia.
+# 0/Estonia	1/began	2/barring	3/access	4/to	5/key	6/government	7/and	8/some	9/private	10/websites	11/3	12/weeks	13/ago	14/after	15/the	16/onset	17/of	18/a	19/series	20/of	21/cyber	22/attacks	23/against	24/Estonia	25/.
 # Alignments:
 
 #79
@@ -1547,9 +1547,9 @@
 #                   :mod (c / critical)))
 #       :time (e / ever))
 # CCG:
-# N	NP\NP/NP:2	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S\NP)\(S\NP):1	S[adj]\NP:1	
+# N/PP:1	PP/NP:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	(S\NP)\(S\NP):1	S[pss]\NP:1	.	
 # 
-# 0/Access	1/to	2/critical	3/websites	4/was	5/never	6/restricted.
+# 0/Access	1/to	2/critical	3/websites	4/was	5/never	6/restricted	7/.
 # Alignments:
 
 #80
@@ -1558,9 +1558,9 @@
 #       :op1 (m / military)
 #       :op2 (t / technology))
 # CCG:
-# LRB	N	
+# N	;	N	
 # 
-# 0/Military;	1/technology
+# 0/Military	1/;	2/technology
 # Alignments:
 
 #81
@@ -1583,9 +1583,9 @@
 #                                  :ARG1 (n5 / nation)
 #                                  :ARG2 (s2 / security))))))
 # CCG:
-# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N	conj:2	N/N:1	N	
+# N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP/N:1	N	NP/(N/PP)\NP:2	N/N:1	conj:2	N/N:1	N/PP:1	.	
 # 
-# 0/Ivanov	1/stated	2/that	3/Russians	4/should	5/be	6/confident	7/in	8/the	9/nation's	10/defense	11/and	12/security	13/capabilities.
+# 0/Ivanov	1/stated	2/that	3/Russians	4/should	5/be	6/confident	7/in	8/the	9/nation	10/'s	11/defense	12/and	13/security	14/capabilities	15/.
 # Alignments:
 
 #82
@@ -1600,9 +1600,9 @@
 #                   :mod (s / summit
 #                         :mod (b / beer)))))
 # CCG:
-# NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	conj:2	N	
+# NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N	conj:2	N	.	
 # 
-# 0/He	1/needs	2/to	3/conduct	4/a	5/beer	6/summit	7/between	8/Palin	9/and	10/NBC.
+# 0/He	1/needs	2/to	3/conduct	4/a	5/beer	6/summit	7/between	8/Palin	9/and	10/NBC	11/.
 # Alignments:
 
 #83
@@ -1612,7 +1612,7 @@
 #             :mod (u / universal))
 #       :ARG2 (w / we))
 # CCG:
-# N	S[ng]\NP/NP:2	N/N:1	N/N:1	N	
+# N	S[ng]\NP/NP/NP:3	NP	N/N:1	N	
 # 
 # 0/#2	1/Bringing	2/us	3/Universal	4/Healthcare
 # Alignments:
@@ -1628,9 +1628,9 @@
 #       :time (y / year
 #             :mod (t2 / this)))
 # CCG:
-# N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	(S\NP)\(S\NP)/N:2	N	
+# N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	NP/N:1	N/N:1	N	N\N/N:2	N	.	
 # 
-# 0/Palin	1/is	2/the	3/real	4/star	5/behind	6/the	7/Republican	8/ticket	9/this	10/year.
+# 0/Palin	1/is	2/the	3/real	4/star	5/behind	6/the	7/Republican	8/ticket	9/this	10/year	11/.
 # Alignments:
 
 #85
@@ -1646,9 +1646,9 @@
 #                   :op2 (d / drift-01
 #                         :ARG1 p))))
 # CCG:
-# S/S:1	NP	S[dcl]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	conj:2	N	
+# S/S:1	,	NP	S[dcl]\NP:1	,	S\S/S[dcl]:2	NP	S[dcl]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	conj:2	N	.	
 # 
-# 0/Not,	1/I	2/suspect,	3/as	4/it	5/relates	6/to	7/magnetic	8/pole	9/shift	10/or	11/drift.
+# 0/Not	1/,	2/I	3/suspect	4/,	5/as	6/it	7/relates	8/to	9/magnetic	10/pole	11/shift	12/or	13/drift	14/.
 # Alignments:
 
 #86
@@ -1665,9 +1665,9 @@
 #             :ARG1 (t / thread
 #                   :mod (t2 / this))))
 # CCG:
-# LRB	NP[nb]/N:1	N	NP\NP/NP:2	NP/NP:1	NP[nb]/N:1	N	NP\NP/NP:2	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	(S\NP)\(S\NP)/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/NP:2	NP	S[ng]\NP/NP:2	NP	N	
+# N/N:1	N	,	;	NP/N:1	N/PP:1	PP/NP:1	NP/(S[dcl]/NP):1	NP/N:1	N/PP:1	PP/NP:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	(S\NP)\(S\NP)/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/(S[ng]\NP)/NP:2	NP	S[ng]\NP/NP:2	NP/N:1	N	.	
 # 
-# 0/'Flow,'	1/a	2/documentary	3/on	4/what	5/the	6/privatization	7/of	8/water	9/really	10/means	11/which	12/was	13/the	14/inspiration	15/for	16/me	17/creating	18/this	19/thread.
+# 0/'	1/Flow	2/,	3/'	4/a	5/documentary	6/on	7/what	8/the	9/privatization	10/of	11/water	12/really	13/means	14/which	15/was	16/the	17/inspiration	18/for	19/me	20/creating	21/this	22/thread	23/.
 # Alignments:
 
 #87
@@ -1681,9 +1681,9 @@
 #                         :ARG1 (r2 / run
 #                               :extent (l / long))))))
 # CCG:
-# NP/(S[dcl]\NP):1	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/S[dcl]:2	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	NP	(S\NP)/(S\NP):1	S[dcl]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N	
+# NP/(S[dcl]/NP):1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	S[dcl]\NP/S[em]:2	(S\NP)\(S\NP):1	,	(S\NP)\(S\NP):1	,	S[em]/S[dcl]:1	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/PP:2	PP/NP:1	NP/N:1	N/N:1	N	.	
 # 
-# 0/What	1/he's	2/saying	3/isn't,	4/obviously,	5/that	6/we	7/shouldn't	8/care	9/about	10/the	11/long	12/run.
+# 0/What	1/he	2/'s	3/saying	4/is	5/n't	6/,	7/obviously	8/,	9/that	10/we	11/should	12/n't	13/care	14/about	15/the	16/long	17/run	18/.
 # Alignments:
 
 #88
@@ -1705,9 +1705,9 @@
 #                         :ARG1 e
 #                         :time (s3 / still)))))
 # CCG:
-# S/S/PP:2	PP/NP:1	NP[nb]/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP)/NP:3	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	S[qem]/S[dcl]:1	NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N	
+# (S/S)/(S/S):1	S/S/NP:2	NP/N:1	N	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	S[pss]\NP/PP:2	PP/NP:1	NP/N:1	N/N:1	N	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	NP	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP):2	S[to]\NP:1	.	
 # 
-# 0/Preferably	1/with	2/a	3/solution	4/that	5/would	6/allow	7/soldiers	8/lost	9/to	10/this	11/idiotic	12/policy	13/to	14/reenlist	15/if	16/they	17/still	18/wish	19/to.
+# 0/Preferably	1/with	2/a	3/solution	4/that	5/would	6/allow	7/soldiers	8/lost	9/to	10/this	11/idiotic	12/policy	13/to	14/reenlist	15/if	16/they	17/still	18/wish	19/to	20/.
 # Alignments:
 
 #89
@@ -1722,9 +1722,9 @@
 #                               :ARG1 m
 #                               :degree (l / less))))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/PP:2	PP/NP:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP:1	S[adj]\NP:1	S[adj]\NP:1	
+# NP/N:1	N	S[dcl]\NP/PP:2	PP/NP:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP:1	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	.	
 # 
-# 0/The	1/military	2/is	3/against	4/things	5/that	6/make	7/it	8/run	9/less	10/efficiently.
+# 0/The	1/military	2/is	3/against	4/things	5/that	6/make	7/it	8/run	9/less	10/efficiently	11/.
 # Alignments:
 
 #90
@@ -1736,9 +1736,9 @@
 #             :ARG1 (y / you)
 #             :ARG2 (a / amr-unknown)))
 # CCG:
-# S/S:1	S[wq]/(S[q]/NP):1	S[q]/NP/NP:2	NP	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	
+# LRB	NP/(S[dcl]\NP):1	S[dcl]\NP/(S[ng]\NP)/NP:3	NP	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	.	
 # 
-# 0/Of	1/what	2/Am	3/I	4/trying	5/to	6/convince	7/you?
+# 0/Of	1/what	2/Am	3/I	4/trying	5/to	6/convince	7/you	8/?
 # Alignments:
 
 #91
@@ -1754,9 +1754,9 @@
 #                   :topic (s / substance))
 #             :beneficiary (y / you)))
 # CCG:
-# S[qem]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	N/N:1	N	PP/NP:1	N	
+# S/S/S[dcl]:2	NP/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N/PP:1	PP/NP:1	NP	,	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP	.	
 # 
-# 0/If	1/that	2/article	3/represents	4/the	5/final	6/word	7/on	8/substance	9/to	10/you,	11/that's	12/fine	13/with	14/me.
+# 0/If	1/that	2/article	3/represents	4/the	5/final	6/word	7/on	8/substance	9/to	10/you	11/,	12/that	13/'s	14/fine	15/with	16/me	17/.
 # Alignments:
 
 #92
@@ -1778,9 +1778,9 @@
 #                               :ARG1 m
 #                               :ARG2 e)))))
 # CCG:
-# NP	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/S[qem]:2	(S\NP)\(S\NP)/S[dcl]:2	N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	conj:2	(S\NP)\(S\NP):1	(S\NP)\(S\NP):1	S[qem]/S[dcl]:1	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	N	conj:2	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	
+# NP	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N	conj:2	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	N	conj:2	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	.	
 # 
-# 0/I	1/think	2/you	3/are	4/answering	5/if	6/two	7/men	8/are	9/the	10/same	11/and	12/not	13/necessarily	14/if	15/they	16/are	17/equal	18/in	19/rights	20/or	21/should	22/be.
+# 0/I	1/think	2/you	3/are	4/answering	5/if	6/two	7/men	8/are	9/the	10/same	11/and	12/not	13/necessarily	14/if	15/they	16/are	17/equal	18/in	19/rights	20/or	21/should	22/be	23/.
 # Alignments:
 
 #93
@@ -1804,9 +1804,9 @@
 #                   :time (w / week
 #                         :domain (t / this)))))
 # CCG:
-# S/S/(S[ng]\NP):2	S[ng]\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	S/S/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	
+# S/S/(S[ng]\NP):2	S[ng]\NP/NP:2	NP/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/N:2	N	,	NP	S[dcl]\NP/S[dcl]:2	NP/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	S/S/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP/N:1	N/(S[to]\NP):1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	,	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP/PR:3	PR	NP/N:1	N	.	
 # 
-# 0/While	1/riding	2/the	3/bus	4/earlier	5/this	6/week,	7/I	8/overheard	9/a	10/man	11/say	12/that	13/if	14/he	15/had	16/the	17/guts	18/to	19/do	20/it,	21/he	22/would	23/jump	24/off	25/an	26/overpass.
+# 0/While	1/riding	2/the	3/bus	4/earlier	5/this	6/week	7/,	8/I	9/overheard	10/a	11/man	12/say	13/that	14/if	15/he	16/had	17/the	18/guts	19/to	20/do	21/it	22/,	23/he	24/would	25/jump	26/off	27/an	28/overpass	29/.
 # Alignments:
 
 #94
@@ -1818,9 +1818,9 @@
 #             :mod (o / only :polarity x0 / -))
 #       :mod (o2 / of-course))
 # CCG:
-# N/N:1	N/N:1	N	NP\NP/NP:2	N/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N/N:1	N	
+# S/S/NP:2	N	,	N/PP:1	PP/NP:1	N/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP/N:1	N/N:1	N	.	
 # 
-# 0/Of	1/course,	2/access	3/to	4/petroleum	5/itelf	6/is	7/not	8/the	9/only	10/issue.
+# 0/Of	1/course	2/,	3/access	4/to	5/petroleum	6/itelf	7/is	8/not	9/the	10/only	11/issue	12/.
 # Alignments:
 
 #95
@@ -1833,9 +1833,9 @@
 #                   :ARG2 (e / economy
 #                         :ARG1-of (l / localize-01)))))
 # CCG:
-# NP	S[dcl]\NP/S[dcl]:2	NP/(S[dcl]/NP):1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	
+# NP	S[dcl]\NP/S[dcl]:2	NP/(S[dcl]/NP):1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/I	1/think	2/what	3/you	4/are	5/going	6/to	7/see	8/is	9/a	10/shift	11/towards	12/localized	13/economies.
+# 0/I	1/think	2/what	3/you	4/are	5/going	6/to	7/see	8/is	9/a	10/shift	11/towards	12/localized	13/economies	14/.
 # Alignments:
 
 #96
@@ -1848,9 +1848,9 @@
 #                   :ARG1-of (s / say-01
 #                         :ARG0 p))))
 # CCG:
-# N/N:1	N/N:1	N	S[dcl]\NP/NP:2	NP/(S[dcl]/NP):1	NP	S[dcl]\NP/NP:2	
+# NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/S[dcl]:2	N	S[dcl]\NP/NP:2	NP/(S[dcl]/NP):1	NP	S[dcl]\NP/NP:2	.	
 # 
-# 0/I'm	1/thinking	2/Farmerman	3/means	4/what	5/he	6/says.
+# 0/I	1/'m	2/thinking	3/Farmerman	4/means	5/what	6/he	7/says	8/.
 # Alignments:
 
 #97
@@ -1874,9 +1874,9 @@
 #             :ARG1 a2)
 #       :ARG1-of (r / repeat-01))
 # CCG:
-# NP	(S\NP)/(S\NP):1	S[dcl]\NP/PP:2	PP/NP:1	conj:2	S[dcl]\NP/NP:2	NP[nb]/N:1	N	conj:2	NP[nb]/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP:1	conj:2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	conj:2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	
+# NP	(S\NP)/(S\NP):1	S[dcl]\NP/PP:2	PP/NP:1	conj:2	S[dcl]\NP/NP:2	NP/N:1	N	conj:2	NP/N:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	(S\NP)\(S\NP):1	(S[adj]\NP)/(S[adj]\NP):1	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	conj:2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
-# 0/You	1/repeatedly	2/voted	3/for	4/and	5/supported	6/a	7/president	8/and	9/an	10/administration	11/who	12/was	13/clearly	14/and	15/obviously	16/incompetent	17/and	18/ideologically	19/extreme.
+# 0/You	1/repeatedly	2/voted	3/for	4/and	5/supported	6/a	7/president	8/and	9/an	10/administration	11/who	12/was	13/clearly	14/and	15/obviously	16/incompetent	17/and	18/ideologically	19/extreme	20/.
 # Alignments:
 
 #98
@@ -1900,9 +1900,9 @@
 #                   :ARG1 (m / man)
 #                   :ARG1-of (o2 / obvious-41))))
 # CCG:
-# S/S/S[dcl]:2	NP	S[dcl]\NP/PP:2	PP/NP:1	NP	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[b]\NP):2	(S\NP)/(S\NP):1	S[b]\NP/(S[pss]\NP):2	S[pss]\NP/S[dcl]:2	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/NP:2	N/N:1	N	N	conj:2	NP[nb]/N:1	N	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP:1	
+# S/S/S[dcl]:2	NP	S[dcl]\NP/PP:2	PP/NP:1	NP	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/NP:2	N	,	NP	S[dcl]\NP/(S[adj]\NP):2	(N/N)/(N/N):1	N/N:1	N	S[adj]\NP\NP:2	,	conj:2	NP/N:1	N	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP:1	.	
 # 
-# 0/While	1/I	2/disagree	3/with	4/you	5/that	6/we'd	7/all	8/be	9/Nazis,	10/it	11/was	12/over	13/60	14/years	15/ago,	16/and	17/the	18/man	19/has	20/obviously	21/reformed.
+# 0/While	1/I	2/disagree	3/with	4/you	5/that	6/we	7/'d	8/all	9/be	10/Nazis	11/,	12/it	13/was	14/over	15/60	16/years	17/ago	18/,	19/and	20/the	21/man	22/has	23/obviously	24/reformed	25/.
 # Alignments:
 
 #99
@@ -1919,9 +1919,9 @@
 #                                     :ARG2 (d / drug)))
 #                   :mode x0 / interrogative)))
 # CCG:
-# S/S/S[dcl]:2	NP	S[dcl]\NP:1	S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/S[dcl]:2	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	
+# S/S:1	NP	(S[dcl]\NP)/(S[dcl]\NP):1	S[dcl]\NP/(S[b]\NP)/NP:3	NP	S[b]\NP/S[dcl]:2	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP/N:1	N	.	
 # 
-# 0/So	1/I	2/ask	3/do	4/you	5/think	6/drugs	7/can	8/be	9/good	10/for	11/some	12/people?
+# 0/So	1/I	2/ask	3/do	4/you	5/think	6/drugs	7/can	8/be	9/good	10/for	11/some	12/people	13/?
 # Alignments:
 
 #100
@@ -1942,7 +1942,7 @@
 #           :ARG2 (t / that)
 #           :polarity x0 / -))
 # CCG:
-# NP	,	(S\NP)/(S\NP):1	,	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	.	
+# NP	,	(S\NP)/(S\NP):1	,	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/That	1/,	2/however	3/,	4/is	5/not	6/my	7/fault	8/.
 # Alignments:
@@ -1955,7 +1955,7 @@
 #             :ARG4 (r / reverie
 #                   :ARG1-of (l / long-03))))
 # CCG:
-# S/S:1	NP	S[dcl]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	.	
+# S/S:1	NP	S[dcl]\NP/PP:2	PP/NP:1	NP/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	.	
 # 
 # 0/And	1/he	2/sank	3/into	4/a	5/reverie	6/,	7/which	8/lasted	9/a	10/long	11/time	12/.
 # Alignments:
@@ -1988,7 +1988,7 @@
 #             :mod (o3 / only)
 #             :domain (i / it)))
 # CCG:
-# S/S/S[dcl]:2	NP	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	NP\NP/NP:2	N	conj:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/NP:2	N	,	NP	S[dcl]\NP/(S[b]\NP):2	(S[b]\NP)/(S[b]\NP)/NP:2	NP	S[b]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	.	
+# S/S/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N	conj:2	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N		N	,	N	S[dcl]\NP/(S[b]\NP):2	(S[b]\NP)/(S[b]\NP)/NP:2	NP	S[b]\NP:1	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	.	
 # 
 # 0/If	1/it	2/is	3/only	4/a	5/sprout	6/of	7/radish	8/or	9/the	10/sprig	11/of	12/a	13/rose	14/-	15/bush	16/,	17/one	18/would	19/let	20/it	21/grow	22/wherever	23/it	24/might	25/wish	26/.
 # Alignments:
@@ -2010,7 +2010,7 @@
 #       :ARG0-of (h / have-03
 #             :ARG1 (c / consequence)))
 # CCG:
-# N	NP\NP/NP:2	N	.	
+# N/PP:1	PP/NP:1	N	.	
 # 
 # 0/Matters	1/of	2/consequence	3/!
 # Alignments:
@@ -2022,7 +2022,7 @@
 #       :ARG1 (s / star)
 #       :time (e / ever))
 # CCG:
-# NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/PP:2	PP/NP:1	NP/N:1	N	.	
 # 
 # 0/He	1/has	2/never	3/looked	4/at	5/a	6/star	7/.
 # Alignments:
@@ -2036,7 +2036,7 @@
 #             :op1 (t2 / temporal-quantity :quant x0 / 1000000
 #                   :unit (y / year))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N	NP\NP/NP:2	N	.	
+# NP/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N	(S\NP)\(S\NP)/NP:2	N/PP:1	PP/NP:1	N	.	
 # 
 # 0/The	1/flowers	2/have	3/been	4/growing	5/thorns	6/for	7/millions	8/of	9/years	10/.
 # Alignments:
@@ -2064,7 +2064,7 @@
 #             :time (w / while-away-01
 #                   :duration (a / all))))
 # CCG:
-# NP[expl]	S[dcl]\NP[expl]/S[em]/NP:3	NP[nb]/N:1	N	S[em]/S[dcl]:1	NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/NP:2	NP	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/N:2	N	.	
+# NP[expl]	S[dcl]\NP[expl]/S[em]/NP:3	NP/(N/PP):1	N/PP:1	S[em]/S[dcl]:1	NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/NP:2	NP	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/N:2	N	.	
 # 
 # 0/It	1/is	2/my	3/fault	4/that	5/you	6/have	7/not	8/known	9/it	10/all	11/the	12/while	13/.
 # Alignments:
@@ -2075,9 +2075,9 @@
 #   :ARG0 (t / that)
 #   :ARG1 (i / i))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP		
+# NP	S[dcl]\NP/NP:2	NP		.	
 # 
-# 0/That	1/frightens	2/me	3/...
+# 0/That	1/frightens	2/me	3/..	4/.
 # Alignments:
 
 #112
@@ -2088,7 +2088,7 @@
 #           :op1 (t / that
 #                  :mod (a2 / all))))
 # CCG:
-# S/S/NP:2	NP/NP:1	N	,	NP[nb]/N:1	N	S[dcl]\NP:1	.	
+# S/S/NP:2	NP/NP:1	N	,	NP/N:1	N	S[dcl]\NP:1	.	
 # 
 # 0/Over	1/all	2/that	3/,	4/the	5/king	6/answered	7/.
 # Alignments:
@@ -2102,7 +2102,7 @@
 #             :manner (w / well
 #                   :degree (a / amr-unknown))))
 # CCG:
-# S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/S[qem]:2	S[qem]/S[dcl]/(S[adj]\NP):2	S[adj]\NP:1	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP:1	.	
+# S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/S[qem]:2	S[qem]/S[dcl]/(S[adj]\NP):2	S[adj]\NP:1	NP	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	.	
 # 
 # 0/And	1/you	2/will	3/see	4/how	5/well	6/I	7/am	8/obeyed	9/.
 # Alignments:
@@ -2118,7 +2118,7 @@
 #                   :mod (o / other)
 #                   :mod (a / all))))
 # CCG:
-# S/S:1	,	S/S/NP:2	N/N:1	N	,	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/NP:2	N	.	
+# S/S:1	,	S/S/NP:2	N/N:1	N	,	NP/N:1	N/N:1	N	S[dcl]\NP/NP:2	N	.	
 # 
 # 0/For	1/,	2/to	3/conceited	4/men	5/,	6/all	7/other	8/men	9/are	10/admirers	11/.
 # Alignments:
@@ -2131,7 +2131,7 @@
 #           :ARG1 (m / much
 #                   :degree (s / so))))
 # CCG:
-# NP	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[adj]\NP):2	S[adj]\NP/((S[to]\NP)/NP):3	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	.	
+# NP	S[dcl]\NP/(S[to]\NP)/NP:3	N/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	
 # 
 # 0/I	1/have	2/so	3/much	4/to	5/do	6/!
 # Alignments:
@@ -2143,7 +2143,7 @@
 #             :degree (v / very))
 #       :domain (i / it))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	(N/N)/(N/N):1	N/N:1	N	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	(N/N)/(N/N):1	N/N:1	N	.	
 # 
 # 0/It	1/is	2/a	3/very	4/different	5/matter	6/.
 # Alignments:
@@ -2158,7 +2158,7 @@
 #                   :ARG0 (h / he)
 #                   :time (a / always))))
 # CCG:
-# NP	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	NP[nb]/N:1	N/N:1	N	(S\NP)\(S\NP)/S[dcl]:2	NP	(S\NP)/(S\NP):1	S[dcl]\NP:1	.	
+# NP	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	NP/N:1	N/N:1	N	N\N/(S[dcl]/NP):2	NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	.	
 # 
 # 0/I	1/had	2/loosened	3/the	4/golden	5/muffler	6/that	7/he	8/always	9/wore	10/.
 # Alignments:
@@ -2175,7 +2175,7 @@
 #                         :mod (v / vice))
 #                   :time (f / former))))
 # CCG:
-# NP	S[dcl]\NP/NP:2	N/N:1	N/N:1	N	,	NP/NP:1	NP[nb]/N:1	N/N:1	N/N:1	N/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP:1	.	
+# NP	S[dcl]\NP/NP:2	N/N:1	N/N:1	N	,	NP/NP:1	NP/N:1	(N/N)/(N/N):1	N/N:1	N/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP:1	.	
 # 
 # 0/He	1/succeeds	2/Terrence	3/D.	4/Daniels	5/,	6/formerly	7/a	8/W.R.	9/Grace	10/vice	11/chairman	12/,	13/who	14/resigned	15/.
 # Alignments:
@@ -2188,7 +2188,7 @@
 #       :ARG2 (p / place :polarity x0 / -
 #             :domain (t / this)))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	,	conj:2	NP	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	,	conj:2	NP	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	NP/N:1	N	.	
 # 
 # 0/It	1/is	2/the	3/right	4/day	5/,	6/but	7/this	8/is	9/not	10/the	11/place	12/.
 # Alignments:
@@ -2204,7 +2204,7 @@
 #             :ARG1 a)
 #       :time (e / ever))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N	S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP:1	conj:2	S[b]\NP/NP:2	NP	.	
+# S/S/NP:2	NP/N:1	N	S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/NP:2	conj:2	S[b]\NP/NP:2	NP	.	
 # 
 # 0/At	1/no	2/time	3/did	4/I	5/see	6/or	7/hear	8/anyone	9/.
 # Alignments:
@@ -2222,7 +2222,7 @@
 #                         :ARG2 (i / i)
 #                         :location (t2 / there)))))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	conj:2	S[b]\NP/PP:2	PP/NP:1	NP	NP\NP:1	.	
+# NP	S[dcl]\NP/(S[to]\NP)/NP:3	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	conj:2	S[b]\NP/PP:2	PP/NP:1	NP	(S\NP)\(S\NP):1	.	
 # 
 # 0/You	1/have	2/nothing	3/to	4/do	5/but	6/wait	7/for	8/me	9/there	10/.
 # Alignments:
@@ -2237,7 +2237,7 @@
 #                   :op1 (w2 / wall)
 #                   :direction (d / down))))
 # CCG:
-# NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	(S\NP)\(S\NP):1	PP/NP:1	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	(S\NP)\(S\NP):1	PP/NP:1	NP/N:1	N	.	
 # 
 # 0/I	1/want	2/to	3/get	4/down	5/from	6/the	7/wall	8/.
 # Alignments:
@@ -2256,7 +2256,7 @@
 #                   :purpose (d / drink-01))
 #             :ARG2 h))
 # CCG:
-# NP	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	NP[nb]/N:1	N	,	conj:2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP/NP:3	NP	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
+# NP	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	NP/N:1	N	,	conj:2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP/NP:3	NP	NP/N:1	N	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP:1	.	
 # 
 # 0/I	1/had	2/moistened	3/his	4/temples	5/,	6/and	7/had	8/given	9/him	10/some	11/water	12/to	13/drink	14/.
 # Alignments:
@@ -2285,7 +2285,7 @@
 #                         :direction (a / away
 #                               :mod (f / far))))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	,	(S\NP)/(S\NP)/NP:2	NP	S[dcl]\NP:1	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	.	
+# NP/(N/PP):1	N/PP:1	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	,	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP:1	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	.	
 # 
 # 0/His	1/look	2/was	3/very	4/serious	5/,	6/like	7/someone	8/lost	9/far	10/away	11/.
 # Alignments:
@@ -2297,7 +2297,7 @@
 #       :ARG1 (s2 / some
 #             :ARG0-of (t / travel-01)))
 # CCG:
-# S/S/NP:2	NP	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	N	,	NP[nb]/N:1	N	S[dcl]\NP/NP:2	N	.	
+# S/S/NP:2	NP	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	N	,	NP/N:1	N	S[dcl]\NP/NP:2	N	.	
 # 
 # 0/For	1/some	2/,	3/who	4/are	5/travelers	6/,	7/the	8/stars	9/are	10/guides	11/.
 # Alignments:
@@ -2314,7 +2314,7 @@
 #             :dayperiod (n / night)
 #             :mod (t / that)))
 # CCG:
-# (S/S)/(S/S):1	S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	(S[b]\NP)/(S[b]\NP)/NP:2	NP	S[b]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	.	
+# S/S/N:2	N	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	(S[b]\NP)/(S[b]\NP)/NP:2	NP	S[b]\NP/PR:2	PR	(S\NP)\(S\NP)/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/That	1/night	2/I	3/did	4/not	5/see	6/him	7/set	8/out	9/on	10/his	11/way	12/.
 # Alignments:
@@ -2328,7 +2328,7 @@
 #                         :mod (r / rust))))
 #       :mod (a / all))
 # CCG:
-# NP/NP:1	NP[nb]/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N/N:1	N	.	
+# NP/NP:1	NP/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	N\N/NP:2	NP/N:1	N/N:1	N	.	
 # 
 # 0/All	1/the	2/stars	3/will	4/be	5/wells	6/with	7/a	8/rusty	9/pulley	10/.
 # Alignments:
@@ -2359,7 +2359,7 @@
 #             :ARG2 (w / world
 #                   :mod (a / all))))
 # CCG:
-# NP	S[dcl]\NP/NP:2	N/N:1	N	,	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP	,	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP	PP/NP:1	NP/NP:1	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/NP:2	N/N:1	N	,	NP\NP/NP:2	NP/N:1	N	N\N/NP:2	NP	,	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP	PP/NP:1	NP/NP:1	NP/N:1	N	.	
 # 
 # 0/She	1/has	2/four	3/thorns	4/,	5/of	6/no	7/use	8/at	9/all	10/,	11/to	12/protect	13/herself	14/against	15/all	16/the	17/world	18/.
 # Alignments:
@@ -2374,7 +2374,7 @@
 #             :instrument (r / rope))
 #       :polarity x0 / -)
 # CCG:
-# NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP	PP/NP:1	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP	PP/NP:1	NP/N:1	N	.	
 # 
 # 0/I	1/did	2/not	3/want	4/him	5/to	6/tire	7/himself	8/with	9/the	10/rope	11/.
 # Alignments:
@@ -2402,7 +2402,7 @@
 #       :ARG1 (w / weary-01
 #             :ARG1 i))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N	.	
 # 
 # 0/I	1/made	2/a	3/gesture	4/of	5/weariness	6/.
 # Alignments:
@@ -2418,7 +2418,7 @@
 #             :op2 (s / stir-02
 #                   :ARG1 i)))
 # CCG:
-# NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP:1	,	conj:2	S[dcl]\NP:1	.	
+# NP	S[dcl]\NP/(S[pt]\NP):2	(S\NP)/(S\NP):1	S[pt]\NP:1	,	conj:2	S[dcl]\NP:1	.	
 # 
 # 0/I	1/felt	2/deeply	3/moved	4/,	5/and	6/stirred	7/.
 # Alignments:
@@ -2434,7 +2434,7 @@
 #      :ARG0-of (m / merchandise-01)
 #      :domain (t2 / this))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/NP:2	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP):1	.	
 # 
 # 0/This	1/was	2/a	3/merchant	4/who	5/sold	6/pills	7/that	8/had	9/been	10/invented	11/to	12/quench	13/thirst	14/.
 # Alignments:
@@ -2456,7 +2456,7 @@
 #                         :ARG2 p))
 #             :time (e2 / ever)))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP/NP:3	NP	(N/N)/(N/N):1	N/N:1	N	,	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	NP	S[dcl]\NP/NP/NP:3	NP	.	
+# NP/N:1	N/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP/NP:3	NP	(N/N)/(N/N):1	N/N:1	N	,	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N	NP	S[dcl]\NP/NP/NP:3	NP	.	
 # 
 # 0/The	1/little	2/prince	3/,	4/who	5/asked	6/me	7/so	8/many	9/questions	10/,	11/never	12/seemed	13/to	14/hear	15/the	16/ones	17/I	18/asked	19/him	20/.
 # Alignments:
@@ -2470,7 +2470,7 @@
 #                   :degree (v / very)))
 #       :time (a / at-first))
 # CCG:
-# S/S/NP:2	N	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)):3	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
+# S/S/(S[adj]\NP):2	S[adj]\NP:1	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
 # 0/At	1/first	2/you	3/seemed	4/to	5/be	6/very	7/much	8/surprised	9/.
 # Alignments:
@@ -2496,7 +2496,7 @@
 #             :ARG1 (c / cry-02
 #                   :ARG0 s)))
 # CCG:
-# S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	.	
+# S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/For	1/she	2/did	3/not	4/want	5/him	6/to	7/see	8/her	9/crying	10/.
 # Alignments:
@@ -2512,7 +2512,7 @@
 #                         :ARG1-of (d / differ-02
 #                               :ARG2 h)))))
 # CCG:
-# S/S:1	NP	S[dcl]\NP/S:2	S/S[dcl]:1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/PP:2	PP/NP:1	NP	S[adj]\NP:1	NP\NP/NP:2	NP	.	
+# S/S:1	NP	S[dcl]\NP/PP:2	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/PP:2	PP/NP:1	N	N\N:1	PP/NP:1	NP	.	
 # 
 # 0/Perhaps	1/that	2/is	3/because	4/he	5/is	6/thinking	7/of	8/something	9/else	10/besides	11/himself	12/.
 # Alignments:
@@ -2523,7 +2523,7 @@
 #       :ARG0 (y / you)
 #       :ARG1 (a / amr-unknown))
 # CCG:
-# S[wq]/(S[q]/NP):1	S[q]/(S[ng]\NP)/NP:2	NP	S[ng]\NP/NP:2	.	
+# S[wq]/(S[dcl]\NP):1	S[dcl]\NP/(S[ng]\NP)/NP:3	NP	S[ng]\NP:1	.	
 # 
 # 0/What	1/are	2/you	3/doing	4/?
 # Alignments:
@@ -2539,7 +2539,7 @@
 #                         :mod (t2 / this))
 #                   :ARG1-of (t3 / true-01))))
 # CCG:
-# NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S\NP)\(S\NP):1	,	S[adj]\NP:1	,	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	.	
+# NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP):1	,	(S\NP)\(S\NP):1	,	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
 # 0/I	1/would	2/try	3/to	4/find	5/out	6/,	7/so	8/,	9/if	10/this	11/was	12/a	13/person	14/of	15/true	16/understanding	17/.
 # Alignments:
@@ -2558,7 +2558,7 @@
 #                   :compared-to (p2 / possible-01)))
 #       :mod (c / certain))
 # CCG:
-# NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP/PP:2	PP/NP:1	N	NP\NP/(S[adj]\NP):2	S[adj]\NP:1	.	
+# NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP)/NP:3	NP/N:1	N/PP:1	PP/(S[adj]\NP):1	S[adj]\NP/PP:2	PP/NP:1	N	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
 # 0/I	1/shall	2/certainly	3/try	4/to	5/make	6/my	7/portraits	8/as	9/true	10/to	11/life	12/as	13/possible	14/.
 # Alignments:
@@ -2577,7 +2577,7 @@
 #                               :mod (g2 / great)))))
 #       :mode x0 / interrogative)
 # CCG:
-# S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	.	
+# S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/N:1	N/PP:1	PP/NP:1	N	.	
 # 
 # 0/Do	1/you	2/think	3/that	4/this	5/sheep	6/will	7/have	8/to	9/have	10/a	11/great	12/deal	13/of	14/grass	15/?
 # Alignments:
@@ -2609,7 +2609,7 @@
 #                               :quant (t2 / temporal-quantity :quant x0 / 35
 #                                     :unit (y2 / year)))))))
 # CCG:
-# S/S:1	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N	S[dcl]\NP/NP:2	N	N/N:1	N	(S\NP)\(S\NP)\NP:2	.	
+# S/S:1	NP	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N	S[dcl]\NP/NP:2	N	N/N:1	N	(S\NP)\(S\NP)\NP:2	.	
 # 
 # 0/But	1/you	2/have	3/to	4/recognize	5/that	6/these	7/events	8/took	9/place	10/35	11/years	12/ago	13/.
 # Alignments:
@@ -2637,7 +2637,7 @@
 #                                                :ARG0-of (g2 / govern-01))))
 #                      :polarity x2 / -)))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	S[dcl]\NP/NP:2	N	NP\NP/NP:2	N/N:1	N/N:1	N	(S\NP)\(S\NP)/S[dcl]:2	N	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	.	
+# NP/N:1	N/N:1	N	S[dcl]\NP/NP:2	N/PP:1	PP/NP:1	N/N:1	N/N:1	N	(S\NP)\(S\NP)/S[dcl]:2	N	S[dcl]\NP/(S[pt]\NP):2	(S\NP)\(S\NP):1	S[pt]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
 # 0/The	1/federal	2/government	3/suspended	4/sales	5/of	6/U.S.	7/savings	8/bonds	9/because	10/Congress	11/has	12/n't	13/lifted	14/the	15/ceiling	16/on	17/government	18/debt	19/.
 # Alignments:
@@ -2660,7 +2660,7 @@
 #                                         :ARG0-of (o2 / own-01
 #                                                    :ARG1 (f / factory)))))))
 # CCG:
-# S/S:1	NP[nb]/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP:1	NP\NP/NP:2	N	conj:2	N/N:1	N	NP\NP/NP:2	N/N:1	N	.	
+# S/S:1	NP/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP/(N/PP):1	N/PP:1	PP/PP:1	PP/NP:1	N/N:1	conj:2	N/N:1	N	N\N/NP:2	N/N:1	N	.	
 # 
 # 0/And	1/the	2/city	3/decided	4/to	5/treat	6/its	7/guests	8/more	9/like	10/royalty	11/or	12/rock	13/stars	14/than	15/factory	16/owners	17/.
 # Alignments:
@@ -2683,7 +2683,7 @@
 #             :ARG2 (d3 / drool-02
 #                   :ARG0 (s2 / schoolboy))))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N	,	N/N:1	N/N:1	N	S[dcl]\NP/PP:2	PP/NP:1	N	NP\NP/NP:2	NP[nb]/N:1	N	conj:2	N	.	
+# S/S/NP:2	NP/N:1	N	,	N/N:1	(N/N)\(N/N):1	N	S[dcl]\NP/PP:2	PP/NP:1	N	N\N/NP:2	NP/N:1	N	conj:2	N	.	
 # 
 # 0/After	1/the	2/race	3/,	4/Fortune	5/500	6/executives	7/drooled	8/like	9/schoolboys	10/over	11/the	12/cars	13/and	14/drivers	15/.
 # Alignments:
@@ -2707,7 +2707,7 @@
 #                  :ARG1-of (l2 / localize-01)))
 #   :time (a3 / already))
 # CCG:
-# S/S:1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	conj:2	S[ng]\NP/NP:2	N/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	.	
+# S/S:1	NP	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	N/N:1	N	(S\NP)\(S\NP)/NP:2	NP/N:1	N	conj:2	S[ng]\NP/NP:2	N/N:1	N/N:1	N	N\N/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/Already	1/it	2/is	3/changing	4/development	5/patterns	6/for	7/the	8/worse	9/and	10/causing	11/localized	12/traffic	13/congestion	14/around	15/its	16/exits	17/.
 # Alignments:
@@ -2721,7 +2721,7 @@
 #             :ARG0 (y / you)
 #             :ARG1 p))
 # CCG:
-# S/S/(S[dcl]\NP):2	S[dcl]\NP/NP:2	N/N:1	N	S[qem]/S[dcl]:1	NP	S[dcl]\NP/NP:2	NP	.	
+# S[wq]/S[q]:1	S[q]/NP/NP:2	N/N:1	N		NP	S[dcl]\NP/NP:2	NP	.	
 # 
 # 0/Where	1/'s	2/Homer	3/Simpson	4/when	5/you	6/need	7/him	8/?
 # Alignments:
@@ -2740,7 +2740,7 @@
 #                        :ARG1 (b2 / business)
 #                        :mod (p / primary))))
 # CCG:
-# S/S/S[dcl]:2	NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	N/N:1	N/N:1	N	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N		
+# S/S/S[dcl]:2	NP	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N	S/S:1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N		
 # 
 # 0/If	1/we	2/recognize	3/that	4/roads	5/primarily	6/benefit	7/businesses	8/then	9/we	10/should	11/do	12/two	13/things	14/
 # Alignments:
@@ -2764,7 +2764,7 @@
 #   :ARG1 (y / yx0 / 'all)
 #   :degree (d / dead))
 # CCG:
-# NP	NP\NP:1	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
+# N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
 # 0/You	1/all	2/are	3/dead	4/wrong	5/.
 # Alignments:
@@ -2785,7 +2785,7 @@
 #                                     :ARG1 (o / other)))))
 #             :ARG2 c))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	NP	S[dcl]\NP/NP:2	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	N	.	
+# N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP/N:1	N	NP	S[dcl]\NP/NP:2	(S\NP)\(S\NP)/(S[ng]\NP):2	S[ng]\NP/NP:2	N	.	
 # 
 # 0/Audit	1/cadres	2/must	3/require	4/themselves	5/to	6/adhere	7/to	8/the	9/standards	10/they	11/apply	12/when	13/auditing	14/others	15/.
 # Alignments:
@@ -2798,7 +2798,7 @@
 #       :ARG1 (p / prosecute-01
 #             :ARG1 a))
 # CCG:
-# S[q]/(S[b]\NP)/NP:2	N/N:1	N	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[pss]\NP):2	S[pss]\NP:1	.	
+# S[q]/(S[b]\NP)/NP:2	S[ng]\NP/NP:2	N	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[pss]\NP):2	S[pss]\NP:1	.	
 # 
 # 0/Do	1/prosecuting	2/authorities	3/dare	4/to	5/be	6/prosecuted	7/?
 # Alignments:
@@ -2817,7 +2817,7 @@
 #                         :mod (r2 / reciprocate-00))))
 #       :beneficiary (p / person))
 # CCG:
-# NP	S[dcl]\NP/(S[b]\NP)/NP:3	N	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N	conj:2	N/N:1	N	NP\NP/NP:2	N	.	
+# NP	S[dcl]\NP/(S[b]\NP)/NP:3	N	S[b]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N	conj:2	S[ng]\NP/NP:2	N/PP:1	PP/NP:1	N	.	
 # 
 # 0/He	1/made	2/people	3/realize	4/the	5/strength	6/of	7/gratitude	8/and	9/touching	10/nature	11/of	12/reciprocation	13/.
 # Alignments:
@@ -2836,7 +2836,7 @@
 #             :mod (t / that))
 #       :time (j / just))
 # CCG:
-# NP	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP)/NP:3	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[qem]/NP:3	NP	S[qem]/S[dcl]/(S[adj]\NP):2	S[adj]\NP:1	NP	S[dcl]\NP:1	.	
+# NP	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP)/NP:3	NP/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[qem]/NP:3	NP	S[qem]/(S[dcl]/NP)/N:2	N	NP	S[dcl]\NP/NP:2	.	
 # 
 # 0/He	1/just	2/emailed	3/that	4/friend	5/to	6/ask	7/him	8/how	9/much	10/it	11/cost	12/.
 # Alignments:
@@ -2855,7 +2855,7 @@
 #             :ARG1 (w2 / wish-01
 #                   :ARG0 (e / everybody))))
 # CCG:
-# NP/NP:1	NP[nb]/N:1	N	NP\NP/NP:2	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	NP[nb]/N\NP:2	N	.	
+# S/S:1	NP/N:1	N/PP:1	PP/NP:1	N/N:1	N	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/NP:2	NP/(N/PP):1	N/PP:1	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/NP:2	NP	NP/(N/PP)\NP:2	N/PP:1	.	
 # 
 # 0/Currently	1/a	2/group	3/of	4/Australian	5/physicists	6/are	7/accelerating	8/their	9/work	10/to	11/realize	12/everybody	13/'s	14/wish	15/.
 # Alignments:
@@ -2871,7 +2871,7 @@
 #                         :ARG1-of (s / state-01)
 #                         :mod (t2 / this)))))
 # CCG:
-# NP[expl]	S[dcl]\NP[expl]/(S[to]\NP)/(S[adj]\NP):3	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	.	
+# NP[expl]	S[dcl]\NP[expl]/(S[to]\NP)/(S[adj]\NP):3	(S\NP)\(S\NP):1	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	PP/NP:1	NP/N:1	N/N:1	N	.	
 # 
 # 0/It	1/was	2/not	3/possible	4/to	5/confirm	6/the	7/credibility	8/of	9/this	10/statement	11/from	12/an	13/independent	14/source	15/.
 # Alignments:
@@ -2887,7 +2887,7 @@
 #             :ARG2 (s2 / succeed-01
 #                   :ARG0 (w2 / we))))
 # CCG:
-# S[q]/(S[b]\NP)/NP:2	NP	(S\NP)/(S\NP):1	S[b]\NP/NP:2	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
+# S[q]/(S[b]\NP)/NP:2	NP	S\S:1	S[b]\NP/NP:2	N/(S[to]\NP):1	S[to]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/(S[to]\NP)/NP:2	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
 # 
 # 0/Do	1/they	2/still	3/have	4/time	5/to	6/wait	7/for	8/us	9/to	10/succeed	11/?
 # Alignments:
@@ -2906,9 +2906,9 @@
 #             :ARG0 i
 #             :ARG1 c2))
 # CCG:
-# NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N	conj:2	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	
+# NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	(S\NP)\(S\NP):1	,	conj:2	S[dcl]\NP/(S[ng]\NP):2	S[ng]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	.	
 # 
-# 0/I	1/actually	2/had	3/some	4/other	5/classmates	6/there,	7/and	8/was	9/going	10/to	11/call	12/them.
+# 0/I	1/actually	2/had	3/some	4/other	5/classmates	6/there	7/,	8/and	9/was	10/going	11/to	12/call	13/them	14/.
 # Alignments:
 
 #163
@@ -2928,9 +2928,9 @@
 #                               :ARG1-of (d3 / dial-01))))
 #             :manner (p / proper)))
 # CCG:
-# NP	S[dcl]\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N	conj:2	(S\NP)\(S\NP)/PP:2	PP/NP:1	N	NP\NP/NP:2	N	S[adj]\NP:1	N/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	S[adj]\NP:1	
+# NP	S[dcl]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	NP/(N/PP):1	N/N:1	N/PP:1	,	conj:2	PP/PP:1	PP/NP:1	N/PP:1	PP/NP:1	N	S[pss]\NP:1	N/N:1	N	S[dcl]\NP/NP:2	(S\NP)\(S\NP):1	RQU	
 # 
-# 0/I	1/had	2/a	3/look	4/at	5/my	6/call	7/register,	8/and	9/out	10/of	11/dozens	12/of	13/calls	14/dialed	15/only	16/one	17/was	18/properly	19/connected!
+# 0/I	1/had	2/a	3/look	4/at	5/my	6/call	7/register	8/,	9/and	10/out	11/of	12/dozens	13/of	14/calls	15/dialed	16/only	17/one	18/was	19/properly	20/connected!
 # Alignments:
 
 #164
@@ -2946,9 +2946,9 @@
 #                               :op1 x0 / "Wenchuan"
 #                               :op2 x1 / "Earthquake")))))
 # CCG:
-# NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP[nb]/N:1	N	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N	
+# NP	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP/N:1	N	S[pss]\NP/PP:2	PP/NP:1	NP/N:1	N/N:1	N	.	
 # 
-# 0/We	1/all	2/saw	3/the	4/damage	5/wreaked	6/by	7/the	8/Wenchuan	9/Earthquake.
+# 0/We	1/all	2/saw	3/the	4/damage	5/wreaked	6/by	7/the	8/Wenchuan	9/Earthquake	10/.
 # Alignments:
 
 #165
@@ -2966,9 +2966,9 @@
 #                   :mod (p2 / powerful)))
 #       :mod (r / really))
 # CCG:
-# S/S/S[dcl]:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	(S\NP)\(S\NP)/NP:2	NP	NP\NP/NP:2	N	
+# S/S/S[dcl]:2	NP/N:1	N/N:1	N	S[dcl]\NP:1	,	NP/N:1	N	NP/(N/PP)\NP:2	N/PP:1	(S\NP)/(S\NP):1	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP/PP:2	PP/NP:1	NP/PP:1	PP/NP:1	N	.	
 # 
-# 0/Once	1/a	2/powerful	3/earthquake	4/strikes,	5/the	6/people's	7/lives	8/really	9/do	10/become	11/as	12/tiny	13/as	14/those	15/of	16/ants.
+# 0/Once	1/a	2/powerful	3/earthquake	4/strikes	5/,	6/the	7/people	8/'s	9/lives	10/really	11/do	12/become	13/as	14/tiny	15/as	16/those	17/of	18/ants	19/.
 # Alignments:
 
 #166
@@ -2989,9 +2989,9 @@
 #                         :mod (a2 / again))))
 #       :ARG2 (p2 / person :name (n / name :op1 x2 / "God")))
 # CCG:
-# NP	S[dcl]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	conj:2	N	S[dcl]\NP/(S[b]\NP)/NP:3	N	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	(S\NP)\(S\NP):1	
+# NP	S[dcl]\NP/PP:2	PP/NP:1	NP/N:1	N	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/NP:2	NP/(N/PP):1	N/PP:1	conj:2	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	(S[b]\NP)/(S[b]\NP)/NP:2	N	S[b]\NP/NP:2	NP/N:1	N/N:1	N	RQU	
 # 
-# 0/I	1/pray	2/to	3/the	4/God	5/to	6/open	7/his	8/eyes	9/and	10/don't	11/let	12/disasters	13/visit	14/the	15/Chinese	16/land	17/again!
+# 0/I	1/pray	2/to	3/the	4/God	5/to	6/open	7/his	8/eyes	9/and	10/do	11/n't	12/let	13/disasters	14/visit	15/the	16/Chinese	17/land	18/again!
 # Alignments:
 
 #167
@@ -3005,9 +3005,9 @@
 #             :op3 (s3 / stabilize-01
 #                   :ARG1 (s4 / society))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N/N:1	N	conj:2	S[b]\NP/NP:2	NP[nb]/N:1	N	
+# NP/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	,	S[b]\NP/NP:2	N	conj:2	S[b]\NP/NP:2	NP/N:1	N	.	
 # 
-# 0/The	1/aim	2/was	3/to	4/settle	5/disputes,	6/stop	7/fights	8/and	9/stabilize	10/the	11/society.
+# 0/The	1/aim	2/was	3/to	4/settle	5/disputes	6/,	7/stop	8/fights	9/and	10/stabilize	11/the	12/society	13/.
 # Alignments:
 
 #168
@@ -3027,9 +3027,9 @@
 #                   :ARG1 (a2 / ant
 #                         :ARG0-of (l / live-01)))))
 # CCG:
-# N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	((S[adj]\NP)/(S[adj]\NP))/((S[adj]\NP)/(S[adj]\NP)):3	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	(S[adj]\NP)\(S[adj]\NP)/NP:2	N	conj:2	N	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	
+# N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	N\N/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	(S[adj]\NP)\(S[adj]\NP)/NP:2	N	,	conj:2	N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	.	
 # 
-# 0/Humans	1/can	2/manufacture	3/tanks	4/that	5/are	6/much	7/more	8/powerful	9/than	10/ants,	11/but	12/humans	13/cannot	14/manufacture	15/a	16/living	17/ant...
+# 0/Humans	1/can	2/manufacture	3/tanks	4/that	5/are	6/much	7/more	8/powerful	9/than	10/ants	11/,	12/but	13/humans	14/cannot	15/manufacture	16/a	17/living	18/ant..	19/.
 # Alignments:
 
 #169
@@ -3043,9 +3043,9 @@
 #             :ARG1 (b / brave
 #                   :domain p2)))
 # CCG:
-# NP[nb]/N:1	N/N:1	N/N:1	N	S[dcl]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	
+# NP/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	.	
 # 
-# 0/A	1/defeated	2/general	3/can't	4/claim	5/to	6/be	7/brave.
+# 0/A	1/defeated	2/general	3/can	4/n't	5/claim	6/to	7/be	8/brave	9/.
 # Alignments:
 
 #170
@@ -3058,9 +3058,9 @@
 #             :time (d / die-01
 #                   :ARG1 y)))
 # CCG:
-# S[q]/(S[adj]\NP)/NP:2	NP	S[adj]\NP/PP:2	PP/(S[ng]\NP):1	S[ng]\NP:1	(S\NP)\(S\NP)/NP:2	N	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP:1	
+# S[q]/(S[adj]\NP)/NP:2	NP	S[adj]\NP/PP:2	PP/(S[ng]\NP):1	S[ng]\NP/PP:2	PP/NP:1	N	(S\NP)\(S\NP)/S[dcl]:2	NP	S[dcl]\NP:1	.	
 # 
-# 0/Are	1/you	2/afraid	3/of	4/going	5/to	6/Hell	7/when	8/you	9/die?
+# 0/Are	1/you	2/afraid	3/of	4/going	5/to	6/Hell	7/when	8/you	9/die	10/?
 # Alignments:
 
 #171
@@ -3070,9 +3070,9 @@
 #       :ARG1 (i / it)
 #       :manner (a / amr-unknown))
 # CCG:
-# S[wq]/S[q]:1	S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/NP:2	NP	S[adj]\NP:1	
+# S[wq]/S[q]:1	S[q]/(S[b]\NP)/NP:2	NP	S[b]\NP/PR/NP:3	NP	PR	.	
 # 
-# 0/How	1/did	2/they	3/set	4/it	5/up?
+# 0/How	1/did	2/they	3/set	4/it	5/up	6/?
 # Alignments:
 
 #172
@@ -3092,9 +3092,9 @@
 #             :ARG1-of (v2 / vary-01
 #                   :ARG2 (q / quite))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N	NP\NP/NP:2	N	LRB	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP:1	S[adj]\NP:1	conj:2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	
+# N/N:1	N	S[dcl]\NP/NP:2	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP:1	,	S[adj]\NP:1	,	conj:2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	.	
 # 
-# 0/Strike-type	1/earthquakes	2/have	3/various	4/types	5/of	6/precursory	7/signs,	8/which	9/are	10/widespread,	11/long-lasting,	12/and	13/quite	14/variable.
+# 0/Strike-type	1/earthquakes	2/have	3/various	4/types	5/of	6/precursory	7/signs	8/,	9/which	10/are	11/widespread	12/,	13/long-lasting	14/,	15/and	16/quite	17/variable	18/.
 # Alignments:
 
 #173
@@ -3109,9 +3109,9 @@
 #                   :ARG1 (b / building
 #                         :mod (s / school)))))
 # CCG:
-# N/N:1	N	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	conj:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[pt]\NP):2	S[pt]\NP:1	
+# N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	,	conj:2	NP/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[pt]\NP):2	S[pt]\NP:1	.	
 # 
-# 0/Natural	1/disasters	2/cannot	3/be	4/predicted,	5/but	6/the	7/school	8/buildings	9/should	10/not	11/have	12/collapsed.
+# 0/Natural	1/disasters	2/cannot	3/be	4/predicted	5/,	6/but	7/the	8/school	9/buildings	10/should	11/not	12/have	13/collapsed	14/.
 # Alignments:
 
 #174
@@ -3135,9 +3135,9 @@
 #                         :mod (y / young))
 #                   :time (n / no-longer))))
 # CCG:
-# S[pss]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	S[ng]\NP/NP:2	(S\NP)\(S\NP):1	N/N:1	N	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	conj:2	S[adj]\NP:1	(S\NP)\(S\NP):1	
+# S/S/PP:2	PP/NP:1	N/N:1	N/N:1	N	((S\NP)/(S\NP))/((S\NP)/(S\NP)):3	(S\NP)/(S\NP):1	S[ng]\NP/NP/PR:3	PR	N/N:1	N	,	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S[adj]\NP)/(S[adj]\NP):1	S[adj]\NP:1	conj:2	S[dcl]\NP/PR:2	PR	.	
 # 
-# 0/Due	1/to	2/formal	3/working	4/units	5/no	6/longer	7/taking	8/on	9/young	10/employees,	11/working	12/units	13/got	14/increasingly	15/older	16/and	17/broken	18/up.
+# 0/Due	1/to	2/formal	3/working	4/units	5/no	6/longer	7/taking	8/on	9/young	10/employees	11/,	12/working	13/units	14/got	15/increasingly	16/older	17/and	18/broken	19/up	20/.
 # Alignments:
 
 #175
@@ -3157,9 +3157,9 @@
 #                               :mod (c4 / country :name (n2 / name :op1 x1 / "America"))))
 #                   :ARG1 p)))
 # CCG:
-# S[pss]\NP/PP:2	PP/NP:1	N	conj:2	N	NP\NP/NP:2	NP[nb]/N:1	N	NP[nb]/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	(S\NP)\(S\NP)/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N	
+# S[pss]\NP/PP:2	PP/NP:1	N	conj:2	N	N\N/NP:2	NP/N:1	N	,	NP/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N	(S\NP)\(S\NP)/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	.	
 # 
-# 0/Faced	1/with	2/rascals	3/and	4/hooligans	5/like	6/the	7/Americans,	8/the	9/Chinese	10/have	11/no	12/choice	13/but	14/to	15/arm	16/themselves.
+# 0/Faced	1/with	2/rascals	3/and	4/hooligans	5/like	6/the	7/Americans	8/,	9/the	10/Chinese	11/have	12/no	13/choice	14/but	15/to	16/arm	17/themselves	18/.
 # Alignments:
 
 #176
@@ -3178,9 +3178,9 @@
 #             :ARG2 (g / government-organization
 #                   :ARG0-of (g2 / govern-01))))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N/N:1	N	NP	S[dcl]\NP/(S[to]\NP)/NP:3	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	conj:2	S[b]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	N	
+# S/S/NP:2	NP/N:1	N/N:1	N	,	NP	S[dcl]\NP/(S[to]\NP)/NP:3	NP/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	conj:2	S[b]\NP/NP:2	NP/N:1	N/PP:1	PP/NP:1	N	;	
 # 
-# 0/On	1/the	2/one	3/hand,	4/it	5/helps	6/the	7/government	8/to	9/reduce	10/and	11/narrow	12/the	13/gap	14/of	15/wealth;
+# 0/On	1/the	2/one	3/hand	4/,	5/it	6/helps	7/the	8/government	9/to	10/reduce	11/and	12/narrow	13/the	14/gap	15/of	16/wealth	17/;
 # Alignments:
 
 #177
@@ -3196,9 +3196,9 @@
 #                       :degree (m2 / more)))
 #             :manner (c / correct)))
 # CCG:
-# S/S/S[dcl]:2	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S\NP)\(S\NP):1	S[adj]\NP:1	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP:1	(S\NP)\(S\NP):1	
+# S/S/S[dcl]:2	NP/N:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	(S\NP)/(S\NP):1	S[pss]\NP:1	,	NP/N:1	N/N:1	N	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/(S[adj]\NP):2	S[adj]\NP:1	.	
 # 
-# 0/If	1/the	2/upper	3/beams	4/are	5/correctly	6/placed,	7/the	8/lower	9/beams	10/will	11/not	12/go	13/awry.
+# 0/If	1/the	2/upper	3/beams	4/are	5/correctly	6/placed	7/,	8/the	9/lower	10/beams	11/will	12/not	13/go	14/awry	15/.
 # Alignments:
 
 #178
@@ -3219,9 +3219,9 @@
 #                   :ARG1 (s / subway)))
 #       :time (m2 / meanwhile))
 # CCG:
-# NP/NP:1	NP[nb]/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N	S[dcl]\NP/(S[to]\NP)/NP:3	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	
+# S/S:1	,	NP/N:1	N/N:1	N	conj:2	N/N:1	N/N:1	N	S[dcl]\NP/(S[to]\NP)/NP:3	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	N/N:1	N/PP:1	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	.	
 # 
-# 0/Meanwhile,	1/the	2/crowded	3/highways	4/and	5/complicated	6/road	7/traffic	8/cause	9/people	10/to	11/have	12/greater	13/expectations	14/in	15/the	16/development	17/of	18/the	19/subway.
+# 0/Meanwhile	1/,	2/the	3/crowded	4/highways	5/and	6/complicated	7/road	8/traffic	9/cause	10/people	11/to	12/have	13/greater	14/expectations	15/in	16/the	17/development	18/of	19/the	20/subway	21/.
 # Alignments:
 
 #179
@@ -3234,9 +3234,9 @@
 #             :ARG0 (y / you)
 #             :ARG1 h))
 # CCG:
-# N/NP:1	NP[nb]/N:1	(N/N)/(N/N):1	N/N:1	N	NP\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
+# NP	S[dcl]\NP/NP:2	NP/N:1	(N/N)/(N/N):1	N/N:1	N	S[ng]\NP/(S[to]\NP)/NP:3	NP	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	.	
 # 
-# 0/that's	1/a	2/terribly	3/small	4/horse	5/for	6/you	7/to	8/ride	9/.
+# 0/that	1/'s	2/a	3/terribly	4/small	5/horse	6/for	7/you	8/to	9/ride	10/.
 # Alignments:
 
 #180
@@ -3249,9 +3249,9 @@
 #                   :location (b / basket)))
 #       :ARG2 (y / you))
 # CCG:
-# S[qem]/S[dcl]:1	S\S:1	NP	S[dcl]\NP/PP:2	PP/NP:1	NP	NP\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	.	
+# S[wq]/S[q]:1	S[q]/(S[b]\NP)/NP:2	S\S:1	NP	S[b]\NP/PP:2	PP/NP:1	NP/PP:1	PP/NP:1	NP/N:1	N	N\N/NP:2	NP/N:1	N	.	
 # 
-# 0/why	1/don't	2/you	3/look	4/at	5/some	6/of	7/the	8/toys	9/in	10/the	11/basket	12/.
+# 0/why	1/do	2/n't	3/you	4/look	5/at	6/some	7/of	8/the	9/toys	10/in	11/the	12/basket	13/.
 # Alignments:
 
 #181
@@ -3283,9 +3283,9 @@
 #                   :op1 (w / window
 #                         :mod (o2 / other)))))
 # CCG:
-# S/S/S[dcl]:2	NP	S[dcl]\NP:1	(S\NP)\(S\NP):1	NP[nb]/N:1	N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	.	
+# S/S/S[dcl]:2	NP	S[dcl]\NP/NP/PR:3	PR	NP/N:1	N/N:1	N	(S\NP)\(S\NP):1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP	.	
 # 
-# 0/if	1/you	2/look	3/out	4/the	5/other	6/window	7/maybe	8/you'll	9/see	10/it	11/.
+# 0/if	1/you	2/look	3/out	4/the	5/other	6/window	7/maybe	8/you	9/'ll	10/see	11/it	12/.
 # Alignments:
 
 #183
@@ -3301,9 +3301,9 @@
 #                   :ARG1 o
 #                   :ARG4 (w / window))))
 # CCG:
-# NP	S[dcl]\NP/S[dcl]:2	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP)/(S[adj]\NP):3	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP/(S[to]\NP)/(S[adj]\NP):3	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP)/NP:2	NP/N:1	N	.	
 # 
-# 0/I	1/think	2/that	3/one's	4/too	5/large	6/to	7/go	8/in	9/the	10/window	11/.
+# 0/I	1/think	2/that	3/one	4/'s	5/too	6/large	7/to	8/go	9/in	10/the	11/window	12/.
 # Alignments:
 
 #184
@@ -3316,7 +3316,7 @@
 #             :ARG1-of (h / hit-01
 #                   :ARG0 (p2 / person))))
 # CCG:
-# NP/NP:1	NP[nb]/N:1	N	NP	S[dcl]\NP/NP:2	conj:2	NP[nb]/N:1	N	N\N:1	S[dcl]\NP:1	.	
+# NP/NP:1	NP/N:1	N	NP	S[dcl]\NP/NP:2	conj:2	NP/N:1	N	NP	S[dcl]\NP/NP:2	.	
 # 
 # 0/not	1/the	2/kind	3/you	4/hit	5/but	6/the	7/kind	8/you	9/kick	10/.
 # Alignments:
@@ -3334,9 +3334,9 @@
 #                   :ARG1 t2
 #                   :ARG2 (h / he))))
 # CCG:
-# S[qem]/S[dcl]:1	S\S:1	NP	S[dcl]\NP/NP:2	NP	S[adj]\NP:1	conj:2	S[dcl]\NP/PP/NP:3	NP	PP/NP:1	NP	.	
+# S[wq]/S[q]:1	S[q]/(S[b]\NP)/NP:2	S\S:1	NP	S[b]\NP/NP:2	NP	(S\NP)\(S\NP):1	conj:2	S[b]\NP/PP/NP:3	NP	PP/NP:1	NP	.	
 # 
-# 0/why	1/don't	2/you	3/take	4/that	5/over	6/and	7/show	8/it	9/to	10/him	11/.
+# 0/why	1/do	2/n't	3/you	4/take	5/that	6/over	7/and	8/show	9/it	10/to	11/him	12/.
 # Alignments:
 
 #186
@@ -3349,7 +3349,7 @@
 #             :location (h / house
 #                   :poss p2)))
 # CCG:
-# NP	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/PP:2	PP/NP:1	N	NP\NP/NP:2	NP[nb]/N:1	N	.	
+# NP	S[dcl]\NP/S[dcl]:2	N	S[dcl]\NP/PP:2	PP/NP:1	N	(S\NP)\(S\NP)/NP:2	NP/(N/PP):1	N/PP:1	.	
 # 
 # 0/I	1/guess	2/Cliffy	3/looks	4/at	5/Bozo	6/at	7/her	8/house	9/.
 # Alignments:
@@ -3365,9 +3365,9 @@
 #                   :ARG2 (b / box)))
 #       :ARG1-of (r / request-confirmation-91))
 # CCG:
-# NP	N	S[dcl]\NP/NP:2	NP	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	(S\NP)\(S\NP):1	NP[nb]/N:1	N	S[dcl]\NP/NP/NP:3	NP	.	
+# NP	S[dcl]\NP/(S[b]\NP):2	(S\NP)\(S\NP):1	S[b]\NP/NP:2	N	N\N:1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP/PR:3	PR	NP/N:1	N	S[dcl]/NP/NP:2	NP	.	
 # 
-# 0/you	1/don't	2/have	3/anything	4/else	5/to	6/put	7/in	8/the	9/box	10/do	11/you	12/?
+# 0/you	1/do	2/n't	3/have	4/anything	5/else	6/to	7/put	8/in	9/the	10/box	11/do	12/you	13/?
 # Alignments:
 
 #188
@@ -3382,9 +3382,9 @@
 #                   :ARG2 (b / ball)))
 #       :ARG2 (y / you))
 # CCG:
-# S[qem]/S[dcl]:1	S\S:1	NP	S[dcl]\NP/(S[adj]\NP):2	S[adj]\NP:1	(S\NP)\(S\NP):1	conj:2	S[dcl]\NP/PP:2	PP/NP:1	NP[nb]/N:1	N	.	
+# S[wq]/S[q]:1	S[q]/(S[b]\NP)/NP:2	S\S:1	NP	S[b]\NP:1	(S\NP)\(S\NP):1	(S\NP)\(S\NP):1	conj:2	S[b]\NP:1	(S\NP)\(S\NP)/NP:2	NP/N:1	N	.	
 # 
-# 0/why	1/don't	2/you	3/come	4/over	5/here	6/and	7/play	8/with	9/the	10/ball	11/?
+# 0/why	1/do	2/n't	3/you	4/come	5/over	6/here	7/and	8/play	9/with	10/the	11/ball	12/?
 # Alignments:
 
 #189
@@ -3397,7 +3397,7 @@
 #                         :ARG0 i)
 #                   :mod (c / current))))
 # CCG:
-# NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP:1	(S\NP)\(S\NP)/NP:2	NP[nb]/N:1	N/N:1	N/N:1	N	.	
+# NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP:2	PP/NP:1	NP/(N/PP):1	N/N:1	N/N:1	N/PP:1	.	
 # 
 # 0/I	1/can	2/work	3/on	4/my	5/current	6/research	7/topic	8/.
 # Alignments:
@@ -3416,7 +3416,7 @@
 #             :mod (t / that))
 #      :time (j / just))
 # CCG:
-# NP	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP)/NP:3	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[qem]/NP:3	NP	S[qem]/S[dcl]/(S[adj]\NP):2	S[adj]\NP:1	NP	S[dcl]\NP:1	.	
+# NP	(S\NP)/(S\NP):1	S[dcl]\NP/(S[to]\NP)/NP:3	NP/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/S[qem]/NP:3	NP	S[qem]/(S[dcl]/NP)/N:2	N	NP	S[dcl]\NP/NP:2	.	
 # 
 # 0/He	1/just	2/emailed	3/that	4/friend	5/to	6/ask	7/him	8/how	9/much	10/it	11/cost	12/.
 # Alignments:
@@ -3438,9 +3438,9 @@
 #                   :topic (i2 / intelligence)
 #                   :mod (h / hostile))))
 # CCG:
-# NP[nb]/N:1	N	S[dcl]\NP/PP/NP:3	NP[nb]/N:1	N/N:1	N/N:1	N/N:1	N	PP/(S[ng]\NP):1	S[ng]\NP/S[em]:2	S[em]/S[dcl]:1	NP[nb]/N:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	
+# NP/N:1	N	S[dcl]\NP/PP/NP:3	NP/N:1	N/N:1	N/N:1	N/N:1	N	PP/(S[ng]\NP):1	S[ng]\NP/S[em]:2	S[em]/S[dcl]:1	NP/N:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/NP:1	N/N:1	N/N:1	N	.	
 # 
-# 0/The	1/Times	2/quoted	3/an	4/unidentified	5/British	6/government	7/source	8/as	9/stating	10/that	11/the	12/Chinese	13/government	14/was	15/engaged	16/in	17/hostile	18/intelligence	19/activities.
+# 0/The	1/Times	2/quoted	3/an	4/unidentified	5/British	6/government	7/source	8/as	9/stating	10/that	11/the	12/Chinese	13/government	14/was	15/engaged	16/in	17/hostile	18/intelligence	19/activities	20/.
 # Alignments:
 
 #192
@@ -3456,7 +3456,7 @@
 #                               :degree (m / mass)))))
 #       :manner (w / wrong))
 # CCG:
-# N	S[dcl]\NP/S[em]:2	(S\NP)\(S\NP):1	S[em]/S[dcl]:1	N	((S\NP)/(S\NP))/((S\NP)/(S\NP)):3	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N	NP\NP/NP:2	N/N:1	N	.	
+# N	S[dcl]\NP/S[em]:2	(S\NP)\(S\NP):1	S[em]/S[dcl]:1	N	((S\NP)/(S\NP))/((S\NP)/(S\NP)):3	(S\NP)/(S\NP):1	S[dcl]\NP/NP:2	N/PP:1	PP/NP:1	N/N:1	N	.	
 # 
 # 0/Fe	1/concluded	2/wrongly	3/that	4/Iraq	5/most	6/likely	7/had	8/weapons	9/of	10/mass	11/destruction	12/.
 # Alignments:
@@ -3477,7 +3477,7 @@
 #                         :ARG1-of (r / resemble-01
 #                               :ARG2 (p3 / planet :name (n3 / name :op1 x2 / "Earth")))))))
 # CCG:
-# S/S/PP:2	PP/NP:1	N	,	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	,	S[dcl]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N/N:1	N	.	
+# S/S/PP:2	PP/NP:1	N	,	N	,	NP\NP/(S[dcl]\NP):2	S[dcl]\NP/NP:2	NP/N:1	N	N\N/NP:2	NP/N:1	N	,	S[dcl]\NP/NP:2	NP/N:1	N/N:1	N	N\N/NP:2	NP/N:1	N/N:1	N	.	
 # 
 # 0/According	1/to	2/experts	3/,	4/Jupiter	5/,	6/which	7/orbits	8/the	9/Sun	10/like	11/the	12/Earth	13/,	14/is	15/the	16/largest	17/planet	18/in	19/the	20/solar	21/system	22/.
 # Alignments:
@@ -3499,7 +3499,7 @@
 #       :time (t2 / time
 #             :ARG1-of (s / same-41)))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N/N:1	N	,	NP	(S\NP)/(S\NP):1	S[dcl]\NP/S[bem]:2	S[bem]/S[b]:1	N/N:1	N	S[b]\NP/(S[pss]\NP):2	S[pss]\NP/(S[to]\NP):2	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N/N:1	N	NP\NP/NP:2	N	NP\NP/NP:2	N	.	
+# S/S/NP:2	NP/N:1	N/N:1	N	,	NP	(S\NP)/(S\NP):1	S[dcl]\NP/S[bem]:2	S[bem]/S[b]:1	N/N:1	N	S[b]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/(S[b]\NP):2	S[b]\NP/NP:2	NP/N:1	N/N:1	N	N\N/NP:2	N	NP\NP/NP:2	N	.	
 # 
 # 0/At	1/the	2/same	3/time	4/,	5/he	6/also	7/demanded	8/that	9/new	10/talks	11/be	12/held	13/to	14/end	15/the	16/civil	17/war	18/in	19/Bosnia	20/-	21/Herzegovina	22/.
 # Alignments:
@@ -3527,9 +3527,9 @@
 #                               :op2 (f2 / force
 #                                     :mod c4))))))
 # CCG:
-# S/S/PP:2	PP/NP:1	N/N:1	N	N\N:1	NP[expl]	S[dcl]\NP[expl]/S[qem]/(S[adj]\NP):3	S[adj]\NP:1	S[qem]/S[dcl]:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	N	NP\NP/NP:2	N/N:1	conj:2	N/N:1	N	conj:2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/(S[ng]\NP):1	S[ng]\NP/NP:2	N/N:1	N	conj:2	N/N:1	N	
+# (S/S)/(S/S):1	S/S/NP:2	N/N:1	N	N\N:1	NP[expl]	S[dcl]\NP[expl]/S[qem]/(S[adj]\NP):3	S[adj]\NP:1	S[qem]/S[dcl]:1	N/N:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/NP:2	N/PP:1	PP/NP:1	N/N:1	conj:2	N/N:1	N	conj:2	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/(S[ng]\NP):1	S[ng]\NP/PP:2	PP/NP:1	N	conj:2	N/N:1	N	.	
 # 
-# 0/Late	1/on	2/8	3/August	4/2008	5/it	6/was	7/unclear	8/whether	9/ground	10/combat	11/had	12/taken	13/place	14/between	15/Russian	16/and	17/Georgian	18/soldiers	19/or	20/had	21/been	22/limited	23/to	24/fighting	25/between	26/separatists	27/and	28/Georgian	29/forces.
+# 0/Late	1/on	2/8	3/August	4/2008	5/it	6/was	7/unclear	8/whether	9/ground	10/combat	11/had	12/taken	13/place	14/between	15/Russian	16/and	17/Georgian	18/soldiers	19/or	20/had	21/been	22/limited	23/to	24/fighting	25/between	26/separatists	27/and	28/Georgian	29/forces	30/.
 # Alignments:
 
 #196
@@ -3548,9 +3548,9 @@
 #                         :mod (p2 / physical))
 #                   :ARG1 v)))
 # CCG:
-# N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N/N:1	N	NP\NP/NP:2	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP:1	(S\NP)\(S\NP)/NP:2	N	conj:2	(S\NP)\(S\NP):1	(S\NP)\(S\NP)/NP:2	N/N:1	N	
+# N/N:1	N	S[dcl]\NP/S[em]:2	S[em]/S[dcl]:1	N/N:1	N/PP:1	PP/NP:1	N/N:1	N	S[dcl]\NP/(S[pss]\NP):2	S[pss]\NP/PP:2	PP/NP:1	N	conj:2	PP/PP:1	PP/NP:1	N/N:1	N	.	
 # 
-# 0/Nancy	1/schepeter-Hughes	2/stated	3/that	4/most	5/victims	6/of	7/kidney	8/trafficking	9/are	10/coerced	11/by	12/need	13/and	14/not	15/by	16/physical	17/force.
+# 0/Nancy	1/schepeter-Hughes	2/stated	3/that	4/most	5/victims	6/of	7/kidney	8/trafficking	9/are	10/coerced	11/by	12/need	13/and	14/not	15/by	16/physical	17/force	18/.
 # Alignments:
 
 #197
@@ -3566,9 +3566,9 @@
 #                               :domain (u / uncover-01
 #                                     :ARG1 t))))))
 # CCG:
-# N/N:1	N	NP\NP/NP:2	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP:1	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP)/S[em]:2	S[em]/S[dcl]:1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[to]\NP)/(S[adj]\NP):3	S[adj]\NP:1	S[to]\NP/(S[b]\NP):2	S[b]\NP:1	
+# N/N:1	N/PP:1	PP/NP:1	N	S[dcl]\NP/(S[pt]\NP):2	S[pt]\NP/(S[pss]\NP):2	S[pss]\NP/S[em]:2	((S\NP)\(S\NP))/((S\NP)\(S\NP)):3	(S\NP)\(S\NP):1	S[em]/S[dcl]:1	NP	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/(S[adj]\NP):2	S[adj]\NP/((S[to]\NP)/NP):3	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	.	
 # 
-# 0/Drug	1/trafficking	2/from	3/Afghanistan	4/has	5/been	6/concealed	7/so	8/securely	9/that	10/it	11/will	12/be	13/impossible	14/to	15/uncover.
+# 0/Drug	1/trafficking	2/from	3/Afghanistan	4/has	5/been	6/concealed	7/so	8/securely	9/that	10/it	11/will	12/be	13/impossible	14/to	15/uncover	16/.
 # Alignments:
 
 #198
@@ -3587,7 +3587,7 @@
 #       :ARG2 (a / authority
 #             :ARG0-of (r2 / rule-01)))
 # CCG:
-# NP[nb]/N:1	N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	N	PP/NP:1	NP[nb]/N:1	N	NP\NP/NP:2	N	conj:2	N	NP\NP/NP:2	N	
+# NP/N:1	N/N:1	N	(S\NP)/(S\NP):1	S[dcl]\NP/(S[b]\NP):2	S[b]\NP/PP/NP:3	N	PP/NP:1	NP/N:1	N/PP:1	PP/NP:1	N	conj:2	N/PP:1	PP/NP:1	N	
 # 
 # 0/The	1/ruling	2/authorities	3/actually	4/should	5/pay	6/attention	7/to	8/these	9/kinds	10/of	11/capitulators	12/and	13/traitors	14/of	15/China!
 # Alignments:
@@ -3599,9 +3599,9 @@
 #             :poss (p / person
 #                   :ARG0-of (t / traffic-00))))
 # CCG:
-# NP[nb]/N:1	N	NP\NP/NP:2	NP[nb]/N:1	N	S[dcl]\NP/(S[adj]\NP):2	(S\NP)\(S\NP):1	S[adj]\NP:1	
+# NP/N:1	N/PP:1	PP/NP:1	NP/N:1	N	S[dcl]\NP/(S[pss]\NP):2	(S\NP)\(S\NP):1	S[pss]\NP:1	.	
 # 
-# 0/The	1/identity	2/of	3/the	4/trafficker	5/was	6/not	7/revealed.
+# 0/The	1/identity	2/of	3/the	4/trafficker	5/was	6/not	7/revealed	8/.
 # Alignments:
 
 #200
@@ -3619,8 +3619,8 @@
 #                         :ARG0 p
 #                         :ARG1 (c2 / conscience)))))
 # CCG:
-# S/S/NP:2	NP[nb]/N:1	N	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/NP:2	NP[nb]/N:1	N	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP[nb]/N:1	N	conj:2	N	NP\NP/NP:2	N	
+# S/S/NP:2	NP/N:1	N	,	N/N:1	N/N:1	N/N:1	N	S[dcl]\NP/NP:2	NP/N:1	N/(S[to]\NP):1	S[to]\NP/(S[b]\NP):2	S[b]\NP/NP:2	NP/(N/PP):1	N/PP:1	conj:2	N/PP/PP:2	PP/NP:1	N	.	
 # 
-# 0/In	1/the	2/story,	3/evildoer	4/Cruella	5/de	6/Vil	7/makes	8/no	9/attempt	10/to	11/conceal	12/her	13/glee	14/and	15/lack	16/of	17/conscience.
+# 0/In	1/the	2/story	3/,	4/evildoer	5/Cruella	6/de	7/Vil	8/makes	9/no	10/attempt	11/to	12/conceal	13/her	14/glee	15/and	16/lack	17/of	18/conscience	19/.
 # Alignments:
 
