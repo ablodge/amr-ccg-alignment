@@ -257,10 +257,13 @@ class CCG(CCG_Lexical):
         tag1 = re.sub(r'\[.*?\]', '', tag1)
         tag2 = re.sub(r'\[.*?\]', '', tag2)
         tag = re.sub(r'\[.*?\]', '', tag)
+        # tag1 = self.clean_tag(tag1).split(':')[0]
+        # tag2 = self.clean_tag(tag2).split(':')[0]
+        # tag = self.clean_tag(tag).split(':')[0]
         combin = ''
+        # Function Application
         m = FA_RE1.match(self.mark_first_arg(tag1))
         m2 = FA_RE2.match(self.mark_first_arg(tag2))
-        # Function Application
         if m:
             Y = m.group('Y')
             X = m.group('X')
@@ -272,9 +275,9 @@ class CCG(CCG_Lexical):
             if Y in [tag1, f'({tag1})'] and X in [tag, f'({tag})']:
                 combin = '&lt;'
         # Other
-        if tag1 in ['.', ',', '?', 'LRB', 'RRB']:
+        if tag1 in ['.', ',', '?', 'LRB', 'RRB', ';', 'RQU']:
             combin = tag1
-        if tag2 in ['.', ',', '?', 'LRB', 'RRB'] or not tag2.strip():
+        if tag2 in ['.', ',', '?', 'LRB', 'RRB', ';', 'RQU'] or not tag2.strip():
             combin = tag2
         if not tag1.strip() or not tag2.strip():
             combin = 'SPACE'
@@ -299,9 +302,9 @@ class CCG(CCG_Lexical):
                 combin = 'B&lt;'
             else:
                 print('B?', tag1, '+', tag2, '=>', tag)
-                print('X1 ', X1, 'Y1 ', Y1)
-                print('X2 ', X2, 'Y2 ', Y2)
-                print('X3 ', X3, 'Y3 ', Y3)
+                # print('X1 ', X1, 'Y1 ', Y1)
+                # print('X2 ', X2, 'Y2 ', Y2)
+                # print('X3 ', X3, 'Y3 ', Y3)
         if not combin:
             print('B?', tag1, '+', tag2, '=>', tag)
             combin = '?'
@@ -316,6 +319,7 @@ class CCG(CCG_Lexical):
         combin = '?'
         tag1 = re.sub(r'\[.*?\]', '', tag1)
         tag2 = re.sub(r'\[.*?\]', '', tag2)
+        # Type Raising
         if TR_RE1.match(tag2) and TR_RE1.match(tag2).group('T1') == TR_RE1.match(tag2).group('T2'):
             X = TR_RE1.match(tag2).group('X')
             if X == tag1 or X == '(' + tag1 + ')':
@@ -328,13 +332,17 @@ class CCG(CCG_Lexical):
                 combin = 'TR&lt;'
             else:
                 print('U?', tag1, '=>', tag2)
+        # Raising to NP
         elif tag1 == 'N' and tag2 == 'NP':
             combin = 'NP'
+        # Relative and Adverbial Clauses
         elif re.match(r'S(\[.*?\])?[\\/]NP', tag1):
             if re.match(r'NP?[\\/]NP?', tag2):
                 combin = 'Rel'
             elif re.match(r'S[\\/]S', tag2):
                 combin = 'AdvCl'
+            elif re.match('NP', tag2):
+                combin = 'NomCl'
             else:
                 print('U?', tag1, '=>', tag2)
         else:
@@ -347,13 +355,18 @@ class CCG(CCG_Lexical):
 
     def mark_first_arg(self,tag):
         depth = 0
+        index = -1
         for i,c in enumerate(tag):
             if c == '(':
                 depth +=1
             elif c == ')':
                 depth -=1
             elif c in ['\\','/'] and depth==0:
-                return tag[:i]+'*'+tag[i]+'*'+tag[i+1:]
+                index = i
+        if index>0:
+            x = tag[:index] + '*' + tag[index] + '*' + tag[index + 1:]
+            # print(x)
+            return x
         return tag
 
 def main():
