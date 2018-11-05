@@ -9,8 +9,9 @@ CLASSES = {'0':TXT, '1':CCG}
 
 name, html_file, amr_file, sent_file, classnum = sys.argv[1:]
 template_file = 'template.html'
+START, END = 0, 0
 
-
+BREAK_INTO_PARTS = False
 
 cl = CLASSES[classnum]
 
@@ -34,8 +35,11 @@ def main():
         html = f.read()
     # output
     content = []
-    i = 1
-    for s, a in zip(sentences, amrs):
+    sent_amrs = [x for x in zip(sentences, amrs)]
+    if BREAK_INTO_PARTS:
+        sent_amrs = sent_amrs[START-1:END]
+    i = START if BREAK_INTO_PARTS else 1
+    for s, a in sent_amrs:
         content.append(
             f"""
 <div amr-id ="{i}" class="aligner">
@@ -54,4 +58,13 @@ def main():
 
 
 if __name__=="__main__":
-    main()
+    if BREAK_INTO_PARTS:
+        h = html_file
+        for i in range(4):
+            START = i*50+1
+            END = 50+START-1
+            if BREAK_INTO_PARTS:
+                html_file = h.replace('.html', f'_{START}-{END}.html')
+            main()
+    else:
+        main()
