@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/ccgvis.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+<div class="btn-group options">
+  <button type="button" class="download">Download</button>
+  <button type="button" class="load">Load</button>
+  <button type="button" class="showall">Show All</button>
+</div> 
+<div class="options">
+  <input type="file" name="load">
+</div>
+<center><h1>Welcome to the AMR-CCG Aligner Tool</h1></center>
+<center>
+<div class='instructions'>
+<h2>Instructions</h2>
+To select/unselect an element: click it<br/>
+<b>Add Alignment button</b> will create an alignment button. (Shortcut: double-click an element)<br/>
+Clicking an <b>alignment button</b> will color its alignment. (double-click to delete)<br/>
+<b>Download button</b> allows you to download all alignments as a text file.<br/>
+<b>Load button</b> allows you to load a a previous alignment file.<br/>
+<b>Show All button</b> highlights all alignments to show their coverage. (Shortcut: ctrl + x)<br/>
+<h2>Alignments</h2>
+Each element has a unique identifier.<br/>
+<b>AMR nodes</b>: <math> a, b, a2, b2, x0, x1, ...</math><br/>
+<b>AMR edge</b> from a to b: <math>a_ARG0_b, a_mod_b, ...</math><br/>
+<b>Word</b> in sentence:   <math>0, 1, 2, ...</math><br/>
+Use <math>#</math> to add a comment to an alignment.<br/>
+</div>
+</center>
+
+<div amr-id ="1" class="aligner">
+<h1>1. </h1><input  amr-id ="1" type="text" class="cmdline"/>
+<button amr-id ="1" class="align">Add Alignment</button>
+<div amr-id ="1" class="btn-group"></div><br/>
+<anything amr-id ="1" class="CCG">
+<pre>
+<button class="expand">CCG parse ▲</button><br/><table class="visccg wordsbelow"><tbody>
+<tr class="expand"></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="3" span="0:3">NP<span class="combinator">NP</span></td></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="3" span="0:3">N<span class="combinator">&lt;</span></td></tr>
+<tr class="expand"><td colspan="1" span="0:1"/><td class="constit ccg-parse" colspan="2" span="1:3">N\N:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td colspan="2" span="0:2"/><td class="constit ccg-parse" colspan="1" span="2:3">NP<span class="combinator">NP</span></td></tr>
+<tr class="expand"></tr>
+<tr>
+<td class="constit" colspan="1"><tag class="aligned" tok-id="0">N</tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="1">N\N/NP:<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="2">N</tag> </td></tr>
+<tr>
+<td><word class="aligned" tok-id="0"><tok>0/</tok>Dogs</word> </td><td><word class="aligned" tok-id="1"><tok>1/</tok>like</word> </td><td><word class="aligned" tok-id="2"><tok>2/</tok>cats</word> </td></tr>
+</tbody></table>
+</pre>
+</anything>
+<amr amr-id ="1">
+<pre>
+(<amr-node class="aligned" tok-id="l">l / like-01</amr-node>
+      <amr-edge class="aligned" tok-id="l_ARG0_d">:ARG0</amr-edge> <amr-node class="aligned" tok-id="d">d/dog</amr-node>
+      <amr-edge class="aligned" tok-id="d_ARG1_c">:ARG1</amr-edge> <amr-node class="aligned" tok-id="c">c/cat</amr-node>)
+</pre>
+</amr>
+</div>
+<div amr-id ="2" class="aligner">
+<h1>2. </h1><input  amr-id ="2" type="text" class="cmdline"/>
+<button amr-id ="2" class="align">Add Alignment</button>
+<div amr-id ="2" class="btn-group"></div><br/>
+<anything amr-id ="2" class="CCG">
+<pre>
+<button class="expand">CCG parse ▲</button><br/><table class="visccg wordsbelow"><tbody>
+<tr class="expand"></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="5" span="0:5">S<sub>dcl</sub><span class="combinator">&lt;</span></td></tr>
+<tr class="expand"><td colspan="2" span="0:2"/><td class="constit ccg-parse" colspan="3" span="2:5">S<sub>dcl</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="2" span="0:2">NP<span class="combinator">&gt;</span></td><td colspan="1" span="2:3"/><td class="constit ccg-parse" colspan="2" span="3:5">S<sub>pss</sub>\NP:<args>1</args><span class="combinator">&lt;</span></td></tr>
+<tr class="expand"></tr>
+<tr>
+<td class="constit" colspan="1"><tag class="aligned" tok-id="0">NP/N:<args>1</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="1">N</tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="2">S<sub>dcl</sub>\NP/(S<sub>pss</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="3">S<sub>pss</sub>\NP:<args>1</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="4">(S\NP)\(S\NP):<args>1</args></tag> </td></tr>
+<tr>
+<td><word class="aligned" tok-id="0"><tok>0/</tok>The</word> </td><td><word class="aligned" tok-id="1"><tok>1/</tok>house</word> </td><td><word class="aligned" tok-id="2"><tok>2/</tok>was</word> </td><td><word class="aligned" tok-id="3"><tok>3/</tok>painted</word> </td><td><word class="aligned" tok-id="4"><tok>4/</tok>yesterday</word> </td></tr>
+</tbody></table>
+</pre>
+</anything>
+<amr amr-id ="2">
+<pre>
+(<amr-node class="aligned" tok-id="p">p / paint-01</amr-node> <amr-edge class="aligned" tok-id="p_time_y">:time</amr-edge> <amr-node class="aligned" tok-id="y">y/yesterday</amr-node>
+      <amr-edge class="aligned" tok-id="y_ARG1_h">:ARG1</amr-edge> <amr-node class="aligned" tok-id="h">h/house</amr-node>)
+</pre>
+</amr>
+</div>
+<div amr-id ="3" class="aligner">
+<h1>3. </h1><input  amr-id ="3" type="text" class="cmdline"/>
+<button amr-id ="3" class="align">Add Alignment</button>
+<div amr-id ="3" class="btn-group"></div><br/>
+<anything amr-id ="3" class="CCG">
+<pre>
+<button class="expand">CCG parse ▲</button><br/><table class="visccg wordsbelow"><tbody>
+<tr class="expand"></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="5" span="0:5">S<sub>dcl</sub><span class="combinator">&lt;</span></td></tr>
+<tr class="expand"><td colspan="1" span="0:1"/><td class="constit ccg-parse" colspan="4" span="1:5">S<sub>dcl</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td colspan="2" span="0:2"/><td class="constit ccg-parse" colspan="3" span="2:5">S<sub>to</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="1" span="0:1">NP<span class="combinator">NP</span></td><td colspan="2" span="1:3"/><td class="constit ccg-parse" colspan="2" span="3:5">S<sub>b</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"></tr>
+<tr>
+<td class="constit" colspan="1"><tag class="aligned" tok-id="0">N</tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="1">S<sub>dcl</sub>\NP/(S<sub>to</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="2">S<sub>to</sub>\NP/(S<sub>b</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="3">S<sub>b</sub>\NP/(S<sub>adj</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="4">S<sub>adj</sub>\NP:<args>1</args></tag> </td></tr>
+<tr>
+<td><word class="aligned" tok-id="0"><tok>0/</tok>John</word> </td><td><word class="aligned" tok-id="1"><tok>1/</tok>seems</word> </td><td><word class="aligned" tok-id="2"><tok>2/</tok>to</word> </td><td><word class="aligned" tok-id="3"><tok>3/</tok>be</word> </td><td><word class="aligned" tok-id="4"><tok>4/</tok>busy</word> </td></tr>
+</tbody></table>
+</pre>
+</anything>
+<amr amr-id ="3">
+<pre>
+(<amr-node class="aligned" tok-id="s">s / seem-01</amr-node>
+      <amr-edge class="aligned" tok-id="s_ARG1_b">:ARG1</amr-edge> (<amr-node class="aligned" tok-id="b">b / busy-01</amr-node>
+            <amr-edge class="aligned" tok-id="b_ARG0_p">:ARG0</amr-edge> (<amr-node class="aligned" tok-id="p">p / person</amr-node> <amr-edge class="aligned" tok-id="p_name_n">:name</amr-edge> (<amr-node class="aligned" tok-id="n">n / name</amr-node> <amr-edge class="aligned" tok-id="n_op1_x0">:op1</amr-edge> <amr-node class="aligned" tok-id="x0">x0 / &quot;John&quot;</amr-node>))))
+</pre>
+</amr>
+</div>
+<div amr-id ="4" class="aligner">
+<h1>4. </h1><input  amr-id ="4" type="text" class="cmdline"/>
+<button amr-id ="4" class="align">Add Alignment</button>
+<div amr-id ="4" class="btn-group"></div><br/>
+<anything amr-id ="4" class="CCG">
+<pre>
+<button class="expand">CCG parse ▲</button><br/><table class="visccg wordsbelow"><tbody>
+<tr class="expand"></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="6" span="0:6">S<sub>dcl</sub><span class="combinator">&lt;</span></td></tr>
+<tr class="expand"><td colspan="2" span="0:2"/><td class="constit ccg-parse" colspan="4" span="2:6">S<sub>dcl</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td colspan="3" span="0:3"/><td class="constit ccg-parse" colspan="3" span="3:6">S<sub>ng</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="2" span="0:2">NP<span class="combinator">&gt;</span></td><td colspan="2" span="2:4"/><td class="constit ccg-parse" colspan="2" span="4:6">NP<span class="combinator">&gt;</span></td></tr>
+<tr class="expand"></tr>
+<tr>
+<td class="constit" colspan="1"><tag class="aligned" tok-id="0">NP/N:<args>1</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="1">N</tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="2">S<sub>dcl</sub>\NP/(S<sub>ng</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="3">S<sub>ng</sub>\NP/NP:<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="4">NP/N:<args>1</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="5">N</tag> </td></tr>
+<tr>
+<td><word class="aligned" tok-id="0"><tok>0/</tok>Our</word> </td><td><word class="aligned" tok-id="1"><tok>1/</tok>cat</word> </td><td><word class="aligned" tok-id="2"><tok>2/</tok>is</word> </td><td><word class="aligned" tok-id="3"><tok>3/</tok>taking</word> </td><td><word class="aligned" tok-id="4"><tok>4/</tok>a</word> </td><td><word class="aligned" tok-id="5"><tok>5/</tok>nap</word> </td></tr>
+</tbody></table>
+</pre>
+</anything>
+<amr amr-id ="4">
+<pre>
+(<amr-node class="aligned" tok-id="n">n / nap-01</amr-node>
+      <amr-edge class="aligned" tok-id="n_ARG0_c">:ARG0</amr-edge> (<amr-node class="aligned" tok-id="c">c / cat</amr-node>
+            <amr-edge class="aligned" tok-id="c_poss_w">:poss</amr-edge> (<amr-node class="aligned" tok-id="w">w / we</amr-node>)))
+</pre>
+</amr>
+</div>
+<div amr-id ="5" class="aligner">
+<h1>5. </h1><input  amr-id ="5" type="text" class="cmdline"/>
+<button amr-id ="5" class="align">Add Alignment</button>
+<div amr-id ="5" class="btn-group"></div><br/>
+<anything amr-id ="5" class="CCG">
+<pre>
+<button class="expand">CCG parse ▲</button><br/><table class="visccg wordsbelow"><tbody>
+<tr class="expand"></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="5" span="0:5">S<sub>dcl</sub><span class="combinator">&lt;</span></td></tr>
+<tr class="expand"><td colspan="1" span="0:1"/><td class="constit ccg-parse" colspan="4" span="1:5">S<sub>dcl</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td colspan="2" span="0:2"/><td class="constit ccg-parse" colspan="3" span="2:5">S<sub>to</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td colspan="3" span="0:3"/><td class="constit ccg-parse" colspan="2" span="3:5">S<sub>b</sub>\NP:<args>1</args><span class="combinator">&gt;</span></td></tr>
+<tr class="expand"><td class="constit ccg-parse" colspan="1" span="0:1">NP<span class="combinator">NP</span></td><td colspan="3" span="1:4"/><td class="constit ccg-parse" colspan="1" span="4:5">NP<span class="combinator">NP</span></td></tr>
+<tr class="expand"></tr>
+<tr>
+<td class="constit" colspan="1"><tag class="aligned" tok-id="0">N</tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="1">S<sub>dcl</sub>\NP/(S<sub>to</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="2">S<sub>to</sub>\NP/(S<sub>b</sub>\NP):<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="3">S<sub>b</sub>\NP/NP:<args>2</args></tag> </td><td class="constit" colspan="1"><tag class="aligned" tok-id="4">N</tag> </td></tr>
+<tr>
+<td><word class="aligned" tok-id="0"><tok>0/</tok>Laura</word> </td><td><word class="aligned" tok-id="1"><tok>1/</tok>wants</word> </td><td><word class="aligned" tok-id="2"><tok>2/</tok>to</word> </td><td><word class="aligned" tok-id="3"><tok>3/</tok>read</word> </td><td><word class="aligned" tok-id="4"><tok>4/</tok>Tolstoy</word> </td></tr>
+</tbody></table>
+</pre>
+</anything>
+<amr amr-id ="5">
+<pre>
+(<amr-node class="aligned" tok-id="w">w / want-01</amr-node>
+      <amr-edge class="aligned" tok-id="w_ARG0_p">:ARG0</amr-edge> (<amr-node class="aligned" tok-id="p">p / person</amr-node> <amr-edge class="aligned" tok-id="p_name_n">:name</amr-edge> (<amr-node class="aligned" tok-id="n">n / name</amr-node> <amr-edge class="aligned" tok-id="n_op1_x0">:op1</amr-edge> <amr-node class="aligned" tok-id="x0">x0 / &quot;Laura&quot;</amr-node>))
+      <amr-edge class="aligned" tok-id="w_ARG1_r">:ARG1</amr-edge> (<amr-node class="aligned" tok-id="r">r / read-01</amr-node>
+            <amr-edge class="aligned" tok-id="r_ARG0_p">:ARG0</amr-edge> <amr-node class="aligned" tok-id="p">p</amr-node>
+            <amr-edge class="aligned" tok-id="r_ARG1_b">:ARG1</amr-edge> (<amr-node class="aligned" tok-id="b">b / book</amr-node>
+                  <amr-edge class="aligned" tok-id="b_ARG1-of_w2">:ARG1-of</amr-edge> (<amr-node class="aligned" tok-id="w2">w2 / write-01</amr-node>
+                        <amr-edge class="aligned" tok-id="w2_ARG0_p2">:ARG0</amr-edge> (<amr-node class="aligned" tok-id="p2">p2 / person</amr-node> <amr-edge class="aligned" tok-id="p2_name_n2">:name</amr-edge> (<amr-node class="aligned" tok-id="n2">n2 / name</amr-node> <amr-edge class="aligned" tok-id="n2_op1_x1">:op1</amr-edge> <amr-node class="aligned" tok-id="x1">x1 / &quot;Tolstoy&quot;</amr-node>))))))
+</pre>
+</amr>
+</div>
+</body>
+</html> 
