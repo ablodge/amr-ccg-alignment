@@ -7,11 +7,10 @@ import sys
 
 CLASSES = {'0':TXT, '1':CCG}
 
-name, html_file, amr_file, sent_file, classnum = sys.argv[1:]
+name, html_file, amr_file, sent_file, classnum, BREAK_INTO_PARTS = sys.argv[1:]
 template_file = 'template.html'
 START, END = 0, 0
-
-BREAK_INTO_PARTS = False
+BREAK_INTO_PARTS = (BREAK_INTO_PARTS=='True')
 
 cl = CLASSES[classnum]
 
