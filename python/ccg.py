@@ -3,9 +3,10 @@ import re, sys, html
 sys.path.append("..")
 from python.txt import *
 
+TAG_SET = set()
 
-class CCG_Lexical(TXT):
 
+class CCG(TXT):
     ELEM_RE = re.compile(r'<.*?>|[()]|[^\s()]+|\s+')
 
     def __init__(self, text):
@@ -17,84 +18,8 @@ class CCG_Lexical(TXT):
     def init_elements(self):
         elem = []
         for e in self.ELEM_RE.findall(self.text):
-            if re.match(r'<L.*?>', e):
-                s = e.split()
-                e = '<L '+s[4]+':'+s[1]+' >'
-            elif re.match(r'<T.*?>', e):
-                tr = {'0 1>':'U',
-                      '0 2>':'H<',
-                      '1 2>':'H>'}
-                s = e.split()
-                e = tr[s[2]+' '+s[3]] + ':' + s[1]
             elem.append(e)
         return elem
-
-    def elements_html(self):
-        words = []
-        tags = []
-        j = 0
-        for e in self.elements():
-            if re.match('<L.*?>',e):
-                e = e.split()[1]
-                w, t = e.split(':')[0],e.split(':')[1]
-                w = f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>'
-                t = self.clean_tag(t)
-                t = f'<td><tag class="aligned" tok-id="{j}">{t}</tag> </td>'
-                j += 1
-                words.append(w)
-                tags.append(t)
-        return ['<table>\n<tr>']+words+['</tr>\n<tr>']+tags+['</tr>\n</table>']
-
-    def clean_tag(self, tag):
-        Paren_RE = re.compile('^(?P<pre>([^()])*)(?P<paren>[()])')
-        i = 0
-        max = 0
-        while Paren_RE.match(tag):
-            s = Paren_RE.match(tag).group('pre')
-            p = Paren_RE.match(tag).group('paren')
-            if p=='(':
-                i += 1
-                if i>max:
-                    max = i
-                tag = Paren_RE.sub(s + f'<{i}>', tag, 1)
-            else:
-                tag = Paren_RE.sub(s + f'</{i}>', tag, 1)
-                i -= 1
-        j = max
-        while j > 0:
-            Left_RE = re.compile(f'^(?P<pre>(<[0-9]+>)*)<{j}>(?P<a>.*?)</{j}>')
-            Right_RE = re.compile(f'<{j}>(?P<a>.*?)</{j}>')
-            Modifier_RE = re.compile(fr'<{j}>(?P<a>.*?)</{j}>(?P<slash>[/\\])<{j}>(?P<b>.*?)</{j}>')
-            while re.search(f'<{j}>',tag):
-                mod = Modifier_RE.search(tag)
-                if mod and mod.group('a')==mod.group('b'):
-                    a = mod.group('a')
-                    b = mod.group('b')
-                    slash = mod.group('slash')
-                    tag = Modifier_RE.sub('('+a+')'+slash+'('+b+')',tag,1)
-                elif Left_RE.match(tag):
-                    x = Left_RE.match(tag)
-                    pre = x.group('pre')
-                    a = x.group('a')
-                    tag = Left_RE.sub(pre + a, tag, 1)
-                elif Right_RE.search(tag):
-                    x = Right_RE.search(tag)
-                    a = x.group('a')
-                    tag = Right_RE.sub('(' +a+ ')', tag, 1)
-            j -= 1
-        arg_count = 0
-        x = tag
-        Paren_RE = re.compile('[(].*?[)]')
-        while Paren_RE.search(x):
-            x = Paren_RE.sub('X', x)
-        arg_count = len(re.findall(r'[/\\]', x))
-
-        if arg_count>0:
-            tag = tag+':'+'<args>'+str(arg_count)+'</args>'
-        elif tag=='conj':
-            tag='conj:<args>2</args>'
-        # print(tag)
-        return tag
 
     @staticmethod
     def test(text):
@@ -109,8 +34,124 @@ class CCG_Lexical(TXT):
         if not depth == 0: return False
         return True
 
+    def elements_html(self):
+        WORDS = []
+        TAGS = []
+        PHRASES = []
+        CCG = self.elements()
 
-class CCG(CCG_Lexical):
+        for i, e in enumerate(CCG):
+            if e == '(':
+                CCG[i] = '<*>'
+            elif e == ')':
+                CCG[i] = '</*>'
+
+        CCG = ''.join(CCG)
+
+        # find words
+        j = 0
+        for word in CCGBankUtils.word_iter(CCG):
+            w = word.group('word')
+            tag = word.group('tag')
+            tag = CCGTagUtils.clean_parens(tag)
+            pos = word.group('pos')
+            CCG = CCG.replace(word.group(), f'{j}={tag}', 1)
+            tag = CCGTagUtils.to_html(tag)
+            WORDS.append(f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>')
+            TAGS.append(f'<td class="constit" colspan="1"><tag class="aligned" tok-id="{j}">{tag}</tag> </td>')
+            j += 1
+
+        # mark depth from inside out
+        Parens_RE = re.compile('<\*>(?P<text>[^*]*)</\*>')
+        i = 1
+        while '<*>' in CCG:
+            for p in Parens_RE.finditer(CCG):
+                text = p.group('text')
+                CCG = CCG.replace(p.group(), f'<{i}>{text}</{i}>', 1)
+            i += 1
+        max = i
+
+        # Find Constituents from inside out
+        j = 1
+        while j <= max:
+            PHRASES.append([])
+            id_marker = lambda x, y: f'(?P<{x}>[0-9]+(:[0-9]+)?)=(?P<{y}>\S*?)'
+            tag_pattern = CCGBankUtils.phrase_re().pattern
+            Word_RE = re.compile(f'<{j}>{id_marker("a","tag")}</{j}>')
+            Unary_RE = re.compile(f'<{j}>{tag_pattern} {id_marker("a","tag1")} ?</{j}>')
+            Binary_RE = re.compile(f'<{j}>{tag_pattern} {id_marker("a","tag1")} {id_marker("b","tag2")} ?</{j}>')
+
+            while re.search(f'<{j}>', CCG):
+                regex = re.search(f'<{j}>.*?</{j}>', CCG).group()
+                if Word_RE.match(regex):
+                    a = Word_RE.match(regex).group('a')
+                    tag = Word_RE.match(regex).group('tag')
+                    CCG = Word_RE.sub(a + '=' + tag, CCG, 1)
+                elif Unary_RE.match(regex):
+                    tag = Unary_RE.match(regex).group('tag')
+                    tag = CCGTagUtils.clean_parens(tag)
+                    a = Unary_RE.match(regex).group('a')
+                    CCG = Unary_RE.sub(a + '=' + tag, CCG, 1)
+                    if ':' in a:
+                        start, end = int(a.split(':')[0]), int(a.split(':')[1])
+                        size = end - start
+                    else:
+                        start, end = int(a), int(a) + 1
+                        size = 1
+                    prev_tag = Unary_RE.match(regex).group('tag1')
+                    combin = CCGTagUtils.get_combinator_unary(prev_tag, tag)
+                    tag = CCGTagUtils.to_html(tag)
+                    c = f'<td class="constit ccg-parse" colspan="{size}" span="{start}:{end}">{tag}<span class="combinator">{combin}</span></td>'
+                    PHRASES[j - 1].append(c)
+                elif Binary_RE.match(regex):
+                    x = Binary_RE.match(regex)
+                    tag = x.group('tag')
+                    tag = CCGTagUtils.clean_parens(tag)
+                    a = x.group('a')
+                    b = x.group('b')
+                    if ':' in a:
+                        a = a.split(':')[0]
+                    if ':' in b:
+                        b = b.split(':')[1]
+                    else:
+                        b = str(int(b) + 1)
+                    CCG = Binary_RE.sub(a + ':' + b + '=' + tag, CCG, 1)
+                    size = int(b) - int(a)
+                    tag1 = Binary_RE.match(regex).group('tag1')
+                    tag2 = Binary_RE.match(regex).group('tag2')
+                    combin = CCGTagUtils.get_combinator_binary(tag1, tag2, tag)
+                    tag = CCGTagUtils.to_html(tag)
+                    c = f'<td class="constit ccg-parse" colspan="{size}" span="{a}:{b}">{tag}<span class="combinator">{combin}</span></td>'
+                    PHRASES[j - 1].append(c)
+
+                else:
+                    raise Exception('Parsing CCG error:', j, regex)
+            j += 1
+        Span_RE = re.compile('span="(?P<a>[0-9]+):(?P<b>[0-9]+)"')
+        for i, row in enumerate(PHRASES):
+            span_end = 0
+            for j, con in enumerate(row):
+                x = Span_RE.search(con)
+                a = int(x.group('a'))
+                b = int(x.group('b'))
+                if a > span_end:
+                    PHRASES[i][j] = f'<td colspan="{a-span_end}" span="{span_end}:{a}"/>' + PHRASES[i][j]
+                span_end = b
+        ccg_parse = ['<tr class="expand">' + ''.join(c) + '</tr>\n' for c in PHRASES]
+        ccg_parse.reverse()
+        html_elems = []
+        html_elems += ['<button class="expand">CCG parse ▲</button><br/>']
+        html_elems += ['<div class="scroll">']
+        html_elems += ['<table class="visccg wordsbelow"><tbody>\n']
+        html_elems += ccg_parse
+        html_elems += ['<tr>\n'] + TAGS + ['</tr>\n']
+        html_elems += ['<tr>\n'] + WORDS + ['</tr>\n']
+        html_elems += ['</tbody></table>']
+        html_elems += ['</div>']
+        return html_elems
+
+    # Example of ccg in html:
+    #
     # <table class="visccg wordsabove">
     # <tbody>
     # 	<tr><td>the</td> <td>dog</td> <td>bit</td> <td>John</td> </tr>
@@ -143,231 +184,235 @@ class CCG(CCG_Lexical):
     # 	</tr>
     # </tbody>
     # </table>
-    def elements_html(self):
-        words = []
-        tags = []
-        constits = []
-        j = 0
-        elems = self.elements()
-        for i,e in enumerate(elems):
-            if re.match('<L.*?>', e):
-                e = e.split()[1]
-                w, t = e.split(':')[0], e.split(':')[1]
-                w = f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>'
-                tag = t
-                t = self.clean_tag(t)
-                t = f'<td class="constit" colspan="1"><tag class="aligned" tok-id="{j}">{t}</tag> </td>'
-                words.append(w)
-                tags.append(t)
-                elems[i] = str(j) + '=' +tag
-                j += 1
-            elif e=='(':
-                elems[i] = '<*>'
-            elif e ==')':
-                elems[i] = '</*>'
 
-        elems = ''.join(elems)
 
-        Parens_RE = re.compile('<\*>(?P<text>[^*]*)</\*>')
-        i = 1
-        while '<*>' in elems:
-            for p in Parens_RE.finditer(elems):
-                text = p.group('text')
-                elems = elems.replace(p.group(), f'<{i}>{text}</{i}>', 1)
-            i += 1
-        max = i
+class CCGTagUtils:
+
+    @staticmethod
+    def clean_parens(tag):
+        tag = CCGTagUtils.mark_depth(tag)
+        max = CCGTagUtils.get_max_depth(tag)
         j = 1
         while j <= max:
-            constits.append([])
-            Word_RE = re.compile(f'<{j}>(?P<a>[0-9]+)=(?P<tag>\S*?)</{j}>')
-            Unary_RE = re.compile(f'<{j}>U:(?P<tag>\S+) (?P<a>[0-9]+(:[0-9]+)?)=(?P<tag1>\S+?) ?</{j}>')
-            Binary_RE = re.compile(f'<{j}>H(?P<lg>[<>]):(?P<tag>\S*?) (?P<a>[0-9]+(:[0-9]+)?)=(?P<tag1>\S*?) (?P<b>[0-9]+(:[0-9]+)?)=(?P<tag2>\S*?) ?</{j}>')
-
-            while re.search(f'<{j}>', elems):
-                regex = re.search(f'<{j}>.*?</{j}>', elems).group()
-                if Word_RE.match(regex):
-                    a = Word_RE.match(regex).group('a')
-                    tag = Word_RE.match(regex).group('tag')
-                    elems = Word_RE.sub(a+'='+tag, elems, 1)
-                elif Unary_RE.match(regex):
-                    tag_dirty = Unary_RE.match(regex).group('tag')
-                    tag = self.clean_tag(tag_dirty)
-                    a = Unary_RE.match(regex).group('a')
-                    elems = Unary_RE.sub(a+'='+tag_dirty, elems, 1)
-                    if ':' in a:
-                        start, end = int(a.split(':')[0]), int(a.split(':')[1])
-                        size = end - start
-                    else:
-                        start, end = int(a), int(a)+1
-                        size = 1
-                    prev_tag = Unary_RE.match(regex).group('tag1')
-                    combin = self.combinator_unary(prev_tag, tag_dirty)
-                    c = f'<td class="constit ccg-parse" colspan="{size}" span="{start}:{end}">{tag}<span class="combinator">{combin}</span></td>'
-                    constits[j-1].append(c)
-                elif Binary_RE.match(regex):
-                    x = Binary_RE.match(regex)
-                    tag_dirty = x.group('tag')
-                    tag = self.clean_tag(tag_dirty)
+            Left_RE = re.compile(f'^(?P<pre>(<[0-9]+>|[(])*)<{j}>(?P<a>.*?)</{j}>')
+            Right_RE = re.compile(f'<{j}>(?P<a>.*?)</{j}>')
+            Modifier_RE = re.compile(fr'<{j}>(?P<a>.*?)</{j}>(?P<slash>[/\\])<{j}>(?P<b>.*?)</{j}>')
+            while re.search(f'<{j}>', tag):
+                mod = Modifier_RE.search(tag)
+                if mod and CCGTagUtils.remove_features(mod.group('a')) == CCGTagUtils.remove_features(mod.group('b')):
+                    a = mod.group('a')
+                    b = mod.group('b')
+                    slash = mod.group('slash')
+                    tag = tag.replace(mod.group(), '(' + a + ')' + slash + '(' + b + ')')
+                elif Left_RE.match(tag):
+                    x = Left_RE.match(tag)
+                    pre = x.group('pre')
                     a = x.group('a')
-                    b = x.group('b')
-                    if ':' in a:
-                        a = a.split(':')[0]
-                    if ':' in b:
-                        b = b.split(':')[1]
-                    else:
-                        b = str(int(b)+1)
-                    elems = Binary_RE.sub(a+':'+b+'='+tag_dirty, elems, 1)
-                    size = int(b) - int(a)
-                    tag1 = Binary_RE.match(regex).group('tag1')
-                    tag2 = Binary_RE.match(regex).group('tag2')
-                    combin = self.combinator_binary(tag1,tag2,tag_dirty)
-                    c = f'<td class="constit ccg-parse" colspan="{size}" span="{a}:{b}">{tag}<span class="combinator">{combin}</span></td>'
-                    constits[j - 1].append(c)
-
-                else:
-                    print(j, regex)
+                    tag = tag.replace(x.group(), pre + a)
+                elif Right_RE.search(tag):
+                    x = Right_RE.search(tag)
+                    a = x.group('a')
+                    tag = tag.replace(x.group(), '(' + a + ')')
             j += 1
-        Span_RE = re.compile('span="(?P<a>[0-9]+):(?P<b>[0-9]+)"')
-        for i,row in enumerate(constits):
-            span_end = 0
-            for j,con in enumerate(row):
-                x = Span_RE.search(con)
-                a = int(x.group('a'))
-                b = int(x.group('b'))
-                if a>span_end:
-                    constits[i][j] = f'<td colspan="{a-span_end}" span="{span_end}:{a}"/>'+constits[i][j]
-                span_end = b
-        ccg_parse = ['<tr class="expand">'+''.join(c) +'</tr>\n' for c in constits]
-        ccg_parse.reverse()
-        html_elems = []
-        html_elems += ['<button class="expand">CCG parse ▲</button><br/>']
-        html_elems += ['<table class="visccg wordsbelow"><tbody>\n']
-        html_elems += ccg_parse
-        html_elems += ['<tr>\n'] + tags + ['</tr>\n']
-        html_elems += ['<tr>\n'] + words + ['</tr>\n']
-        html_elems += ['</tbody></table>']
-        return html_elems
+        tag = tag.replace(r'((S\NP)/NP)', r'(S\NP/NP)')
+        # print(tag)
+        return tag
 
-    def combinator_binary(self, tag1, tag2, tag):
+    @staticmethod
+    def to_html(tag):
+        x = CCGTagUtils.mark_depth(tag)
+        i = 1
+        while f'<{i}>' in tag:
+            Paren_RE = re.compile(f'<{i}>.*?</{i}>')
+            while Paren_RE.search(x):
+                x = Paren_RE.sub('X', x)
+            i += 1
+        arg_count = len(re.findall(r'[/\\]', x))
 
-        FA_RE1 = re.compile(r'(?P<X>\S+)[*]/[*](?P<Y>\S+)')
-        FA_RE2 = re.compile(r'(?P<X>\S+)[*]\\[*](?P<Y>\S+)')
-        B_RE = re.compile(r'(?P<X>\S+)[*][\\/][*](?P<Y>\S+)')
-        # assign combinator
-        tag1 = re.sub(r'\[.*?\]', '', tag1)
-        tag2 = re.sub(r'\[.*?\]', '', tag2)
-        tag = re.sub(r'\[.*?\]', '', tag)
-        # tag1 = self.clean_tag(tag1).split(':')[0]
-        # tag2 = self.clean_tag(tag2).split(':')[0]
-        # tag = self.clean_tag(tag).split(':')[0]
-        combin = ''
-        # Function Application
-        m = FA_RE1.match(self.mark_first_arg(tag1))
-        m2 = FA_RE2.match(self.mark_first_arg(tag2))
-        if m:
-            Y = m.group('Y')
-            X = m.group('X')
-            if Y in [tag2, f'({tag2})'] and X in [tag, f'({tag})']:
-                combin = '&gt;'
-        if m2:
-            Y = m2.group('Y')
-            X = m2.group('X')
-            if Y in [tag1, f'({tag1})'] and X in [tag, f'({tag})']:
-                combin = '&lt;'
-        # Other
-        if tag1 in ['.', ',', '?', 'LRB', 'RRB', ';', 'RQU']:
-            combin = tag1
-        if tag2 in ['.', ',', '?', 'LRB', 'RRB', ';', 'RQU'] or not tag2.strip():
-            combin = tag2
-        if not tag1.strip() or not tag2.strip():
-            combin = 'SPACE'
-        if tag1 == 'conj' and tag in [tag2 + '\\' + tag2, f'({tag2})\\({tag2})']:
-            combin = 'conj'
-        # Composition
-        if (not combin) and B_RE.match(self.mark_first_arg(tag1)) \
-                and B_RE.match(self.mark_first_arg(tag2)) \
-                and B_RE.match(self.mark_first_arg(tag)):
-            a = B_RE.match(self.mark_first_arg(tag1))
-            b = B_RE.match(self.mark_first_arg(tag2))
-            c = B_RE.match(self.mark_first_arg(tag))
-            X1 = a.group('X')
-            Y1 = a.group('Y')
-            X2 = b.group('X')
-            Y2 = b.group('Y')
-            X3 = c.group('X')
-            Y3 = c.group('Y')
-            if Y1 == X2 and X1 == X3 and Y2 == Y3:
-                combin = 'B&lt;'
-            elif X1 == Y2 and X3 == X2 and Y1 == Y3:
-                combin = 'B&lt;'
+        if arg_count > 0:
+            tag = tag + ':' + '<args>' + str(arg_count) + '</args>'
+        elif tag == 'conj':
+            tag = 'conj:<args>2</args>'
+        return tag.replace('[', '<sub>').replace(']', '</sub>')
+
+    @staticmethod
+    def mark_depth(tag):
+        Paren_RE = re.compile('^(?P<pre>([^()])*)(?P<paren>[()])')
+        i = 0
+        while Paren_RE.match(tag):
+            s = Paren_RE.match(tag).group('pre')
+            p = Paren_RE.match(tag).group('paren')
+            if p == '(':
+                i += 1
+                tag = Paren_RE.sub(s + f'<{i}>', tag, 1)
             else:
-                print('B?', tag1, '+', tag2, '=>', tag)
-                # print('X1 ', X1, 'Y1 ', Y1)
-                # print('X2 ', X2, 'Y2 ', Y2)
-                # print('X3 ', X3, 'Y3 ', Y3)
-        if not combin:
-            print('B?', tag1, '+', tag2, '=>', tag)
-            combin = '?'
-        return combin
+                tag = Paren_RE.sub(s + f'</{i}>', tag, 1)
+                i -= 1
+        return tag
 
+    @staticmethod
+    def get_max_depth(deep_tag):
+        i = 1
+        max = 0
+        while f'<{i}>' in deep_tag:
+            max = i
+            i += 1
+        if '<1>' not in deep_tag:
+            return -1
+        return max
 
-    def combinator_unary(self, tag1, tag2):
-        TR_RE1 = re.compile(r'(?P<T1>\S+)/[(](?P<T2>\S+)\\(?P<X>\S+)[)]')
-        TR_RE2 = re.compile(r'(?P<T1>\S+)\\[(](?P<T2>\S+)/(?P<X>\S+)[)]')
+    @staticmethod
+    def unmark_depth(deep_tag):
+        i = 1
+        tag = deep_tag
+        while f'<{i}>' in tag:
+            tag = tag.replace(f'<{i}>', '(')
+            tag = tag.replace(f'</{i}>', ')')
+            i += 1
+        return tag
 
-        # assign combinator
-        combin = '?'
-        tag1 = re.sub(r'\[.*?\]', '', tag1)
-        tag2 = re.sub(r'\[.*?\]', '', tag2)
-        # Type Raising
-        if TR_RE1.match(tag2) and TR_RE1.match(tag2).group('T1') == TR_RE1.match(tag2).group('T2'):
-            X = TR_RE1.match(tag2).group('X')
-            if X == tag1 or X == '(' + tag1 + ')':
-                combin = 'TR&gt;'
-            else:
-                print('U?', tag1, '=>', tag2)
-        elif TR_RE2.match(tag2) and TR_RE2.match(tag2).group('T1') == TR_RE2.match(tag2).group('T2'):
-            X = TR_RE2.match(tag2).group('X')
-            if X == tag1 or X == '(' + tag1 + ')':
-                combin = 'TR&lt;'
-            else:
-                print('U?', tag1, '=>', tag2)
-        # Raising to NP
-        elif tag1 == 'N' and tag2 == 'NP':
-            combin = 'NP'
-        # Relative and Adverbial Clauses
-        elif re.match(r'S(\[.*?\])?[\\/]NP', tag1):
-            if re.match(r'NP?[\\/]NP?', tag2):
-                combin = 'Rel'
-            elif re.match(r'S[\\/]S', tag2):
-                combin = 'AdvCl'
-            elif re.match('NP', tag2):
-                combin = 'NomCl'
-            else:
-                print('U?', tag1, '=>', tag2)
-        else:
-            print('U?', tag1, '=>', tag2)
-        return combin
-
-    def clean_tag(self, tag):
-        tag = super(CCG,self).clean_tag(tag)
-        return tag.replace('[','<sub>').replace(']','</sub>')
-
-    def mark_first_arg(self,tag):
+    @staticmethod
+    def mark_first_arg(tag):
         depth = 0
         index = -1
-        for i,c in enumerate(tag):
+        for i, c in enumerate(tag):
             if c == '(':
-                depth +=1
+                depth += 1
             elif c == ')':
-                depth -=1
-            elif c in ['\\','/'] and depth==0:
+                depth -= 1
+            elif c in ['\\', '/'] and depth == 0:
                 index = i
-        if index>0:
-            x = tag[:index] + '*' + tag[index] + '*' + tag[index + 1:]
-            # print(x)
-            return x
+        if index > 0:
+            return tag[:index] + '*' + tag[index] + '*' + tag[index + 1:]
         return tag
+
+    @staticmethod
+    def add_indices(tag):
+        ...
+
+    @staticmethod
+    def remove_features(tag):
+        return re.sub(r'\[.+?\]', '', tag)
+
+    @staticmethod
+    def get_combinator_unary(before_tag, after_tag):
+        TR1_RE = re.compile(r'(?P<T1>\S+)/[(](?P<T2>\S+)\\(?P<X>\S+)[)]')
+        TR2_RE = re.compile(r'(?P<T1>\S+)\\[(](?P<T2>\S+)/(?P<X>\S+)[)]')
+
+        before_tag = CCGTagUtils.remove_features(before_tag)
+        after_tag = CCGTagUtils.remove_features(after_tag)
+        # Type Raising
+        tr = TR1_RE.match(after_tag)
+        if tr and tr.group('T1') == tr.group('T2'):
+            X = tr.group('X')
+            if X in [before_tag, f'({before_tag})']:
+                return 'TR>'
+        tr = TR2_RE.match(after_tag)
+        if tr and tr.group('T1') == tr.group('T2'):
+            X = tr.group('X')
+            if X in [before_tag, f'({before_tag})']:
+                return 'TR<'
+        # Raising to NP
+        if before_tag == 'N' and after_tag == 'NP':
+            return 'NP'
+        # Clauses
+        if before_tag in ['S/NP', 'S\\NP']:
+            if after_tag in ['N\\N', 'NP\\NP']:
+                return 'Rel'
+            if after_tag in ['S\\S', 'S/S']:
+                return 'AdvCl'
+            if after_tag == 'NP':
+                return 'NomCl'
+        print('U?', before_tag, '=>', after_tag)
+        return '?'
+
+    @staticmethod
+    def get_combinator_binary(left_tag, right_tag, tag):
+        FA1_RE = re.compile(r'(?P<X>\S+)[*]/[*](?P<Y>\S+)')
+        FA2_RE = re.compile(r'(?P<X>\S+)[*]\\[*](?P<Y>\S+)')
+
+        left_tag = CCGTagUtils.remove_features(left_tag)
+        right_tag = CCGTagUtils.remove_features(right_tag)
+        tag = CCGTagUtils.remove_features(tag)
+
+        # Right Function Application
+        fa = FA1_RE.match(CCGTagUtils.mark_first_arg(left_tag))
+        if fa and CCGTagUtils.clean_parens(fa.group('Y')) == right_tag \
+                and CCGTagUtils.clean_parens(fa.group('X')) in tag:
+            return '>'
+        # Left Function Application
+        fa = FA2_RE.match(CCGTagUtils.mark_first_arg(right_tag))
+        if fa and CCGTagUtils.clean_parens(fa.group('Y')) == left_tag \
+                and CCGTagUtils.clean_parens(fa.group('X'))  == tag:
+            return '<'
+
+        # Other
+        if left_tag in ['.', ',', '?', ';', ':', 'LRB', 'RRB', 'RQU']:
+            return left_tag
+        if right_tag in ['.', ',', '?', ';', ':', 'LRB', 'RRB', 'RQU']:
+            return right_tag
+        if left_tag == 'conj' and tag in [f'{right_tag}\\{right_tag}', f'({right_tag})\\({right_tag})']:
+            return 'conj'
+        # Composition
+        B_RE = re.compile(r'(?P<X>\S+)[*][\\/][*](?P<Y>\S+)')
+
+        l = B_RE.match(CCGTagUtils.mark_first_arg(left_tag))
+        r = B_RE.match(CCGTagUtils.mark_first_arg(right_tag))
+        t = B_RE.match(CCGTagUtils.mark_first_arg(tag))
+        if l and r and t:
+            lx, ly = CCGTagUtils.clean_parens(l.group('X')), CCGTagUtils.clean_parens(l.group('Y'))
+            rx, ry = CCGTagUtils.clean_parens(r.group('X')), CCGTagUtils.clean_parens(r.group('Y'))
+            tx, ty = CCGTagUtils.clean_parens(t.group('X')), CCGTagUtils.clean_parens(t.group('Y'))
+            if ly == rx and lx == tx and ry == ty:
+                return 'B>'
+            elif lx == ry and rx == tx and ly == ty:
+                return 'B<'
+        if right_tag == r'S\S' and tag == left_tag:
+            return 'B<$'
+        if left_tag == r'S/S' and tag == right_tag:
+            return 'B>$'
+        print('B?', left_tag, '+', right_tag, '=>', tag)
+        return '?'
+
+
+class CCGBankUtils:
+
+    @staticmethod
+    def word_re():
+        # <L N NN NN question N>
+        return re.compile('<L [^\s>]+ [^\s>]+ [^\s>]+ [^\s>]+ [^\s>]+>')
+
+    @staticmethod
+    def phrase_re():
+        # <T NP 0 2>
+        return re.compile('<T (?P<tag>[^\s>]+) [^\s>]+ [^\s>]+>')
+
+    @staticmethod
+    def word_iter(ccg_code):
+        return re.finditer('<L (?P<tag>[^\s>]+) (?P<pos>[^\s>]+) [^\s>]+ (?P<word>[^\s>]+) [^\s>]+>', ccg_code)
+
+    @staticmethod
+    def is_word(ccg_code):
+        # <L N NN NN question N>
+        return re.match('^<L [^\s>]+ [^\s>]+ [^\s>]+ [^\s>]+ [^\s>]+>$', ccg_code)
+
+    @staticmethod
+    def is_phrase(ccg_code):
+        # <T NP 0 2>
+        return re.match('^<T [^\s>]+ [^\s>]+ [^\s>]+>$', ccg_code)
+
+    @staticmethod
+    def get_tag(ccg_code):
+        return ccg_code.split()[1]
+
+    @staticmethod
+    def get_word(ccg_code):
+        return ccg_code.split()[4]
+
+    @staticmethod
+    def get_pos(ccg_code):
+        return ccg_code.split()[2]
+
 
 def main():
     test_file = r'../data/ccg.txt'
@@ -376,6 +421,8 @@ def main():
         for ccg in CCG.finditer(f.read()):
             ccg = CCG(ccg)
             ccg.html()
+    # for tag in sorted(TAG_SET):
+    #     print(tag)
 
 
 if __name__ == "__main__":
