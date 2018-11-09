@@ -115,3 +115,31 @@ button.expand {
 .covered {
     background-color: #eee;
 }
+
+table {
+    text-align: left;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+tbody {
+    text-align: left;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+anything pre {
+    margin: 10px 30px;
+}
+
+.scroll:hover {
+    padding: 0px 0px 10px 0px;
+    overflow-x: auto;
+}
+
+.scroll {
+    padding: 0px 0px 10px 0px;
+}
+
+amr pre {
+    margin: 10px 60px;
+}
