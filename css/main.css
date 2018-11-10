@@ -131,15 +131,14 @@ anything pre {
     margin: 10px 30px;
 }
 
-.scroll:hover {
+.scroll {
     padding: 0px 0px 10px 0px;
     overflow-x: auto;
 }
 
-.scroll {
-    padding: 0px 0px 10px 0px;
-}
-
 amr pre {
     margin: 10px 60px;
+}
+
+args{
 }

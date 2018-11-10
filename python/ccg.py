@@ -38,7 +38,7 @@ class CCG(TXT):
         WORDS = []
         TAGS = []
         PHRASES = []
-        CCG = self.elements()
+        CCG = self.elements().copy()
 
         for i, e in enumerate(CCG):
             if e == '(':
@@ -203,7 +203,7 @@ class CCGTagUtils:
                     a = mod.group('a')
                     b = mod.group('b')
                     slash = mod.group('slash')
-                    tag = tag.replace(mod.group(), '(' + a + ')' + slash + '(' + b + ')')
+                    tag = tag.replace(mod.group(), f'({a}){slash}({b})')
                 elif Left_RE.match(tag):
                     x = Left_RE.match(tag)
                     pre = x.group('pre')
@@ -220,20 +220,20 @@ class CCGTagUtils:
 
     @staticmethod
     def to_html(tag):
+        tag = CCGTagUtils.add_indices(tag)
         x = CCGTagUtils.mark_depth(tag)
-        i = 1
-        while f'<{i}>' in tag:
-            Paren_RE = re.compile(f'<{i}>.*?</{i}>')
-            while Paren_RE.search(x):
-                x = Paren_RE.sub('X', x)
-            i += 1
+        Paren_RE = re.compile('<1>.*?</1>')
+        while Paren_RE.search(x):
+            x = Paren_RE.sub('X', x)
         arg_count = len(re.findall(r'[/\\]', x))
 
         if arg_count > 0:
-            tag = tag + ':' + '<args>' + str(arg_count) + '</args>'
+            tag = tag + f'<args> : {arg_count}</args>'
         elif tag == 'conj':
-            tag = 'conj:<args>2</args>'
-        return tag.replace('[', '<sub>').replace(']', '</sub>')
+            tag = 'conj<args> : 2</args>'
+
+        tag = tag.replace('[', '<sub>').replace(']', '</sub>')
+        return tag
 
     @staticmethod
     def mark_depth(tag):
@@ -288,7 +288,63 @@ class CCGTagUtils:
 
     @staticmethod
     def add_indices(tag):
-        ...
+        # simplest case
+        x = re.match(r'^(?P<a>[A-Z]+(\[.*?\])?)(?P<slash>[/\\])(?P<b>[A-Z]+(\[.*?\])?)', tag)
+        if x:
+            a = CCGTagUtils.remove_features(x.group('a'))
+            b = CCGTagUtils.remove_features(x.group('b'))
+            if a == b:
+                if x.group('a') == x.group('b'):
+                    tag = tag.replace(x.group('a'), x.group('a') + '.1', 2)
+                else:
+                    tag = tag.replace(x.group('a'), x.group('a') + '.1', 1)
+                    tag = tag.replace(x.group('b'), x.group('b') + '.1', 1)
+                # print(tag)
+                return tag
+
+        tag = CCGTagUtils.mark_depth(tag)
+        max = CCGTagUtils.get_max_depth(tag)
+
+        # get spans for each modifier pattern
+        modifier_spans = []
+        j = 1
+        while j<=max:
+            Modifier_RE = re.compile(fr'<{j}>(?P<a>.*?)</{j}>(?P<slash>[/\\])<{j}>(?P<b>.*?)</{j}>')
+            for mod in Modifier_RE.finditer(tag):
+                a = CCGTagUtils.remove_features(mod.group('a'))
+                b = CCGTagUtils.remove_features(mod.group('b'))
+                if a == b:
+                    modifier_spans.append((mod.start('a'), mod.end('a'), mod.start('b'), mod.end('b')))
+            j += 1
+
+        Cat_RE = re.compile(r'([^<>()/\\]+|</?[0-9]+>|.)')
+        cats = [c.group() for c in Cat_RE.finditer(tag)]
+        cat_indices = [c.start() for c in Cat_RE.finditer(tag)]
+
+        CATS = cats.copy()
+        modifier_memo = []
+        for a_start, a_end, b_start, b_end in modifier_spans:
+            i = 1
+            for j, c in enumerate(CATS):
+                if not re.match('[A-Z].*',c):
+                    continue
+                me = cat_indices[j]
+                if a_start <= me < a_end:
+                    modifier_memo.append(i)
+                    if not re.match('.*[.][0-9]+$',cats[j]):
+                        cats[j] = f'{c}.{i}'
+                    i+=1
+                elif b_start <= me < b_end:
+                    m = modifier_memo.pop(0)
+                    cats[j] = f'{c}.{m}'
+
+                    # i -= 1
+            # i += 1
+        tag = ''.join(cats)
+        tag = CCGTagUtils.unmark_depth(tag)
+        # print(tag)
+        return tag
+
 
     @staticmethod
     def remove_features(tag):
