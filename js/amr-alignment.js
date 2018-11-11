@@ -71,8 +71,15 @@ class AMR_Alignment{
         if (!this.is_connected())
             c += '# ✘disconnected ';
         let type = $(`anything[amr-id='${this.amr_id}']`).attr('class');
-        if (type==='CCG' && this.is_isomorphic())
-            c += '# ✓sem args = syn args ';
+        if (type==='CCG') {
+            let s = this.sem_and_syn_count();
+            let sem_count = s[0];
+            let syn_count = s[1];
+            if (sem_count === syn_count && sem_count+syn_count > 0)
+                c += `# ✓ ${sem_count} sem = ${syn_count} syn `;
+            else if (sem_count+syn_count > 0)
+                c += `# ${sem_count} sem, ${syn_count} syn `;
+        }
         return '     '+c;
     }
 
@@ -132,11 +139,7 @@ class AMR_Alignment{
         return test2;
     }
 
-    is_isomorphic(){
-        // number of semantic args equals the number of syntactic args
-        if(!$.trim(this.clean().split('~')[0]) || !$.trim(this.clean().split('~')[1]))
-            return false;
-
+    sem_and_syn_count(){
         let sem_count = 0;
         let syn_count = 0;
         let align = this.clean().split('~');
@@ -167,10 +170,13 @@ class AMR_Alignment{
         // get number of syntactic args
         for (let w of sent_align){
             let selector = $(`anything[amr-id='${this.amr_id}'] [tok-id='${w}'] args`);
-            if (selector.length>0)
-                syn_count += parseInt(selector.html());
+            if (selector.length>0) {
+                let x = parseInt(selector.html().replace(':',''));
+                if (x)
+                    syn_count += x
+            }
         }
-        return sem_count===syn_count;
+        return [sem_count, syn_count];
     }
 
     readible(){

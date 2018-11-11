@@ -4,6 +4,7 @@ sys.path.append("..")
 from python.txt import *
 
 TAG_SET = set()
+CONTROL_VERBS = set()
 
 
 class CCG(TXT):
@@ -57,6 +58,12 @@ class CCG(TXT):
             pos = word.group('pos')
             CCG = CCG.replace(word.group(), f'{j}={tag}', 1)
             tag = CCGTagUtils.to_html(tag)
+            t = re.sub(r'<sub>.*?</sub>','',tag)
+            t2 = re.sub(r'<args>.*?</args>', '', tag)
+            t2 = t2.replace(r'<sub>', '[').replace('</sub>',']')
+            if t.startswith(r'S\NP.1/(S\NP.1)'):
+                CONTROL_VERBS.add(t2+' : '+w+' '+pos)
+
             WORDS.append(f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>')
             TAGS.append(f'<td class="constit" colspan="1"><tag class="aligned" tok-id="{j}">{tag}</tag> </td>')
             j += 1
@@ -288,22 +295,11 @@ class CCGTagUtils:
 
     @staticmethod
     def add_indices(tag):
-        # simplest case
-        x = re.match(r'^(?P<a>[A-Z]+(\[.*?\])?)(?P<slash>[/\\])(?P<b>[A-Z]+(\[.*?\])?)', tag)
-        if x:
-            a = CCGTagUtils.remove_features(x.group('a'))
-            b = CCGTagUtils.remove_features(x.group('b'))
-            if a == b:
-                if x.group('a') == x.group('b'):
-                    tag = tag.replace(x.group('a'), x.group('a') + '.1', 2)
-                else:
-                    tag = tag.replace(x.group('a'), x.group('a') + '.1', 1)
-                    tag = tag.replace(x.group('b'), x.group('b') + '.1', 1)
-                # print(tag)
-                return tag
-
+        old_tag = tag
         tag = CCGTagUtils.mark_depth(tag)
         max = CCGTagUtils.get_max_depth(tag)
+        tag = tag.replace('NP[expl]','*EXPL*')
+        tag = tag.replace('NP[thr]', '*THR*')
 
         # get spans for each modifier pattern
         modifier_spans = []
@@ -313,36 +309,70 @@ class CCGTagUtils:
             for mod in Modifier_RE.finditer(tag):
                 a = CCGTagUtils.remove_features(mod.group('a'))
                 b = CCGTagUtils.remove_features(mod.group('b'))
-                if a == b:
+                if a == b and 'NP' in a:
                     modifier_spans.append((mod.start('a'), mod.end('a'), mod.start('b'), mod.end('b')))
             j += 1
 
         Cat_RE = re.compile(r'([^<>()/\\]+|</?[0-9]+>|.)')
         cats = [c.group() for c in Cat_RE.finditer(tag)]
         cat_indices = [c.start() for c in Cat_RE.finditer(tag)]
-
         CATS = cats.copy()
+
+        i = 1
+        for j, c in enumerate(CATS):
+            if c == 'NP':
+                cats[j] = f'{c}.{i}'
+                i += 1
+
+        if re.match(r'^NP[/\\]NP[/\\]?', tag):
+            cats[0] = 'NP.1'
+            cats[2] = 'NP.1'
+
+
+        # handle matching indices within a modifier
         modifier_memo = []
         for a_start, a_end, b_start, b_end in modifier_spans:
-            i = 1
             for j, c in enumerate(CATS):
-                if not re.match('[A-Z].*',c):
+                if c == 'NP':
+                    me = cat_indices[j]
+                    if a_start <= me < a_end:
+                        x = re.match('.*[.](?P<n>[0-9]+)$', cats[j])
+                        if x:
+                            modifier_memo.append(int(x.group('n')))
+                    elif b_start <= me < b_end:
+                        m = modifier_memo.pop(0)
+                        cats[j] = f'{c}.{m}'
+        i = 1
+        for j, c in enumerate(CATS):
+            if c == 'NP':
+                x = re.match('.*[.](?P<n>[0-9]+)$', cats[j])
+                if x and int(x.group('n')) > i:
+                    cats[j] = f'{c}.{i}'
                     continue
-                me = cat_indices[j]
-                if a_start <= me < a_end:
-                    modifier_memo.append(i)
-                    if not re.match('.*[.][0-9]+$',cats[j]):
-                        cats[j] = f'{c}.{i}'
-                    i+=1
-                elif b_start <= me < b_end:
-                    m = modifier_memo.pop(0)
-                    cats[j] = f'{c}.{m}'
+                elif x and int(x.group('n')) < i:
+                    continue
+                i += 1
 
-                    # i -= 1
-            # i += 1
         tag = ''.join(cats)
+        if tag.count('NP') < 2:
+            tag = old_tag
+        # fix parens for "want", "should", etc.
+        # If nodes are the same but features are different,
+        # remove parentheses around first half of expression.
+        # This is important for getting number of args!
+        j = 1
+        while j <= max:
+            Modifier_RE = re.compile(fr'<{j}>(?P<a>.*?)</{j}>(?P<slash>[/\\])<{j}>(?P<b>.*?)</{j}>')
+            for mod in Modifier_RE.finditer(tag):
+                a = mod.group('a')
+                b = mod.group('b')
+                slash = mod.group('slash')
+                if a != b:
+                    tag = tag.replace(mod.group(), f'{a}{slash}({b})')
+            j+=1
         tag = CCGTagUtils.unmark_depth(tag)
-        # print(tag)
+        tag = tag.replace('*EXPL*', 'NP[expl]')
+        tag = tag.replace('*THR*', 'NP[thr]')
         return tag
 
 
@@ -477,8 +507,8 @@ def main():
         for ccg in CCG.finditer(f.read()):
             ccg = CCG(ccg)
             ccg.html()
-    # for tag in sorted(TAG_SET):
-    #     print(tag)
+    for w in sorted(CONTROL_VERBS):
+        print(w)
 
 
 if __name__ == "__main__":
