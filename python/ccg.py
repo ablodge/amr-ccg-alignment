@@ -4,7 +4,7 @@ sys.path.append("..")
 from python.txt import *
 
 TAG_SET = set()
-CONTROL_VERBS = set()
+ARG_STRUCTURE = set()
 
 
 class CCG(TXT):
@@ -61,8 +61,8 @@ class CCG(TXT):
             t = re.sub(r'<sub>.*?</sub>','',tag)
             t2 = re.sub(r'<args>.*?</args>', '', tag)
             t2 = t2.replace(r'<sub>', '[').replace('</sub>',']')
-            if t.startswith(r'S\NP.1/(S\NP.1)'):
-                CONTROL_VERBS.add(t2+' : '+w+' '+pos)
+            if t.count('NP') >= 2:
+                ARG_STRUCTURE.add(t2+' : '+w+' '+pos)
 
             WORDS.append(f'<td><word class="aligned" tok-id="{j}"><tok>{j}/</tok>{w}</word> </td>')
             TAGS.append(f'<td class="constit" colspan="1"><tag class="aligned" tok-id="{j}">{tag}</tag> </td>')
@@ -222,6 +222,10 @@ class CCGTagUtils:
                     tag = tag.replace(x.group(), '(' + a + ')')
             j += 1
         tag = tag.replace(r'((S\NP)/NP)', r'(S\NP/NP)')
+        tag = tag.replace(r'((S[to]\NP)/NP)', r'(S[to]\NP/NP)')
+        tag = tag.replace(r'((S[b]\NP)/NP)', r'(S[b]\NP/NP)')
+        tag = tag.replace(r'((S[ng]\NP)/NP)', r'(S[ng]\NP/NP)')
+        tag = tag.replace(r'((S[adj]\NP)/NP)', r'(S[adj]\NP/NP)')
         # print(tag)
         return tag
 
@@ -320,7 +324,7 @@ class CCGTagUtils:
 
         i = 1
         for j, c in enumerate(CATS):
-            if c == 'NP':
+            if c.startswith('NP'):
                 cats[j] = f'{c}.{i}'
                 i += 1
 
@@ -333,7 +337,7 @@ class CCGTagUtils:
         modifier_memo = []
         for a_start, a_end, b_start, b_end in modifier_spans:
             for j, c in enumerate(CATS):
-                if c == 'NP':
+                if c.startswith('NP'):
                     me = cat_indices[j]
                     if a_start <= me < a_end:
                         x = re.match('.*[.](?P<n>[0-9]+)$', cats[j])
@@ -344,7 +348,7 @@ class CCGTagUtils:
                         cats[j] = f'{c}.{m}'
         i = 1
         for j, c in enumerate(CATS):
-            if c == 'NP':
+            if c.startswith('NP'):
                 x = re.match('.*[.](?P<n>[0-9]+)$', cats[j])
                 if x and int(x.group('n')) > i:
                     cats[j] = f'{c}.{i}'
@@ -354,6 +358,7 @@ class CCGTagUtils:
                 i += 1
 
         tag = ''.join(cats)
+
         if tag.count('NP') < 2:
             tag = old_tag
         # fix parens for "want", "should", etc.
@@ -371,6 +376,14 @@ class CCGTagUtils:
                     tag = tag.replace(mod.group(), f'{a}{slash}({b})')
             j+=1
         tag = CCGTagUtils.unmark_depth(tag)
+        obj_ctrl = re.match(r'[(]?S\[.*?\]\\NP.1[)]?/[(]S\[.*?\]\\NP.1[)]/NP.2', tag)
+        obj_raise = re.match(r'[(]?S\[.*?\]\\NP.1[)]?/[(]S\[.*?\]\\NP.2/NP.3[)]', tag)
+        if obj_ctrl:
+            tag = tag.replace('NP.1)/NP.2','NP.2)/NP.2',1)
+        if obj_raise:
+            tag = tag.replace('NP.2/NP.3)','NP.2/NP.1)',1)
+
+        r'S[adj]\NP.1/(S[to]\NP.2/NP.1)'
         tag = tag.replace('*EXPL*', 'NP[expl]')
         tag = tag.replace('*THR*', 'NP[thr]')
         return tag
@@ -507,7 +520,7 @@ def main():
         for ccg in CCG.finditer(f.read()):
             ccg = CCG(ccg)
             ccg.html()
-    for w in sorted(CONTROL_VERBS):
+    for w in sorted(ARG_STRUCTURE):
         print(w)
 
 
