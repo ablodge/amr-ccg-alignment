@@ -1,0 +1,7716 @@
+#1
+# AMR:
+# (q/question-01
+#       :ARG1 (p/possible :mode x0/interrogative
+#             :domain (b/broaden-01
+#                   :ARG0 (w/we)
+#                   :ARG1 (t/train
+#                         :mod (t2/think-01
+#                               :ARG0 (p2/person
+#                                     :ARG0-of (h/have-org-role-91
+#                                           :ARG1 (o/organization :name (n2/name :op1 x1/"Audit" :op2 x2/"Office"))
+#                                           :ARG2 (d/director)))))
+#                   :ARG2 (b2/bit)))
+#       :time (n/now))
+# Sentence:
+# The question is now , can we broaden out a bit the Audit Office director 's train of thought ?
+# Alignments:
+#  ~ The
+# q/question-01 :ARG1 ~ question
+# :domain ~ is
+# n/now ~ now
+#  ~ ,
+# p/possible ~ can
+# w/we ~ we
+# b/broaden-01 :ARG0 :ARG1 :ARG2 ~ broaden
+#  ~ a
+# b2/bit ~ bit
+#  ~ the
+# o/organization :name n2/name :op1 x1/"Audit" :op2 x2/"Office" ~ Audit Office
+# p2/person :ARG0-of h/have-org-role-91 :ARG2 d/director ~ director
+# t/train ~ train
+# :mod t2/think-01 :ARG0 ~ thought
+#  ~ ?
+0 ~ 
+1 ~ q q_ARG1_p
+2 ~ p_domain_b
+3 ~ n
+4 ~ 
+5 ~ p
+6 ~ w
+7 ~ b b_ARG0_w b_ARG1_t b_ARG2_b2
+9 ~ 
+10 ~ b2
+11 ~ 
+12 13 ~ o o_name_n2 n2 n2_op1_x1 x1 n2_op2_x2 x2
+14 ~ p2 p2_ARG0-of_h h h_ARG2_d d
+16 ~ t
+18 ~ t_mod_t2 t2 t2_ARG0_p2
+19 ~ 
+
+#2
+# AMR:
+# (a/and
+#       :op1 (c/cause-01
+#             :ARG0 (t/this)
+#             :ARG1 (b/break-06
+#                   :ARG1 (m/movement :name (n/name :op1 x0/"May" :op2 x1/"4" :op3 x2/"th")
+#                         :mod (m2/momentous))
+#                   :location (c2/country)))
+#       :op2 (p/protest-01
+#             :ARG0 (a2/and
+#                   :op1 (p2/person :name (n2/name :op1 x3/"Xiao" :op2 x4/"Kejian"))
+#                   :op2 (o/other))
+#             :location (c3/city :name (n3/name :op1 x5/"Paris"))
+#             :mod (a3/also)))
+# Sentence:
+# This caused the momentous " May 4th " Movement to break out in the country , and Xiao Kejian and others also protested in Paris .
+# Alignments:
+# t/this ~ This
+# c/cause-01 :ARG0 :ARG1 ~ caused
+#  ~ the
+# :mod m2/momentous ~ momentous
+#  ~ "
+# m/movement :name n/name :op1 x0/"May" :op2 x1/"4" :op3 x2/"th" ~ May 4th
+#  ~ "
+# m/movement ~ Movement
+# b/break-06 :ARG1 ~ break
+# :location ~ in
+#  ~ the
+# c2/country ~ country
+#  ~ ,
+# a/and :op1 :op2 ~ and
+# p2/person :name n2/name :op1 x3/"Xiao" :op2 x4/"Kejian" ~ Xiao Kejian
+# a2/and :op1 :op2 ~ and
+# o/other ~ others
+# :mod a3/also ~ also
+# p/protest-01 :ARG0 ~ protested
+# :location ~ in
+# c3/city :name n3/name :op1 x5/"Paris" ~ Paris
+#  ~ .
+0 ~ t
+1 ~ c c_ARG0_t c_ARG1_b
+2 ~ 
+3 ~ m_mod_m2 m2
+4 ~ 
+5 6 ~ m m_name_n n n_op1_x0 x0 n_op2_x1 x1 n_op3_x2 x2
+7 ~ 
+8 ~ m
+10 ~ b b_ARG1_m
+12 ~ b_location_c2
+13 ~ 
+14 ~ c2
+15 ~ 
+16 ~ a a_op1_c a_op2_p
+17 18 ~ p2 p2_name_n2 n2 n2_op1_x3 x3 n2_op2_x4 x4
+19 ~ a2 a2_op1_p2 a2_op2_o
+20 ~ o
+21 ~ p_mod_a3 a3
+22 ~ p p_ARG0_a2
+23 ~ p_location_c3
+24 ~ c3 c3_name_n3 n3 n3_op1_x5 x5
+25 ~ 
+
+#3
+# AMR:
+# (p/possible :mode x0/interrogative
+#       :domain (b/break-01
+#             :ARG1 (t/television)))
+# Sentence:
+# Could it be that the television is broken ?
+# Alignments:
+# p/possible ~ Could
+# :domain ~ be
+#  ~ the
+# t/television ~ television
+# b/break-01 :ARG1 ~ broken
+#  ~ ?
+0 ~ p
+2 ~ p_domain_b
+4 ~ 
+5 ~ t
+7 ~ b b_ARG1_t
+8 ~ 
+
+#4
+# AMR:
+# (c/cause-01
+#       :ARG1 (a/appear-02
+#             :ARG1 (u/urgent
+#                   :mod (p/particular)
+#                   :domain (a2/and
+#                         :op1 (a5/and
+#                               :op1 (a3/activate-01
+#                                     :ARG1 (m/market
+#                                           :mod (p2/person
+#                                                 :ARG0-of (c3/consume-01))))
+#                               :op2 (a6/activate-01
+#                                     :ARG1 (m2/market
+#                                           :location (r/rural)
+#                                           :mod (w/wide))
+#                                     :mod (e2/especially)))
+#                         :op2 (c2/cultivate-01
+#                               :ARG1 (a4/and
+#                                     :op1 (h/hotspot
+#                                           :mod p2)
+#                                     :op2 (p3/point
+#                                           :mod (g/grow-01
+#                                                 :ARG1 (e/economy))
+#                                           :mod (n/new))))))))
+# Sentence:
+# Hence , activating the consumer market , especially the wide rural market , cultivating consumer hotspots and new economic growth points appear to be particularly urgent .
+# Alignments:
+# c/cause-01 :ARG1 ~ Hence
+#  ~ ,
+# a3/activate-01 :ARG1 ~ activating
+#  ~ the
+# p2/person :ARG0-of c3/consume-01 ~ consumer
+# m/market ~ market
+#  ~ ,
+# :mod e2/especially ~ especially
+#  ~ the
+# :mod w/wide ~ wide
+# r/rural ~ rural
+# m2/market ~ market
+#  ~ ,
+# c2/cultivate-01 :ARG1 ~ cultivating
+# h/hotspot ~ hotspots
+# a2/and :op1 :op2 ~ and
+# :mod n/new ~ new
+# e/economy ~ economic
+# :mod g/grow-01 :ARG1 ~ growth
+# p3/point ~ points
+# a/appear-02 :ARG1 ~ appear
+# :domain ~ be
+# :mod p/particular ~ particularly
+# u/urgent ~ urgent
+#  ~ .
+0 ~ c c_ARG1_a
+1 ~ 
+2 ~ a3 a3_ARG1_m
+3 ~ 
+4 ~ p2 p2_ARG0-of_c3 c3
+5 ~ m
+6 ~ 
+7 ~ a6_mod_e2 e2
+8 ~ 
+9 ~ m2_mod_w w
+10 ~ r
+11 ~ m2
+12 ~ 
+13 ~ c2 c2_ARG1_a4
+15 ~ h
+16 ~ a2 a2_op1_a5 a2_op2_c2
+17 ~ p3_mod_n n
+18 ~ e
+19 ~ p3_mod_g g g_ARG1_e
+20 ~ p3
+21 ~ a a_ARG1_u
+23 ~ u_domain_a2
+24 ~ u_mod_p p
+25 ~ u
+26 ~ 
+
+#5
+# AMR:
+# (s/state-01
+#       :ARG0 (p2/person :name (n/name :op1 x0/"Yongtu" :op2 x1/"Long"))
+#       :ARG1 (t/thing
+#             :location (a/above))
+#       :time (s3/speech
+#             :ARG1-of (h/hold-04
+#                   :ARG0 (o/organization :name (n2/name :op1 x2/"US" :op2 x3/"Asian" :op3 x4/"Foundation")))))
+# Sentence:
+# Yongtu Long made the above statement during a speech held by the US- Asian Foundation .
+# Alignments:
+# p2/person :name n/name :op1 x0/"Yongtu" :op2 x1/"Long" ~ Yongtu Long
+#  ~ the
+# t/thing :location a/above ~ above
+# s/state-01 :ARG0 :ARG1 ~ statement
+# :time ~ during
+#  ~ a
+# s3/speech ~ speech
+# h/hold-04 :ARG0 ~ held
+#  ~ the
+# o/organization :name n2/name :op1 x2/"US" :op2 x3/"Asian" :op3 x4/"Foundation" ~ US- Asian Foundation
+#  ~ .
+0 1 ~ p2 p2_name_n n n_op1_x0 x0 n_op2_x1 x1
+3 ~ 
+4 ~ t t_location_a a
+5 ~ s s_ARG0_p2 s_ARG1_t
+6 ~ s_time_s3
+7 ~ 
+8 ~ s3
+9 ~ :ARG1-of s3_ARG1-of_h h h_ARG0_o
+11 ~ 
+12 13 14 ~ o o_name_n2 n2 n2_op1_x2 x2 n2_op2_x3 x3 n2_op3_x4 x4
+15 ~ 
+
+#6
+# AMR:
+# (c3/company
+#       :mod (g2/group)
+#       :mod (m2/multi-national)
+#       :mod (s2/scale
+#             :mod (l/large))
+#       :ARG0-of (e/establish-01
+#             :ARG1 (h/headquarters)
+#             :location (c4/country :name (n2/name :op1 x0/"Canada")))
+#       :ARG0-of (m/manufacture-01
+#             :ARG1 (c5/coolant
+#                   :ARG1-of (f2/free-41
+#                         :ARG2 (f/fluorine))))
+#       :ARG0-of (s/sell-01
+#             :ARG1 c5)
+#       :domain (c/company :name (n/name :op1 x1/"GreenKel")))
+# Sentence:
+# With headquarters established in Canada , GreenKel is a large- scale multi- national group company manufacturing and selling fluorine- free coolant .
+# Alignments:
+# h/headquarters ~ headquarters
+# e/establish-01 :ARG1 ~ established
+# :location ~ in
+# c4/country :name n2/name :op1 x0/"Canada" ~ Canada
+#  ~ ,
+# c/company :name n/name :op1 x1/"GreenKel" ~ GreenKel
+# :domain ~ is
+#  ~ a
+# :mod l/large ~ large-
+# :mod s2/scale ~ scale
+# :mod m2/multi-national ~ multi-
+# :mod g2/group ~ group
+# c3/company ~ company
+# m/manufacture-01 :ARG1 ~ manufacturing
+# s/sell-01 :ARG1 ~ selling
+# f/fluorine ~ fluorine-
+# f2/free-41 :ARG2 ~ free
+# c5/coolant ~ coolant
+#  ~ .
+1 ~ h
+2 ~ :ARG0-of c3_ARG0-of_e e e_ARG1_h
+3 ~ e_location_c4
+4 ~ c4 c4_name_n2 n2 n2_op1_x0 x0
+5 ~ 
+6 ~ c c_name_n n n_op1_x1 x1
+7 ~ c3_domain_c
+8 ~ 
+9 ~ s2_mod_l l
+10 ~ c3_mod_s2 s2
+11 ~ c3_mod_m2 m2
+13 ~ c3_mod_g2 g2
+14 ~ c3
+15 ~ :ARG0-of c3_ARG0-of_m m m_ARG1_c5
+17 ~ :ARG0-of c3_ARG0-of_s s s_ARG1_c5
+18 ~ f
+19 ~ :ARG1-of c5_ARG1-of_f2 f2 f2_ARG2_f
+20 ~ c5
+21 ~ 
+
+#7
+# AMR:
+# (s/suck-01
+#       :ARG0 (m/mosquito)
+#       :ARG1 (e/element
+#             :mod (m2/mold))
+#       :ARG2 (c/cell
+#             :part-of (p/plant))
+#       :destination (b/body
+#             :poss m)
+#       :time (f/feed-01
+#             :ARG2 m))
+# Sentence:
+# When mosquitoes feed , they suck the mold element from the cells of plants into their bodies .
+# Alignments:
+# :time ~ When
+# m/mosquito ~ mosquitoes
+# f/feed-01 :ARG2 ~ feed
+#  ~ ,
+# s/suck-01 :ARG0 :ARG1 :ARG2 ~ suck
+#  ~ the
+# :mod m2/mold ~ mold
+# e/element ~ element
+#  ~ the
+# c/cell ~ cells
+# :poss ~ of
+# p/plant ~ plants
+# :destination ~ into
+# b/body ~ bodies
+#  ~ .
+0 ~ s_time_f
+1 ~ m
+2 ~ f f_ARG2_m
+3 ~ 
+5 ~ s s_ARG0_m s_ARG1_e s_ARG2_c
+6 ~ 
+7 ~ e_mod_m2 m2
+8 ~ e
+10 ~ 
+11 ~ c
+12 ~ b_poss_m
+13 ~ p
+14 ~ s_destination_b
+16 ~ b
+17 ~ 
+
+#8
+# AMR:
+# (d2/deny-01
+#       :ARG0 (h/he)
+#       :ARG1 (s/state-01
+#             :ARG1 (e/enough
+#                   :mod (o/only)
+#                   :domain (r/reserve
+#                         :mod (f/food)
+#                         :location (s2/station
+#                               :ARG0-of (o2/orbit-01)))
+#                   :purpose (l/last-01
+#                         :ARG1 r
+#                         :ARG2 (t3/temporal-quantity :quant x0/10
+#                               :unit (d3/day))))))
+# Sentence:
+# He denied the statement that the food reserve on the orbital station is only enough to last 10 days .
+# Alignments:
+# h/he ~ He
+# d2/deny-01 :ARG0 :ARG1 ~ denied
+#  ~ the
+# s/state-01 :ARG1 ~ statement
+#  ~ the
+# :mod f/food ~ food
+# r/reserve ~ reserve
+# :location ~ on
+#  ~ the
+# o2/orbit-01 ~ orbital
+# s2/station ~ station
+# :domain ~ is
+# :mod o/only ~ only
+# e/enough ~ enough
+# l/last-01 :ARG1 :ARG2 ~ last
+# :quant x0/10 ~ 10
+# t3/temporal-quantity :unit d3/day ~ days
+#  ~ .
+0 ~ h
+1 ~ d2 d2_ARG0_h d2_ARG1_s
+2 ~ 
+3 ~ s s_ARG1_e
+5 ~ 
+6 ~ r_mod_f f
+7 ~ r
+8 ~ r_location_s2
+9 ~ 
+10 ~ :ARG0-of s2_ARG0-of_o2 o2
+11 ~ s2
+12 ~ e_domain_r
+13 ~ e_mod_o o
+14 ~ e
+16 ~ l l_ARG1_r l_ARG2_t3
+17 ~ t3_quant_x0 x0
+18 ~ t3 t3_unit_d3 d3
+19 ~ 
+
+#9
+# AMR:
+# (o/obligate-01
+#       :ARG2 (r2/remember-01
+#             :ARG0 (e/everyone
+#                   :prep-from (p/person
+#                         :ARG0-of (l/lead-02))
+#                   :prep-to (p2/person
+#                         :mod (c/common)))
+#             :ARG1 (t/that)))
+# Sentence:
+# From leaders to the common people , everyone needs to keep that in mind .
+# Alignments:
+# :prep-from ~ From
+# p/person :ARG0-of l/lead-02 ~ leaders
+#  ~ the
+# :mod p2/person :mod c/common ~ common
+#  ~ ,
+# e/everyone ~ everyone
+# o/obligate-01 :ARG2 ~ needs
+# t/that ~ that
+#  ~ .
+0 ~ e_prep-from_p
+1 ~ p p_ARG0-of_l l
+3 ~ 
+4 ~ p2_mod_c p2 p2_mod_c c
+6 ~ 
+7 ~ e
+8 ~ o o_ARG2_r2
+11 ~ t
+14 ~ 
+
+#10
+# AMR:
+# (e3/expect-01
+#       :ARG1 (h/have-quant-91
+#             :ARG1 (s/seismic-quantity
+#                   :quant-of (e/earthquake)
+#                   :location (c/city :name (n/name :op1 x0/"Chengdu")
+#                         :location (r2/relative-position
+#                               :op1 (e2/epicenter)
+#                               :quant (o3/over
+#                                     :op1 (d/distance-quantity :quant x1/100
+#                                           :unit (k/kilometer))))))
+#             :ARG2 (a/at-most
+#                   :op1 (o/or :op1 x2/7 :op2 x3/8))))
+# Sentence:
+# In Chengdu , which is over 100 kms away from the epicenter , the earthquake should not have an intensity of over 7 , or 8 at the most .
+# Alignments:
+# :location ~ In
+# c/city :name n/name :op1 x0/"Chengdu" ~ Chengdu
+#  ~ ,
+# :quant o3/over :op1 ~ over
+# :quant x1/100 ~ 100
+# d/distance-quantity :unit k/kilometer ~ kms
+#  ~ the
+# e2/epicenter ~ epicenter
+#  ~ ,
+#  ~ the
+# e/earthquake ~ earthquake
+# e3/expect-01 :ARG1 ~ should
+# h/have-quant-91 :ARG1 :ARG2 ~ have
+#  ~ an
+# x2/7 ~ 7
+#  ~ ,
+# o/or :op1 :op2 ~ or
+# x3/8 ~ 8
+# :location ~ at
+#  ~ the
+#  ~ .
+0 ~ s_location_c
+1 ~ c c_name_n n n_op1_x0 x0
+2 ~ 
+5 ~ r2_quant_o3 o3 o3_op1_d
+6 ~ d_quant_x1 x1
+7 ~ d d_unit_k k
+10 ~ 
+11 ~ e2
+12 ~ 
+13 ~ 
+14 ~ e
+15 ~ e3 e3_ARG1_h
+17 ~ h h_ARG1_s h_ARG2_a
+18 ~ 
+22 ~ x2
+23 ~ 
+24 ~ o o_op1_x2 o_op2_x3
+25 ~ x3
+26 ~ c_location_r2
+27 ~ 
+29 ~ 
+
+#11
+# AMR:
+# (p/person
+#       :prep-on (d/duty
+#             :time (d2/day
+#                   :time-of (e/earthquake :name (n5/name :op1 x0/"Tangshan" :op2 x1/"Earthquake"))
+#                   :ARG0-of (m/mean-01
+#                         :ARG1 (d3/date-entity :month x2/7 :day x3/28)))
+#             :location (q/quarter
+#                   :poss p5))
+#       :domain (a/and
+#             :op1 (p2/person :name (n/name :op1 x4/"Wang" :op2 x5/"Dongxing"))
+#             :op2 (p3/person :name (n2/name :op1 x6/"Wang" :op2 x7/"Hongwen"))
+#             :op3 (p4/person :name (n3/name :op1 x8/"Zhang" :op2 x9/"Yufeng")
+#                   :ARG0-of (h/have-org-role-91
+#                         :ARG1 (p5/person :name (n4/name :op1 x10/"Mao" :op2 x11/"Zedong"))
+#                         :ARG2 (s/secretary
+#                               :mod (c/confidence))))))
+# Sentence:
+# On the day of the Tangshan Earthquake , i.e. July 28th , those on duty at Mao Zedong 's quarters were Wang Dongxing , Wang Hongwen , and Mao Zedong 's confidential secretary , Zhang Yufeng .
+# Alignments:
+# :location ~ On
+#  ~ the
+# d2/day ~ day
+# :poss ~ of
+#  ~ the
+# e/earthquake :name n5/name :op1 x0/"Tangshan" :op2 x1/"Earthquake" ~ Tangshan Earthquake
+#  ~ ,
+# d3/date-entity :month :month x2/7 ~ July
+#  ~ ,
+# :prep-on ~ on
+# p/person :prep-on d/duty ~ duty
+# :time ~ at
+# p5/person :name n4/name :op1 x10/"Mao" :op2 x11/"Zedong" ~ Mao Zedong
+# q/quarter ~ quarters
+# :domain ~ were
+# p2/person :name n/name :op1 x4/"Wang" :op2 x5/"Dongxing" ~ Wang Dongxing
+#  ~ ,
+# p3/person :name n2/name :op1 x6/"Wang" :op2 x7/"Hongwen" ~ Wang Hongwen
+#  ~ ,
+# p/person :domain a/and ~ and
+# :mod c/confidence ~ confidential
+# p4/person :ARG0-of h/have-org-role-91 :ARG2 s/secretary ~ secretary
+#  ~ ,
+# p4/person :name n3/name :op1 x8/"Zhang" :op2 x9/"Yufeng" ~ Zhang Yufeng
+#  ~ .
+0 ~ d_location_q
+1 ~ 
+2 ~ d2
+3 ~ q_poss_p5
+4 ~ 
+5 6 ~ e e_name_n5 n5 n5_op1_x0 x0 n5_op2_x1 x1
+7 ~ 
+9 ~ d3 d3_month_x2 d3_month_x2 x2
+11 ~ 
+13 ~ p_prep-on_d
+14 ~ p p_prep-on_d d
+15 ~ d_time_d2
+16 17 ~ p5 p5_name_n4 n4 n4_op1_x10 x10 n4_op2_x11 x11
+19 ~ q
+20 ~ p_domain_a
+21 22 ~ p2 p2_name_n n n_op1_x4 x4 n_op2_x5 x5
+23 ~ 
+24 25 ~ p3 p3_name_n2 n2 n2_op1_x6 x6 n2_op2_x7 x7
+26 ~ 
+27 ~ p p_domain_a a
+31 ~ s_mod_c c
+32 ~ p4 p4_ARG0-of_h h h_ARG2_s s
+33 ~ 
+34 35 ~ p4 p4_name_n3 n3 n3_op1_x8 x8 n3_op2_x9 x9
+36 ~ 
+
+#12
+# AMR:
+# (s/stop-01
+#       :ARG0 (e/enterprise
+#             :mod (e2/engineer-01)
+#             :ARG1-of (o/own-01
+#                   :ARG0 (s2/state)))
+#       :ARG1 (r/recruit-01
+#             :ARG0 e
+#             :ARG1 (p/person
+#                   :ARG0-of (w/work-01
+#                         :ARG1 (c/construct-01))))
+#       :time (a/after
+#             :op1 (d/date-entity :decade x0/1990)))
+# Sentence:
+# After the nineties , state- owned engineering enterprises stopped recruiting construction workers .
+# Alignments:
+# a/after :op1 ~ After
+#  ~ the
+#  ~ ,
+# s2/state ~ state-
+# o/own-01 :ARG0 ~ owned
+# :mod e2/engineer-01 ~ engineering
+# e/enterprise ~ enterprises
+# s/stop-01 :ARG0 :ARG1 ~ stopped
+# r/recruit-01 :ARG0 :ARG1 ~ recruiting
+# c/construct-01 ~ construction
+# p/person :ARG0-of w/work-01 ~ workers
+#  ~ .
+0 ~ a a_op1_d
+1 ~ 
+3 ~ 
+4 ~ s2
+5 ~ :ARG1-of e_ARG1-of_o o o_ARG0_s2
+6 ~ e_mod_e2 e2
+7 ~ e
+8 ~ s s_ARG0_e s_ARG1_r
+9 ~ r r_ARG0_e r_ARG1_p
+10 ~ c
+11 ~ p p_ARG0-of_w w
+12 ~ 
+
+#13
+# AMR:
+# (s2/say-01
+#       :ARG0 i
+#       :ARG1 (l/let-01 :mode x0/imperative
+#             :ARG0 f2
+#             :ARG1 (f/fill-05
+#                   :ARG0 (i/i)
+#                   :ARG1 (w/word
+#                         :quant (s/some)
+#                         :prep-for (m/melody
+#                               :ARG1-of (b/be-located-at-91
+#                                     :ARG2 (h/heart
+#                                           :part-of i))))
+#                   :time (n/now
+#                         :mod (r/right))))
+#       :ARG2 (f2/friend
+#             :mod (d/dear)))
+# Sentence:
+# Dear friends , let me fill in some of the words for the melody right now in my heart .
+# Alignments:
+# :mod d/dear ~ Dear
+# f2/friend ~ friends
+#  ~ ,
+# l/let-01 :ARG0 :ARG1 ~ let
+# i ~ me
+# f/fill-05 :ARG0 :ARG1 ~ fill
+# :time ~ in
+# :quant s/some ~ some
+#  ~ the
+# w/word ~ words
+# :prep-for ~ for
+#  ~ the
+# m/melody ~ melody
+# :mod r/right ~ right
+# n/now ~ now
+# b/be-located-at-91 :ARG2 ~ in
+# i/i ~ my
+# h/heart ~ heart
+#  ~ .
+0 ~ f2_mod_d d
+1 ~ f2
+2 ~ 
+3 ~ l l_ARG0_f2 l_ARG1_f
+4 ~ i
+5 ~ f f_ARG0_i f_ARG1_w
+6 ~ f_time_n
+7 ~ w_quant_s s
+9 ~ 
+10 ~ w
+11 ~ w_prep-for_m
+12 ~ 
+13 ~ m
+14 ~ n_mod_r r
+15 ~ n
+16 ~ :ARG1-of m_ARG1-of_b b b_ARG2_h
+17 ~ i
+18 ~ h
+19 ~ 
+
+#14
+# AMR:
+# (s/shadow-01
+#       :ARG0 (o/organization :name (n/name :op1 x0/"International" :op2 x1/"Data" :op3 x2/"Group")
+#             :ARG1-of (o2/own-01
+#                   :ARG0 (c/country :name (n2/name :op1 x3/"U.S."))))
+#       :ARG1 (m/magnate
+#             :mod (t3/tech
+#                   :mod (h/high))
+#             :ARG0-of (e/emerge-02
+#                   :manner (m2/magnate
+#                         :mod (o3/one)
+#                         :time (a2/after
+#                               :op1 (m3/magnate
+#                                     :mod (a/another)))))
+#             :mod (c2/country :name (n3/name :op1 x4/"China"))
+#             :mod (t2/this))
+#       :mod (s2/sure)
+#       :time (b/before
+#             :op1 (n4/now)
+#             :duration (t/temporal-quantity :quant x5/10
+#                   :unit (y/year))))
+# Sentence:
+# In the past 10 years , behind these Chinese high- tech magnates who emerged one after another was sure to be the shadow of the U.S. owned International Data Group (IDG) .
+# Alignments:
+# :time ~ In
+#  ~ the
+# :quant x5/10 ~ 10
+# t/temporal-quantity :unit y/year ~ years
+#  ~ ,
+# :mod c2/country :name n3/name :op1 x4/"China" ~ Chinese
+# :mod h/high ~ high-
+# :mod t3/tech ~ tech
+# m/magnate ~ magnates
+# e/emerge-02 ~ emerged
+# :mod o3/one ~ one
+# a2/after :op1 ~ after
+# :mod a/another ~ another
+# :mod s2/sure ~ sure
+#  ~ the
+# s/shadow-01 :ARG0 :ARG1 ~ shadow
+#  ~ the
+# c/country :name n2/name :op1 x3/"U.S." ~ U.S.
+# o2/own-01 :ARG0 ~ owned
+# o/organization :name n/name :op1 x0/"International" :op2 x1/"Data" :op3 x2/"Group" ~ International Data Group
+#  ~ .
+0 ~ m2_time_a2
+1 ~ 
+3 ~ t_quant_x5 x5
+4 ~ t t_unit_y y
+5 ~ 
+8 ~ m_mod_c2 c2 c2_name_n3 n3 n3_op1_x4 x4
+9 ~ t3_mod_h h
+10 ~ m_mod_t3 t3
+11 ~ m
+13 ~ :ARG0-of m_ARG0-of_e e
+14 ~ m2_mod_o3 o3
+15 ~ a2 a2_op1_m3
+16 ~ m3_mod_a a
+18 ~ s_mod_s2 s2
+21 ~ 
+22 ~ s s_ARG0_o s_ARG1_m
+24 ~ 
+25 ~ c c_name_n2 n2 n2_op1_x3 x3
+26 ~ :ARG1-of o_ARG1-of_o2 o2 o2_ARG0_c
+27 28 29 ~ o o_name_n n n_op1_x0 x0 n_op2_x1 x1 n_op3_x2 x2
+31 ~ 
+
+#15
+# AMR:
+# (b/bed :polarity x0/-
+#       :consist-of (r/rose)
+#       :domain (l/life)
+#       :time (e/ever)
+#       :location (l4/location
+#             :mod (a2/any))
+#       :location (l2/land
+#             :mod (f/foreign)
+#             :location-of (a4/and
+#                   :op1 (b2/barrier
+#                         :mod (l3/language))
+#                   :op2 (c/custom
+#                         :ARG1-of (d/differ-02))
+#                   :op3 (o/or :polarity x1/-
+#                         :op1 (f2/family)
+#                         :op2 (f3/friend)))
+#             :mod (m/more
+#                   :mod (e2/even))))
+# Sentence:
+# Life is never a bed of roses in any location , even more in a foreign land where there is a language barrier , different customs and no family or friends .
+# Alignments:
+# l/life ~ Life
+# :domain ~ is
+# :polarity x0/- :time e/ever ~ never
+#  ~ a
+# b/bed ~ bed
+# r/rose ~ roses
+# :time ~ in
+# :mod a2/any ~ any
+# l4/location ~ location
+#  ~ ,
+# :mod e2/even ~ even
+# :mod m/more ~ more
+# :location ~ in
+#  ~ a
+# :mod f/foreign ~ foreign
+# l2/land ~ land
+#  ~ a
+# :mod l3/language ~ language
+# b2/barrier ~ barrier
+#  ~ ,
+# d/differ-02 ~ different
+# c/custom ~ customs
+# a4/and :op1 :op2 :op3 ~ and
+# :polarity x0/- ~ no
+# f2/family ~ family
+# o/or :op1 :op2 ~ or
+# f3/friend ~ friends
+#  ~ .
+0 ~ l
+1 ~ b_domain_l
+2 ~ b_polarity_x0 x0 b_time_e e
+3 ~ 
+4 ~ b
+6 ~ r
+7 ~ b_time_e
+8 ~ l4_mod_a2 a2
+9 ~ l4
+10 ~ 
+11 ~ m_mod_e2 e2
+12 ~ l2_mod_m m
+13 ~ b_location_l4
+14 ~ 
+15 ~ l2_mod_f f
+16 ~ l2
+20 ~ 
+21 ~ b2_mod_l3 l3
+22 ~ b2
+23 ~ 
+24 ~ :ARG1-of c_ARG1-of_d d
+25 ~ c
+26 ~ a4 a4_op1_b2 a4_op2_c a4_op3_o
+27 ~ b_polarity_x0 x0
+28 ~ f2
+29 ~ o o_op1_f2 o_op2_f3
+30 ~ f3
+31 ~ 
+
+#16
+# AMR:
+# (c/country
+#   :name (n/name
+#           :op1 x0/"Saudi"
+#           :op2 x1/"Arabia"))
+# Sentence:
+# Saudi Arabia (SA)
+# Alignments:
+# c/country :name n/name :op1 x0/"Saudi" :op2 x1/"Arabia" ~ Saudi Arabia
+0 1 ~ c c_name_n n n_op1_x0 x0 n_op2_x1 x1
+
+#17
+# AMR:
+# (s/send-01
+#       :ARG0 (p/person :name (n/name :op1 x0/"Sepp" :op2 x1/"Blatter")
+#             :ARG0-of (h/have-org-role-91
+#                   :ARG1 (o/organization :name (n2/name :op1 x2/"FIFA"))
+#                   :ARG2 (p2/president)))
+#       :ARG1 (l/letter)
+#       :ARG2 (c/committee
+#             :ARG0-of (o2/organize-01
+#                   :ARG1 (g/game :name (n3/name :op1 x3/"World" :op2 x4/"Cup")))
+#             :poss (c2/country :name (n4/name :op1 x5/"South" :op2 x6/"Korea")))
+#       :purpose (c3/call-03
+#             :ARG0 p
+#             :ARG1 (m/measure
+#                   :purpose (c5/counter-01
+#                         :ARG1 (c4/cruel
+#                               :beneficiary (d2/dog)))
+#                   :mod (i/immediate)
+#                   :mod (d/decisive)))
+#       :time (d3/date-entity :month x7/11
+#             :mod (l2/last)))
+# Sentence:
+# FIFA president Sepp Blatter sent a letter last November to South Korea 's World Cup organizing committee calling for immediate and decisive measures against cruelty to dogs .
+# Alignments:
+# o/organization :name n2/name :op1 x2/"FIFA" ~ FIFA
+# p/person :ARG0-of h/have-org-role-91 :ARG2 p2/president ~ president
+# p/person :name n/name :op1 x0/"Sepp" :op2 x1/"Blatter" ~ Sepp Blatter
+# s/send-01 :ARG0 :ARG1 :ARG2 ~ sent
+#  ~ a
+# l/letter ~ letter
+# :mod l2/last ~ last
+# d3/date-entity :month :month x7/11 ~ November
+# c2/country :name n4/name :op1 x5/"South" :op2 x6/"Korea" ~ South Korea
+# :poss ~ 's
+# g/game :name n3/name :op1 x3/"World" :op2 x4/"Cup" ~ World Cup
+# o/organization ~ organizing
+# c/committee ~ committee
+# c3/call-03 :ARG0 :ARG1 ~ calling
+# :purpose ~ for
+# :mod i/immediate ~ immediate
+# :mod d/decisive ~ decisive
+# m/measure ~ measures
+# :beneficiary ~ against
+# c4/cruel ~ cruelty
+# d2/dog ~ dogs
+#  ~ .
+0 ~ o o_name_n2 n2 n2_op1_x2 x2
+1 ~ p p_ARG0-of_h h h_ARG2_p2 p2
+2 3 ~ p p_name_n n n_op1_x0 x0 n_op2_x1 x1
+4 ~ s s_ARG0_p s_ARG1_l s_ARG2_c
+5 ~ 
+6 ~ l
+7 ~ d3_mod_l2 l2
+8 ~ d3 d3_month_x7 d3_month_x7 x7
+10 11 ~ c2 c2_name_n4 n4 n4_op1_x5 x5 n4_op2_x6 x6
+12 ~ c_poss_c2
+13 14 ~ g g_name_n3 n3 n3_op1_x3 x3 n3_op2_x4 x4
+15 ~ o
+16 ~ c
+17 ~ c3 c3_ARG0_p c3_ARG1_m
+18 ~ s_purpose_c3
+19 ~ m_mod_i i
+21 ~ m_mod_d d
+22 ~ m
+23 ~ c4_beneficiary_d2
+24 ~ c4
+26 ~ d2
+27 ~ 
+
+#18
+# AMR:
+# (a/and
+#   :op1 (i/international)
+#   :op2 (g/government-organization
+#          :ARG0-of (g2/govern-01))
+#   :op3 (t/terrorism)
+#   :op4 (a2/and
+#          :op1 (w/war-01)
+#          :op2 (c/conflict-01))
+#   :op5 (d/dissent-01)
+#   :op6 (p/person
+#          :ARG0-of (l/lead-02)))
+# Sentence:
+# International ; Government ; terrorism ; war and conflict ; dissent ; leader
+# Alignments:
+# i/international ~ International
+#  ~ ;
+# g/government-organization ~ Government
+#  ~ ;
+# t/terrorism ~ terrorism
+#  ~ ;
+# w/war-01 ~ war
+# a/and :op1 :op2 :op3 :op4 :op5 :op6 ~ and
+# c/conflict-01 ~ conflict
+#  ~ ;
+# d/dissent-01 ~ dissent
+#  ~ ;
+# p/person :ARG0-of l/lead-02 ~ leader
+0 ~ i
+1 ~ 
+2 ~ g
+3 ~ 
+4 ~ t
+5 ~ 
+6 ~ w
+7 ~ a a_op1_i a_op2_g a_op3_t a_op4_a2 a_op5_d a_op6_p
+8 ~ c
+9 ~ 
+10 ~ d
+11 ~ 
+12 ~ p p_ARG0-of_l l
+
+#19
+# AMR:
+# (a/arrest-01
+#       :ARG1 (e/extremist
+#             :mod (r/religion)
+#             :ARG1-of (a2/allege-01)
+#             :quant (a3/around :op1 x0/1400))
+#       :time (s/since
+#             :op1 (d/date-entity :year x1/2002 :month x2/1 :day x3/12))
+#       :prep-under (a4/act-02
+#             :prep-against (a5/and
+#                   :op1 (m/militant
+#                         :mod (r2/religious-group :name (n/name :op1 x4/"Islam")))
+#                   :op2 (r3/radical
+#                         :mod (s2/sectarian)))
+#             :ARG1-of (a6/announce-01
+#                   :ARG0 (p/person :name (n2/name :op1 x5/"Pervez" :op2 x6/"Musharraf")
+#                         :ARG0-of (h/have-org-role-91
+#                               :ARG2 (p2/president)))
+#                   :time (w/weekend))
+#             :mod (s3/severe)))
+# Sentence:
+# Around 1400 alleged religious extremists have been arrested since 020112 under severe actions against Islamic militants and sectarian radicals announced by President Pervez Musharraf during the weekend .
+# Alignments:
+# :quant a3/around :op1 ~ Around
+# x0/1400 ~ 1400
+# a2/allege-01 ~ alleged
+# :mod r/religion ~ religious
+# e/extremist ~ extremists
+# p/person :ARG0-of h/have-org-role-91 ~ have
+# a/arrest-01 :ARG1 ~ arrested
+# s/since :op1 ~ since
+# :prep-under ~ under
+# :mod s3/severe ~ severe
+# :mod r2/religious-group :name n/name :op1 x4/"Islam" ~ Islamic
+# m/militant ~ militants
+# a5/and :op1 :op2 ~ and
+# :mod s2/sectarian ~ sectarian
+# r3/radical ~ radicals
+# a6/announce-01 :ARG0 ~ announced
+# p/person :ARG0-of h/have-org-role-91 :ARG2 p2/president ~ President
+# p/person :name n2/name :op1 x5/"Pervez" :op2 x6/"Musharraf" ~ Pervez Musharraf
+# :time ~ during
+#  ~ the
+# w/weekend ~ weekend
+#  ~ .
+0 ~ e_quant_a3 a3 a3_op1_x0
+1 ~ x0
+2 ~ :ARG1-of e_ARG1-of_a2 a2
+3 ~ e_mod_r r
+4 ~ e
+5 ~ p p_ARG0-of_h h
+7 ~ a a_ARG1_e
+8 ~ s s_op1_d
+10 ~ a_prep-under_a4
+11 ~ a4_mod_s3 s3
+14 ~ m_mod_r2 r2 r2_name_n n n_op1_x4 x4
+15 ~ m
+16 ~ a5 a5_op1_m a5_op2_r3
+17 ~ r3_mod_s2 s2
+18 ~ r3
+19 ~ :ARG1-of a4_ARG1-of_a6 a6 a6_ARG0_p
+21 ~ p p_ARG0-of_h h h_ARG2_p2 p2
+22 23 ~ p p_name_n2 n2 n2_op1_x5 x5 n2_op2_x6 x6
+24 ~ a_time_s
+25 ~ 
+26 ~ w
+27 ~ 
+
+#20
+# AMR:
+# (g/group :quant x0/2
+#       :consist-of (m/militant
+#             :mod (h/hardline))
+#       :ARG0-of (f/fight-01
+#             :ARG1 (r/rule-03
+#                   :ARG0 (c/country :name (n/name :op1 x1/"India"))
+#                   :ARG1 (w/world-region :name (n2/name :op1 x2/"Kashmir"))))
+#       :domain (a/and
+#             :op1 (o/organization :name (n3/name :op1 x3/"Lashkar-e-Taiba"))
+#             :op2 (o2/organization :name (n4/name :op1 x4/"Jaish-e-Mohammad"))))
+# Sentence:
+# The 2 hardline militant groups fighting Indian rule in Kashmir are the Lashkar- e- Taiba and Jaish- e- Mohammad .
+# Alignments:
+#  ~ The
+# :quant x0/2 ~ 2
+# :mod h/hardline ~ hardline
+# m/militant ~ militant
+# g/group ~ groups
+# f/fight-01 :ARG1 ~ fighting
+# c/country :name n/name :op1 x1/"India" ~ Indian
+# r/rule-03 :ARG0 :ARG1 ~ rule
+# w/world-region :name n2/name :op1 x2/"Kashmir" ~ Kashmir
+# :domain ~ are
+#  ~ the
+# o/organization :name n3/name :op1 x3/"Lashkar-e-Taiba" ~ Lashkar-
+# a/and :op1 :op2 ~ and
+# o2/organization :name n4/name :op1 x4/"Jaish-e-Mohammad" ~ Jaish-
+#  ~ .
+0 ~ 
+1 ~ g_quant_x0 x0
+2 ~ m_mod_h h
+3 ~ m
+4 ~ g
+5 ~ :ARG0-of g_ARG0-of_f f f_ARG1_r
+6 ~ c c_name_n n n_op1_x1 x1
+7 ~ r r_ARG0_c r_ARG1_w
+9 ~ w w_name_n2 n2 n2_op1_x2 x2
+10 ~ g_domain_a
+11 ~ 
+12 ~ o o_name_n3 n3 n3_op1_x3 x3
+15 ~ a a_op1_o a_op2_o2
+16 ~ o2 o2_name_n4 n4 n4_op1_x4 x4
+19 ~ 
+
+#21
+# AMR:
+# (s/state-01
+#   :ARG0 (l/law
+#           :source (c/country
+#                     :name (n/name
+#                             :op1 x0/"Iran")))
+#   :ARG1 (p/penalize-01
+#           :ARG0 l
+#           :ARG2 (t/trafficking
+#                   :mod (d/drug))
+#           :manner (d2/die-01)))
+# Sentence:
+# Iranian law states the death penalty for drug trafficking .
+# Alignments:
+# c/country :name n/name :op1 x0/"Iran" ~ Iranian
+# l/law ~ law
+# s/state-01 :ARG0 :ARG1 ~ states
+#  ~ the
+# p/penalize-01 :ARG0 :ARG2 ~ penalty
+# :mod d/drug ~ drug
+# t/trafficking ~ trafficking
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ l
+2 ~ s s_ARG0_l s_ARG1_p
+3 ~ 
+5 ~ p p_ARG0_l p_ARG2_t
+7 ~ t_mod_d d
+8 ~ t
+9 ~ 
+
+#22
+# AMR:
+# (a/and
+#   :op1 (i/international)
+#   :op2 (t/terrorism))
+# Sentence:
+# International ; terrorism
+# Alignments:
+# i/international ~ International
+#  ~ ;
+# t/terrorism ~ terrorism
+0 ~ i
+1 ~ 
+2 ~ t
+
+#23
+# AMR:
+# (s/state-01
+#   :ARG0 (p/person
+#           :name (n/name
+#                   :op1 x0/"Bradley"))
+#   :ARG1 (f/focus-01
+#           :ARG1 (c/company)
+#           :ARG2 (p2/prevent-01
+#                   :ARG1 (a/attack-01
+#                           :mod (c2/cyber)))
+#           :degree (s2/significant)))
+# Sentence:
+# Bradley stated that the company has been significantly focused on prevention of cyberattacks .
+# Alignments:
+# p/person :name n/name :op1 x0/"Bradley" ~ Bradley
+# s/state-01 :ARG0 :ARG1 ~ stated
+#  ~ the
+# c/company ~ company
+# :degree s2/significant ~ significantly
+# f/focus-01 :ARG1 :ARG2 ~ focused
+# p2/prevent-01 :ARG1 ~ prevention
+# :mod c2/cyber ~ cyberattacks
+#  ~ .
+0 ~ p p_name_n n n_op1_x0 x0
+1 ~ s s_ARG0_p s_ARG1_f
+3 ~ 
+4 ~ c
+7 ~ f_degree_s2 s2
+8 ~ f f_ARG1_c f_ARG2_p2
+10 ~ p2 p2_ARG1_a
+12 ~ a_mod_c2 c2
+13 ~ 
+
+#24
+# AMR:
+# (p/possible
+#       :domain (l/lead-03
+#             :ARG0 (c/cut-02
+#                   :ARG1 (p2/power))
+#             :ARG2 (f/fail-01
+#                   :ARG2 (w/work-01
+#                         :ARG1 (s/space-craft)
+#                         :quant (a/all)))))
+# Sentence:
+# Power cuts could lead to a failure of all work with space craft .
+# Alignments:
+# p2/power ~ Power
+# c/cut-02 :ARG1 ~ cuts
+# p/possible ~ could
+# l/lead-03 :ARG0 :ARG2 ~ lead
+#  ~ a
+# f/fail-01 :ARG2 ~ failure
+# :quant a/all ~ all
+# w/work-01 :ARG1 ~ work
+# s/space-craft ~ space
+#  ~ .
+0 ~ p2
+1 ~ c c_ARG1_p2
+2 ~ p
+3 ~ l l_ARG0_c l_ARG2_f
+5 ~ 
+6 ~ f f_ARG2_w
+8 ~ w_quant_a a
+9 ~ w w_ARG1_s
+11 ~ s
+13 ~ 
+
+#25
+# AMR:
+# (s/state-01
+#       :ARG0 (n/newspaper :name (n2/name :op1 x0/"Korea" :op2 x1/"Herald"))
+#       :ARG1 (s2/say-01
+#             :ARG0 (p/person
+#                   :ARG0-of (c/criticize-01))
+#             :ARG1 (b/benefit-01
+#                   :ARG0 (m2/minimum
+#                         :consist-of (p2/point))
+#                   :ARG1 (c2/company :name (n3/name :op1 x2/"Boeing"))
+#                   :degree (m/most)
+#                   :ARG1-of (c3/cause-01
+#                         :ARG0 (g/gain-02
+#                               :ARG0 c2
+#                               :ARG1 (p3/point
+#                                     :mod (f/few
+#                                           :degree (m3/more)
+#                                           :compared-to (c4/company :name (n4/name :op1 x3/"Dassault"))))
+#                               :mod (t/term
+#                                     :mod (a/and
+#                                           :op1 (t2/transfer-01
+#                                                 :ARG1 (t3/technology))
+#                                           :op2 (s3/subcontract-01))))))))
+# Sentence:
+# The Korea Herald stated that critics say Boeing would benefit most from the points minimum because it would gain fewer points than Dassault in terms of technology transfer and subcontracts .
+# Alignments:
+#  ~ The
+# n/newspaper :name n2/name :op1 x0/"Korea" :op2 x1/"Herald" ~ Korea Herald
+# s/state-01 :ARG0 :ARG1 ~ stated
+# p/person :ARG0-of c/criticize-01 ~ critics
+# s2/say-01 :ARG0 :ARG1 ~ say
+# c2/company :name n3/name :op1 x2/"Boeing" ~ Boeing
+# b/benefit-01 :ARG0 :ARG1 ~ benefit
+# :degree m/most ~ most
+#  ~ the
+# p2/point ~ points
+# m2/minimum ~ minimum
+# c3/cause-01 :ARG0 ~ because
+# g/gain-02 :ARG0 :ARG1 ~ gain
+# :mod f/few ~ fewer
+# p3/point ~ points
+# :compared-to ~ than
+# c4/company :name n4/name :op1 x3/"Dassault" ~ Dassault
+# :mod t/term ~ terms
+# t3/technology ~ technology
+# t2/transfer-01 :ARG1 ~ transfer
+# :mod a/and :op1 :op2 ~ and
+# s3/subcontract-01 ~ subcontracts
+#  ~ .
+0 ~ 
+1 2 ~ n n_name_n2 n2 n2_op1_x0 x0 n2_op2_x1 x1
+3 ~ s s_ARG0_n s_ARG1_s2
+5 ~ p p_ARG0-of_c c
+6 ~ s2 s2_ARG0_p s2_ARG1_b
+7 ~ c2 c2_name_n3 n3 n3_op1_x2 x2
+9 ~ b b_ARG0_m2 b_ARG1_c2
+10 ~ b_degree_m m
+12 ~ 
+13 ~ p2
+14 ~ m2
+15 ~ :ARG1-of b_ARG1-of_c3 c3 c3_ARG0_g
+18 ~ g g_ARG0_c2 g_ARG1_p3
+19 ~ p3_mod_f f
+20 ~ p3
+21 ~ f_compared-to_c4
+22 ~ c4 c4_name_n4 n4 n4_op1_x3 x3
+24 ~ g_mod_t t
+26 ~ t3
+27 ~ t2 t2_ARG1_t3
+28 ~ t_mod_a a a_op1_t2 a_op2_s3
+29 ~ s3
+30 ~ 
+
+#26
+# AMR:
+# (s/say-01
+#       :ARG0 (p4/person
+#             :ARG0-of (h/have-org-role-91
+#                   :ARG1 (m/military)
+#                   :ARG2 (o/official)))
+#       :ARG1 (i/intimate-01
+#             :ARG0 (p/person :name (n/name :op1 x0/"Lim"))
+#             :ARG1 (p2/possible
+#                   :domain (s2/serious-41
+#                         :ARG1 (p3/problem)
+#                         :compared-to (s3/standoff
+#                               :mod (n2/nucleus)
+#                               :time (d2/date-entity :year x1/1994)
+#                               :ARG1-of (c/cause-01
+#                                     :ARG0 (d3/develop-02
+#                                           :ARG0 (c2/country :name (n3/name :op1 x2/"North" :op2 x3/"Korea"))
+#                                           :ARG1 (w/weapon
+#                                                 :mod (n4/nucleus))
+#                                           :ARG1-of (s4/suspect-01)))
+#                               :ARG1-of (c4/close-41
+#                                     :ARG2 (c3/conflict)))))))
+# Sentence:
+# Military officials said Lim intimated the problems could be as serious as a 940000 nuclear standoff over North Korea 's suspected nuclear weapons development that came close to conflict .
+# Alignments:
+# m/military ~ Military
+# p4/person :ARG0-of h/have-org-role-91 :ARG2 o/official ~ officials
+# s/say-01 :ARG0 :ARG1 ~ said
+# p/person :name n/name :op1 x0/"Lim" ~ Lim
+# i/intimate-01 :ARG0 :ARG1 ~ intimated
+#  ~ the
+# p3/problem ~ problems
+# p2/possible ~ could
+# :domain ~ be
+# s2/serious-41 :ARG1 ~ serious
+#  ~ a
+# :mod n2/nucleus ~ nuclear
+# s3/standoff ~ standoff
+# c2/country :name n3/name :op1 x2/"North" :op2 x3/"Korea" ~ North Korea
+# s4/suspect-01 ~ suspected
+# :mod n4/nucleus ~ nuclear
+# w/weapon ~ weapons
+# d3/develop-02 :ARG0 :ARG1 ~ development
+# c4/close-41 :ARG2 ~ close
+# c3/conflict ~ conflict
+#  ~ .
+0 ~ m
+1 ~ p4 p4_ARG0-of_h h h_ARG2_o o
+2 ~ s s_ARG0_p4 s_ARG1_i
+3 ~ p p_name_n n n_op1_x0 x0
+4 ~ i i_ARG0_p i_ARG1_p2
+5 ~ 
+6 ~ p3
+7 ~ p2
+8 ~ p2_domain_s2
+10 ~ s2 s2_ARG1_p3
+12 ~ 
+14 ~ s3_mod_n2 n2
+15 ~ s3
+17 18 ~ c2 c2_name_n3 n3 n3_op1_x2 x2 n3_op2_x3 x3
+20 ~ :ARG1-of d3_ARG1-of_s4 s4
+21 ~ w_mod_n4 n4
+22 ~ w
+23 ~ d3 d3_ARG0_c2 d3_ARG1_w
+26 ~ :ARG1-of s3_ARG1-of_c4 c4 c4_ARG2_c3
+28 ~ c3
+29 ~ 
+
+#27
+# AMR:
+# (c/country :name (n/name :op1 x0/"India"))
+# Sentence:
+# India (IN)
+# Alignments:
+# c/country :name n/name :op1 x0/"India" ~ India
+0 ~ c c_name_n n n_op1_x0 x0
+
+#28
+# AMR:
+# (f/fund-01
+#       :ARG0 (c/country :name (n3/name :op1 x0/"Iran"))
+#       :ARG1 (o/organization :name (n/name :op1 x1/"Northern" :op2 x2/"Alliance")
+#             :mod (r/rebel)
+#             :poss (c2/country :name (n2/name :op1 x3/"Afghanistan"))))
+# Sentence:
+# Iran funded Afghanistan 's rebel Northern Alliance .
+# Alignments:
+# c/country :name n3/name :op1 x0/"Iran" ~ Iran
+# f/fund-01 :ARG0 :ARG1 ~ funded
+# c2/country :name n2/name :op1 x3/"Afghanistan" ~ Afghanistan
+# :poss ~ 's
+# :mod r/rebel ~ rebel
+# o/organization :name n/name :op1 x1/"Northern" :op2 x2/"Alliance" ~ Northern Alliance
+#  ~ .
+0 ~ c c_name_n3 n3 n3_op1_x0 x0
+1 ~ f f_ARG0_c f_ARG1_o
+2 ~ c2 c2_name_n2 n2 n2_op1_x3 x3
+3 ~ o_poss_c2
+4 ~ o_mod_r r
+5 6 ~ o o_name_n n n_op1_x1 x1 n_op2_x2 x2
+7 ~ 
+
+#29
+# AMR:
+# (s/sentence-01
+#       :ARG1 (p/person :name (n/name :op1 x0/"Chen"))
+#       :ARG2 (d2/die-01
+#             :ARG1 p)
+#       :ARG3 (m/manufacture-01
+#             :ARG1 (m2/methamphetamine)
+#             :manner (l/legal :polarity x1/-)
+#             :ARG1-of (d3/disguise-01
+#                   :ARG2 (p2/plant
+#                         :purpose (m3/manufacture-01
+#                               :ARG1 (s2/soap)))))
+#       :time (d/date-entity :year x2/1997))
+# Sentence:
+# Chen was sentenced to death in 1997 for the illegal manufacture of methamphetamines disguised as a soap manufacturing plant .
+# Alignments:
+# p/person :name n/name :op1 x0/"Chen" ~ Chen
+# s/sentence-01 :ARG1 :ARG2 :ARG3 ~ sentenced
+# :time ~ in
+# d/date-entity :year x2/1997 ~ 1997
+# :purpose ~ for
+#  ~ the
+# :manner l/legal :polarity x1/- ~ illegal
+# m/manufacture-01 :ARG1 ~ manufacture
+# m2/methamphetamine ~ methamphetamines
+# d3/disguise-01 :ARG2 ~ disguised
+#  ~ a
+# s2/soap ~ soap
+# m3/manufacture-01 :ARG1 ~ manufacturing
+# p2/plant ~ plant
+#  ~ .
+0 ~ p p_name_n n n_op1_x0 x0
+2 ~ s s_ARG1_p s_ARG2_d2 s_ARG3_m
+5 ~ s_time_d
+6 ~ d d_year_x2 x2
+7 ~ p2_purpose_m3
+8 ~ 
+9 ~ m_manner_l l l_polarity_x1 x1
+10 ~ m m_ARG1_m2
+12 ~ m2
+13 ~ :ARG1-of m_ARG1-of_d3 d3 d3_ARG2_p2
+15 ~ 
+16 ~ s2
+17 ~ m3 m3_ARG1_s2
+18 ~ p2
+19 ~ 
+
+#30
+# AMR:
+# (e/execute-01
+#       :ARG1 (w/woman
+#             :source (a/and
+#                   :op1 (c/country :name (n/name :op1 x0/"Vietnam"))
+#                   :op2 (c2/country :name (n2/name :op1 x1/"Canada")))
+#             :domain (n3/national
+#                   :source (w2/world-region :name (n4/name :op1 x2/"West"))))
+#       :ARG0-of (c3/cause-01
+#             :ARG1 (c4/controversy
+#                   :mod (d2/diplomatic)
+#                   :accompanier c2))
+#       :time (d3/date-entity :year x3/2000))
+# Sentence:
+# The Western national executed was a Vietnamese- Canadian woman whose execution in 2000 caused a diplomatic controversy with Canada .
+# Alignments:
+#  ~ The
+# w2/world-region :name n4/name :op1 x2/"West" ~ Western
+# n3/national ~ national
+# e/execute-01 :ARG1 ~ executed
+# :domain ~ was
+#  ~ a
+# c/country :name n/name :op1 x0/"Vietnam" ~ Vietnamese-
+# w/woman ~ woman
+# :time ~ in
+# d3/date-entity :year x3/2000 ~ 2000
+# c3/cause-01 :ARG1 ~ caused
+#  ~ a
+# :mod d2/diplomatic ~ diplomatic
+# c4/controversy ~ controversy
+# c2/country :name n2/name :op1 x1/"Canada" ~ Canada
+#  ~ .
+0 ~ 
+1 ~ w2 w2_name_n4 n4 n4_op1_x2 x2
+2 ~ n3
+3 ~ e e_ARG1_w
+4 ~ w_domain_n3
+5 ~ 
+6 ~ c c_name_n n n_op1_x0 x0
+8 ~ w
+11 ~ e_time_d3
+12 ~ d3 d3_year_x3 x3
+13 ~ :ARG0-of e_ARG0-of_c3 c3 c3_ARG1_c4
+14 ~ 
+15 ~ c4_mod_d2 d2
+16 ~ c4
+18 ~ c2 c2_name_n2 n2 n2_op1_x1 x1
+19 ~ 
+
+#31
+# AMR:
+# (s/say-01
+#       :ARG0 (p2/person :name (n2/name :op1 x0/"Lemahieu"))
+#       :ARG1 (h/have-03
+#             :ARG0 (c/ceremony
+#                   :mod (t/this))
+#             :ARG1 (l/less
+#                   :degree-of (a/and
+#                         :op1 (o/opium)
+#                         :op2 (h2/heroin)
+#                         :ARG1-of (p/process-01))
+#                   :compared-to (s2/seed
+#                         :part-of o))))
+# Sentence:
+# Lemahieu said that this ceremony had less processed opium and heroin than opium seeds .
+# Alignments:
+# p2/person :name n2/name :op1 x0/"Lemahieu" ~ Lemahieu
+# s/say-01 :ARG0 :ARG1 ~ said
+# :mod t/this ~ this
+# c/ceremony ~ ceremony
+# h/have-03 :ARG0 :ARG1 ~ had
+# l/less ~ less
+# p/process-01 ~ processed
+# o/opium ~ opium
+# a/and :op1 :op2 ~ and
+# h2/heroin ~ heroin
+# :compared-to ~ than
+# s2/seed ~ seeds
+#  ~ .
+0 ~ p2 p2_name_n2 n2 n2_op1_x0 x0
+1 ~ s s_ARG0_p2 s_ARG1_h
+3 ~ c_mod_t t
+4 ~ c
+5 ~ h h_ARG0_c h_ARG1_l
+6 ~ l
+7 ~ :ARG1-of a_ARG1-of_p p
+8 ~ o
+9 ~ a a_op1_o a_op2_h2
+10 ~ h2
+11 ~ l_compared-to_s2
+13 ~ s2
+14 ~ 
+
+#32
+# AMR:
+# (c/continue-01
+#       :ARG1 (a/and
+#             :op1 (s/supply-01
+#                   :ARG0 (c2/country :name (n/name :op1 x0/"Afghanistan")
+#                         :ARG1-of (t/tear-01
+#                               :ARG0 (w/war)))
+#                   :ARG1 (h/heroin)
+#                   :ARG2 (c4/continent :name (n2/name :op1 x1/"Europe"))
+#                   :mod (t2/top))
+#             :op2 (p/produce-01
+#                   :ARG0 c2
+#                   :ARG1 (o/opiate
+#                         :quant (a2/all
+#                               :degree (a3/almost))
+#                         :ARG1-of (c3/consume-01
+#                               :location (w3/world-region :name (n3/name :op1 x2/"Central" :op2 x3/"Asia")))))))
+# Sentence:
+# War- torn Afghanistan continues to be the top supplier of heroin to Europe and the producer of almost all the opiates consumed in Central Asia .
+# Alignments:
+# t/tear-01 :ARG0 ~ torn
+# c2/country :name n/name :op1 x0/"Afghanistan" ~ Afghanistan
+# c/continue-01 :ARG1 ~ continues
+#  ~ the
+# :mod t2/top ~ top
+# s/supply-01 :ARG0 :ARG1 :ARG2 ~ supplier
+# h/heroin ~ heroin
+# c4/continent :name n2/name :op1 x1/"Europe" ~ Europe
+# a/and :op1 :op2 ~ and
+#  ~ the
+# p/produce-01 :ARG0 :ARG1 ~ producer
+# :degree a3/almost ~ almost
+# :quant a2/all ~ all
+#  ~ the
+# o/opiate ~ opiates
+# c3/consume-01 ~ consumed
+# :location ~ in
+# w3/world-region :name n3/name :op1 x2/"Central" :op2 x3/"Asia" ~ Central Asia
+#  ~ .
+1 ~ :ARG1-of c2_ARG1-of_t t t_ARG0_w
+2 ~ c2 c2_name_n n n_op1_x0 x0
+3 ~ c c_ARG1_a
+6 ~ 
+7 ~ s_mod_t2 t2
+8 ~ s s_ARG0_c2 s_ARG1_h s_ARG2_c4
+10 ~ h
+12 ~ c4 c4_name_n2 n2 n2_op1_x1 x1
+13 ~ a a_op1_s a_op2_p
+14 ~ 
+15 ~ p p_ARG0_c2 p_ARG1_o
+17 ~ a2_degree_a3 a3
+18 ~ o_quant_a2 a2
+19 ~ 
+20 ~ o
+21 ~ :ARG1-of o_ARG1-of_c3 c3
+22 ~ c3_location_w3
+23 24 ~ w3 w3_name_n3 n3 n3_op1_x2 x2 n3_op2_x3 x3
+25 ~ 
+
+#33
+# AMR:
+# (i/increase-01
+#       :ARG1 (p/purchase-01
+#             :ARG0 (m/ministry
+#                   :mod (d/defense)
+#                   :mod (c/country :name (n/name :op1 x0/"India")))
+#             :ARG1 (h/hardware
+#                   :mod (m2/military)
+#                   :ARG2-of (i2/include-01
+#                         :ARG1 (a/and
+#                               :op1 (d2/device
+#                                     :purpose (s2/see-01
+#                                           :time (n2/night)))
+#                               :op2 (v2/vehicle
+#                                     :ARG1-of (m3/man-01 :polarity x1/-)
+#                                     :mod (a2/aerial))
+#                               :op3 (d3/device
+#                                     :mod (o/other)
+#                                     :ARG0-of (c2/counter-01
+#                                           :ARG1 (t/terrorism)))))))
+#       :manner (s/sharp))
+# Sentence:
+# There has been a sharp increase in Indian Defense Ministry 's purchases of military hardware including night vision devices , unmanned aerial vehicles and other anti- terrorism devices .
+# Alignments:
+#  ~ a
+# :manner s/sharp ~ sharp
+# i/increase-01 :ARG1 ~ increase
+# :time ~ in
+# :mod c/country :name n/name :op1 x0/"India" ~ Indian
+# :mod d/defense ~ Defense
+# m/ministry ~ Ministry
+# p/purchase-01 :ARG0 :ARG1 ~ purchases
+# :mod m2/military ~ military
+# h/hardware ~ hardware
+# i2/include-01 :ARG1 ~ including
+# n2/night ~ night
+# d2/device ~ devices
+#  ~ ,
+# m3/man-01 :polarity x1/- ~ unmanned
+# :mod a2/aerial ~ aerial
+# v2/vehicle ~ vehicles
+# a/and :op1 :op2 :op3 ~ and
+# :mod o/other ~ other
+# t/terrorism ~ terrorism
+# d3/device ~ devices
+#  ~ .
+3 ~ 
+4 ~ i_manner_s s
+5 ~ i i_ARG1_p
+6 ~ s2_time_n2
+7 ~ m_mod_c c c_name_n n n_op1_x0 x0
+8 ~ m_mod_d d
+9 ~ m
+11 ~ p p_ARG0_m p_ARG1_h
+13 ~ h_mod_m2 m2
+14 ~ h
+15 ~ :ARG2-of h_ARG2-of_i2 i2 i2_ARG1_a
+16 ~ n2
+18 ~ d2
+19 ~ 
+20 ~ :ARG1-of v2_ARG1-of_m3 m3 m3_polarity_x1 x1
+21 ~ v2_mod_a2 a2
+22 ~ v2
+23 ~ a a_op1_d2 a_op2_v2 a_op3_d3
+24 ~ d3_mod_o o
+26 ~ t
+27 ~ d3
+28 ~ 
+
+#34
+# AMR:
+# (o/obligate-01
+#   :ARG2 (a/agree-01
+#           :ARG0 (o2/organization
+#                   :name (n/name
+#                           :op1 x0/"ASEAN"))
+#           :ARG1 (t/thing
+#                   :ARG2-of (d/define-01
+#                              :ARG1 (t2/terrorism)))
+#           :purpose (i/identify-01
+#                      :ARG0 o2
+#                      :ARG1 (e/enemy
+#                              :ARG1-of (s/share-01
+#                                         :ARG0 o2)))))
+# Sentence:
+# ASEAN must agree on a definition of terrorism to identify the common enemy .
+# Alignments:
+# o2/organization :name n/name :op1 x0/"ASEAN" ~ ASEAN
+# o/obligate-01 :ARG2 ~ must
+# a/agree-01 :ARG0 :ARG1 ~ agree
+#  ~ a
+# t/thing :ARG2-of d/define-01 ~ definition
+# t2/terrorism ~ terrorism
+# i/identify-01 :ARG0 :ARG1 ~ identify
+#  ~ the
+# e/enemy ~ enemy
+#  ~ .
+0 ~ o2 o2_name_n n n_op1_x0 x0
+1 ~ o o_ARG2_a
+2 ~ a a_ARG0_o2 a_ARG1_t
+4 ~ 
+5 ~ t t_ARG2-of_d d
+7 ~ t2
+9 ~ i i_ARG0_o2 i_ARG1_e
+10 ~ 
+12 ~ e
+13 ~ 
+
+#35
+# AMR:
+# (s/share-01
+#       :ARG0 (c/country :quant x0/3)
+#       :ARG1 (l/location
+#             :ARG2-of (b2/be-located-at-91
+#                   :ARG1 (b/border-01
+#                         :ARG2 (s2/sea)
+#                         :ARG1-of (u/use-01
+#                               :ARG0 (a/and
+#                                     :op1 (p/pirate)
+#                                     :op2 (c2/criminal))
+#                               :purpose (e/evade-01
+#                                     :ARG0 a
+#                                     :ARG1 (t/troop
+#                                           :ARG0-of (p2/pursue-01)))
+#                               :frequency (f/frequent))))))
+# Sentence:
+# The 3 countries share sea borders frequently used by pirates and criminals in evading pursuing troops .
+# Alignments:
+#  ~ The
+# :quant x0/3 ~ 3
+# c/country ~ countries
+# s/share-01 :ARG0 :ARG1 ~ share
+# s2/sea ~ sea
+# b/border-01 :ARG2 ~ borders
+# f/frequent ~ frequently
+# u/use-01 :ARG0 ~ used
+# p/pirate ~ pirates
+# a/and :op1 :op2 ~ and
+# c2/criminal ~ criminals
+# b2/be-located-at-91 :ARG1 ~ in
+# e/evade-01 :ARG0 :ARG1 ~ evading
+# p2/pursue-01 ~ pursuing
+# t/troop ~ troops
+#  ~ .
+0 ~ 
+1 ~ c_quant_x0 x0
+2 ~ c
+3 ~ s s_ARG0_c s_ARG1_l
+4 ~ s2
+5 ~ b b_ARG2_s2
+6 ~ f
+7 ~ :ARG1-of b_ARG1-of_u u u_ARG0_a
+9 ~ p
+10 ~ a a_op1_p a_op2_c2
+11 ~ c2
+12 ~ :ARG2-of l_ARG2-of_b2 b2 b2_ARG1_b
+13 ~ e e_ARG0_a e_ARG1_t
+14 ~ :ARG0-of t_ARG0-of_p2 p2
+15 ~ t
+16 ~ 
+
+#36
+# AMR:
+# (d/date-entity :day x0/15 :month x1/10 :year x2/2002)
+# Sentence:
+# 2002- 10- 15
+# Alignments:
+# d/date-entity :year x2/2002 ~ 2002-
+# d/date-entity :month :month x1/10 ~ 10-
+# d/date-entity :day x0/15 ~ 15
+0 ~ d d_year_x2 x2
+1 ~ d d_month_x1 d_month_x1 x1
+2 ~ d d_day_x0 x0
+
+#37
+# AMR:
+# (c/country :name (n/name :op1 x0/"Iraq"))
+# Sentence:
+# Iraq (IQ)
+# Alignments:
+# c/country :name n/name :op1 x0/"Iraq" ~ Iraq
+0 ~ c c_name_n n n_op1_x0 x0
+
+#38
+# AMR:
+# (w/want-01
+#       :ARG0 (p/person :name (n/name :op1 x0/"Hasina"))
+#       :ARG1 (a/and
+#             :op1 (a2/arrest-01
+#                   :ARG0 (m/military)
+#                   :ARG1 (c2/criminal
+#                         :mod (r/real)))
+#             :op2 (v/violate-01 :polarity x1/-
+#                   :ARG0 m
+#                   :ARG1 (a3/and
+#                         :op1 (c3/constitution
+#                               :poss (c/country :name (n2/name :op1 x2/"Bangladesh")))
+#                         :op2 (t/thing
+#                               :ARG1-of (e/entitle-01
+#                                     :ARG2 (h/human))))
+#                   :beneficiary (d/drive
+#                         :ARG0-of (o/oppose-01
+#                               :ARG1 (c6/crime)))
+#                   :mod (s/such)))
+#       :ARG1-of (c4/cause-01
+#             :ARG0 (c5/concern-01
+#                   :ARG0 v)))
+# Sentence:
+# Hasina wants the military to arrest real criminals and not violate Bangladesh 's constitution and human rights because of concern about such violations in the name of anti- crime drive .
+# Alignments:
+# p/person :name n/name :op1 x0/"Hasina" ~ Hasina
+# w/want-01 :ARG0 :ARG1 ~ wants
+#  ~ the
+# m/military ~ military
+# a2/arrest-01 :ARG0 :ARG1 ~ arrest
+# :mod r/real ~ real
+# c2/criminal ~ criminals
+# a/and :op1 :op2 ~ and
+# :polarity x1/- ~ not
+# v/violate-01 :ARG0 :ARG1 ~ violate
+# c/country :name n2/name :op1 x2/"Bangladesh" ~ Bangladesh
+# :poss ~ 's
+# c3/constitution ~ constitution
+# a3/and :op1 :op2 ~ and
+# h/human ~ human
+# c4/cause-01 :ARG0 ~ because
+# c5/concern-01 :ARG0 ~ concern
+# :mod s/such ~ such
+#  ~ the
+# p/person :name n/name ~ name
+# o/oppose-01 :ARG1 ~ anti-
+# c6/crime ~ crime
+# d/drive ~ drive
+#  ~ .
+0 ~ p p_name_n n n_op1_x0 x0
+1 ~ w w_ARG0_p w_ARG1_a
+2 ~ 
+3 ~ m
+5 ~ a2 a2_ARG0_m a2_ARG1_c2
+6 ~ c2_mod_r r
+7 ~ c2
+8 ~ a a_op1_a2 a_op2_v
+9 ~ v_polarity_x1 x1
+10 ~ v v_ARG0_m v_ARG1_a3
+11 ~ c c_name_n2 n2 n2_op1_x2 x2
+12 ~ c3_poss_c
+13 ~ c3
+14 ~ a3 a3_op1_c3 a3_op2_t
+15 ~ h
+17 ~ :ARG1-of w_ARG1-of_c4 c4 c4_ARG0_c5
+19 ~ c5 c5_ARG0_v
+21 ~ v_mod_s s
+24 ~ 
+25 ~ p p_name_n n
+27 ~ :ARG0-of d_ARG0-of_o o o_ARG1_c6
+28 ~ c6
+29 ~ d
+30 ~ 
+
+#39
+# AMR:
+# (c/country :name (n/name :op1 x0/"China"))
+# Sentence:
+# China (CN)
+# Alignments:
+# c/country :name n/name :op1 x0/"China" ~ China
+0 ~ c c_name_n n n_op1_x0 x0
+
+#40
+# AMR:
+# (a/and
+#       :op1 (s/skeptic
+#             :domain (g/government-organization
+#                   :ARG0-of (g2/govern-01
+#                         :ARG1 (c/country :name (n/name :op1 x0/"U.S."))))
+#             :topic (i/intend-01
+#                   :ARG0 (c2/country :name (n2/name :op1 x1/"Iran"))))
+#       :op2 (s2/state-01
+#             :ARG0 g
+#             :ARG1 (m/make-06
+#                   :ARG1 (p/pursue-01
+#                         :ARG0 c2
+#                         :ARG1 (c4/cycle
+#                               :mod (f/fuel)
+#                               :mod (c5/complete)))
+#                   :ARG2 (s3/sense)
+#                   :condition (p2/pursue-01
+#                         :ARG0 c2
+#                         :ARG1 (w/weapon
+#                               :mod (n4/nucleus)))
+#                   :mod (o/only))))
+# Sentence:
+# The U.S. government was skeptical of Iran 's intentions and stated that Iran 's pursuit of a complete fuel cycle only made sense if it were pursuing nuclear weapons .
+# Alignments:
+#  ~ The
+# g/government-organization :ARG0-of g2/govern-01 :ARG1 c/country :name n/name :op1 x0/"U.S." ~ U.S.
+# g/government-organization ~ government
+# :domain ~ was
+# s/skeptic ~ skeptical
+# c2/country :name n2/name :op1 x1/"Iran" ~ Iran
+# i/intend-01 :ARG0 ~ intentions
+# a/and :op1 :op2 ~ and
+# s2/state-01 :ARG0 :ARG1 ~ stated
+# p2/pursue-01 :ARG0 :ARG1 ~ pursuit
+#  ~ a
+# :mod c5/complete ~ complete
+# :mod f/fuel ~ fuel
+# c4/cycle ~ cycle
+# :mod o/only ~ only
+# m/make-06 :ARG1 :ARG2 ~ made
+# s3/sense ~ sense
+# :condition ~ if
+# p/pursue-01 :ARG0 :ARG1 ~ pursuing
+# :mod n4/nucleus ~ nuclear
+# w/weapon ~ weapons
+#  ~ .
+0 ~ 
+1 ~ g g_ARG0-of_g2 g2 g2_ARG1_c c c_name_n n n_op1_x0 x0
+2 ~ g
+3 ~ s_domain_g
+4 ~ s
+6 ~ c2 c2_name_n2 n2 n2_op1_x1 x1
+8 ~ i i_ARG0_c2
+9 ~ a a_op1_s a_op2_s2
+10 ~ s2 s2_ARG0_g s2_ARG1_m
+14 ~ p2 p2_ARG0_c2 p2_ARG1_w
+16 ~ 
+17 ~ c4_mod_c5 c5
+18 ~ c4_mod_f f
+19 ~ c4
+20 ~ m_mod_o o
+21 ~ m m_ARG1_p m_ARG2_s3
+22 ~ s3
+23 ~ m_condition_p2
+26 ~ p p_ARG0_c2 p_ARG1_c4
+27 ~ w_mod_n4 n4
+28 ~ w
+29 ~ 
+
+#41
+# AMR:
+# (p2/produce-01
+#       :ARG0 (p3/plant
+#             :location (p/province :name (n/name :op1 x0/"Yazd" :op2 x1/"Province")))
+#       :ARG1 (u/uranium
+#             :mod (c2/cake
+#                   :mod (y/yellow))
+#             :ARG1-of (c5/concentrate-02))
+#       :time (c3/complete-01
+#             :ARG0 (f/facility
+#                   :mod (a/another)
+#                   :location (l/location
+#                         :ARG1-of (d/disclose-01 :polarity x2/-)))
+#             :ARG1 (c4/cycle)
+#             :manner (p4/produce-01
+#                   :ARG1 (f2/fuel
+#                         :mod (f3/finish)
+#                         :ARG1-of (m/make-01
+#                               :degree (e/entire)
+#                               :location (c/country :name (n2/name :op1 x3/"Iran")))))))
+# Sentence:
+# The plant in Yazd Province would produce concentrated yellow cake uranium while another facility at an undisclosed location would complete the cycle by producing finished fuel made entirely in Iran .
+# Alignments:
+#  ~ The
+# p3/plant ~ plant
+# p/province :name n/name :op1 x0/"Yazd" :op2 x1/"Province" ~ in Yazd Province
+# p2/produce-01 :ARG0 :ARG1 ~ produce
+# c5/concentrate-02 ~ concentrated
+# :mod y/yellow ~ yellow
+# :mod c2/cake ~ cake
+# u/uranium ~ uranium
+# :mod a/another ~ another
+# f/facility ~ facility
+# :location ~ at
+#  ~ an
+# d/disclose-01 :polarity x2/- ~ undisclosed
+# l/location ~ location
+# c3/complete-01 :ARG0 :ARG1 ~ complete
+#  ~ the
+# c4/cycle ~ cycle
+# :manner p4/produce-01 :ARG1 ~ producing
+# :mod f3/finish ~ finished
+# f2/fuel ~ fuel
+# m/make-01 ~ made
+# :degree e/entire ~ entirely
+# :time ~ in
+# c/country :name n2/name :op1 x3/"Iran" ~ Iran
+#  ~ .
+0 ~ 
+1 ~ p3
+2 3 4 ~ p p_name_n n n_op1_x0 x0 n_op2_x1 x1
+6 ~ p2 p2_ARG0_p3 p2_ARG1_u
+7 ~ :ARG1-of u_ARG1-of_c5 c5
+8 ~ c2_mod_y y
+9 ~ u_mod_c2 c2
+10 ~ u
+12 ~ f_mod_a a
+13 ~ f
+14 ~ p3_location_p
+15 ~ 
+16 ~ :ARG1-of l_ARG1-of_d d d_polarity_x2 x2
+17 ~ l
+19 ~ c3 c3_ARG0_f c3_ARG1_c4
+20 ~ 
+21 ~ c4
+23 ~ c3_manner_p4 p4 p4_ARG1_f2
+24 ~ f2_mod_f3 f3
+25 ~ f2
+26 ~ :ARG1-of f2_ARG1-of_m m
+27 ~ m_degree_e e
+28 ~ p2_time_c3
+29 ~ c c_name_n2 n2 n2_op1_x3 x3
+30 ~ 
+
+#42
+# AMR:
+# (i/increase-01
+#       :ARG0 (c/country :name (n/name :op1 x0/"Kazakhstan"))
+#       :ARG1 (d/defense
+#             :mod (a/air)
+#             :poss c)
+#       :time (d2/during
+#             :op1 (c2/carry-03
+#                   :ARG0 (m/military :name (n2/name :op1 x1/"Air" :op2 x2/"Force")
+#                         :poss c)
+#                   :ARG1 (e/exercise)
+#                   :location (a2/along
+#                         :op1 (s/shore
+#                               :location (s2/sea :name (n3/name :op1 x3/"Caspian" :op2 x4/"Sea")))))))
+# Sentence:
+# Kazakhstan 's increased air defenses come during Kazakhstan 's air force carries out exercises along its Caspian shores .
+# Alignments:
+# c/country :name n/name :op1 x0/"Kazakhstan" ~ Kazakhstan
+# :poss ~ 's
+# i/increase-01 :ARG0 :ARG1 ~ increased
+# :mod a/air ~ air
+# d/defense ~ defenses
+# :time ~ during
+# :poss ~ 's
+# c2/carry-03 :ARG0 :ARG1 ~ carries
+# e/exercise ~ exercises
+# a2/along :op1 ~ along
+# s2/sea :name n3/name :op1 x3/"Caspian" :op2 x4/"Sea" ~ Caspian
+# s/shore ~ shores
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ d_poss_c
+2 ~ i i_ARG0_c i_ARG1_d
+3 ~ d_mod_a a
+4 ~ d
+6 ~ i_time_d2
+8 ~ m_poss_c
+11 ~ c2 c2_ARG0_m c2_ARG1_e
+13 ~ e
+14 ~ a2 a2_op1_s
+16 ~ s2 s2_name_n3 n3 n3_op1_x3 x3 n3_op2_x4 x4
+17 ~ s
+18 ~ 
+
+#43
+# AMR:
+# (d2/date-entity :year x0/2003 :month x1/3 :day x2/30)
+# Sentence:
+# 2003- 03- 30
+# Alignments:
+# d2/date-entity :year x0/2003 ~ 2003-
+# d2/date-entity :month :month x1/3 ~ 03-
+# d2/date-entity :day x2/30 ~ 30
+0 ~ d2 d2_year_x0 x0
+1 ~ d2 d2_month_x1 d2_month_x1 x1
+2 ~ d2 d2_day_x2 x2
+
+#44
+# AMR:
+# (b/become-01
+#       :ARG1 (d/drug :polarity x0/-
+#             :mod (o/other))
+#       :ARG2 (i/integral
+#             :degree (a/as))
+#       :time (d2/decade
+#             :quant (m/multiple)))
+# Sentence:
+# No other drug has become as integral in decades .
+# Alignments:
+# :polarity x0/- ~ No
+# :mod o/other ~ other
+# d/drug ~ drug
+# b/become-01 :ARG1 :ARG2 ~ become
+# :degree a/as ~ as
+# i/integral ~ integral
+# :time ~ in
+# d2/decade ~ decades
+#  ~ .
+0 ~ d_polarity_x0 x0
+1 ~ d_mod_o o
+2 ~ d
+4 ~ b b_ARG1_d b_ARG2_i
+5 ~ i_degree_a a
+6 ~ i
+7 ~ b_time_d2
+8 ~ d2
+9 ~ 
+
+#45
+# AMR:
+# (c2/cost-01
+#       :ARG1 (p/produce-01
+#             :ARG1 (p2/pill))
+#       :ARG2 (m/monetary-quantity :quant x0/5
+#             :unit (c/cent)))
+# Sentence:
+# The pill costs five cents to produce .
+# Alignments:
+#  ~ The
+# p2/pill ~ pill
+# c2/cost-01 :ARG1 :ARG2 ~ costs
+# :quant x0/5 ~ five
+# m/monetary-quantity :unit c/cent ~ cents
+# p/produce-01 :ARG1 ~ produce
+#  ~ .
+0 ~ 
+1 ~ p2
+2 ~ c2 c2_ARG1_p c2_ARG2_m
+3 ~ m_quant_x0 x0
+4 ~ m m_unit_c c
+6 ~ p p_ARG1_p2
+7 ~ 
+
+#46
+# AMR:
+# (c/country :name (n/name :op1 x0/"Pakistan"))
+# Sentence:
+# Pakistan (PK)
+# Alignments:
+# c/country :name n/name :op1 x0/"Pakistan" ~ Pakistan
+0 ~ c c_name_n n n_op1_x0 x0
+
+#47
+# AMR:
+# (r/raid-01
+#       :ARG0 (p/police
+#             :mod (c/country :name (n/name :op1 x0/"France")))
+#       :ARG1 (l/location
+#             :quant (m/more-than :op1 x1/12)
+#             :ARG1-of (l2/link-01
+#                   :ARG1 (o/organization :name (n2/name :op1 x2/"People's" :op2 x3/"Mujahedeen")))
+#             :location (r2/relative-position
+#                   :op1 (c2/city :name (n3/name :op1 x4/"Paris"))
+#                   :direction (n4/northwest)))
+#       :time (w/week
+#             :mod (l3/last)))
+# Sentence:
+# Last week French police raided more than a dozen locations linked to the People 's Mujahedeen northwest of Paris .
+# Alignments:
+# :mod l3/last ~ Last
+# w/week ~ week
+# p/police ~ police
+# r/raid-01 :ARG0 :ARG1 ~ raided
+# :quant m/more-than :op1 ~ more
+#  ~ a
+# l/location ~ locations
+# l2/link-01 :ARG1 ~ linked
+#  ~ the
+# o/organization :name n2/name :op1 x2/"People's" :op2 x3/"Mujahedeen" ~ People 's Mujahedeen
+# n4/northwest ~ northwest
+# c2/city :name n3/name :op1 x4/"Paris" ~ Paris
+#  ~ .
+0 ~ w_mod_l3 l3
+1 ~ w
+3 ~ p
+4 ~ r r_ARG0_p r_ARG1_l
+5 ~ l_quant_m m m_op1_x1
+7 ~ 
+9 ~ l
+10 ~ :ARG1-of l_ARG1-of_l2 l2 l2_ARG1_o
+12 ~ 
+13 14 15 ~ o o_name_n2 n2 n2_op1_x2 x2 n2_op2_x3 x3
+16 ~ n4
+18 ~ c2 c2_name_n3 n3 n3_op1_x4 x4
+19 ~ 
+
+#48
+# AMR:
+# (p2/person
+#   :ARG0-of (h2/head-01
+#              :ARG1 (g2/government-organization
+#                      :name (n4/name
+#                              :op1 x0/"North"
+#                              :op2 x1/"American"
+#                              :op3 x2/"Affairs"
+#                              :op4 x3/"Bureau")
+#                      :part-of (g/government-organization
+#                                 :name (n2/name
+#                                         :op1 x4/"Foreign"
+#                                         :op2 x5/"Ministry")
+#                                 :mod (c/country
+#                                        :name (n3/name
+#                                                :op1 x6/"South"
+#                                                :op2 x7/"Korea")))))
+#   :domain (p/person
+#             :name (n/name
+#                     :op1 x8/"Wi"
+#                     :op2 x9/"Sung-lac")))
+# Sentence:
+# Wi Sung- lac is the head of the South Korean Foreign Ministry 's North American Affairs Bureau .
+# Alignments:
+# p2/person :domain p/person :name n/name :op1 x8/"Wi" :op2 x9/"Sung-lac" ~ Wi Sung- lac
+# :domain ~ is
+#  ~ the
+# p2/person :ARG0-of h2/head-01 ~ head
+#  ~ the
+# :mod c/country :name n3/name :op1 x6/"South" :op2 x7/"Korea" ~ South Korean
+# g/government-organization :name n2/name :op1 x4/"Foreign" :op2 x5/"Ministry" ~ Foreign Ministry
+# g2/government-organization :name n4/name :op1 x0/"North" :op2 x1/"American" :op3 x2/"Affairs" :op4 x3/"Bureau" ~ North American Affairs Bureau
+#  ~ .
+0 1 2 ~ p2 p2_domain_p p p_name_n n n_op1_x8 x8 n_op2_x9 x9
+3 ~ p2_domain_p
+4 ~ 
+5 ~ p2 p2_ARG0-of_h2 h2
+7 ~ 
+8 9 ~ g_mod_c c c_name_n3 n3 n3_op1_x6 x6 n3_op2_x7 x7
+10 11 ~ g g_name_n2 n2 n2_op1_x4 x4 n2_op2_x5 x5
+13 14 15 16 ~ g2 g2_name_n4 n4 n4_op1_x0 x0 n4_op2_x1 x1 n4_op3_x2 x2 n4_op4_x3 x3
+17 ~ 
+
+#49
+# AMR:
+# (s/state-01
+#       :ARG0 (p/person :name (n/name :op1 x0/"Kim" :op2 x1/"Myong-Chol"))
+#       :ARG1 (a/and
+#             :op1 (m/monitor-01
+#                   :ARG0 (c/country :name (n2/name :op1 x2/"North" :op2 x3/"Korea"))
+#                   :ARG1 (b/behave-01
+#                         :ARG0 (c2/country :name (n3/name :op1 x4/"Australia"))
+#                         :quant (a2/all))
+#                   :manner (c3/careful))
+#             :op2 (o/obligate-01
+#                   :ARG1 c2
+#                   :ARG2 (c4/care-01
+#                         :ARG0 c2
+#                         :ARG1 (a3/act-01
+#                                 :prep-toward c)))))
+# Sentence:
+# Kim Myong- Chol stated that North Korea is carefully monitoring all Australian behavior and that Australia must be careful how Australia acts towards North Korea .
+# Alignments:
+# p/person :name n/name :op1 x0/"Kim" :op2 x1/"Myong-Chol" ~ Kim Myong- Chol
+# s/state-01 :ARG0 :ARG1 ~ stated
+# c/country :name n2/name :op1 x2/"North" :op2 x3/"Korea" ~ North Korea
+# c4/care-01 :ARG0 :ARG1 ~ carefully
+# m/monitor-01 :ARG0 :ARG1 ~ monitoring
+# :quant a2/all ~ all
+# b/behave-01 :ARG0 ~ behavior
+# a/and :op1 :op2 ~ and
+# c2/country :name n3/name :op1 x4/"Australia" ~ Australia
+# o/obligate-01 :ARG1 :ARG2 ~ must
+# :manner c3/careful ~ careful
+# a3/act-01 ~ acts
+# :prep-toward ~ towards
+#  ~ .
+0 1 2 ~ p p_name_n n n_op1_x0 x0 n_op2_x1 x1
+3 ~ s s_ARG0_p s_ARG1_a
+5 6 ~ c c_name_n2 n2 n2_op1_x2 x2 n2_op2_x3 x3
+8 ~ c4 c4_ARG0_c2 c4_ARG1_a3
+9 ~ m m_ARG0_c m_ARG1_b
+10 ~ b_quant_a2 a2
+12 ~ b b_ARG0_c2
+13 ~ a a_op1_m a_op2_o
+15 ~ c2 c2_name_n3 n3 n3_op1_x4 x4
+16 ~ o o_ARG1_c2 o_ARG2_c4
+18 ~ m_manner_c3 c3
+21 ~ a3
+22 ~ a3_prep-toward_c
+25 ~ 
+
+#50
+# AMR:
+# (s/state-01
+#       :ARG0 (p3/person
+#             :ARG0-of (h/have-org-role-91
+#                   :ARG1 (g2/government-organization :name (n3/name :op1 x0/"Federal" :op2 x1/"Exports" :op3 x2/"Office")
+#                         :poss (c/country :name (n/name :op1 x3/"Germany")))
+#                   :ARG2 (s2/spokeswoman)))
+#       :ARG1 (s3/study-01
+#             :ARG1 (a2/apply-01
+#                   :ARG1 (l/licence
+#                         :mod (e/export-01)))
+#             :prep-at (l2/level
+#                   :mod (p4/person
+#                         :ARG0-of (h2/have-org-role-91
+#                               :ARG2 (m/minister))))
+#             :ARG1-of (c2/cause-01
+#                   :ARG0 (c3/consider-01
+#                         :mod (p/politics)
+#                         :ARG1-of (i/involve-01))))
+#       :ARG2 (p2/publication :name (n2/name :op1 x4/"Agence" :op2 x5/"France-Presse")))
+# Sentence:
+# A spokeswoman for Germany 's Federal exports office stated to Agence France- Presse that the application for an export licence was being studied at ministerial level due to the political considerations involved .
+# Alignments:
+#  ~ A
+# p3/person :ARG0-of h/have-org-role-91 :ARG2 s2/spokeswoman ~ spokeswoman
+# c/country :name n/name :op1 x3/"Germany" ~ Germany
+# :poss ~ 's
+# g2/government-organization :name n3/name :op1 x0/"Federal" :op2 x1/"Exports" :op3 x2/"Office" ~ Federal
+# s/state-01 :ARG0 :ARG1 :ARG2 ~ stated
+# p2/publication :name n2/name :op1 x4/"Agence" :op2 x5/"France-Presse" ~ Agence France- Presse
+#  ~ the
+# a2/apply-01 :ARG1 ~ application
+#  ~ an
+# :mod e/export-01 ~ export
+# l/licence ~ licence
+# s3/study-01 :ARG1 ~ studied
+# :prep-at ~ at
+# p4/person :ARG0-of h2/have-org-role-91 :ARG2 m/minister ~ ministerial
+# l2/level ~ level
+#  ~ the
+# :mod p/politics ~ political
+# c3/consider-01 ~ considerations
+# i/involve-01 ~ involved
+#  ~ .
+0 ~ 
+1 ~ p3 p3_ARG0-of_h h h_ARG2_s2 s2
+3 ~ c c_name_n n n_op1_x3 x3
+4 ~ g2_poss_c
+5 ~ g2 g2_name_n3 n3 n3_op1_x0 x0 n3_op2_x1 x1 n3_op3_x2 x2
+8 ~ s s_ARG0_p3 s_ARG1_s3 s_ARG2_p2
+10 11 12 ~ p2 p2_name_n2 n2 n2_op1_x4 x4 n2_op2_x5 x5
+14 ~ 
+15 ~ a2 a2_ARG1_l
+17 ~ 
+18 ~ l_mod_e e
+19 ~ l
+22 ~ s3 s3_ARG1_a2
+23 ~ s3_prep-at_l2
+24 ~ p4 p4_ARG0-of_h2 h2 h2_ARG2_m m
+25 ~ l2
+28 ~ 
+29 ~ c3_mod_p p
+30 ~ c3
+31 ~ :ARG1-of c3_ARG1-of_i i
+32 ~ 
+
+#51
+# AMR:
+# (s/state-01
+#   :ARG0 (c/company
+#           :name (n/name
+#                   :op1 x0/"Siemens"))
+#   :ARG1 (a/abandon-01
+#           :ARG1 (f/facility
+#                   :ARG0-of (p/process-01
+#                              :ARG1 (p2/plutonium))
+#                   :location (c4/city
+#                               :name (n2/name
+#                                       :op1 x1/"Hanau")))
+#           :ARG1-of (c3/cause-01
+#                      :ARG0 (d/difficulty
+#                              :mod (p3/politics)
+#                              :time (d2/debate-01
+#                                      :ARG1 (f2/future
+#                                              :poss (p5/power
+#                                                      :mod (n4/nucleus)))
+#                                      :ARG1-of (g/grow-01))
+#                              :mod (a3/also)))))
+# Sentence:
+# Siemens stated that the Hanau plutonium- processing facility was also abandoned due to political difficulties at a time of growing debate about the future of nuclear power .
+# Alignments:
+# c/company :name n/name :op1 x0/"Siemens" ~ Siemens
+# s/state-01 :ARG0 :ARG1 ~ stated
+#  ~ the
+# c4/city :name n2/name :op1 x1/"Hanau" ~ Hanau
+# p2/plutonium ~ plutonium-
+# p/process-01 :ARG1 ~ processing
+# f/facility ~ facility
+# :mod a3/also ~ also
+# a/abandon-01 :ARG1 ~ abandoned
+# :mod p3/politics ~ political
+# d/difficulty ~ difficulties
+# :location ~ at
+#  ~ a
+# :poss ~ of
+# g/grow-01 ~ growing
+# d2/debate-01 :ARG1 ~ debate
+#  ~ the
+# f2/future ~ future
+# :mod n4/nucleus ~ nuclear
+# p5/power ~ power
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ s s_ARG0_c s_ARG1_a
+3 ~ 
+4 ~ c4 c4_name_n2 n2 n2_op1_x1 x1
+5 ~ p2
+6 ~ :ARG0-of f_ARG0-of_p p p_ARG1_p2
+7 ~ f
+9 ~ d_mod_a3 a3
+10 ~ a a_ARG1_f
+13 ~ d_mod_p3 p3
+14 ~ d
+15 ~ f_location_c4
+16 ~ 
+18 ~ f2_poss_p5
+19 ~ :ARG1-of d2_ARG1-of_g g
+20 ~ d2 d2_ARG1_f2
+22 ~ 
+23 ~ f2
+25 ~ p5_mod_n4 n4
+26 ~ p5
+27 ~ 
+
+#52
+# AMR:
+# (u/undermine-01
+#   :ARG0 (s/smuggle-01
+#           :ARG1 (p/poultry
+#                   :ARG0-of (l/live-01)))
+#   :ARG1 (e/effort
+#           :poss (a/and
+#                   :op1 (o/organization
+#                          :name (n/name
+#                                  :op1 x0/"WHO"))
+#                   :op2 (o2/organization
+#                          :name (n2/name
+#                                  :op1 x1/"FAO")))
+#           :purpose (r/restrict-01
+#                      :ARG0 a
+#                      :ARG1 (s2/spread-02
+#                              :ARG1 (f/flu
+#                                      :mod (b/bird))
+#                              :location (c/continent
+#                                          :name (n3/name
+#                                                  :op1 x2/"Asia"))))))
+# Sentence:
+# Live poultry smuggling undermines WHO and FAO efforts to restrict bird flu spread in Asia .
+# Alignments:
+# l/live-01 ~ Live
+# p/poultry ~ poultry
+# s/smuggle-01 :ARG1 ~ smuggling
+# u/undermine-01 :ARG0 :ARG1 ~ undermines
+# o/organization :name n/name :op1 x0/"WHO" ~ WHO
+# a/and :op1 :op2 ~ and
+# o2/organization :name n2/name :op1 x1/"FAO" ~ FAO
+# e/effort ~ efforts
+# r/restrict-01 :ARG0 :ARG1 ~ restrict
+# :mod b/bird ~ bird
+# f/flu ~ flu
+# s2/spread-02 :ARG1 ~ spread
+# :location ~ in
+# c/continent :name n3/name :op1 x2/"Asia" ~ Asia
+#  ~ .
+0 ~ :ARG0-of p_ARG0-of_l l
+1 ~ p
+2 ~ s s_ARG1_p
+3 ~ u u_ARG0_s u_ARG1_e
+4 ~ o o_name_n n n_op1_x0 x0
+5 ~ a a_op1_o a_op2_o2
+6 ~ o2 o2_name_n2 n2 n2_op1_x1 x1
+7 ~ e
+9 ~ r r_ARG0_a r_ARG1_s2
+10 ~ f_mod_b b
+11 ~ f
+12 ~ s2 s2_ARG1_f
+13 ~ s2_location_c
+14 ~ c c_name_n3 n3 n3_op1_x2 x2
+15 ~ 
+
+#53
+# AMR:
+# (c/cause-01
+#       :ARG0 (s/strain :name (n/name :op1 x0/"H5N1")
+#             :mod (f/flu))
+#       :ARG1 (a2/and :quant x1/13
+#             :op1 (d/die-01)
+#             :op2 (b/break-13
+#                   :ARG1-of (r2/report-01)))
+#       :location (c2/country :quant x2/10))
+# Sentence:
+# The H5N1 flu strain has caused 13 deaths and reported outbreaks in 10 countries .
+# Alignments:
+#  ~ The
+# s/strain :name n/name :op1 x0/"H5N1" ~ H5N1
+# :mod f/flu ~ flu
+# s/strain ~ strain
+# c/cause-01 :ARG0 :ARG1 ~ caused
+# :quant x1/13 ~ 13
+# a2/and :op1 :op2 ~ and
+# r2/report-01 ~ reported
+# :location ~ in
+# :quant x2/10 ~ 10
+# c2/country ~ countries
+#  ~ .
+0 ~ 
+1 ~ s s_name_n n n_op1_x0 x0
+2 ~ s_mod_f f
+3 ~ s
+5 ~ c c_ARG0_s c_ARG1_a2
+6 ~ a2_quant_x1 x1
+8 ~ a2 a2_op1_d a2_op2_b
+9 ~ :ARG1-of b_ARG1-of_r2 r2
+11 ~ c_location_c2
+12 ~ c2_quant_x2 x2
+13 ~ c2
+14 ~ 
+
+#54
+# AMR:
+# (d/date-entity :month x0/2 :day x1/16 :year x2/2004)
+# Sentence:
+# 2004- 02- 16
+# Alignments:
+# d/date-entity :year x2/2004 ~ 2004-
+# d/date-entity :month :month x0/2 ~ 02-
+# d/date-entity :day x1/16 ~ 16
+0 ~ d d_year_x2 x2
+1 ~ d d_month_x0 d_month_x0 x0
+2 ~ d d_day_x1 x1
+
+#55
+# AMR:
+# (s/surrender-01
+#   :ARG0 (a/and
+#           :op1 (i/insurgent
+#                  :quant (u/up-to
+#                           :op1 x0/700))
+#           :op2 (r/relative
+#                  :poss i)
+#           :op3 (p/person
+#                  :quant x1/8
+#                  :ARG0-of (c2/command-02
+#                             :ARG1 (p2/person
+#                                     :ARG0-of (r2/rebel-01)))))
+#   :time (a2/after
+#           :op1 (s2/surround-01
+#                  :ARG1 (t/troop
+#                          :mod (g/government-organization
+#                                 :ARG0-of (g2/govern-01)))
+#                  :ARG2 (h/holdout
+#                          :quant (s3/several)
+#                          :mod (n/north))
+#                  :time (l2/late
+#                          :op1 (d/date-entity
+#                                 :month x2/2
+#                                 :year x3/2004)))))
+# Sentence:
+# Up to 700 insurgents and their relatives and 8 rebel commanders surrendered after government troops surrounded several northern holdouts in late February 2004 .
+# Alignments:
+# x0/700 ~ 700
+# i/insurgent ~ insurgents
+# a/and :op1 :op2 :op3 ~ and
+# r/relative ~ relatives
+# :quant p/person :quant x1/8 ~ 8
+# p2/person :ARG0-of r2/rebel-01 ~ rebel
+# p/person :ARG0-of c2/command-02 ~ commanders
+# s/surrender-01 :ARG0 ~ surrendered
+# a2/after :op1 ~ after
+# :mod g/government-organization ~ government
+# t/troop ~ troops
+# s2/surround-01 :ARG1 :ARG2 ~ surrounded
+# :quant s3/several ~ several
+# :mod n/north ~ northern
+# h/holdout ~ holdouts
+# :time ~ in
+# l2/late :op1 ~ late
+# d/date-entity :month :month x2/2 ~ February
+# d/date-entity :year x3/2004 ~ 2004
+#  ~ .
+2 ~ x0
+3 ~ i
+4 ~ a a_op1_i a_op2_r a_op3_p
+6 ~ r
+8 ~ p_quant_x1 p p_quant_x1 x1
+9 ~ p2 p2_ARG0-of_r2 r2
+10 ~ p p_ARG0-of_c2 c2
+11 ~ s s_ARG0_a
+12 ~ a2 a2_op1_s2
+13 ~ t_mod_g g
+14 ~ t
+15 ~ s2 s2_ARG1_t s2_ARG2_h
+16 ~ h_quant_s3 s3
+17 ~ h_mod_n n
+18 ~ h
+19 ~ s_time_a2
+20 ~ l2 l2_op1_d
+21 ~ d d_month_x2 d_month_x2 x2
+22 ~ d d_year_x3 x3
+23 ~ 
+
+#56
+# AMR:
+# (w/work-01
+#   :ARG0 (g/government-organization
+#           :ARG0-of (g2/govern-01
+#                      :ARG1 (c/country
+#                              :name (n/name
+#                                      :op1 x0/"Albania"))))
+#   :ARG1 (p/project
+#           :topic (s/strategy
+#                    :mod (n2/nation))
+#           :ARG0-of (r/require-01
+#                      :ARG1 (a/and
+#                              :op1 (s3/support-01)
+#                              :op2 (c2/cooperate-01)
+#                              :mod (i/international)))))
+# Sentence:
+# The Albanian Government has been working on a project of national strategy which will require international support and cooperation .
+# Alignments:
+#  ~ The
+# g/government-organization :ARG0-of g2/govern-01 :ARG1 c/country :name n/name :op1 x0/"Albania" ~ Albanian
+# g/government-organization ~ Government
+# w/work-01 :ARG0 :ARG1 ~ working
+#  ~ a
+# p/project ~ project
+# :mod n2/nation ~ national
+# s/strategy ~ strategy
+# r/require-01 :ARG1 ~ require
+# :mod i/international ~ international
+# s3/support-01 ~ support
+# a/and :op1 :op2 ~ and
+# c2/cooperate-01 ~ cooperation
+#  ~ .
+0 ~ 
+1 ~ g g_ARG0-of_g2 g2 g2_ARG1_c c c_name_n n n_op1_x0 x0
+2 ~ g
+5 ~ w w_ARG0_g w_ARG1_p
+7 ~ 
+8 ~ p
+10 ~ s_mod_n2 n2
+11 ~ s
+14 ~ :ARG0-of p_ARG0-of_r r r_ARG1_a
+15 ~ a_mod_i i
+16 ~ s3
+17 ~ a a_op1_s3 a_op2_c2
+18 ~ c2
+19 ~ 
+
+#57
+# AMR:
+# (w/witness-01
+#       :ARG0 (p/person
+#             :mod (i/international)
+#             :ARG0-of (h/have-org-role-91
+#                   :ARG2 (d/diplomat)))
+#       :ARG1 (i2/incinerate-01))
+# Sentence:
+# International diplomats witnessed the incineration .
+# Alignments:
+# :mod p/person :mod i/international ~ International
+# p/person :ARG0-of h/have-org-role-91 :ARG2 d/diplomat ~ diplomats
+# w/witness-01 :ARG0 :ARG1 ~ witnessed
+#  ~ the
+# i2/incinerate-01 ~ incineration
+#  ~ .
+0 ~ p_mod_i p p_mod_i i
+1 ~ p p_ARG0-of_h h h_ARG2_d d
+2 ~ w w_ARG0_p w_ARG1_i2
+3 ~ 
+4 ~ i2
+5 ~ 
+
+#58
+# AMR:
+# (q/quote-01
+#       :ARG0 (n/newspaper :name (n2/name :op1 x0/"Wen" :op2 x1/"Wei" :op3 x2/"Po")
+#             :frequency (r2/rate-entity-91
+#                   :ARG3 (t2/temporal-quantity :quant x3/1
+#                         :unit (d/day)))
+#             :poss (c4/city :name (n3/name :op1 x4/"Hong" :op2 x5/"Kong")))
+#       :ARG1 (s/source
+#             :mod (m/military)
+#             :mod (c/country :name (n4/name :op1 x6/"China")))
+#       :ARG2 (s2/state-01
+#             :ARG0 s
+#             :ARG1 (o/obligate-01
+#                   :ARG1 (c2/country :name (n5/name :op1 x7/"Taiwan"))
+#                   :ARG2 (o2/or
+#                         :op1 (r/rejoin-01
+#                               :ARG0 c2
+#                               :ARG1 c)
+#                         :op2 (f/face-01
+#                               :ARG0 c2
+#                               :ARG1 (a/action
+#                                     :mod (m2/military))
+#                               :time (w2/within
+#                                     :op1 (t/temporal-quantity :quant x8/20
+#                                           :unit (y/year)))))))
+#       :time (w/week
+#             :mod (l/last)))
+# Sentence:
+# Last week Hong Kong 's Wen Wei Po daily newspaper quoted Chinese military sources as stating that Taiwan must rejoin China or face military action within 20 years .
+# Alignments:
+# :mod l/last ~ Last
+# w/week ~ week
+# c4/city :name n3/name :op1 x4/"Hong" :op2 x5/"Kong" ~ Hong Kong
+# :poss ~ 's
+# n/newspaper :name n2/name :op1 x0/"Wen" :op2 x1/"Wei" :op3 x2/"Po" ~ Wen Wei Po
+# n/newspaper ~ newspaper
+# q/quote-01 :ARG0 :ARG1 :ARG2 ~ quoted
+# :mod m/military ~ military
+# s/source ~ sources
+# s2/state-01 :ARG0 :ARG1 ~ stating
+# c2/country :name n5/name :op1 x7/"Taiwan" ~ Taiwan
+# o/obligate-01 :ARG1 :ARG2 ~ must
+# r/rejoin-01 :ARG0 :ARG1 ~ rejoin
+# :mod c/country :name n4/name :op1 x6/"China" ~ China
+# o2/or :op1 :op2 ~ or
+# f/face-01 :ARG0 :ARG1 ~ face
+# :mod m2/military ~ military
+# a/action ~ action
+# w2/within :op1 ~ within
+# :quant x8/20 ~ 20
+# t/temporal-quantity :unit y/year ~ years
+#  ~ .
+0 ~ w_mod_l l
+1 ~ w
+2 3 ~ c4 c4_name_n3 n3 n3_op1_x4 x4 n3_op2_x5 x5
+4 ~ n_poss_c4
+5 6 7 ~ n n_name_n2 n2 n2_op1_x0 x0 n2_op2_x1 x1 n2_op3_x2 x2
+9 ~ n
+10 ~ q q_ARG0_n q_ARG1_s q_ARG2_s2
+12 ~ s_mod_m m
+13 ~ s
+15 ~ s2 s2_ARG0_s s2_ARG1_o
+17 ~ c2 c2_name_n5 n5 n5_op1_x7 x7
+18 ~ o o_ARG1_c2 o_ARG2_o2
+19 ~ r r_ARG0_c2 r_ARG1_c
+20 ~ s_mod_c c c_name_n4 n4 n4_op1_x6 x6
+21 ~ o2 o2_op1_r o2_op2_f
+22 ~ f f_ARG0_c2 f_ARG1_a
+23 ~ a_mod_m2 m2
+24 ~ a
+25 ~ w2 w2_op1_t
+26 ~ t_quant_x8 x8
+27 ~ t t_unit_y y
+28 ~ 
+
+#59
+# AMR:
+# (r/ready-01
+#       :ARG1 (p/plant
+#             :ord (o/ordinal-entity :value x0/2))
+#       :ARG2 (g/generate-01
+#             :ARG0 p
+#             :ARG1 (e/electricity))
+#       :time (a/after
+#             :op1 (n/now)
+#             :quant (t/temporal-quantity :quant x1/7
+#                   :unit (y/year))))
+# Sentence:
+# The second plant will be ready to generate electricity in 7 years .
+# Alignments:
+#  ~ The
+# p/plant ~ plant
+# r/ready-01 :ARG1 :ARG2 ~ ready
+# g/generate-01 :ARG0 :ARG1 ~ generate
+# e/electricity ~ electricity
+# :time ~ in
+# :quant x1/7 ~ 7
+# t/temporal-quantity :unit y/year ~ years
+#  ~ .
+0 ~ 
+2 ~ p
+5 ~ r r_ARG1_p r_ARG2_g
+7 ~ g g_ARG0_p g_ARG1_e
+8 ~ e
+9 ~ r_time_a
+10 ~ t_quant_x1 x1
+11 ~ t t_unit_y y
+12 ~ 
+
+#60
+# AMR:
+# (a/and
+#       :op1 (t/terrorism)
+#       :op2 (t2/technology)
+#       :op3 (t3/telecommunication))
+# Sentence:
+# terrorism ; technology ; Telecom
+# Alignments:
+# t/terrorism ~ terrorism
+#  ~ ;
+# t2/technology ~ technology
+#  ~ ;
+# t3/telecommunication ~ Telecom
+0 ~ t
+1 ~ 
+2 ~ t2
+3 ~ 
+4 ~ t3
+
+#61
+# AMR:
+# (b/break-08
+#       :ARG1 (m/missile :quant x0/1
+#             :ARG1-of (i/include-91
+#                   :ARG2 (m2/missile)))
+#       :location (o/over
+#             :op1 (v/village :quant x1/2
+#                   :mod (c/country :name (n/name :op1 x2/"Turkey")))))
+# Sentence:
+# One of the missiles broke up over two Turkish villages .
+# Alignments:
+# :quant x0/1 ~ One
+#  ~ the
+# m/missile ~ missiles
+# b/break-08 :ARG1 ~ broke
+# o/over :op1 ~ over
+# :quant x1/2 ~ two
+# :mod c/country :name n/name :op1 x2/"Turkey" ~ Turkish
+# v/village ~ villages
+#  ~ .
+0 ~ m_quant_x0 x0
+2 ~ 
+3 ~ m
+4 ~ b b_ARG1_m
+6 ~ o o_op1_v
+7 ~ v_quant_x1 x1
+8 ~ v_mod_c c c_name_n n n_op1_x2 x2
+9 ~ v
+10 ~ 
+
+#62
+# AMR:
+# (r/receive-01
+#   :ARG0 (p/patient :quant x0/24000
+#           :location (c/country
+#                       :name (n2/name :op1 x1/"Brazil")))
+#   :ARG1 (p2/product
+#           :name (n/name :op1 x2/"Kaletra"))
+#   :time (c2/current))
+# Sentence:
+# Currently 24000 patients in Brazil receive Kaletra .
+# Alignments:
+# c2/current ~ Currently
+# :quant x0/24000 ~ 24000
+# p/patient ~ patients
+# :location ~ in
+# c/country :name n2/name :op1 x1/"Brazil" ~ Brazil
+# r/receive-01 :ARG0 :ARG1 ~ receive
+# p2/product :name n/name :op1 x2/"Kaletra" ~ Kaletra
+#  ~ .
+0 ~ c2
+1 ~ p_quant_x0 x0
+2 ~ p
+3 ~ p_location_c
+4 ~ c c_name_n2 n2 n2_op1_x1 x1
+5 ~ r r_ARG0_p r_ARG1_p2
+6 ~ p2 p2_name_n n n_op1_x2 x2
+7 ~ 
+
+#63
+# AMR:
+# (c/crack-06
+#       :ARG1 (g/government-organization
+#             :ARG0-of (g2/govern-01)))
+# Sentence:
+# Government crackdown--
+# Alignments:
+# g/government-organization ~ Government
+# c/crack-06 :ARG1 ~ crackdown--
+0 ~ g
+1 ~ c c_ARG1_g
+
+#64
+# AMR:
+# (d/detain-01
+#       :ARG0 (c/country :name (n/name :op1 x0/"Spain"))
+#       :ARG1 (g/group)
+#       :ARG2 (s/suspect-01
+#             :ARG1 (a/and
+#                   :op1 (p/possess-01
+#                         :ARG0 g
+#                         :ARG1 (w/weapon))
+#                   :op2 (t/traffic-00
+#                         :ARG0 g
+#                         :ARG1 w)))
+#       :time (d2/date-interval
+#             :op1 (d3/date-entity :year x1/2005 :month x2/9 :day x3/17)
+#             :op2 (d4/date-entity :year x4/2005 :month x5/9 :day x6/18)))
+# Sentence:
+# on 17- 18 September 2005 Spain detained the group on suspicion of possession and trafficking of weapons .
+# Alignments:
+# d4/date-entity :day x6/18 ~ 18
+# d3/date-entity :month :month x2/9 ~ September
+# d3/date-entity :year x1/2005 ~ 2005
+# c/country :name n/name :op1 x0/"Spain" ~ Spain
+# d/detain-01 :ARG0 :ARG1 :ARG2 ~ detained
+#  ~ the
+# g/group ~ group
+# s/suspect-01 :ARG1 ~ suspicion
+# p/possess-01 :ARG0 :ARG1 ~ possession
+# a/and :op1 :op2 ~ and
+# t/traffic-00 :ARG0 :ARG1 ~ trafficking
+# w/weapon ~ weapons
+#  ~ .
+2 ~ d4 d4_day_x6 x6
+3 ~ d3 d3_month_x2 d3_month_x2 x2
+4 ~ d3 d3_year_x1 x1
+5 ~ c c_name_n n n_op1_x0 x0
+6 ~ d d_ARG0_c d_ARG1_g d_ARG2_s
+7 ~ 
+8 ~ g
+10 ~ s s_ARG1_a
+12 ~ p p_ARG0_g p_ARG1_w
+13 ~ a a_op1_p a_op2_t
+14 ~ t t_ARG0_g t_ARG1_w
+16 ~ w
+17 ~ 
+
+#65
+# AMR:
+# (a/and
+#       :op1 (c/country :name (n/name :op1 x0/"India"))
+#       :op2 (c2/country :name (n2/name :op1 x1/"Pakistan")))
+# Sentence:
+# India (IN) ; Pakistan (PK)
+# Alignments:
+# c/country :name n/name :op1 x0/"India" ~ India
+#  ~ ;
+# c2/country :name n2/name :op1 x1/"Pakistan" ~ Pakistan
+0 ~ c c_name_n n n_op1_x0 x0
+2 ~ 
+3 ~ c2 c2_name_n2 n2 n2_op1_x1 x1
+
+#66
+# AMR:
+# (a/and
+#       :op1 (a2/and
+#             :op1 (w/weather)
+#             :op2 (d/disaster
+#                   :mod (n/nature)))
+#       :op2 (a3/and
+#             :op1 (w2/war)
+#             :op2 (c/conflict-01))
+#       :op3 (t/terrorism))
+# Sentence:
+# weather and natural disaster ; war and conflict ; terrorism
+# Alignments:
+# w/weather ~ weather
+# a/and :op1 :op2 :op3 ~ and
+# :mod n/nature ~ natural
+# d/disaster ~ disaster
+#  ~ ;
+# w2/war ~ war
+# a2/and :op1 :op2 ~ and
+# c/conflict-01 ~ conflict
+#  ~ ;
+# t/terrorism ~ terrorism
+0 ~ w
+1 ~ a a_op1_a2 a_op2_a3 a_op3_t
+2 ~ d_mod_n n
+3 ~ d
+4 ~ 
+5 ~ w2
+6 ~ a2 a2_op1_w a2_op2_d
+7 ~ c
+8 ~ 
+9 ~ t
+
+#67
+# AMR:
+# (d/date-entity
+#   :day x0/12
+#   :month x1/12
+#   :year x2/2005)
+# Sentence:
+# 2005- 12- 12
+# Alignments:
+# d/date-entity :year x2/2005 ~ 2005-
+# d/date-entity :month :month x1/12 ~ 12-
+# d/date-entity :day x0/12 ~ 12
+0 ~ d d_year_x2 x2
+1 ~ d d_month_x1 d_month_x1 x1
+2 ~ d d_day_x0 x0
+
+#68
+# AMR:
+# (s/share-01
+#   :ARG0 (a/and
+#           :op1 (c/country
+#                  :name (n/name
+#                          :op1 x0/"Israel"))
+#           :op2 (c2/country
+#                  :name (n2/name
+#                          :op1 x1/"South"
+#                          :op2 x2/"Korea")))
+#   :ARG1 (c3/concern-01
+#           :ARG0 (c5/connect-01
+#                   :ARG1 (a4/and
+#                           :op1 (c9/country
+#                                  :name (n3/name
+#                                          :op1 x3/"North"
+#                                          :op2 x4/"Korea"))
+#                           :op2 (c10/country
+#                                  :name (n4/name
+#                                          :op1 x5/"Iran")))
+#                   :purpose (p/pursue-01
+#                              :ARG0 a4
+#                              :ARG1 (w2/weapon
+#                                      :ARG2-of (d2/destroy-01
+#                                                 :degree (m2/mass)))))
+#           :ARG1 a))
+# Sentence:
+# Israel and South Korea share concerns over the connection between North Korea and Iran in the pursuit of weapons of mass destruction .
+# Alignments:
+# c/country :name n/name :op1 x0/"Israel" ~ Israel
+# a/and :op1 :op2 ~ and
+# c2/country :name n2/name :op1 x1/"South" :op2 x2/"Korea" ~ South Korea
+# s/share-01 :ARG0 :ARG1 ~ share
+# c3/concern-01 :ARG0 :ARG1 ~ concerns
+#  ~ the
+# c5/connect-01 :ARG1 ~ connection
+# c9/country :name n3/name :op1 x3/"North" :op2 x4/"Korea" ~ North Korea
+# a4/and :op1 :op2 ~ and
+# c10/country :name n4/name :op1 x5/"Iran" ~ Iran
+#  ~ the
+# p/pursue-01 :ARG0 :ARG1 ~ pursuit
+# w2/weapon ~ weapons
+# :degree m2/mass ~ mass
+# d2/destroy-01 ~ destruction
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ a a_op1_c a_op2_c2
+2 3 ~ c2 c2_name_n2 n2 n2_op1_x1 x1 n2_op2_x2 x2
+4 ~ s s_ARG0_a s_ARG1_c3
+5 ~ c3 c3_ARG0_c5 c3_ARG1_a
+7 ~ 
+8 ~ c5 c5_ARG1_a4
+10 11 ~ c9 c9_name_n3 n3 n3_op1_x3 x3 n3_op2_x4 x4
+12 ~ a4 a4_op1_c9 a4_op2_c10
+13 ~ c10 c10_name_n4 n4 n4_op1_x5 x5
+15 ~ 
+16 ~ p p_ARG0_a4 p_ARG1_w2
+18 ~ w2
+20 ~ d2_degree_m2 m2
+21 ~ :ARG2-of w2_ARG2-of_d2 d2
+22 ~ 
+
+#69
+# AMR:
+# (s/say-01
+#   :ARG0 (c/country
+#           :name (n/name
+#                   :op1 x0/"China"))
+#   :ARG1 (e/entitle-01
+#           :ARG1 (t/test-01
+#                   :ARG0 c
+#                   :time (a/after
+#                           :op1 (d/destroy-01
+#                                  :ARG0 c
+#                                  :ARG1 (s2/satellite))))
+#           :ARG2 c))
+# Sentence:
+# China said it had the right to carry out the test after destroying the satellite .
+# Alignments:
+# c/country :name n/name :op1 x0/"China" ~ China
+# s/say-01 :ARG0 :ARG1 ~ said
+#  ~ the
+#  ~ the
+# t/test-01 :ARG0 ~ test
+# a/after :op1 ~ after
+# d/destroy-01 :ARG0 :ARG1 ~ destroying
+#  ~ the
+# s2/satellite ~ satellite
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ s s_ARG0_c s_ARG1_e
+4 ~ 
+9 ~ 
+10 ~ t t_ARG0_c
+11 ~ a a_op1_d
+12 ~ d d_ARG0_c d_ARG1_s2
+13 ~ 
+14 ~ s2
+15 ~ 
+
+#70
+# AMR:
+# (d/detain-01
+#       :ARG1 (i/individual :quant x0/10)
+#       :ARG2 (s/suspect-01
+#             :ARG1 (c2/collect-01
+#                   :ARG0 i
+#                   :ARG1 (m/money)
+#                   :manner (l/law :polarity x1/-)
+#                   :purpose (f/fund-01
+#                         :ARG0 i
+#                         :ARG1 (a/activity
+#                               :ARG1-of (r/relate-01
+#                                     :ARG2 (t/terror)))))
+#             :ARG2 i)
+#       :location (c/country :name (n/name :op1 x2/"Saudi" :op2 x3/"Arabia"))
+#       :time (d2/date-entity :day x4/3 :month x5/2 :year x6/2007))
+# Sentence:
+# 10 individuals are detained in Saudi Arabia on February 3 , 2007 for suspicion of illegally collecting money to fund terror- related activities .
+# Alignments:
+# :quant x0/10 ~ 10
+# i/individual ~ individuals
+# d/detain-01 :ARG1 :ARG2 ~ detained
+# :location ~ in
+# c/country :name n/name :op1 x2/"Saudi" :op2 x3/"Arabia" ~ Saudi Arabia
+# d2/date-entity :month :month x5/2 ~ February
+# d2/date-entity :day x4/3 ~ 3
+#  ~ ,
+# d2/date-entity :year x6/2007 ~ 2007
+# :purpose ~ for
+# s/suspect-01 :ARG1 :ARG2 ~ suspicion
+# :manner l/law :polarity x1/- ~ illegally
+# c2/collect-01 :ARG0 :ARG1 ~ collecting
+# m/money ~ money
+# f/fund-01 :ARG0 :ARG1 ~ fund
+# t/terror ~ terror-
+# r/relate-01 :ARG2 ~ related
+# a/activity ~ activities
+#  ~ .
+0 ~ i_quant_x0 x0
+1 ~ i
+3 ~ d d_ARG1_i d_ARG2_s
+4 ~ d_location_c
+5 6 ~ c c_name_n n n_op1_x2 x2 n_op2_x3 x3
+8 ~ d2 d2_month_x5 d2_month_x5 x5
+9 ~ d2 d2_day_x4 x4
+10 ~ 
+11 ~ d2 d2_year_x6 x6
+12 ~ c2_purpose_f
+13 ~ s s_ARG1_c2 s_ARG2_i
+15 ~ c2_manner_l l l_polarity_x1 x1
+16 ~ c2 c2_ARG0_i c2_ARG1_m
+17 ~ m
+19 ~ f f_ARG0_i f_ARG1_a
+20 ~ t
+21 ~ :ARG1-of a_ARG1-of_r r r_ARG2_t
+22 ~ a
+23 ~ 
+
+#71
+# AMR:
+# (p2/penalize-01
+#   :ARG2 (p/possess-01
+#           :ARG1 (o/or
+#                   :op1 (h/heroin
+#                          :quant (m/more-than
+#                                   :op1 (m3/mass-quantity
+#                                          :quant x0/600
+#                                          :unit (g/gram))))
+#                   :op2 (o2/opium
+#                          :quant (m2/more-than
+#                                   :op1 (m4/mass-quantity
+#                                          :quant x1/20
+#                                          :unit (k/kilogram))))))
+#   :instrument (d/die-01)
+#   :location (c2/country
+#               :name (n/name
+#                       :op1 x2/"Vietnam")
+#               :mod (c3/communism)))
+# Sentence:
+# Possession of more than 600 grams of heroin or more than 20 kilograms of opium carries the death penalty in communist Vietnam .
+# Alignments:
+# p/possess-01 :ARG1 ~ Possession
+# :quant m/more-than :op1 ~ more
+# :quant x0/600 ~ 600
+# m3/mass-quantity :unit g/gram ~ grams
+# h/heroin ~ heroin
+# o/or :op1 :op2 ~ or
+# :quant m2/more-than :op1 ~ more
+# :quant x1/20 ~ 20
+# m4/mass-quantity :unit k/kilogram ~ kilograms
+# o2/opium ~ opium
+#  ~ the
+# p2/penalize-01 :ARG2 ~ penalty
+# :location ~ in
+# :mod c3/communism ~ communist
+# c2/country :name n/name :op1 x2/"Vietnam" ~ Vietnam
+#  ~ .
+0 ~ p p_ARG1_o
+2 ~ h_quant_m m m_op1_m3
+4 ~ m3_quant_x0 x0
+5 ~ m3 m3_unit_g g
+7 ~ h
+8 ~ o o_op1_h o_op2_o2
+9 ~ o2_quant_m2 m2 m2_op1_m4
+11 ~ m4_quant_x1 x1
+12 ~ m4 m4_unit_k k
+14 ~ o2
+16 ~ 
+18 ~ p2 p2_ARG2_p
+19 ~ p2_location_c2
+20 ~ c2_mod_c3 c3
+21 ~ c2 c2_name_n n n_op1_x2 x2
+22 ~ 
+
+#72
+# AMR:
+# (s/seize-01
+#       :ARG1 (p/person
+#             :mod (e/ethnic-group :name (n/name :op1 x0/"Kurd")))
+#       :time (w/week
+#             :mod (d/date-entity :year x1/2007 :month x2/2 :day x3/4))
+#       :subevent-of (i/investigate-01
+#             :ARG1-of (h/head-01
+#                   :ARG0 (p2/person :name (n2/name :op1 x4/"Jean-Louis" :op2 x5/"Bruguiere")
+#                         :ARG0-of (o/oppose-01
+#                               :ARG1 (t/terrorism))
+#                         :mod (t2/top)
+#                         :ARG0-of (h2/have-org-role-91
+#                               :ARG1 (c/country :name (n3/name :op1 x6/"France"))
+#                               :ARG3 (j/judge-01))))))
+# Sentence:
+# The Kurds were seized the week of 4 February 2007 as part of an investigation headed by France 's top anti- terrorist judge Jean- Louis Bruguiere .
+# Alignments:
+#  ~ The
+# :mod p/person :mod e/ethnic-group :name n/name :op1 x0/"Kurd" ~ Kurds
+# s/seize-01 :ARG1 ~ seized
+#  ~ the
+# w/week ~ week
+# d/date-entity :day x3/4 ~ 4
+# d/date-entity :month :month x2/2 ~ February
+# d/date-entity :year x1/2007 ~ 2007
+#  ~ an
+# i/investigate-01 ~ investigation
+# h/head-01 :ARG0 ~ headed
+# c/country :name n3/name :op1 x6/"France" ~ France
+# :mod p2/person :mod t2/top ~ top
+# p2/person :ARG0-of o/oppose-01 ~ anti-
+# t/terrorism ~ terrorist
+# j/judge-01 ~ judge
+# p2/person :name n2/name :op1 x4/"Jean-Louis" :op2 x5/"Bruguiere" ~ Jean- Louis Bruguiere
+#  ~ .
+0 ~ 
+1 ~ p_mod_e p p_mod_e e e_name_n n n_op1_x0 x0
+3 ~ s s_ARG1_p
+4 ~ 
+5 ~ w
+7 ~ d d_day_x3 x3
+8 ~ d d_month_x2 d_month_x2 x2
+9 ~ d d_year_x1 x1
+13 ~ 
+14 ~ i
+15 ~ :ARG1-of i_ARG1-of_h h h_ARG0_p2
+17 ~ c c_name_n3 n3 n3_op1_x6 x6
+19 ~ p2_mod_t2 p2 p2_mod_t2 t2
+20 ~ p2 p2_ARG0-of_o o
+21 ~ t
+22 ~ j
+23 24 25 ~ p2 p2_name_n2 n2 n2_op1_x4 x4 n2_op2_x5 x5
+26 ~ 
+
+#73
+# AMR:
+# (a/and
+#       :op1 (i/international)
+#       :op2 (g/government-organization
+#             :ARG0-of (g2/govern-01))
+#       :op3 (w/weapon)
+#       :op4 (p/proliferate-01)
+#       :op5 (a2/and
+#             :op1 (w2/war)
+#             :op2 (c/conflict-01))
+#       :op6 (m/military))
+# Sentence:
+# International ; Government ; weapons ; proliferation ; war and conflict ; military
+# Alignments:
+# i/international ~ International
+#  ~ ;
+# g/government-organization ~ Government
+#  ~ ;
+# w/weapon ~ weapons
+#  ~ ;
+# p/proliferate-01 ~ proliferation
+#  ~ ;
+# w2/war ~ war
+# a/and :op1 :op2 :op3 :op4 :op5 :op6 ~ and
+# c/conflict-01 ~ conflict
+#  ~ ;
+# m/military ~ military
+0 ~ i
+1 ~ 
+2 ~ g
+3 ~ 
+4 ~ w
+5 ~ 
+6 ~ p
+7 ~ 
+8 ~ w2
+9 ~ a a_op1_i a_op2_g a_op3_w a_op4_p a_op5_a2 a_op6_m
+10 ~ c
+11 ~ 
+12 ~ m
+
+#74
+# AMR:
+# (c/country :name (n/name :op1 x0/"Kenya"))
+# Sentence:
+# Kenya (KE)
+# Alignments:
+# c/country :name n/name :op1 x0/"Kenya" ~ Kenya
+0 ~ c c_name_n n n_op1_x0 x0
+
+#75
+# AMR:
+# (a/and
+#       :op1 (c/country :name (n/name :op1 x0/"India"))
+#       :op2 (c2/country :name (n2/name :op1 x1/"Islamic" :op2 x2/"Republic" :op3 x3/"of" :op4 x4/"Iran"))
+#       :op3 (c3/country :name (n3/name :op1 x5/"Democratic" :op2 x6/"People's" :op3 x7/"Republic" :op4 x8/"of" :op5 x9/"Korea")))
+# Sentence:
+# India (IN) ; Iran , Islamic Republic of (IR) ; Korea , Democratic People 's Republic of (KP)
+# Alignments:
+# c/country :name n/name :op1 x0/"India" ~ India
+#  ~ ;
+# c2/country :name n2/name :op1 x1/"Islamic" :op2 x2/"Republic" :op3 x3/"of" :op4 x4/"Iran" ~ Iran Islamic Republic of
+#  ~ ,
+#  ~ ;
+# c3/country :name n3/name :op1 x5/"Democratic" :op2 x6/"People's" :op3 x7/"Republic" :op4 x8/"of" :op5 x9/"Korea" ~ Korea Democratic People 's Republic of
+#  ~ ,
+0 ~ c c_name_n n n_op1_x0 x0
+2 ~ 
+3 5 6 7 ~ c2 c2_name_n2 n2 n2_op1_x1 x1 n2_op2_x2 x2 n2_op3_x3 x3 n2_op4_x4 x4
+4 ~ 
+9 ~ 
+10 12 13 14 15 16 ~ c3 c3_name_n3 n3 n3_op1_x5 x5 n3_op2_x6 x6 n3_op3_x7 x7 n3_op4_x8 x8 n3_op5_x9 x9
+11 ~ 
+
+#76
+# AMR:
+# (c3/candidate :quant x0/2
+#       :ARG1-of (a2/arrest-01)
+#       :domain (a/and
+#             :op1 (p4/person :name (n/name :op1 x1/"Leoluca" :op2 x2/"Lanza")
+#                   :ARG0-of (h/have-org-role-91
+#                         :ARG1 (p/political-party :name (n3/name :op1 x3/"Christian-Democrats" :op2 x4/"for" :op3 x5/"Independence" :op4 x6/"Party"))))
+#             :op2 (p5/person :name (n2/name :op1 x7/"Giovanni" :op2 x8/"Riina")
+#                   :ARG0-of (h2/have-org-role-91
+#                         :ARG1 (p2/political-party :name (n4/name :op1 x9/"Forza" :op2 x10/"Italia" :op3 x11/"Party")
+#                               :ARG1-of (h3/have-org-role-91
+#                                     :ARG0 (p3/person :name (n5/name :op1 x12/"Silvio" :op2 x13/"Berlusconi"))))))))
+# Sentence:
+# The 2 arrested candidates are Leoluca Lanza of the Christian- Democrats for Independence Party and Giovanni riina from Silvio Berlusconi 's Forza Italia party .
+# Alignments:
+#  ~ The
+# :quant x0/2 ~ 2
+# a2/arrest-01 ~ arrested
+# c3/candidate ~ candidates
+# :domain ~ are
+# p4/person :name n/name :op1 x1/"Leoluca" :op2 x2/"Lanza" ~ Leoluca Lanza
+#  ~ the
+# p/political-party :name n3/name :op1 x3/"Christian-Democrats" :op2 x4/"for" :op3 x5/"Independence" :op4 x6/"Party" ~ Christian- Democrats for Independence Party
+# a/and :op1 :op2 ~ and
+# p5/person :name n2/name :op1 x7/"Giovanni" :op2 x8/"Riina" ~ Giovanni
+# p3/person :name n5/name :op1 x12/"Silvio" :op2 x13/"Berlusconi" ~ Silvio Berlusconi
+# p2/political-party :name n4/name :op1 x9/"Forza" :op2 x10/"Italia" :op3 x11/"Party" ~ Forza Italia
+#  ~ .
+0 ~ 
+1 ~ c3_quant_x0 x0
+2 ~ :ARG1-of c3_ARG1-of_a2 a2
+3 ~ c3
+4 ~ c3_domain_a
+5 6 ~ p4 p4_name_n n n_op1_x1 x1 n_op2_x2 x2
+8 ~ 
+9 10 11 12 13 ~ p p_name_n3 n3 n3_op1_x3 x3 n3_op2_x4 x4 n3_op3_x5 x5 n3_op4_x6 x6
+14 ~ a a_op1_p4 a_op2_p5
+15 ~ p5 p5_name_n2 n2 n2_op1_x7 x7 n2_op2_x8 x8
+18 19 ~ p3 p3_name_n5 n5 n5_op1_x12 x12 n5_op2_x13 x13
+21 22 ~ p2 p2_name_n4 n4 n4_op1_x9 x9 n4_op2_x10 x10 n4_op3_x11 x11
+24 ~ 
+
+#77
+# AMR:
+# (a/and
+#       :op1 (c/country :name (n/name :op1 x0/"Estonia"))
+#       :op2 (c2/continent :name (n2/name :op1 x1/"Europe"))
+#       :op3 (c3/country :name (n3/name :op1 x2/"Russian" :op2 x3/"Federation")))
+# Sentence:
+# Estonia (EE) ; Europe ; Russian Federation (RU)
+# Alignments:
+# c/country :name n/name :op1 x0/"Estonia" ~ Estonia
+#  ~ ;
+# c2/continent :name n2/name :op1 x1/"Europe" ~ Europe
+#  ~ ;
+# c3/country :name n3/name :op1 x2/"Russian" :op2 x3/"Federation" ~ Russian Federation
+0 ~ c c_name_n n n_op1_x0 x0
+2 ~ 
+3 ~ c2 c2_name_n2 n2 n2_op1_x1 x1
+4 ~ 
+5 6 ~ c3 c3_name_n3 n3 n3_op1_x2 x2 n3_op2_x3 x3
+
+#78
+# AMR:
+# (b/begin-01
+#       :ARG0 (c/country :name (n/name :op1 x0/"Estonia"))
+#       :ARG1 (b2/bar-01
+#             :ARG0 c
+#             :ARG1 (a/access-01
+#                   :ARG1 (a6/and
+#                         :op1 (w/website
+#                               :mod (g/government-organization
+#                                     :ARG0-of (g2/govern-01))
+#                               :mod (k/key))
+#                         :op2 (w3/website
+#                               :mod (p/private)
+#                               :quant (s/some)))))
+#       :time (b3/before
+#             :op1 (n2/now)
+#             :quant (t/temporal-quantity :quant x1/3
+#                   :unit (w2/week)))
+#       :time (a4/after
+#             :op1 (o/onset
+#                   :poss (a5/attack-01
+#                         :ARG1 c
+#                         :mod (c2/cyber)
+#                         :quant (s2/series)))))
+# Sentence:
+# Estonia began barring access to key government and some private websites 3 weeks ago after the onset of a series of cyber attacks against Estonia .
+# Alignments:
+# c/country :name n/name :op1 x0/"Estonia" ~ Estonia
+# b/begin-01 :ARG0 :ARG1 ~ began
+# b2/bar-01 :ARG0 :ARG1 ~ barring
+# a/access-01 :ARG1 ~ access
+# :mod k/key ~ key
+# :mod g/government-organization ~ government
+# a6/and :op1 :op2 ~ and
+# :quant s/some ~ some
+# :mod p/private ~ private
+# w/website ~ websites
+# :quant x1/3 ~ 3
+# t/temporal-quantity :unit w2/week ~ weeks
+# a4/after :op1 ~ after
+#  ~ the
+# o/onset ~ onset
+# :poss ~ of
+#  ~ a
+# :quant s2/series ~ series
+# :mod c2/cyber ~ cyber
+# a5/attack-01 :ARG1 ~ attacks
+#  ~ .
+0 ~ c c_name_n n n_op1_x0 x0
+1 ~ b b_ARG0_c b_ARG1_b2
+2 ~ b2 b2_ARG0_c b2_ARG1_a
+3 ~ a a_ARG1_a6
+5 ~ w_mod_k k
+6 ~ w_mod_g g
+7 ~ a6 a6_op1_w a6_op2_w3
+8 ~ w3_quant_s s
+9 ~ w3_mod_p p
+10 ~ w
+11 ~ t_quant_x1 x1
+12 ~ t t_unit_w2 w2
+14 ~ a4 a4_op1_o
+15 ~ 
+16 ~ o
+17 ~ o_poss_a5
+18 ~ 
+19 ~ a5_quant_s2 s2
+21 ~ a5_mod_c2 c2
+22 ~ a5 a5_ARG1_c
+25 ~ 
+
+#79
+# AMR:
+# (r/restrict-01 :polarity x0/-
+#       :ARG1 (a/access-01
+#             :ARG1 (w/website
+#                   :mod (c/critical)))
+#       :time (e/ever))
+# Sentence:
+# Access to critical websites was never restricted .
+# Alignments:
+# a/access-01 :ARG1 ~ Access
+# :mod c/critical ~ critical
+# w/website ~ websites
+# :polarity x0/- :time e/ever ~ never
+# r/restrict-01 :ARG1 ~ restricted
+#  ~ .
+0 ~ a a_ARG1_w
+2 ~ w_mod_c c
+3 ~ w
+5 ~ r_polarity_x0 x0 r_time_e e
+6 ~ r r_ARG1_a
+7 ~ 
+
+#80
+# AMR:
+# (a/and
+#       :op1 (m/military)
+#       :op2 (t/technology))
+# Sentence:
+# Military ; technology
+# Alignments:
+# m/military ~ Military
+#  ~ ;
+# t/technology ~ technology
+0 ~ m
+1 ~ 
+2 ~ t
+
+#81
+# AMR:
+# (s/state-01
+#   :ARG0 (p3/person
+#           :name (n3/name
+#                   :op1 x0/"Ivanov"))
+#   :ARG1 (r/recommend-01
+#           :ARG1 (c2/confident-41
+#                   :ARG1 (p4/person
+#                           :mod (c3/country
+#                                  :name (n4/name
+#                                          :op1 x1/"Russia")))
+#                   :ARG2 (a/and
+#                           :op1 (c/capable-41
+#                                  :ARG1 n5
+#                                  :ARG2 (d/defend-01))
+#                           :op2 (c4/capable-41
+#                                  :ARG1 (n5/nation)
+#                                  :ARG2 (s2/security))))))
+# Sentence:
+# Ivanov stated that Russians should be confident in the nation 's defense and security capabilities .
+# Alignments:
+# p3/person :name n3/name :op1 x0/"Ivanov" ~ Ivanov
+# s/state-01 :ARG0 :ARG1 ~ stated
+# :mod p4/person :mod c3/country :name n4/name :op1 x1/"Russia" ~ Russians
+# r/recommend-01 :ARG1 ~ should
+# c2/confident-41 :ARG1 :ARG2 ~ confident
+#  ~ the
+# n5/nation ~ nation
+# d/defend-01 ~ defense
+# a/and :op1 :op2 ~ and
+# s2/security ~ security
+# c/capable-41 :ARG1 :ARG2 ~ capabilities
+#  ~ .
+0 ~ p3 p3_name_n3 n3 n3_op1_x0 x0
+1 ~ s s_ARG0_p3 s_ARG1_r
+3 ~ p4_mod_c3 p4 p4_mod_c3 c3 c3_name_n4 n4 n4_op1_x1 x1
+4 ~ r r_ARG1_c2
+6 ~ c2 c2_ARG1_p4 c2_ARG2_a
+8 ~ 
+9 ~ n5
+11 ~ d
+12 ~ a a_op1_c a_op2_c4
+13 ~ s2
+14 ~ c c_ARG1_n5 c_ARG2_d
+15 ~ 
+
+#82
+# AMR:
+# (n/need-01
+#       :ARG0 (h/he)
+#       :ARG1 (c/conduct-01
+#             :ARG0 h
+#             :ARG1 (m/meet-03
+#                   :ARG0 (p/person :name (n2/name :op1 x0/"Palin"))
+#                   :ARG1 (p2/publication :name (n3/name :op1 x1/"NBC"))
+#                   :mod (s/summit
+#                         :mod (b/beer)))))
+# Sentence:
+# He needs to conduct a beer summit between Palin and NBC .
+# Alignments:
+# h/he ~ He
+# n/need-01 :ARG0 :ARG1 ~ needs
+# c/conduct-01 :ARG0 :ARG1 ~ conduct
+#  ~ a
+# :mod b/beer ~ beer
+# :mod s/summit ~ summit
+# p/person :name n2/name :op1 x0/"Palin" ~ Palin
+# p2/publication :name n3/name :op1 x1/"NBC" ~ NBC
+#  ~ .
+0 ~ h
+1 ~ n n_ARG0_h n_ARG1_c
+3 ~ c c_ARG0_h c_ARG1_m
+4 ~ 
+5 ~ s_mod_b b
+6 ~ m_mod_s s
+8 ~ p p_name_n2 n2 n2_op1_x0 x0
+10 ~ p2 p2_name_n3 n3 n3_op1_x1 x1
+11 ~ 
+
+#83
+# AMR:
+# (b/bring-01 :li x0/2
+#       :ARG1 (h/healthcare
+#             :mod (u/universal))
+#       :ARG2 (w/we))
+# Sentence:
+# "#2 Bringing us Universal Healthcare"
+# Alignments:
+# b/bring-01 :ARG1 :ARG2 ~ Bringing
+# w/we ~ us
+# :mod u/universal ~ Universal
+# h/healthcare ~ Healthcare"
+1 ~ b b_ARG1_h b_ARG2_w
+2 ~ w
+3 ~ h_mod_u u
+4 ~ h
+
+#84
+# AMR:
+# (s/star
+#       :domain (p3/person :name (n/name :op1 x0/"Palin"))
+#       :mod (r/real)
+#       :mod (b/behind
+#             :op1 (t/ticket
+#                   :mod (p4/political-party :name (n2/name :op1 x1/"Republican"))))
+#       :time (y/year
+#             :mod (t2/this)))
+# Sentence:
+# Palin is the real star behind the Republican ticket this year .
+# Alignments:
+# p3/person :name n/name :op1 x0/"Palin" ~ Palin
+# :domain ~ is
+#  ~ the
+# :mod r/real ~ real
+# s/star ~ star
+# :mod b/behind :op1 ~ behind
+#  ~ the
+# :mod p4/political-party :name n2/name :op1 x1/"Republican" ~ Republican
+# t/ticket ~ ticket
+# :mod t2/this ~ this
+# y/year ~ year
+#  ~ .
+0 ~ p3 p3_name_n n n_op1_x0 x0
+1 ~ s_domain_p3
+2 ~ 
+3 ~ s_mod_r r
+4 ~ s
+5 ~ s_mod_b b b_op1_t
+6 ~ 
+7 ~ t_mod_p4 p4 p4_name_n2 n2 n2_op1_x1 x1
+8 ~ t
+9 ~ y_mod_t2 t2
+10 ~ y
+11 ~ 
+
+#85
+# AMR:
+# (s/suspect-01
+#       :ARG0 (i/i)
+#       :ARG1 (r/relate-01 :polarity x0/-
+#             :ARG1 (i2/it)
+#             :ARG2 (o/or
+#                   :op1 (s2/shift-01
+#                         :ARG1 (p/pole
+#                               :mod (m/magnet)))
+#                   :op2 (d/drift-01
+#                         :ARG1 p))))
+# Sentence:
+# Not , I suspect , as it relates to magnetic pole shift or drift .
+# Alignments:
+# :polarity x0/- ~ Not
+#  ~ ,
+# i/i ~ I
+# s/suspect-01 :ARG0 :ARG1 ~ suspect
+#  ~ ,
+# i2/it ~ it
+# r/relate-01 :ARG1 :ARG2 ~ relates
+# :mod m/magnet ~ magnetic
+# p/pole ~ pole
+# s2/shift-01 :ARG1 ~ shift
+# o/or :op1 :op2 ~ or
+# d/drift-01 :ARG1 ~ drift
+#  ~ .
+0 ~ r_polarity_x0 x0
+1 ~ 
+2 ~ i
+3 ~ s s_ARG0_i s_ARG1_r
+4 ~ 
+6 ~ i2
+7 ~ r r_ARG1_i2 r_ARG2_o
+9 ~ p_mod_m m
+10 ~ p
+11 ~ s2 s2_ARG1_p
+12 ~ o o_op1_s2 o_op2_d
+13 ~ d d_ARG1_p
+14 ~ 
+
+#86
+# AMR:
+# (i/inspire-01
+#       :ARG0 (d/documentary :name (n/name :op1 x0/"Flow")
+#             :topic (m/mean-01
+#                   :ARG0 (p/privatize-01
+#                         :ARG1 (w/water))
+#                   :mod (r/really)))
+#       :ARG1 (i2/i)
+#       :ARG2 (c/create-01
+#             :ARG0 i2
+#             :ARG1 (t/thread
+#                   :mod (t2/this))))
+# Sentence:
+# ' Flow , ' a documentary on what the privatization of water really means which was the inspiration for me creating this thread .
+# Alignments:
+# d/documentary :name n/name :op1 x0/"Flow" ~ Flow
+#  ~ ,
+#  ~ a
+# d/documentary ~ documentary
+#  ~ the
+# p/privatize-01 :ARG1 ~ privatization
+# w/water ~ water
+# :mod r/really ~ really
+# m/mean-01 :ARG0 ~ means
+#  ~ the
+# i/inspire-01 :ARG0 :ARG1 :ARG2 ~ inspiration
+# i2/i ~ me
+# c/create-01 :ARG0 :ARG1 ~ creating
+# :mod t2/this ~ this
+# t/thread ~ thread
+#  ~ .
+1 ~ d d_name_n n n_op1_x0 x0
+2 ~ 
+4 ~ 
+5 ~ d
+8 ~ 
+9 ~ p p_ARG1_w
+11 ~ w
+12 ~ m_mod_r r
+13 ~ m m_ARG0_p
+16 ~ 
+17 ~ i i_ARG0_d i_ARG1_i2 i_ARG2_c
+19 ~ i2
+20 ~ c c_ARG0_i2 c_ARG1_t
+21 ~ t_mod_t2 t2
+22 ~ t
+23 ~ 
+
+#87
+# AMR:
+# (o/obvious-41
+#       :ARG1 (s/say-01 :polarity x0/-
+#             :ARG0 (h/he)
+#             :ARG1 (r/recommend-01
+#                   :ARG1 (c/care-01 :polarity x1/-
+#                         :ARG0 (w/we)
+#                         :ARG1 (r2/run
+#                               :extent (l/long))))))
+# Sentence:
+# What he 's saying is n't , obviously , that we should n't care about the long run .
+# Alignments:
+# h/he ~ he
+# s/say-01 :ARG0 :ARG1 ~ saying
+# :polarity x0/- ~ n't
+#  ~ ,
+# o/obvious-41 :ARG1 ~ obviously
+#  ~ ,
+# w/we ~ we
+# r/recommend-01 :ARG1 ~ should
+# c/care-01 :ARG0 :ARG1 ~ care
+#  ~ the
+# :extent l/long ~ long
+# r2/run ~ run
+#  ~ .
+1 ~ h
+3 ~ s s_ARG0_h s_ARG1_r
+5 ~ s_polarity_x0 x0
+6 ~ 
+7 ~ o o_ARG1_s
+8 ~ 
+10 ~ w
+11 ~ r r_ARG1_c
+13 ~ c c_ARG0_w c_ARG1_r2
+15 ~ 
+16 ~ r2_extent_l l
+17 ~ r2
+18 ~ 
+
+#88
+# AMR:
+# (p/prefer-01
+#       :ARG1 (s/solution
+#             :ARG0-of (a/allow-01
+#                   :ARG1 (e/enlist-01
+#                         :ARG0 (p2/person
+#                               :ARG0-of (h/have-org-role-91
+#                                     :ARG2 (s2/soldier))
+#                               :ARG1-of (l/lose-02
+#                                     :ARG1-of (c/cause-01
+#                                           :ARG0 (p3/policy
+#                                                 :mod (i/idiot)))))
+#                         :mod (a2/again))
+#                   :condition (w/wish-01
+#                         :ARG0 p2
+#                         :ARG1 e
+#                         :time (s3/still)))))
+# Sentence:
+# Preferably with a solution that would allow soldiers lost to this idiotic policy to reenlist if they still wish to .
+# Alignments:
+# p/prefer-01 :ARG1 ~ Preferably
+#  ~ a
+# s/solution ~ solution
+# a/allow-01 :ARG1 ~ allow
+# p2/person :ARG0-of h/have-org-role-91 :ARG2 s2/soldier ~ soldiers
+# p2/person :ARG1-of l/lose-02 ~ lost
+# :mod i/idiot ~ idiotic
+# p3/policy ~ policy
+# :condition ~ if
+# s3/still ~ still
+# w/wish-01 :ARG0 :ARG1 ~ wish
+#  ~ .
+0 ~ p p_ARG1_s
+2 ~ 
+3 ~ s
+6 ~ :ARG0-of s_ARG0-of_a a a_ARG1_e
+7 ~ p2 p2_ARG0-of_h h h_ARG2_s2 s2
+8 ~ p2 p2_ARG1-of_l l
+11 ~ p3_mod_i i
+12 ~ p3
+15 ~ a_condition_w
+17 ~ s3
+18 ~ w w_ARG0_p2 w_ARG1_e
+20 ~ 
+
+#89
+# AMR:
+# (o/oppose-01
+#       :ARG0 (m/military)
+#       :ARG1 (t/thing
+#             :ARG0-of (m2/make-02
+#                   :ARG1 (r/run-01
+#                         :ARG1 m
+#                         :ARG2-of (e/efficient-41
+#                               :ARG1 m
+#                               :degree (l/less))))))
+# Sentence:
+# The military is against things that make it run less efficiently .
+# Alignments:
+#  ~ The
+# m/military ~ military
+# o/oppose-01 :ARG0 :ARG1 ~ against
+# t/thing ~ things
+# t/thing :ARG0-of m2/make-02 ~ make
+# r/run-01 :ARG1 ~ run
+# :degree l/less ~ less
+# e/efficient-41 :ARG1 ~ efficiently
+#  ~ .
+0 ~ 
+1 ~ m
+3 ~ o o_ARG0_m o_ARG1_t
+4 ~ t
+6 ~ t t_ARG0-of_m2 m2
+8 ~ r r_ARG1_m
+9 ~ e_degree_l l
+10 ~ :ARG2-of r_ARG2-of_e e e_ARG1_m
+11 ~ 
+
+#90
+# AMR:
+# (t/try-01
+#       :ARG0 (i/i)
+#       :ARG1 (c/convince-01
+#             :ARG0 i
+#             :ARG1 (y/you)
+#             :ARG2 (a/amr-unknown)))
+# Sentence:
+# Of what Am I trying to convince you ?
+# Alignments:
+# a/amr-unknown ~ what
+# i/i ~ I
+# t/try-01 :ARG0 :ARG1 ~ trying
+# c/convince-01 :ARG0 :ARG1 :ARG2 ~ convince
+# y/you ~ you
+#  ~ ?
+1 ~ a
+3 ~ i
+4 ~ t t_ARG0_i t_ARG1_c
+6 ~ c c_ARG0_i c_ARG1_y c_ARG2_a
+7 ~ y
+8 ~ 
+
+#91
+# AMR:
+# (f/fine-00
+#       :ARG1 (t/that)
+#       :ARG2 (i/i)
+#       :condition (r/represent-01
+#             :ARG0 (a/article
+#                   :domain (t2/that))
+#             :ARG1 (w/word
+#                   :mod (f2/final)
+#                   :topic (s/substance))
+#             :beneficiary (y/you)))
+# Sentence:
+# If that article represents the final word on " substance " to you , that 's fine with me .
+# Alignments:
+# :condition ~ If
+# t/that ~ that
+# a/article ~ article
+# r/represent-01 :ARG0 :ARG1 ~ represents
+#  ~ the
+# :mod f2/final ~ final
+# w/word ~ word
+#  ~ "
+# s/substance ~ substance
+#  ~ "
+# y/you ~ you
+#  ~ ,
+# t2/that ~ that
+# f/fine-00 :ARG1 :ARG2 ~ fine
+# i/i ~ me
+#  ~ .
+0 ~ f_condition_r
+1 ~ t
+2 ~ a
+3 ~ r r_ARG0_a r_ARG1_w
+4 ~ 
+5 ~ w_mod_f2 f2
+6 ~ w
+8 ~ 
+9 ~ s
+10 ~ 
+12 ~ y
+13 ~ 
+14 ~ t2
+16 ~ f f_ARG1_t f_ARG2_i
+18 ~ i
+19 ~ 
+
+#92
+# AMR:
+# (t/think-01
+#       :ARG0 (i/i)
+#       :ARG1 (a3/and
+#             :op1 (a/answer-01
+#                   :ARG0 (y/you)
+#                   :ARG1 (s/same-41
+#                         :ARG1 (m/men :quant x0/2)))
+#             :op2 (a4/answer-01 :polarity x1/-
+#                   :ARG0 y
+#                   :ARG1 (o/or
+#                         :op1 (e/equal-01
+#                               :ARG1 m
+#                               :mod (r/right))
+#                         :op2 (o2/obligate-01
+#                               :ARG1 m
+#                               :ARG2 e)))))
+# Sentence:
+# I think you are answering if two men are the " same " and not necessarily if they are equal in rights or should be .
+# Alignments:
+# i/i ~ I
+# t/think-01 :ARG0 :ARG1 ~ think
+# y/you ~ you
+# a/answer-01 :ARG0 :ARG1 ~ answering
+# :quant x0/2 ~ two
+# m/men ~ men
+#  ~ the
+#  ~ "
+# s/same-41 :ARG1 ~ same
+#  ~ "
+# a3/and :op1 :op2 ~ and
+# :polarity x1/- ~ not
+# e/equal-01 :ARG1 ~ equal
+# :mod r/right ~ rights
+# o/or :op1 :op2 ~ or
+#  ~ .
+0 ~ i
+1 ~ t t_ARG0_i t_ARG1_a3
+2 ~ y
+4 ~ a a_ARG0_y a_ARG1_s
+6 ~ m_quant_x0 x0
+7 ~ m
+9 ~ 
+10 ~ 
+11 ~ s s_ARG1_m
+12 ~ 
+13 ~ a3 a3_op1_a a3_op2_a4
+14 ~ a4_polarity_x1 x1
+19 ~ e e_ARG1_m
+21 ~ e_mod_r r
+22 ~ o o_op1_e o_op2_o2
+25 ~ 
+
+#93
+# AMR:
+# (o/overhear-01
+#       :ARG0 (i/i)
+#       :ARG1 (s/say-01
+#             :ARG0 (m/man)
+#             :ARG1 (j/jump-03
+#                   :ARG0 m
+#                   :source (o2/overpass)
+#                   :condition (h/have-03
+#                         :ARG0 m
+#                         :ARG1 (g/guts
+#                               :purpose j))
+#                   :direction (o3/off)))
+#       :time (r/ride-01
+#             :ARG1 (b/bus)
+#             :time (e/early
+#                   :degree (m2/more)
+#                   :time (w/week
+#                         :domain (t/this)))))
+# Sentence:
+# While riding the bus earlier this week , I overheard a man say that if he " had the guts to do it , " he would jump off an overpass .
+# Alignments:
+#  ~ the
+# b/bus ~ bus
+# e/early ~ earlier
+# t/this ~ this
+# w/week ~ week
+#  ~ ,
+# i/i ~ I
+# o/overhear-01 :ARG0 :ARG1 ~ overheard
+#  ~ a
+# m/man ~ man
+# s/say-01 :ARG0 :ARG1 ~ say
+# :condition ~ if
+#  ~ "
+# h/have-03 :ARG0 :ARG1 ~ had
+#  ~ the
+# g/guts ~ guts
+#  ~ ,
+#  ~ "
+# j/jump-03 :ARG0 ~ jump
+# :source ~ off
+#  ~ an
+# o2/overpass ~ overpass
+#  ~ .
+2 ~ 
+3 ~ b
+4 ~ e
+5 ~ t
+6 ~ w
+7 ~ 
+8 ~ i
+9 ~ o o_ARG0_i o_ARG1_s
+10 ~ 
+11 ~ m
+12 ~ s s_ARG0_m s_ARG1_j
+14 ~ j_condition_h
+16 ~ 
+17 ~ h h_ARG0_m h_ARG1_g
+18 ~ 
+19 ~ g
+23 ~ 
+24 ~ 
+27 ~ j j_ARG0_m
+28 ~ j_source_o2
+29 ~ 
+30 ~ o2
+31 ~ 
+
+#94
+# AMR:
+# (i/issue
+#       :domain (a/access-01
+#             :ARG1 (p/petroleum
+#                   :mod p)
+#             :mod (o/only :polarity x0/-))
+#       :mod (o2/of-course))
+# Sentence:
+# Of course , access to petroleum itelf is not the only issue .
+# Alignments:
+#  ~ ,
+# a/access-01 :ARG1 ~ access
+# :mod p/petroleum ~ petroleum
+# :domain ~ is
+# :polarity x0/- ~ not
+#  ~ the
+# :mod o/only ~ only
+# i/issue ~ issue
+#  ~ .
+2 ~ 
+3 ~ a a_ARG1_p
+5 ~ p_mod_p p
+7 ~ i_domain_a
+8 ~ o_polarity_x0 x0
+9 ~ 
+10 ~ a_mod_o o
+11 ~ i
+12 ~ 
+
+#95
+# AMR:
+# (t/think-01
+#       :ARG0 (i/i)
+#       :ARG1 (s/see-01
+#             :ARG0 (y/you)
+#             :ARG1 (s2/shift-01
+#                   :ARG2 (e/economy
+#                         :ARG1-of (l/localize-01)))))
+# Sentence:
+# I think what you are going to see is a shift towards localized economies .
+# Alignments:
+# i/i ~ I
+# t/think-01 :ARG0 :ARG1 ~ think
+# y/you ~ you
+# s/see-01 :ARG0 :ARG1 ~ see
+#  ~ a
+# s2/shift-01 :ARG2 ~ shift
+# l/localize-01 ~ localized
+# e/economy ~ economies
+#  ~ .
+0 ~ i
+1 ~ t t_ARG0_i t_ARG1_s
+3 ~ y
+7 ~ s s_ARG0_y s_ARG1_s2
+9 ~ 
+10 ~ s2 s2_ARG2_e
+12 ~ :ARG1-of e_ARG1-of_l l
+13 ~ e
+14 ~ 
+
+#96
+# AMR:
+# (t/think-01
+#       :ARG0 (i/i)
+#       :ARG1 (m/mean-01
+#             :ARG0 (p/person :name (n/name :op1 x0/"Farmerman"))
+#             :ARG1 (t2/thing
+#                   :ARG1-of (s/say-01
+#                         :ARG0 p))))
+# Sentence:
+# I 'm thinking Farmerman means what he says .
+# Alignments:
+# i/i ~ I
+# t/think-01 :ARG0 :ARG1 ~ thinking
+# p/person :name n/name :op1 x0/"Farmerman" ~ Farmerman
+# m/mean-01 :ARG0 :ARG1 ~ means
+# t2/thing :ARG1-of s/say-01 ~ says
+#  ~ .
+0 ~ i
+2 ~ t t_ARG0_i t_ARG1_m
+3 ~ p p_name_n n n_op1_x0 x0
+4 ~ m m_ARG0_p m_ARG1_t2
+7 ~ t2 t2_ARG1-of_s s
+8 ~ 
+
+#97
+# AMR:
+# (a/and
+#       :op1 (v/vote-01
+#             :ARG0 (y/you)
+#             :ARG1 (a2/and
+#                   :op1 (p/person
+#                         :ARG0-of (h/have-org-role-91
+#                               :ARG2 (p2/president)))
+#                   :op2 (g/government-organization
+#                         :ARG0-of (a3/administrate-01))
+#                   :mod (i3/incompetence
+#                         :mod (c2/clear)
+#                         :mod (o2/obvious))
+#                   :mod (e2/extreme
+#                         :mod (i/ideology))))
+#       :op2 (s/support-01
+#             :ARG0 y
+#             :ARG1 a2)
+#       :ARG1-of (r/repeat-01))
+# Sentence:
+# You repeatedly voted for and supported a president and an administration who was clearly and obviously incompetent and ideologically extreme .
+# Alignments:
+# y/you ~ You
+# r/repeat-01 ~ repeatedly
+# v/vote-01 :ARG0 :ARG1 ~ voted
+# a/and :op1 :op2 ~ and
+# s/support-01 :ARG0 :ARG1 ~ supported
+#  ~ a
+# p/person :ARG0-of h/have-org-role-91 :ARG2 p2/president ~ president
+# a2/and :op1 :op2 ~ and
+#  ~ an
+# a3/administrate-01 ~ administration
+# :mod c2/clear ~ clearly
+# :mod o2/obvious ~ obviously
+# :mod i3/incompetence ~ incompetent
+# :mod i/ideology ~ ideologically
+# :mod e2/extreme ~ extreme
+#  ~ .
+0 ~ y
+1 ~ :ARG1-of a_ARG1-of_r r
+2 ~ v v_ARG0_y v_ARG1_a2
+4 ~ a a_op1_v a_op2_s
+5 ~ s s_ARG0_y s_ARG1_a2
+6 ~ 
+7 ~ p p_ARG0-of_h h h_ARG2_p2 p2
+8 ~ a2 a2_op1_p a2_op2_g
+9 ~ 
+10 ~ :ARG0-of g_ARG0-of_a3 a3
+13 ~ i3_mod_c2 c2
+15 ~ i3_mod_o2 o2
+16 ~ a2_mod_i3 i3
+18 ~ e2_mod_i i
+19 ~ a2_mod_e2 e2
+20 ~ 
+
+#98
+# AMR:
+# (c/contrast-01
+#       :ARG1 (d/disagree-01
+#             :ARG0 (i/i)
+#             :ARG1 (y2/you)
+#             :ARG2 (n/nazis
+#                   :domain (w/we
+#                         :mod (a4/all))))
+#       :ARG2 (a3/and
+#             :op1 (b/be-temporally-at-91
+#                   :ARG1 (i2/it)
+#                   :ARG2 (b2/before
+#                         :op1 (n2/now)
+#                         :quant (o/over
+#                               :op1 (t/temporal-quantity :quant x0/60
+#                                     :unit (y/year)))))
+#             :op2 (r/reform-01
+#                   :ARG1 (m/man)
+#                   :ARG1-of (o2/obvious-41))))
+# Sentence:
+# While I disagree with you that we 'd all be Nazis , it was over 60 years ago , and the man has obviously reformed .
+# Alignments:
+# c/contrast-01 :ARG1 :ARG2 ~ While
+# i/i ~ I
+# d/disagree-01 :ARG0 :ARG1 :ARG2 ~ disagree
+# y2/you ~ you
+# w/we ~ we
+# :mod a4/all ~ all
+# :domain ~ be
+# n/nazis ~ Nazis
+#  ~ ,
+# i2/it ~ it
+# :quant o/over :op1 ~ over
+# :quant x0/60 ~ 60
+# t/temporal-quantity :unit y/year ~ years
+#  ~ ,
+# a3/and :op1 :op2 ~ and
+#  ~ the
+# m/man ~ man
+# o2/obvious-41 ~ obviously
+# r/reform-01 :ARG1 ~ reformed
+#  ~ .
+0 ~ c c_ARG1_d c_ARG2_a3
+1 ~ i
+2 ~ d d_ARG0_i d_ARG1_y2 d_ARG2_n
+4 ~ y2
+6 ~ w
+8 ~ w_mod_a4 a4
+9 ~ n_domain_w
+10 ~ n
+11 ~ 
+12 ~ i2
+14 ~ b2_quant_o o o_op1_t
+15 ~ t_quant_x0 x0
+16 ~ t t_unit_y y
+18 ~ 
+19 ~ a3 a3_op1_b a3_op2_r
+20 ~ 
+21 ~ m
+23 ~ :ARG1-of r_ARG1-of_o2 o2
+24 ~ r r_ARG1_m
+25 ~ 
+
+#99
+# AMR:
+# (c/cause-01
+#   :ARG1 (a/ask-01
+#           :ARG0 (i/i)
+#           :ARG1 (t/think-01
+#                   :ARG0 (y/you)
+#                   :ARG1 (p/possible
+#                           :domain (g/good-42
+#                                     :ARG1 (p2/person
+#                                             :quant (s/some))
+#                                     :ARG2 (d/drug)))
+#                   :mode x0/interrogative)))
+# Sentence:
+# So I ask do you think drugs can be good for some people ?
+# Alignments:
+# c/cause-01 :ARG1 ~ So
+# i/i ~ I
+# a/ask-01 :ARG0 :ARG1 ~ ask
+# y/you ~ you
+# t/think-01 :ARG0 :ARG1 ~ think
+# d/drug ~ drugs
+# p/possible ~ can
+# :domain ~ be
+# g/good-42 :ARG1 :ARG2 ~ good
+# :quant p2/person :quant s/some ~ some
+#  ~ ?
+0 ~ c c_ARG1_a
+1 ~ i
+2 ~ a a_ARG0_i a_ARG1_t
+4 ~ y
+5 ~ t t_ARG0_y t_ARG1_p
+6 ~ d
+7 ~ p
+8 ~ p_domain_g
+9 ~ g g_ARG1_p2 g_ARG2_d
+11 ~ p2_quant_s p2 p2_quant_s s
+13 ~ 
+
+#100
+# AMR:
+# (c/chapter
+#   :mod x0/1)
+# Sentence:
+# Chapter 1 .
+# Alignments:
+# c/chapter ~ Chapter
+# :mod x0/1 ~ 1
+#  ~ .
+0 ~ c
+1 ~ c_mod_x0 x0
+2 ~ 
+
+#101
+# AMR:
+# (c/contrast-01
+#   :ARG2 (f/fault-01
+#           :ARG1 (i/i)
+#           :ARG2 (t/that)
+#           :polarity x0/-))
+# Sentence:
+# That , however , is not my fault .
+# Alignments:
+# t/that ~ That
+#  ~ ,
+# c/contrast-01 :ARG2 ~ however
+#  ~ ,
+# :polarity x0/- ~ not
+# i/i ~ my
+# f/fault-01 :ARG1 :ARG2 ~ fault
+#  ~ .
+0 ~ t
+1 ~ 
+2 ~ c c_ARG2_f
+3 ~ 
+5 ~ f_polarity_x0 x0
+6 ~ i
+7 ~ f f_ARG1_i f_ARG2_t
+8 ~ 
+
+#102
+# AMR:
+# (a/and
+#       :op2 (s/sink-01
+#             :ARG0 (h/he)
+#             :ARG4 (r/reverie
+#                   :ARG1-of (l/long-03))))
+# Sentence:
+# And he sank into a reverie , which lasted a long time .
+# Alignments:
+# a/and :op2 ~ And
+# h/he ~ he
+# s/sink-01 :ARG0 :ARG4 ~ sank
+#  ~ a
+# r/reverie ~ reverie
+#  ~ ,
+#  ~ a
+# l/long-03 ~ long
+#  ~ .
+0 ~ a a_op2_s
+1 ~ h
+2 ~ s s_ARG0_h s_ARG4_r
+4 ~ 
+5 ~ r
+6 ~ 
+9 ~ 
+10 ~ :ARG1-of r_ARG1-of_l l
+12 ~ 
+
+#103
+# AMR:
+# (s/so
+#   :domain (t/that))
+# Sentence:
+# That is so .
+# Alignments:
+# t/that ~ That
+# :domain ~ is
+# s/so ~ so
+#  ~ .
+0 ~ t
+1 ~ s_domain_t
+2 ~ s
+3 ~ 
+
+#104
+# AMR:
+# (a/allow-01
+#       :ARG0 (o/one)
+#       :ARG1 (g/grow-01
+#             :ARG1 i
+#             :location (w2/wish-01
+#                   :ARG0 i
+#                   :ARG1-of (p/possible-01)))
+#       :condition (o2/or
+#             :op1 (s/sprout
+#                   :part-of (r/radish))
+#             :op2 (s2/sprig
+#                   :part-of (b2/bush
+#                         :mod (r2/rose)))
+#             :mod (o3/only)
+#             :domain (i/it)))
+# Sentence:
+# If it is only a sprout of radish or the sprig of a rose- bush , one would let it grow wherever it might wish .
+# Alignments:
+# :condition ~ If
+# i/it ~ it
+# :domain ~ is
+# :mod o3/only ~ only
+#  ~ a
+# s/sprout ~ sprout
+# r/radish ~ radish
+# o2/or :op1 :op2 ~ or
+#  ~ the
+# s2/sprig ~ sprig
+#  ~ a
+# :mod r2/rose ~ rose-
+# b2/bush ~ bush
+#  ~ ,
+# o/one ~ one
+# a/allow-01 :ARG0 :ARG1 ~ let
+# g/grow-01 :ARG1 ~ grow
+# p/possible-01 ~ might
+# w2/wish-01 :ARG0 ~ wish
+#  ~ .
+0 ~ a_condition_o2
+1 ~ i
+2 ~ o2_domain_i
+3 ~ o2_mod_o3 o3
+4 ~ 
+5 ~ s
+7 ~ r
+8 ~ o2 o2_op1_s o2_op2_s2
+9 ~ 
+10 ~ s2
+12 ~ 
+13 ~ b2_mod_r2 r2
+14 ~ b2
+15 ~ 
+16 ~ o
+18 ~ a a_ARG0_o a_ARG1_g
+20 ~ g g_ARG1_i
+23 ~ :ARG1-of w2_ARG1-of_p p
+24 ~ w2 w2_ARG0_i
+25 ~ 
+
+#105
+# AMR:
+# (b2/believe-01 :polarity x0/-
+#       :ARG0 (i/i)
+#       :ARG1 (a2/anything))
+# Sentence:
+# I do n't believe anything .
+# Alignments:
+# i/i ~ I
+# :polarity x0/- ~ n't
+# b2/believe-01 :ARG0 :ARG1 ~ believe
+# a2/anything ~ anything
+#  ~ .
+0 ~ i
+2 ~ b2_polarity_x0 x0
+3 ~ b2 b2_ARG0_i b2_ARG1_a2
+4 ~ a2
+5 ~ 
+
+#106
+# AMR:
+# (m/matter
+#       :ARG0-of (h/have-03
+#             :ARG1 (c/consequence)))
+# Sentence:
+# Matters of consequence !
+# Alignments:
+# m/matter ~ Matters
+# h/have-03 :ARG1 ~ of
+# c/consequence ~ consequence
+#  ~ !
+0 ~ m
+1 ~ :ARG0-of m_ARG0-of_h h h_ARG1_c
+2 ~ c
+3 ~ 
+
+#107
+# AMR:
+# (l/look-01 :polarity x0/-
+#       :ARG0 (h/he)
+#       :ARG1 (s/star)
+#       :time (e/ever))
+# Sentence:
+# He has never looked at a star .
+# Alignments:
+# h/he ~ He
+# :polarity x0/- :time e/ever ~ never
+# l/look-01 :ARG0 :ARG1 ~ looked
+# :time ~ at
+#  ~ a
+# s/star ~ star
+#  ~ .
+0 ~ h
+2 ~ l_polarity_x0 x0 l_time_e e
+3 ~ l l_ARG0_h l_ARG1_s
+4 ~ l_time_e
+5 ~ 
+6 ~ s
+7 ~ 
+
+#108
+# AMR:
+# (g/grow-03
+#       :ARG0 (f/flower)
+#       :ARG1 (t/thorn)
+#       :duration (m/multiple
+#             :op1 (t2/temporal-quantity :quant x0/1000000
+#                   :unit (y/year))))
+# Sentence:
+# The flowers have been growing thorns for millions of years .
+# Alignments:
+#  ~ The
+# f/flower ~ flowers
+# g/grow-03 :ARG0 :ARG1 ~ growing
+# t/thorn ~ thorns
+# t2/temporal-quantity :unit y/year ~ years
+#  ~ .
+0 ~ 
+1 ~ f
+4 ~ g g_ARG0_f g_ARG1_t
+5 ~ t
+9 ~ t2 t2_unit_y y
+10 ~ 
+
+#109
+# AMR:
+# (c/contrast-01
+#       :ARG2 (s/say-01
+#             :ARG0 (h/he)
+#             :ARG1 (k/know-01 :polarity x0/-
+#                   :ARG0 (o/one))))
+# Sentence:
+# But , as he said , one never knows !
+# Alignments:
+# c/contrast-01 :ARG2 ~ But
+#  ~ ,
+# h/he ~ he
+# s/say-01 :ARG0 :ARG1 ~ said
+#  ~ ,
+# o/one ~ one
+# k/know-01 :ARG0 ~ knows
+#  ~ !
+0 ~ c c_ARG2_s
+1 ~ 
+3 ~ h
+4 ~ s s_ARG0_h s_ARG1_k
+5 ~ 
+6 ~ o
+8 ~ k k_ARG0_o
+9 ~ 
+
+#110
+# AMR:
+# (f/fault-01
+#       :ARG1 (i3/i)
+#       :ARG2 (k/know-01 :polarity x0/-
+#             :ARG0 (y/you)
+#             :ARG1 (i2/it)
+#             :time (w/while-away-01
+#                   :duration (a/all))))
+# Sentence:
+# It is my fault that you have not known it all the while .
+# Alignments:
+# i2/it ~ It
+# i3/i ~ my
+# f/fault-01 :ARG1 :ARG2 ~ fault
+# y/you ~ you
+# :polarity x0/- ~ not
+# k/know-01 :ARG0 :ARG1 ~ known
+# a/all ~ all
+#  ~ the
+# w/while-away-01 ~ while
+#  ~ .
+0 ~ i2
+2 ~ i3
+3 ~ f f_ARG1_i3 f_ARG2_k
+5 ~ y
+7 ~ k_polarity_x0 x0
+8 ~ k k_ARG0_y k_ARG1_i2
+10 ~ a
+11 ~ 
+12 ~ w
+13 ~ 
+
+#111
+# AMR:
+# (f/frighten-01
+#   :ARG0 (t/that)
+#   :ARG1 (i/i))
+# Sentence:
+# That frightens me .. .
+# Alignments:
+# t/that ~ That
+# f/frighten-01 :ARG0 :ARG1 ~ frightens
+# i/i ~ me
+#  ~ .
+0 ~ t
+1 ~ f f_ARG0_t f_ARG1_i
+2 ~ i
+4 ~ 
+
+#112
+# AMR:
+# (a/answer-01
+#   :ARG0 (k/king)
+#   :ARG2 (o/over
+#           :op1 (t/that
+#                  :mod (a2/all))))
+# Sentence:
+# " Over all that , " the king answered .
+# Alignments:
+#  ~ "
+# o/over :op1 ~ Over
+# :mod a2/all ~ all
+# t/that ~ that
+#  ~ ,
+#  ~ "
+#  ~ the
+# k/king ~ king
+# a/answer-01 :ARG0 :ARG2 ~ answered
+#  ~ .
+0 ~ 
+1 ~ o o_op1_t
+2 ~ t_mod_a2 a2
+3 ~ t
+4 ~ 
+5 ~ 
+6 ~ 
+7 ~ k
+8 ~ a a_ARG0_k a_ARG2_o
+9 ~ 
+
+#113
+# AMR:
+# (s/see-01
+#       :ARG0 (y/you)
+#       :ARG1 (o/obey-01
+#             :ARG1 (i/i)
+#             :manner (w/well
+#                   :degree (a/amr-unknown))))
+# Sentence:
+# And you will see how well I am obeyed .
+# Alignments:
+# y/you ~ you
+# s/see-01 :ARG0 :ARG1 ~ see
+# :degree a/amr-unknown ~ how
+# :manner w/well ~ well
+# i/i ~ I
+# o/obey-01 :ARG1 ~ obeyed
+#  ~ .
+1 ~ y
+3 ~ s s_ARG0_y s_ARG1_o
+4 ~ w_degree_a a
+5 ~ o_manner_w w
+6 ~ i
+8 ~ o o_ARG1_i
+9 ~ 
+
+#114
+# AMR:
+# (o2/opine-01
+#       :ARG0 (m2/man
+#             :mod (c/conceit))
+#       :ARG1 (p2/person
+#             :ARG0-of (a3/admire-01)
+#             :domain (m/man
+#                   :mod (o/other)
+#                   :mod (a/all))))
+# Sentence:
+# For , to conceited men , all other men are admirers .
+# Alignments:
+#  ~ ,
+# :mod c/conceit ~ conceited
+#  ~ ,
+# :mod a/all ~ all
+# :mod o/other ~ other
+# :domain ~ are
+# p2/person :ARG0-of a3/admire-01 ~ admirers
+#  ~ .
+1 ~ 
+3 ~ m2_mod_c c
+5 ~ 
+6 ~ m_mod_a a
+7 ~ m_mod_o o
+9 ~ p2_domain_m
+10 ~ p2 p2_ARG0-of_a3 a3
+11 ~ 
+
+#115
+# AMR:
+# (o/obligate-01
+#   :ARG1 (i/i)
+#   :ARG2 (d/do-02
+#           :ARG1 (m/much
+#                   :degree (s/so))))
+# Sentence:
+# I have so much to do !
+# Alignments:
+# i/i ~ I
+# o/obligate-01 :ARG1 :ARG2 ~ have
+# :degree s/so ~ so
+# m/much ~ much
+# d/do-02 :ARG1 ~ do
+#  ~ !
+0 ~ i
+1 ~ o o_ARG1_i o_ARG2_d
+2 ~ m_degree_s s
+3 ~ m
+5 ~ d d_ARG1_m
+6 ~ 
+
+#116
+# AMR:
+# (m/matter
+#       :ARG1-of (d/differ-02
+#             :degree (v/very))
+#       :domain (i/it))
+# Sentence:
+# It is a very different matter .
+# Alignments:
+# i/it ~ It
+# :domain ~ is
+#  ~ a
+# :degree v/very ~ very
+# d/differ-02 ~ different
+# m/matter ~ matter
+#  ~ .
+0 ~ i
+1 ~ m_domain_i
+2 ~ 
+3 ~ d_degree_v v
+4 ~ :ARG1-of m_ARG1-of_d d
+5 ~ m
+6 ~ 
+
+#117
+# AMR:
+# (l/loosen-01
+#       :ARG0 (i/i)
+#       :ARG1 (m/muffler
+#             :consist-of (g/gold)
+#             :ARG1-of (w/wear-01
+#                   :ARG0 (h/he)
+#                   :time (a/always))))
+# Sentence:
+# I had loosened the golden muffler that he always wore .
+# Alignments:
+# i/i ~ I
+# l/loosen-01 :ARG0 :ARG1 ~ loosened
+#  ~ the
+# g/gold ~ golden
+# m/muffler ~ muffler
+# h/he ~ he
+# a/always ~ always
+# w/wear-01 :ARG0 ~ wore
+#  ~ .
+0 ~ i
+2 ~ l l_ARG0_i l_ARG1_m
+3 ~ 
+4 ~ g
+5 ~ m
+7 ~ h
+8 ~ a
+9 ~ :ARG1-of m_ARG1-of_w w w_ARG0_h
+10 ~ 
+
+#118
+# AMR:
+# (s/succeed-02
+#       :ARG0 (h/he)
+#       :ARG1 (p/person :name (t/name :op1 x0/"Terrence" :op2 x1/"D." :op3 x2/"Daniels")
+#             :ARG0-of (r/resign-01)
+#             :ARG0-of (h2/have-org-role-91
+#                   :ARG1 (c/company :name (w/name :op1 x3/"W.R." :op2 x4/"Grace"))
+#                   :ARG2 (c2/chairman
+#                         :mod (v/vice))
+#                   :time (f/former))))
+# Sentence:
+# He succeeds Terrence D. Daniels , formerly a W.R. Grace vice chairman , who resigned .
+# Alignments:
+# h/he ~ He
+# s/succeed-02 :ARG0 :ARG1 ~ succeeds
+# p/person :name t/name :op1 x0/"Terrence" :op2 x1/"D." :op3 x2/"Daniels" ~ Terrence D. Daniels
+#  ~ ,
+# f/former ~ formerly
+#  ~ a
+# c/company :name w/name :op1 x3/"W.R." :op2 x4/"Grace" ~ W.R. Grace
+# :mod v/vice ~ vice
+# p/person :ARG0-of h2/have-org-role-91 :ARG2 c2/chairman ~ chairman
+#  ~ ,
+# p/person :ARG0-of r/resign-01 ~ resigned
+#  ~ .
+0 ~ h
+1 ~ s s_ARG0_h s_ARG1_p
+2 3 4 ~ p p_name_t t t_op1_x0 x0 t_op2_x1 x1 t_op3_x2 x2
+5 ~ 
+6 ~ f
+7 ~ 
+8 9 ~ c c_name_w w w_op1_x3 x3 w_op2_x4 x4
+10 ~ c2_mod_v v
+11 ~ p p_ARG0-of_h2 h2 h2_ARG2_c2 c2
+12 ~ 
+14 ~ p p_ARG0-of_r r
+15 ~ 
+
+#119
+# AMR:
+# (c/contrast-01
+#       :ARG1 (d/day
+#             :ARG2-of (r/right-06))
+#       :ARG2 (p/place :polarity x0/-
+#             :domain (t/this)))
+# Sentence:
+# It is the right day , but this is not the place .
+# Alignments:
+# :domain ~ is
+#  ~ the
+# r/right-06 ~ right
+# d/day ~ day
+#  ~ ,
+# c/contrast-01 :ARG1 :ARG2 ~ but
+# t/this ~ this
+# :polarity x0/- ~ not
+#  ~ the
+# p/place ~ place
+#  ~ .
+1 ~ p_domain_t
+2 ~ 
+3 ~ :ARG2-of d_ARG2-of_r r
+4 ~ d
+5 ~ 
+6 ~ c c_ARG1_d c_ARG2_p
+7 ~ t
+9 ~ p_polarity_x0 x0
+10 ~ 
+11 ~ p
+12 ~ 
+
+#120
+# AMR:
+# (o/or
+#       :op1 (s/see-01 :polarity x0/-
+#             :ARG0 (i/i)
+#             :ARG1 (a/anyone))
+#       :op2 (h/hear-01 :polarity x1/-
+#             :ARG0 i
+#             :ARG1 a)
+#       :time (e/ever))
+# Sentence:
+# At no time did I see or hear anyone .
+# Alignments:
+# :time ~ At
+# :polarity x0/- ~ no
+# i/i ~ I
+# s/see-01 :ARG0 :ARG1 ~ see
+# o/or :op1 :op2 ~ or
+# h/hear-01 :ARG0 :ARG1 ~ hear
+# a/anyone ~ anyone
+#  ~ .
+0 ~ o_time_e
+1 ~ s_polarity_x0 x0
+4 ~ i
+5 ~ s s_ARG0_i s_ARG1_a
+6 ~ o o_op1_s o_op2_h
+7 ~ h h_ARG0_i h_ARG1_a
+8 ~ a
+9 ~ 
+
+#121
+# AMR:
+# (h2/have-03
+#       :ARG0 (y/you)
+#       :ARG1 (n/nothing
+#             :ARG1-of (d/do-02
+#                   :ARG0 y)
+#             :ARG1-of (c/contrast-01
+#                   :ARG2 (w2/wait-01
+#                         :ARG1 y
+#                         :ARG2 (i/i)
+#                         :location (t2/there)))))
+# Sentence:
+# You have nothing to do but wait for me there .
+# Alignments:
+# y/you ~ You
+# h2/have-03 :ARG0 :ARG1 ~ have
+# n/nothing ~ nothing
+# d/do-02 :ARG0 ~ do
+# c/contrast-01 :ARG2 ~ but
+# w2/wait-01 :ARG1 :ARG2 ~ wait
+# i/i ~ me
+# t2/there ~ there
+#  ~ .
+0 ~ y
+1 ~ h2 h2_ARG0_y h2_ARG1_n
+2 ~ n
+4 ~ :ARG1-of n_ARG1-of_d d d_ARG0_y
+5 ~ :ARG1-of n_ARG1-of_c c c_ARG2_w2
+6 ~ w2 w2_ARG1_y w2_ARG2_i
+8 ~ i
+9 ~ t2
+10 ~ 
+
+#122
+# AMR:
+# (w/want-01
+#       :ARG0 (i/i)
+#       :ARG1 (g/get-05
+#             :ARG0 i
+#             :ARG2 (r/relative-position
+#                   :op1 (w2/wall)
+#                   :direction (d/down))))
+# Sentence:
+# I want to get down from the wall .
+# Alignments:
+# i/i ~ I
+# w/want-01 :ARG0 :ARG1 ~ want
+# g/get-05 :ARG0 :ARG2 ~ get
+# d/down ~ down
+#  ~ the
+# w2/wall ~ wall
+#  ~ .
+0 ~ i
+1 ~ w w_ARG0_i w_ARG1_g
+3 ~ g g_ARG0_i g_ARG2_r
+4 ~ d
+6 ~ 
+7 ~ w2
+8 ~ 
+
+#123
+# AMR:
+# (a/and
+#       :op1 (m/moisten-01
+#             :ARG0 (i/i)
+#             :ARG1 (t/temple
+#                   :poss (h/he)))
+#       :op2 (g/give-01
+#             :ARG0 i
+#             :ARG1 (w/water
+#                   :quant (s/some)
+#                   :purpose (d/drink-01))
+#             :ARG2 h))
+# Sentence:
+# I had moistened his temples , and had given him some water to drink .
+# Alignments:
+# i/i ~ I
+# m/moisten-01 :ARG0 :ARG1 ~ moistened
+# h/he ~ his
+# t/temple ~ temples
+#  ~ ,
+# a/and :op1 :op2 ~ and
+# g/give-01 :ARG0 :ARG1 :ARG2 ~ given
+# :quant s/some ~ some
+# w/water ~ water
+# d/drink-01 ~ drink
+#  ~ .
+0 ~ i
+2 ~ m m_ARG0_i m_ARG1_t
+3 ~ h
+4 ~ t
+5 ~ 
+6 ~ a a_op1_m a_op2_g
+8 ~ g g_ARG0_i g_ARG1_w g_ARG2_h
+10 ~ w_quant_s s
+11 ~ w
+13 ~ d
+14 ~ 
+
+#124
+# AMR:
+# (k/know-01
+#       :ARG0 (y/you)
+#       :ARG1 (t/that)
+#       :manner (a/amr-unknown))
+# Sentence:
+# How do you know about that ?
+# Alignments:
+# :manner a/amr-unknown ~ How
+# y/you ~ you
+# k/know-01 :ARG0 :ARG1 ~ know
+# t/that ~ that
+#  ~ ?
+0 ~ k_manner_a a
+2 ~ y
+3 ~ k k_ARG0_y k_ARG1_t
+5 ~ t
+6 ~ 
+
+#125
+# AMR:
+# (l/look-01
+#       :ARG0 (h/he)
+#       :ARG2-of (s/serious-01
+#             :degree (v/very))
+#       :ARG1-of (r/resemble-01
+#             :ARG2 (s2/someone
+#                   :ARG1-of (l2/lose-02
+#                         :direction (a/away
+#                               :mod (f/far))))))
+# Sentence:
+# His look was very serious , like someone lost far away .
+# Alignments:
+# h/he ~ His
+# l/look-01 :ARG0 ~ look
+# :degree v/very ~ very
+# s/serious-01 ~ serious
+#  ~ ,
+# s2/someone ~ someone
+# l2/lose-02 ~ lost
+# :mod f/far ~ far
+# a/away ~ away
+#  ~ .
+0 ~ h
+1 ~ l l_ARG0_h
+3 ~ s_degree_v v
+4 ~ :ARG2-of l_ARG2-of_s s
+5 ~ 
+7 ~ s2
+8 ~ :ARG1-of s2_ARG1-of_l2 l2
+9 ~ a_mod_f f
+10 ~ a
+11 ~ 
+
+#126
+# AMR:
+# (g/guide-01
+#       :ARG0 (s/star)
+#       :ARG1 (s2/some
+#             :ARG0-of (t/travel-01)))
+# Sentence:
+# For some , who are travelers , the stars are guides .
+# Alignments:
+# s2/some ~ some
+#  ~ ,
+# t/travel-01 ~ travelers
+#  ~ ,
+#  ~ the
+# s/star ~ stars
+# g/guide-01 :ARG0 :ARG1 ~ guides
+#  ~ .
+1 ~ s2
+2 ~ 
+5 ~ :ARG0-of s2_ARG0-of_t t
+6 ~ 
+7 ~ 
+8 ~ s
+10 ~ g g_ARG0_s g_ARG1_s2
+11 ~ 
+
+#127
+# AMR:
+# (s/see-01 :polarity x0/-
+#       :ARG0 (i/i)
+#       :ARG1 (s2/set-out-07
+#             :ARG0 (h/he)
+#             :ARG1 (w/way
+#                   :poss h))
+#       :time (d/date-entity
+#             :dayperiod (n/night)
+#             :mod (t/that)))
+# Sentence:
+# That night I did not see him set out on his way .
+# Alignments:
+# :mod t/that ~ That
+# n/night ~ night
+# i/i ~ I
+# :polarity x0/- ~ not
+# s/see-01 :ARG0 :ARG1 ~ see
+# h/he ~ him
+# w/way ~ way
+#  ~ .
+0 ~ d_mod_t t
+1 ~ n
+2 ~ i
+4 ~ s_polarity_x0 x0
+5 ~ s s_ARG0_i s_ARG1_s2
+6 ~ h
+11 ~ w
+12 ~ 
+
+#128
+# AMR:
+# (s/star
+#       :domain (w/well
+#             :ARG0-of (h/have-03
+#                   :ARG1 (p/pulley
+#                         :mod (r/rust))))
+#       :mod (a/all))
+# Sentence:
+# All the stars will be wells with a rusty pulley .
+# Alignments:
+# :mod a/all ~ All
+#  ~ the
+# s/star ~ stars
+# :domain ~ be
+# w/well ~ wells
+#  ~ a
+# :mod r/rust ~ rusty
+# p/pulley ~ pulley
+#  ~ .
+0 ~ s_mod_a a
+1 ~ 
+2 ~ s
+4 ~ s_domain_w
+5 ~ w
+7 ~ 
+8 ~ p_mod_r r
+9 ~ p
+10 ~ 
+
+#129
+# AMR:
+# (a/and
+#       :op2 (s/sit-down-02
+#             :ARG1 (h/he)
+#             :ARG1-of (c/cause-01
+#                   :ARG0 (f/fear-01
+#                         :ARG0 h))))
+# Sentence:
+# And he sat down , because he was afraid .
+# Alignments:
+# a/and :op2 ~ And
+# h/he ~ he
+#  ~ ,
+# c/cause-01 :ARG0 ~ because
+# h/he ~ he
+#  ~ .
+0 ~ a a_op2_s
+1 ~ h
+4 ~ 
+5 ~ :ARG1-of s_ARG1-of_c c c_ARG0_f
+6 ~ h
+9 ~ 
+
+#130
+# AMR:
+# (h/have-03
+#       :ARG0 (s/she)
+#       :ARG1 (t/thorn :quant x0/4
+#             :ARG1-of (u/use-01 :polarity x1/-))
+#       :purpose (p/protect-01
+#             :ARG0 t
+#             :ARG1 s
+#             :ARG2 (w/world
+#                   :mod (a/all))))
+# Sentence:
+# She has four thorns , of no use at all , to protect herself against all the world .
+# Alignments:
+# s/she ~ She
+# h/have-03 :ARG0 :ARG1 ~ has
+# :quant x0/4 ~ four
+# t/thorn ~ thorns
+#  ~ ,
+# h/have-03 :ARG0 :ARG1 ~ of
+# :polarity x1/- ~ no
+# u/use-01 ~ use
+# :mod a/all ~ all
+#  ~ ,
+# p/protect-01 :ARG0 :ARG1 :ARG2 ~ protect
+#  ~ the
+# w/world ~ world
+#  ~ .
+0 ~ s
+1 ~ h h_ARG0_s h_ARG1_t
+2 ~ t_quant_x0 x0
+3 ~ t
+4 ~ 
+5 ~ h h_ARG0_s h_ARG1_t
+6 ~ u_polarity_x1 x1
+7 ~ :ARG1-of t_ARG1-of_u u
+9 ~ w_mod_a a
+10 ~ 
+12 ~ p p_ARG0_t p_ARG1_s p_ARG2_w
+16 ~ 
+17 ~ w
+18 ~ 
+
+#131
+# AMR:
+# (w/want-01
+#       :ARG0 (i/i)
+#       :ARG1 (t/tire-01
+#             :ARG0 (h/he)
+#             :ARG1 h
+#             :instrument (r/rope))
+#       :polarity x0/-)
+# Sentence:
+# I did not want him to tire himself with the rope .
+# Alignments:
+# i/i ~ I
+# :polarity x0/- ~ not
+# w/want-01 :ARG0 :ARG1 ~ want
+# h/he ~ him
+# t/tire-01 :ARG0 :ARG1 ~ tire
+#  ~ the
+# r/rope ~ rope
+#  ~ .
+0 ~ i
+2 ~ w_polarity_x0 x0
+3 ~ w w_ARG0_i w_ARG1_t
+4 ~ h
+6 ~ t t_ARG0_h t_ARG1_h
+9 ~ 
+10 ~ r
+11 ~ 
+
+#132
+# AMR:
+# (a/and
+#       :op1 (h/hunger-01
+#             :ARG0 (h2/he)
+#             :polarity x0/-)
+#       :op2 (t/thirst-01
+#             :ARG0 h2
+#             :polarity x1/-)
+#       :time (e/ever))
+# Sentence:
+# He has never been either hungry or thirsty .
+# Alignments:
+# h2/he ~ He
+# h/hunger-01 :ARG0 ~ hungry
+# t/thirst-01 :ARG0 ~ thirsty
+#  ~ .
+0 ~ h2
+5 ~ h h_ARG0_h2
+7 ~ t t_ARG0_h2
+8 ~ 
+
+#133
+# AMR:
+# (g2/gesture-01
+#       :ARG0 (i/i)
+#       :ARG1 (w/weary-01
+#             :ARG1 i))
+# Sentence:
+# I made a gesture of weariness .
+# Alignments:
+# i/i ~ I
+#  ~ a
+# g2/gesture-01 :ARG0 :ARG1 ~ gesture
+# w/weary-01 :ARG1 ~ weariness
+#  ~ .
+0 ~ i
+2 ~ 
+3 ~ g2 g2_ARG0_i g2_ARG1_w
+5 ~ w w_ARG1_i
+6 ~ 
+
+#134
+# AMR:
+# (f/feel-01
+#       :ARG0 (i/i)
+#       :ARG1 (a/and
+#             :op1 (m/move-05
+#                   :ARG1 i
+#                   :ARG1-of (d/deep-02))
+#             :op2 (s/stir-02
+#                   :ARG1 i)))
+# Sentence:
+# I felt deeply moved , and stirred .
+# Alignments:
+# i/i ~ I
+# d/deep-02 ~ deeply
+# m/move-05 :ARG1 ~ moved
+#  ~ ,
+# a/and :op1 :op2 ~ and
+# s/stir-02 :ARG1 ~ stirred
+#  ~ .
+0 ~ i
+2 ~ :ARG1-of m_ARG1-of_d d
+3 ~ m m_ARG1_i
+4 ~ 
+5 ~ a a_op1_m a_op2_s
+6 ~ s s_ARG1_i
+7 ~ 
+
+#135
+# AMR:
+# (p/person
+#       :ARG0-of (s/sell-01
+#             :ARG1 (p2/pill
+#                   :ARG1-of (i/invent-01
+#                         :purpose (q/quench-01
+#                               :ARG1 (t/thirst-01)))))
+#      :ARG0-of (m/merchandise-01)
+#      :domain (t2/this))
+# Sentence:
+# This was a merchant who sold pills that had been invented to quench thirst .
+# Alignments:
+# p/person :domain t2/this ~ This
+# :domain ~ was
+#  ~ a
+# p/person :ARG0-of m/merchandise-01 ~ merchant
+# p/person :ARG0-of s/sell-01 ~ sold
+# p2/pill ~ pills
+# i/invent-01 ~ invented
+# q/quench-01 :ARG1 ~ quench
+# t/thirst-01 ~ thirst
+#  ~ .
+0 ~ p p_domain_t2 t2
+1 ~ p_domain_t2
+2 ~ 
+3 ~ p p_ARG0-of_m m
+5 ~ p p_ARG0-of_s s
+6 ~ p2
+10 ~ :ARG1-of p2_ARG1-of_i i
+12 ~ q q_ARG1_t
+13 ~ t
+14 ~ 
+
+#136
+# AMR:
+# (s/seem-01
+#       :ARG1 (h/hear-01 :polarity x0/-
+#             :ARG0 (p/prince
+#                   :mod (l/little)
+#                   :ARG0-of (a/ask-01
+#                         :ARG2 (i/i)
+#                         :ARG1 (q/question
+#                               :quant (m/many
+#                                     :degree (s2/so)))))
+#             :ARG1 (o/one
+#                   :ARG1-of (a2/ask-01
+#                         :ARG0 i
+#                         :ARG2 p))
+#             :time (e2/ever)))
+# Sentence:
+# The little prince , who asked me so many questions , never seemed to hear the ones I asked him .
+# Alignments:
+#  ~ The
+# :mod l/little ~ little
+# p/prince ~ prince
+#  ~ ,
+# a/ask-01 :ARG2 :ARG1 ~ asked
+# i/i ~ me
+# :degree s2/so ~ so
+# :quant m/many ~ many
+# q/question ~ questions
+#  ~ ,
+# :polarity x0/- :time e2/ever ~ never
+# s/seem-01 :ARG1 ~ seemed
+# h/hear-01 :ARG0 :ARG1 ~ hear
+#  ~ the
+# o/one ~ ones
+# i ~ I
+# a2/ask-01 :ARG0 :ARG2 ~ asked
+#  ~ .
+0 ~ 
+1 ~ p_mod_l l
+2 ~ p
+3 ~ 
+5 ~ :ARG0-of p_ARG0-of_a a a_ARG2_i a_ARG1_q
+6 ~ i
+7 ~ m_degree_s2 s2
+8 ~ q_quant_m m
+9 ~ q
+10 ~ 
+11 ~ h_polarity_x0 x0 h_time_e2 e2
+12 ~ s s_ARG1_h
+14 ~ h h_ARG0_p h_ARG1_o
+15 ~ 
+16 ~ o
+17 ~ i
+18 ~ :ARG1-of o_ARG1-of_a2 a2 a2_ARG0_i a2_ARG2_p
+20 ~ 
+
+#137
+# AMR:
+# (s/seem-01
+#       :ARG1 (s2/surprise-01
+#             :ARG1 (y/you)
+#             :degree (m/much
+#                   :degree (v/very)))
+#       :time (a/at-first))
+# Sentence:
+# At first you seemed to be very much surprised .
+# Alignments:
+# :time ~ At
+# y/you ~ you
+# s/seem-01 :ARG1 ~ seemed
+# :degree v/very ~ very
+# :degree m/much ~ much
+# s2/surprise-01 :ARG1 ~ surprised
+#  ~ .
+0 ~ s_time_a
+2 ~ y
+3 ~ s s_ARG1_s2
+6 ~ m_degree_v v
+7 ~ s2_degree_m m
+8 ~ s2 s2_ARG1_y
+9 ~ 
+
+#138
+# AMR:
+# (s/seem-01
+#       :ARG1 (b/beautiful-02
+#             :ARG1 (t2/they)
+#             :degree (v2/very)))
+# Sentence:
+# It seems that they are very beautiful .
+# Alignments:
+# s/seem-01 :ARG1 ~ seems
+# t2/they ~ they
+# :degree v2/very ~ very
+# b/beautiful-02 :ARG1 ~ beautiful
+#  ~ .
+1 ~ s s_ARG1_b
+3 ~ t2
+5 ~ b_degree_v2 v2
+6 ~ b b_ARG1_t2
+7 ~ 
+
+#139
+# AMR:
+# (w/want-01 :polarity x0/-
+#       :ARG0 (s/she)
+#       :ARG1 (s2/see-01
+#             :ARG0 (h/he)
+#             :ARG1 (c/cry-02
+#                   :ARG0 s)))
+# Sentence:
+# For she did not want him to see her crying .
+# Alignments:
+# s/she ~ she
+# :polarity x0/- ~ not
+# w/want-01 :ARG0 :ARG1 ~ want
+# h/he ~ him
+# s2/see-01 :ARG0 :ARG1 ~ see
+# c/cry-02 :ARG0 ~ crying
+#  ~ .
+1 ~ s
+3 ~ w_polarity_x0 x0
+4 ~ w w_ARG0_s w_ARG1_s2
+5 ~ h
+7 ~ s2 s2_ARG0_h s2_ARG1_c
+9 ~ c c_ARG0_s
+10 ~ 
+
+#140
+# AMR:
+# (p/possible-01
+#       :ARG1 (c/cause-01
+#             :ARG0 (t/think-01
+#                   :ARG0 (h/he)
+#                   :ARG2 (s/something
+#                         :mod (e/else)
+#                         :ARG1-of (d/differ-02
+#                               :ARG2 h)))))
+# Sentence:
+# Perhaps that is because he is thinking of something else besides himself .
+# Alignments:
+# p/possible-01 :ARG1 ~ Perhaps
+# c/cause-01 :ARG0 ~ because
+# h/he ~ he
+# t/think-01 :ARG0 :ARG2 ~ thinking
+# s/something ~ something
+# :mod e/else ~ else
+#  ~ .
+0 ~ p p_ARG1_c
+3 ~ c c_ARG0_t
+4 ~ h
+6 ~ t t_ARG0_h t_ARG2_s
+8 ~ s
+9 ~ s_mod_e e
+12 ~ 
+
+#141
+# AMR:
+# (d2/do-02
+#       :ARG0 (y/you)
+#       :ARG1 (a/amr-unknown))
+# Sentence:
+# What are you doing ?
+# Alignments:
+# a/amr-unknown ~ What
+# y/you ~ you
+# d2/do-02 :ARG0 :ARG1 ~ doing
+#  ~ ?
+0 ~ a
+2 ~ y
+3 ~ d2 d2_ARG0_y d2_ARG1_a
+4 ~ 
+
+#142
+# AMR:
+# (t/try-01
+#       :ARG0 (i/i)
+#       :ARG1 (f/find-out-03
+#             :ARG0 i
+#             :ARG1 (u2/understand-01 :mode x0/interrogative
+#                   :ARG0 (p/person
+#                         :mod (t2/this))
+#                   :ARG1-of (t3/true-01))))
+# Sentence:
+# I would try to find out , so , if this was a person of true understanding .
+# Alignments:
+# i/i ~ I
+# t/try-01 :ARG0 :ARG1 ~ try
+# f/find-out-03 :ARG0 :ARG1 ~ find
+#  ~ ,
+#  ~ ,
+# :mod p/person :mod t2/this ~ this
+#  ~ a
+# p/person ~ person
+# t3/true-01 ~ true
+# u2/understand-01 :ARG0 ~ understanding
+#  ~ .
+0 ~ i
+2 ~ t t_ARG0_i t_ARG1_f
+4 ~ f f_ARG0_i f_ARG1_u2
+6 ~ 
+8 ~ 
+10 ~ p_mod_t2 p p_mod_t2 t2
+12 ~ 
+13 ~ p
+15 ~ :ARG1-of u2_ARG1-of_t3 t3
+16 ~ u2 u2_ARG0_p
+17 ~ 
+
+#143
+# AMR:
+# (t/try-01
+#       :ARG0 (i/i)
+#       :ARG1 (m/make-02
+#             :ARG0 i
+#             :ARG1 (t2/true-02
+#                   :ARG1 (p/portrait
+#                         :poss i)
+#                   :ARG2 (l/life)
+#                   :degree (m2/most)
+#                   :compared-to (p2/possible-01)))
+#       :mod (c/certain))
+# Sentence:
+# I shall certainly try to make my portraits as true to life as possible .
+# Alignments:
+# i/i ~ I
+# :mod c/certain ~ certainly
+# t/try-01 :ARG0 :ARG1 ~ try
+# m/make-02 :ARG0 :ARG1 ~ make
+# i ~ my
+# p/portrait ~ portraits
+# t2/true-02 :ARG1 :ARG2 ~ true
+# l/life ~ life
+# p2/possible-01 ~ possible
+#  ~ .
+0 ~ i
+2 ~ t_mod_c c
+3 ~ t t_ARG0_i t_ARG1_m
+5 ~ m m_ARG0_i m_ARG1_t2
+6 ~ i
+7 ~ p
+9 ~ t2 t2_ARG1_p t2_ARG2_l
+11 ~ l
+13 ~ p2
+14 ~ 
+
+#144
+# AMR:
+# (t/think-01
+#       :ARG0 (y/you)
+#       :ARG1 (o/obligate-01
+#             :ARG1 s
+#             :ARG2 (h/have-03
+#                   :ARG0 (s/sheep
+#                         :mod (t2/this))
+#                   :ARG1 (g/grass
+#                         :quant (d/deal
+#                               :mod (g2/great)))))
+#       :mode x0/interrogative)
+# Sentence:
+# Do you think that this sheep will have to have a great deal of grass ?
+# Alignments:
+# y/you ~ you
+# t/think-01 :ARG0 :ARG1 ~ think
+# :mod t2/this ~ this
+# s/sheep ~ sheep
+# o/obligate-01 :ARG1 :ARG2 ~ have
+# h/have-03 :ARG0 :ARG1 ~ have
+#  ~ a
+# :mod g2/great ~ great
+# :quant d/deal ~ deal
+# h/have-03 :ARG0 :ARG1 ~ of
+# g/grass ~ grass
+#  ~ ?
+1 ~ y
+2 ~ t t_ARG0_y t_ARG1_o
+4 ~ s_mod_t2 t2
+5 ~ s
+7 ~ o o_ARG1_s o_ARG2_h
+9 ~ h h_ARG0_s h_ARG1_g
+10 ~ 
+11 ~ d_mod_g2 g2
+12 ~ g_quant_d d
+13 ~ h h_ARG0_s h_ARG1_g
+14 ~ g
+15 ~ 
+
+#145
+# AMR:
+# (c/collect-01
+#       :ARG0 (h/he)
+#       :ARG1 (b/butterfly)
+#       :mode x0/interrogative)
+# Sentence:
+# Does he collect butterflies ?
+# Alignments:
+# h/he ~ he
+# c/collect-01 :ARG0 :ARG1 ~ collect
+# b/butterfly ~ butterflies
+#  ~ ?
+1 ~ h
+2 ~ c c_ARG0_h c_ARG1_b
+3 ~ b
+4 ~ 
+
+#146
+# AMR:
+# (c/contrast-01
+#       :ARG2 (o/obligate-01
+#             :ARG1 (y/you)
+#             :ARG2 (r/recognize-02
+#                   :ARG0 y
+#                   :ARG1 (b/be-temporally-at-91
+#                         :ARG1 (e/event
+#                               :mod (t/this))
+#                         :ARG2 (b2/before
+#                               :op1 (n/now)
+#                               :quant (t2/temporal-quantity :quant x0/35
+#                                     :unit (y2/year)))))))
+# Sentence:
+# But you have to recognize that these events took place 35 years ago .
+# Alignments:
+# c/contrast-01 :ARG2 ~ But
+# y/you ~ you
+# o/obligate-01 :ARG1 :ARG2 ~ have
+# r/recognize-02 :ARG0 :ARG1 ~ recognize
+# e/event ~ events
+# :quant x0/35 ~ 35
+# t2/temporal-quantity :unit y2/year ~ years
+#  ~ .
+0 ~ c c_ARG2_o
+1 ~ y
+2 ~ o o_ARG1_y o_ARG2_r
+4 ~ r r_ARG0_y r_ARG1_b
+7 ~ e
+10 ~ t2_quant_x0 x0
+11 ~ t2 t2_unit_y2 y2
+13 ~ 
+
+#147
+# AMR:
+# (s/suspend-01
+#   :ARG0 (g4/government-organization
+#           :ARG0-of (g/govern-01)
+#           :mod (f/federal))
+#   :ARG1 (s2/sell-01
+#           :ARG1 (b/bond
+#                   :mod (s3/savings)
+#                   :mod (c3/country
+#                          :name (n/name
+#                                  :op1 x0/"U.S."))))
+#   :ARG1-of (c/cause-01
+#              :ARG0 (l/lift-01
+#                      :ARG0 (g3/government-organization
+#                              :name (n2/name
+#                                      :op1 x1/"Congress"))
+#                      :ARG1 (c4/ceiling
+#                              :prep-on (d/debt
+#                                         :mod (g5/government-organization
+#                                                :ARG0-of (g2/govern-01))))
+#                      :polarity x2/-)))
+# Sentence:
+# The federal government suspended sales of U.S. savings bonds because Congress has n't lifted the ceiling on government debt .
+# Alignments:
+#  ~ The
+# :mod f/federal ~ federal
+# g4/government-organization ~ government
+# s/suspend-01 :ARG0 :ARG1 ~ suspended
+# :mod c3/country :name n/name :op1 x0/"U.S." ~ U.S.
+# :mod s3/savings ~ savings
+# b/bond ~ bonds
+# c/cause-01 :ARG0 ~ because
+# g3/government-organization :name n2/name :op1 x1/"Congress" ~ Congress
+# :polarity x2/- ~ n't
+# l/lift-01 :ARG0 :ARG1 ~ lifted
+#  ~ the
+# c4/ceiling ~ ceiling
+# :prep-on ~ on
+# g/govern-01 ~ government
+# d/debt ~ debt
+#  ~ .
+0 ~ 
+1 ~ g4_mod_f f
+2 ~ g4
+3 ~ s s_ARG0_g4 s_ARG1_s2
+6 ~ b_mod_c3 c3 c3_name_n n n_op1_x0 x0
+7 ~ b_mod_s3 s3
+8 ~ b
+9 ~ :ARG1-of s_ARG1-of_c c c_ARG0_l
+10 ~ g3 g3_name_n2 n2 n2_op1_x1 x1
+12 ~ l_polarity_x2 x2
+13 ~ l l_ARG0_g3 l_ARG1_c4
+14 ~ 
+15 ~ c4
+16 ~ c4_prep-on_d
+17 ~ :ARG0-of g4_ARG0-of_g g
+18 ~ d
+19 ~ 
+
+#148
+# AMR:
+# (a/and
+#   :op2 (d/decide-01
+#          :ARG0 (c/city)
+#          :ARG1 (t/treat-01
+#                  :ARG0 c
+#                  :ARG1 (g/guest
+#                          :poss c)
+#                  :ARG2 (o/or
+#                          :op1 (r/royalty)
+#                          :op2 (s/star
+#                                 :mod (r2/rock))
+#                          :degree (m/more)
+#                          :compared-to (p/person
+#                                         :ARG0-of (o2/own-01
+#                                                    :ARG1 (f/factory)))))))
+# Sentence:
+# And the city decided to treat its guests more like royalty or rock stars than factory owners .
+# Alignments:
+# a/and :op2 ~ And
+#  ~ the
+# c/city ~ city
+# d/decide-01 :ARG0 :ARG1 ~ decided
+# t/treat-01 :ARG0 :ARG1 :ARG2 ~ treat
+# g/guest ~ guests
+# :degree m/more ~ more
+# :compared-to ~ like
+# r/royalty ~ royalty
+# o/or :op1 :op2 ~ or
+# :mod r2/rock ~ rock
+# s/star ~ stars
+# f/factory ~ factory
+#  ~ .
+0 ~ a a_op2_d
+1 ~ 
+2 ~ c
+3 ~ d d_ARG0_c d_ARG1_t
+5 ~ t t_ARG0_c t_ARG1_g t_ARG2_o
+7 ~ g
+8 ~ o_degree_m m
+9 ~ o_compared-to_p
+10 ~ r
+11 ~ o o_op1_r o_op2_s
+12 ~ s_mod_r2 r2
+13 ~ s
+15 ~ f
+17 ~ 
+
+#149
+# AMR:
+# (d/drool-02
+#       :ARG0 (p2/person
+#             :ARG0-of (h/have-org-role-91
+#                   :ARG1 (c2/company
+#                         :mod (t/thing :name (n/name :op1 x0/"Fortune" :op2 x1/"500")))
+#                   :ARG2 (e/executive)))
+#       :ARG1 (a/and
+#             :op1 (c/car)
+#             :op2 (p/person
+#                   :ARG0-of (d2/drive-01)))
+#       :time (a2/after
+#             :op1 (r/race-02))
+#       :ARG1-of (r3/resemble-01
+#             :ARG2 (d3/drool-02
+#                   :ARG0 (s2/schoolboy))))
+# Sentence:
+# After the race , Fortune 500 executives drooled like schoolboys over the cars and drivers .
+# Alignments:
+# a2/after :op1 ~ After
+#  ~ the
+# r/race-02 ~ race
+#  ~ ,
+# :mod t/thing :name n/name :op1 x0/"Fortune" :op2 x1/"500" ~ Fortune 500
+# p2/person :ARG0-of h/have-org-role-91 :ARG2 e/executive ~ executives
+# d/drool-02 :ARG0 :ARG1 ~ drooled
+# s2/schoolboy ~ schoolboys
+#  ~ the
+# c/car ~ cars
+# a/and :op1 :op2 ~ and
+# p/person :ARG0-of d2/drive-01 ~ drivers
+#  ~ .
+0 ~ a2 a2_op1_r
+1 ~ 
+2 ~ r
+3 ~ 
+4 5 ~ c2_mod_t t t_name_n n n_op1_x0 x0 n_op2_x1 x1
+6 ~ p2 p2_ARG0-of_h h h_ARG2_e e
+7 ~ d d_ARG0_p2 d_ARG1_a
+9 ~ s2
+11 ~ 
+12 ~ c
+13 ~ a a_op1_c a_op2_p
+14 ~ p p_ARG0-of_d2 d2
+15 ~ 
+
+#150
+# AMR:
+# (a/and
+#   :op1 (c/change-01
+#          :ARG0 (i/it)
+#          :ARG1 (p/pattern
+#                  :mod (d/develop-02))
+#          :ARG2 (b/bad
+#                  :degree (m/more)))
+#   :op2 (c2/cause-01
+#          :ARG0 i
+#          :ARG1 (c3/congest-01
+#                  :ARG1 (a2/around
+#                          :op1 (e/exit
+#                                 :poss i))
+#                  :ARG2 (t/traffic)
+#                  :ARG1-of (l2/localize-01)))
+#   :time (a3/already))
+# Sentence:
+# Already it is changing development patterns for the worse and causing localized traffic congestion around its exits .
+# Alignments:
+# a3/already ~ Already
+# i/it ~ it
+# c/change-01 :ARG0 :ARG1 :ARG2 ~ changing
+# :mod d/develop-02 ~ development
+# p/pattern ~ patterns
+#  ~ the
+# a/and :op1 :op2 ~ and
+# c2/cause-01 :ARG0 :ARG1 ~ causing
+# l2/localize-01 ~ localized
+# t/traffic ~ traffic
+# c3/congest-01 :ARG1 :ARG2 ~ congestion
+# a2/around :op1 ~ around
+# e/exit ~ exits
+#  ~ .
+0 ~ a3
+1 ~ i
+3 ~ c c_ARG0_i c_ARG1_p c_ARG2_b
+4 ~ p_mod_d d
+5 ~ p
+7 ~ 
+9 ~ a a_op1_c a_op2_c2
+10 ~ c2 c2_ARG0_i c2_ARG1_c3
+11 ~ :ARG1-of c3_ARG1-of_l2 l2
+12 ~ t
+13 ~ c3 c3_ARG1_a2 c3_ARG2_t
+14 ~ a2 a2_op1_e
+16 ~ e
+17 ~ 
+
+#151
+# AMR:
+# (b/be-located-at-91
+#       :ARG1 (p/person :name (h/name :op1 x0/"Homer" :op2 x1/"Simpson"))
+#       :ARG2 (a/amr-unknown)
+#       :time (n/need-01
+#             :ARG0 (y/you)
+#             :ARG1 p))
+# Sentence:
+# Where 's Homer Simpson when you need him ?
+# Alignments:
+# a/amr-unknown ~ Where
+# p/person :name h/name :op1 x0/"Homer" :op2 x1/"Simpson" ~ Homer Simpson
+# :time ~ when
+# y/you ~ you
+# n/need-01 :ARG0 :ARG1 ~ need
+#  ~ ?
+0 ~ a
+2 3 ~ p p_name_h h h_op1_x0 x0 h_op2_x1 x1
+4 ~ b_time_n
+5 ~ y
+6 ~ n n_ARG0_y n_ARG1_p
+8 ~ 
+
+#152
+# AMR:
+# (r2/recommend-01
+#   :ARG1 (d/do-02
+#           :ARG0 w
+#           :ARG1 (t/thing
+#                   :quant x0/2))
+#   :condition (r/recognize-02
+#                :ARG0 (w/we)
+#                :ARG1 (b/benefit-01
+#                        :ARG0 (r3/road)
+#                        :ARG1 (b2/business)
+#                        :mod (p/primary))))
+# Sentence:
+# If we recognize that roads primarily benefit businesses then we should do two things :
+# Alignments:
+# :condition ~ If
+# w/we ~ we
+# r2/recommend-01 :ARG1 ~ recognize
+# r3/road ~ roads
+# :mod p/primary ~ primarily
+# b/benefit-01 :ARG0 :ARG1 ~ benefit
+# b2/business ~ businesses
+# w/we ~ we
+# r2/recommend-01 :ARG1 ~ should
+# d/do-02 :ARG0 :ARG1 ~ do
+# :quant t/thing :quant x0/2 ~ two
+# t/thing ~ things
+#  ~ :
+0 ~ r2_condition_r
+1 ~ w
+2 ~ r2 r2_ARG1_d
+4 ~ r3
+5 ~ b_mod_p p
+6 ~ b b_ARG0_r3 b_ARG1_b2
+7 ~ b2
+9 ~ w
+10 ~ r2 r2_ARG1_d
+11 ~ d d_ARG0_w d_ARG1_t
+12 ~ t_quant_x0 t t_quant_x0 x0
+13 ~ t
+14 ~ 
+
+#153
+# AMR:
+# (h/hard
+#   :domain (u/understand-01
+#             :ARG1 (i/it))
+#   :ARG1-of (c/cause-01
+#              :ARG0 (a/amr-unknown)))
+# Sentence:
+# Why is it so hard to understand ?
+# Alignments:
+# a/amr-unknown ~ Why
+# :domain ~ is
+# i/it ~ it
+# c/cause-01 :ARG0 ~ so
+# h/hard ~ hard
+# u/understand-01 :ARG1 ~ understand
+#  ~ ?
+0 ~ a
+1 ~ h_domain_u
+2 ~ i
+3 ~ :ARG1-of h_ARG1-of_c c c_ARG0_a
+4 ~ h
+6 ~ u u_ARG1_i
+7 ~ 
+
+#154
+# AMR:
+# (w/wrong-41
+#   :ARG1 (y/y'all)
+#   :degree (d/dead))
+# Sentence:
+# You all are dead wrong .
+# Alignments:
+# :degree d/dead ~ dead
+# w/wrong-41 :ARG1 ~ wrong
+#  ~ .
+3 ~ w_degree_d d
+4 ~ w w_ARG1_y
+5 ~ 
+
+#155
+# AMR:
+# (o2/obligate-01
+#       :ARG2 (r/require-01
+#             :ARG0 (c/cadre
+#                   :ARG0-of (a/audit-01))
+#             :ARG1 (a2/adhere-02
+#                   :ARG0 c
+#                   :ARG1 (s/standard
+#                         :ARG1-of (a3/apply-02
+#                               :ARG0 c
+#                               :ARG2 (a4/audit-01
+#                                     :ARG0 c
+#                                     :ARG1 (o/other)))))
+#             :ARG2 c))
+# Sentence:
+# Audit cadres must require themselves to adhere to the standards they apply when auditing others .
+# Alignments:
+# a/audit-01 ~ Audit
+# c/cadre ~ cadres
+# o2/obligate-01 :ARG2 ~ must
+# r/require-01 :ARG0 :ARG1 :ARG2 ~ require
+# a2/adhere-02 :ARG0 :ARG1 ~ adhere
+#  ~ the
+# s/standard ~ standards
+# a3/apply-02 :ARG0 :ARG2 ~ apply
+# a4/audit-01 :ARG0 :ARG1 ~ auditing
+# o/other ~ others
+#  ~ .
+0 ~ :ARG0-of c_ARG0-of_a a
+1 ~ c
+2 ~ o2 o2_ARG2_r
+3 ~ r r_ARG0_c r_ARG1_a2 r_ARG2_c
+6 ~ a2 a2_ARG0_c a2_ARG1_s
+8 ~ 
+9 ~ s
+11 ~ :ARG1-of s_ARG1-of_a3 a3 a3_ARG0_c a3_ARG2_a4
+13 ~ a4 a4_ARG0_c a4_ARG1_o
+14 ~ o
+15 ~ 
+
+#156
+# AMR:
+# (d/dare-01 :mode x0/interrogative
+#       :ARG0 (a/authority
+#             :ARG0-of (p2/prosecute-01))
+#       :ARG1 (p/prosecute-01
+#             :ARG1 a))
+# Sentence:
+# Do prosecuting authorities dare to be prosecuted ?
+# Alignments:
+# p2/prosecute-01 ~ prosecuting
+# a/authority ~ authorities
+# d/dare-01 :ARG0 :ARG1 ~ dare
+# p/prosecute-01 :ARG1 ~ prosecuted
+#  ~ ?
+1 ~ :ARG0-of a_ARG0-of_p2 p2
+2 ~ a
+3 ~ d d_ARG0_a d_ARG1_p
+6 ~ p p_ARG1_a
+7 ~ 
+
+#157
+# AMR:
+# (m/make-02
+#       :ARG0 (h/he)
+#       :ARG1 (r/realize-01
+#             :ARG0 p
+#             :ARG1 (a/and
+#                   :op1 (s/strength
+#                         :mod (g/gratitude))
+#                   :op2 (n/nature
+#                         :mod (t/touch-01)
+#                         :mod (r2/reciprocate-00))))
+#       :beneficiary (p/person))
+# Sentence:
+# He made people realize the strength of gratitude and touching nature of reciprocation .
+# Alignments:
+# h/he ~ He
+# m/make-02 :ARG0 :ARG1 ~ made
+# r/realize-01 :ARG0 :ARG1 ~ realize
+#  ~ the
+# s/strength ~ strength
+# :mod g/gratitude ~ gratitude
+# a/and :op1 :op2 ~ and
+# :mod t/touch-01 ~ touching
+# n/nature ~ nature
+# :mod r2/reciprocate-00 ~ reciprocation
+#  ~ .
+0 ~ h
+1 ~ m m_ARG0_h m_ARG1_r
+3 ~ r r_ARG0_p r_ARG1_a
+4 ~ 
+5 ~ s
+7 ~ s_mod_g g
+8 ~ a a_op1_s a_op2_n
+9 ~ n_mod_t t
+10 ~ n
+12 ~ n_mod_r2 r2
+13 ~ 
+
+#158
+# AMR:
+# (e/email-01
+#       :ARG0 (h/he)
+#       :ARG1 (a/ask-01
+#             :ARG0 h
+#             :ARG1 (c/cost-01
+#                   :ARG1 (i/it)
+#                   :ARG2 (a2/amr-unknown))
+#             :ARG2 f)
+#       :ARG2 (f/friend
+#             :mod (t/that))
+#       :time (j/just))
+# Sentence:
+# He just emailed that friend to ask him how much it cost .
+# Alignments:
+# h/he ~ He
+# j/just ~ just
+# e/email-01 :ARG0 :ARG1 :ARG2 ~ emailed
+# :mod t/that ~ that
+# f/friend ~ friend
+# a/ask-01 :ARG0 :ARG1 :ARG2 ~ ask
+# a2/amr-unknown ~ how
+# i/it ~ it
+# c/cost-01 :ARG1 :ARG2 ~ cost
+#  ~ .
+0 ~ h
+1 ~ j
+2 ~ e e_ARG0_h e_ARG1_a e_ARG2_f
+3 ~ f_mod_t t
+4 ~ f
+6 ~ a a_ARG0_h a_ARG1_c a_ARG2_f
+8 ~ a2
+10 ~ i
+11 ~ c c_ARG1_i c_ARG2_a2
+12 ~ 
+
+#159
+# AMR:
+# (a/accelerate-01
+#       :ARG0 (g/group-01
+#             :ARG1 (p/physicist
+#                   :mod (c/country :name (n/name :op1 x0/"Australia"))))
+#       :ARG1 (w/work-01
+#             :ARG0 p)
+#       :time (c2/current)
+#       :purpose (r/realize-02
+#             :ARG0 p
+#             :ARG1 (w2/wish-01
+#                   :ARG0 (e/everybody))))
+# Sentence:
+# Currently a group of Australian physicists are accelerating their work to realize everybody 's wish .
+# Alignments:
+# c2/current ~ Currently
+#  ~ a
+# g/group-01 :ARG1 ~ group
+# :mod c/country :name n/name :op1 x0/"Australia" ~ Australian
+# p/physicist ~ physicists
+# a/accelerate-01 :ARG0 :ARG1 ~ accelerating
+# w/work-01 :ARG0 ~ work
+# r/realize-02 :ARG0 :ARG1 ~ realize
+# e/everybody ~ everybody
+# w2/wish-01 :ARG0 ~ wish
+#  ~ .
+0 ~ c2
+1 ~ 
+2 ~ g g_ARG1_p
+4 ~ p_mod_c c c_name_n n n_op1_x0 x0
+5 ~ p
+7 ~ a a_ARG0_g a_ARG1_w
+9 ~ w w_ARG0_p
+11 ~ r r_ARG0_p r_ARG1_w2
+12 ~ e
+14 ~ w2 w2_ARG0_e
+15 ~ 
+
+#160
+# AMR:
+# (p/possible :polarity x0/-
+#       :domain (c/confirm-01
+#             :ARG0 (s2/source
+#                   :ARG0-of (d/depend-01 :polarity x1/-))
+#             :ARG1 (c2/credibility
+#                   :domain (t/thing
+#                         :ARG1-of (s/state-01)
+#                         :mod (t2/this)))))
+# Sentence:
+# It was not possible to confirm the credibility of this statement from an independent source .
+# Alignments:
+# :domain ~ was
+# :polarity x0/- ~ not
+# p/possible ~ possible
+# c/confirm-01 :ARG0 :ARG1 ~ confirm
+#  ~ the
+# c2/credibility ~ credibility
+# :mod t/thing :mod t2/this ~ this
+# t/thing :ARG1-of s/state-01 ~ statement
+#  ~ an
+# s2/source ~ source
+#  ~ .
+1 ~ p_domain_c
+2 ~ p_polarity_x0 x0
+3 ~ p
+5 ~ c c_ARG0_s2 c_ARG1_c2
+6 ~ 
+7 ~ c2
+9 ~ t_mod_t2 t t_mod_t2 t2
+10 ~ t t_ARG1-of_s s
+12 ~ 
+14 ~ s2
+15 ~ 
+
+#161
+# AMR:
+# (h/have-03 :mode x0/interrogative
+#       :ARG0 (t/they)
+#       :ARG1 (t2/time)
+#       :mod (s/still)
+#       :purpose (w/wait-01
+#             :ARG1 t
+#             :ARG2 (s2/succeed-01
+#                   :ARG0 (w2/we))))
+# Sentence:
+# Do they still have time to wait for us to succeed ?
+# Alignments:
+# t/they ~ they
+# :mod s/still ~ still
+# h/have-03 :ARG0 :ARG1 ~ have
+# t2/time ~ time
+# w/wait-01 :ARG1 :ARG2 ~ wait
+# :purpose ~ for
+# w2/we ~ us
+# s2/succeed-01 :ARG0 ~ succeed
+#  ~ ?
+1 ~ t
+2 ~ h_mod_s s
+3 ~ h h_ARG0_t h_ARG1_t2
+4 ~ t2
+6 ~ w w_ARG1_t w_ARG2_s2
+7 ~ h_purpose_w
+8 ~ w2
+10 ~ s2 s2_ARG0_w2
+11 ~ 
+
+#162
+# AMR:
+# (a/and
+#       :op1 (h/have-03
+#             :ARG0 (i/i)
+#             :ARG1 (c2/classmate
+#                   :quant (s/some)
+#                   :mod (o/other)
+#                   :location (t/there))
+#             :mod (a2/actual))
+#       :op2 (c/call-02
+#             :ARG0 i
+#             :ARG1 c2))
+# Sentence:
+# I actually had some other classmates there , and was going to call them .
+# Alignments:
+# i/i ~ I
+# :mod a2/actual ~ actually
+# h/have-03 :ARG0 :ARG1 ~ had
+# :quant s/some ~ some
+# :mod o/other ~ other
+# c2/classmate ~ classmates
+# t/there ~ there
+#  ~ ,
+# a/and :op1 :op2 ~ and
+# c/call-02 :ARG0 :ARG1 ~ call
+#  ~ .
+0 ~ i
+1 ~ h_mod_a2 a2
+2 ~ h h_ARG0_i h_ARG1_c2
+3 ~ c2_quant_s s
+4 ~ c2_mod_o o
+5 ~ c2
+6 ~ t
+7 ~ 
+8 ~ a a_op1_h a_op2_c
+12 ~ c c_ARG0_i c_ARG1_c2
+14 ~ 
+
+#163
+# AMR:
+# (a/and
+#       :op1 (l/look-01
+#             :ARG0 (i/i)
+#             :ARG1 (r/register-02
+#                   :ARG1 (c2/call-02
+#                         :ARG0 i)))
+#       :op2 (c/connect-01
+#             :ARG1 (c3/call-02
+#                   :quant (o/only :op1 x0/1)
+#                   :ARG1-of (i2/include-91
+#                         :ARG2 (c4/call-02
+#                               :quant (m/multiple :op1 x1/12)
+#                               :ARG1-of (d3/dial-01))))
+#             :manner (p/proper)))
+# Sentence:
+# I had a look at my call register , and out of dozens of calls dialed only one was properly connected!
+# Alignments:
+# i/i ~ I
+#  ~ a
+# l/look-01 :ARG0 :ARG1 ~ look
+# i ~ my
+# c2/call-02 :ARG0 ~ call
+# r/register-02 :ARG1 ~ register
+#  ~ ,
+# a/and :op1 :op2 ~ and
+# c3/call-02 ~ calls
+# d3/dial-01 ~ dialed
+# :quant o/only :op1 ~ only
+# x0/1 ~ one
+# :manner p/proper ~ properly
+# c/connect-01 :ARG1 ~ connected!
+0 ~ i
+2 ~ 
+3 ~ l l_ARG0_i l_ARG1_r
+5 ~ i
+6 ~ c2 c2_ARG0_i
+7 ~ r r_ARG1_c2
+8 ~ 
+9 ~ a a_op1_l a_op2_c
+14 ~ c3
+15 ~ :ARG1-of c4_ARG1-of_d3 d3
+16 ~ c3_quant_o o o_op1_x0
+17 ~ x0
+19 ~ c_manner_p p
+20 ~ c c_ARG1_c3
+
+#164
+# AMR:
+# (s/see-01
+#       :ARG0 (w/we
+#             :quant (a/all))
+#       :ARG1 (d/damage-01
+#             :ARG0 e
+#             :ARG1-of (w2/wreak-01
+#                   :ARG0 (e/earthquake
+#                         :name (n/name
+#                               :op1 x0/"Wenchuan"
+#                               :op2 x1/"Earthquake")))))
+# Sentence:
+# We all saw the damage wreaked by the Wenchuan Earthquake .
+# Alignments:
+# w/we ~ We
+# :quant a/all ~ all
+#  ~ the
+# d/damage-01 :ARG0 ~ damage
+# w2/wreak-01 :ARG0 ~ wreaked
+#  ~ the
+# e/earthquake :name n/name :op1 x0/"Wenchuan" :op2 x1/"Earthquake" ~ Wenchuan Earthquake
+#  ~ .
+0 ~ w
+1 ~ w_quant_a a
+3 ~ 
+4 ~ d d_ARG0_e
+5 ~ :ARG1-of d_ARG1-of_w2 w2 w2_ARG0_e
+7 ~ 
+8 9 ~ e e_name_n n n_op1_x0 x0 n_op2_x1 x1
+10 ~ 
+
+#165
+# AMR:
+# (b/become-01
+#       :ARG1 (t2/tiny
+#             :domain (l/life
+#                   :poss (p/person))
+#             :ARG1-of (r2/resemble-01
+#                   :ARG2 (t4/tiny
+#                         :domain (l2/life
+#                               :poss (a/ant)))))
+#       :time (s/strike-01
+#             :ARG0 (e4/earthquake
+#                   :mod (p2/powerful)))
+#       :mod (r/really))
+# Sentence:
+# Once a powerful earthquake strikes , the people 's lives really do become as tiny as those of ants .
+# Alignments:
+#  ~ a
+# :mod p2/powerful ~ powerful
+# e4/earthquake ~ earthquake
+# s/strike-01 :ARG0 ~ strikes
+#  ~ ,
+#  ~ the
+# :poss ~ 's
+# l/life ~ lives
+# :mod r/really ~ really
+# b/become-01 :ARG1 ~ become
+# t2/tiny ~ tiny
+# :poss ~ of
+# a/ant ~ ants
+#  ~ .
+1 ~ 
+2 ~ e4_mod_p2 p2
+3 ~ e4
+4 ~ s s_ARG0_e4
+5 ~ 
+6 ~ 
+8 ~ l_poss_p
+9 ~ l
+10 ~ b_mod_r r
+12 ~ b b_ARG1_t2
+14 ~ t2
+17 ~ l2_poss_a
+18 ~ a
+19 ~ 
+
+#166
+# AMR:
+# (p/pray-01
+#       :ARG0 (i/i)
+#       :ARG1 (a/and
+#             :op1 (o/open-01
+#                   :ARG0 p2
+#                   :ARG1 (e/eye
+#                         :part-of p2))
+#             :op2 (l/let-01 :polarity x0/-
+#                   :ARG0 p2
+#                   :ARG1 (v/visit-01
+#                         :ARG0 (d/disaster)
+#                         :ARG1 (l2/land
+#                               :poss (c/country :name (n2/name :op1 x1/"China")))
+#                         :mod (a2/again))))
+#       :ARG2 (p2/person :name (n/name :op1 x2/"God")))
+# Sentence:
+# I pray to the God to open his eyes and do n't let disasters visit the Chinese land again!
+# Alignments:
+# i/i ~ I
+# p/pray-01 :ARG0 :ARG1 :ARG2 ~ pray
+#  ~ the
+# p2/person :name n/name :op1 x2/"God" ~ God
+# o/open-01 :ARG0 :ARG1 ~ open
+# e/eye ~ eyes
+# a/and :op1 :op2 ~ and
+# :polarity x0/- ~ n't
+# l/let-01 :ARG0 :ARG1 ~ let
+# d/disaster ~ disasters
+# v/visit-01 :ARG0 :ARG1 ~ visit
+#  ~ the
+# c/country :name n2/name :op1 x1/"China" ~ Chinese
+# l2/land ~ land
+# :mod a2/again ~ again!
+0 ~ i
+1 ~ p p_ARG0_i p_ARG1_a p_ARG2_p2
+3 ~ 
+4 ~ p2 p2_name_n n n_op1_x2 x2
+6 ~ o o_ARG0_p2 o_ARG1_e
+8 ~ e
+9 ~ a a_op1_o a_op2_l
+11 ~ l_polarity_x0 x0
+12 ~ l l_ARG0_p2 l_ARG1_v
+13 ~ d
+14 ~ v v_ARG0_d v_ARG1_l2
+15 ~ 
+16 ~ c c_name_n2 n2 n2_op1_x1 x1
+17 ~ l2
+18 ~ v_mod_a2 a2
+
+#167
+# AMR:
+# (a2/aim-01
+#       :ARG1 (a/and
+#             :op1 (s/settle-02
+#                   :ARG1 (d/dispute-01))
+#             :op2 (s2/stop-01
+#                   :ARG1 (f/fight-01))
+#             :op3 (s3/stabilize-01
+#                   :ARG1 (s4/society))))
+# Sentence:
+# The aim was to settle disputes , stop fights and stabilize the society .
+# Alignments:
+#  ~ The
+# a2/aim-01 :ARG1 ~ aim
+# s/settle-02 :ARG1 ~ settle
+# d/dispute-01 ~ disputes
+#  ~ ,
+# s2/stop-01 :ARG1 ~ stop
+# f/fight-01 ~ fights
+# a/and :op1 :op2 :op3 ~ and
+# s3/stabilize-01 :ARG1 ~ stabilize
+#  ~ the
+# s4/society ~ society
+#  ~ .
+0 ~ 
+1 ~ a2 a2_ARG1_a
+4 ~ s s_ARG1_d
+5 ~ d
+6 ~ 
+7 ~ s2 s2_ARG1_f
+8 ~ f
+9 ~ a a_op1_s a_op2_s2 a_op3_s3
+10 ~ s3 s3_ARG1_s4
+11 ~ 
+12 ~ s4
+13 ~ 
+
+#168
+# AMR:
+# (c/contrast-01
+#       :ARG1 (p/possible
+#             :domain (m/manufacture-01
+#                   :ARG0 (h/human)
+#                   :ARG1 (t/tank
+#                         :mod (p3/powerful
+#                               :degree (m2/more
+#                                     :mod (m3/much))
+#                               :compared-to (a/ant)))))
+#       :ARG2 (p2/possible :polarity x0/-
+#             :domain (m4/manufacture-01
+#                   :ARG0 h
+#                   :ARG1 (a2/ant
+#                         :ARG0-of (l/live-01)))))
+# Sentence:
+# Humans can manufacture tanks that are much more powerful than ants , but humans cannot manufacture a living ant.. .
+# Alignments:
+# p/possible ~ can
+# m/manufacture-01 :ARG0 :ARG1 ~ manufacture
+# t/tank ~ tanks
+# :domain ~ are
+# :mod m3/much ~ much
+# :degree m2/more ~ more
+# :mod p3/powerful ~ powerful
+# :compared-to ~ than
+# a/ant ~ ants
+#  ~ ,
+# c/contrast-01 :ARG1 :ARG2 ~ but
+# h/human ~ humans
+# m4/manufacture-01 :ARG0 :ARG1 ~ manufacture
+#  ~ a
+# l/live-01 ~ living
+#  ~ .
+1 ~ p
+2 ~ m m_ARG0_h m_ARG1_t
+3 ~ t
+5 ~ p_domain_m
+6 ~ m2_mod_m3 m3
+7 ~ p3_degree_m2 m2
+8 ~ t_mod_p3 p3
+9 ~ p3_compared-to_a
+10 ~ a
+11 ~ 
+12 ~ c c_ARG1_p c_ARG2_p2
+13 ~ h
+15 ~ m4 m4_ARG0_h m4_ARG1_a2
+16 ~ 
+17 ~ :ARG0-of a2_ARG0-of_l l
+19 ~ 
+
+#169
+# AMR:
+# (p/possible :polarity x0/-
+#       :domain (c/claim-01
+#             :ARG0 (p2/person
+#                   :ARG1-of (d/defeat-01)
+#                   :ARG0-of (h/have-org-role-91
+#                         :ARG2 (g/general)))
+#             :ARG1 (b/brave
+#                   :domain p2)))
+# Sentence:
+# A defeated general can n't claim to be brave .
+# Alignments:
+#  ~ A
+# p2/person :ARG1-of d/defeat-01 ~ defeated
+# p2/person :ARG0-of h/have-org-role-91 :ARG2 g/general ~ general
+# p/possible ~ can
+# :polarity x0/- ~ n't
+# c/claim-01 :ARG0 :ARG1 ~ claim
+# :domain ~ be
+# b/brave ~ brave
+#  ~ .
+0 ~ 
+1 ~ p2 p2_ARG1-of_d d
+2 ~ p2 p2_ARG0-of_h h h_ARG2_g g
+3 ~ p
+4 ~ p_polarity_x0 x0
+5 ~ c c_ARG0_p2 c_ARG1_b
+7 ~ p_domain_c
+8 ~ b
+9 ~ 
+
+#170
+# AMR:
+# (f/fear-01 :mode x0/interrogative
+#       :ARG0 (y/you)
+#       :ARG1 (g/go-01
+#             :ARG1 y
+#             :ARG4 (h/hell)
+#             :time (d/die-01
+#                   :ARG1 y)))
+# Sentence:
+# Are you afraid of going to Hell when you die ?
+# Alignments:
+# y/you ~ you
+# g/go-01 :ARG1 :ARG4 ~ going
+# h/hell ~ Hell
+# :time ~ when
+# d/die-01 :ARG1 ~ die
+#  ~ ?
+1 ~ y
+4 ~ g g_ARG1_y g_ARG4_h
+6 ~ h
+7 ~ g_time_d
+9 ~ d d_ARG1_y
+10 ~ 
+
+#171
+# AMR:
+# (s/set-03
+#       :ARG0 (t/they)
+#       :ARG1 (i/it)
+#       :manner (a/amr-unknown))
+# Sentence:
+# How did they set it up ?
+# Alignments:
+# :manner a/amr-unknown ~ How
+# t/they ~ they
+# s/set-03 :ARG0 :ARG1 ~ set
+# i/it ~ it
+#  ~ ?
+0 ~ s_manner_a a
+2 ~ t
+3 ~ s s_ARG0_t s_ARG1_i
+4 ~ i
+6 ~ 
+
+#172
+# AMR:
+# (h/have-03
+#       :ARG0 (e/earthquake
+#             :mod (t/type
+#                   :mod (s/strike-01)))
+#       :ARG1 (s2/sign
+#             :ARG0-of (p/precede-01)
+#             :mod (t2/type
+#                   :mod (v/various))
+#             :ARG1-of (s3/spread-02
+#                   :extent (w/wide))
+#             :ARG1-of (l/last-01
+#                   :ARG2 (l2/long))
+#             :ARG1-of (v2/vary-01
+#                   :ARG2 (q/quite))))
+# Sentence:
+# Strike- type earthquakes have various types of precursory signs , which are widespread , long- lasting , and quite variable .
+# Alignments:
+# :mod s/strike-01 ~ Strike-
+# :mod t/type ~ type
+# e/earthquake ~ earthquakes
+# h/have-03 :ARG0 :ARG1 ~ have
+# :mod v/various ~ various
+# :mod t2/type ~ types
+# h/have-03 :ARG0 :ARG1 ~ of
+# p/precede-01 ~ precursory
+# s2/sign ~ signs
+#  ~ ,
+# :extent w/wide ~ widespread
+#  ~ ,
+# l2/long ~ long-
+# l/last-01 :ARG2 ~ lasting
+#  ~ ,
+# q/quite ~ quite
+#  ~ .
+0 ~ t_mod_s s
+1 ~ e_mod_t t
+2 ~ e
+3 ~ h h_ARG0_e h_ARG1_s2
+4 ~ t2_mod_v v
+5 ~ s2_mod_t2 t2
+6 ~ h h_ARG0_e h_ARG1_s2
+7 ~ :ARG0-of s2_ARG0-of_p p
+8 ~ s2
+9 ~ 
+12 ~ s3_extent_w w
+13 ~ 
+14 ~ l2
+15 ~ :ARG1-of s2_ARG1-of_l l l_ARG2_l2
+16 ~ 
+18 ~ q
+20 ~ 
+
+#173
+# AMR:
+# (c/contrast-01
+#       :ARG1 (p/possible :polarity x0/-
+#             :domain (p2/predict-01
+#                   :ARG1 (d/disaster
+#                         :mod (n/natural))))
+#       :ARG2 (r/recommend-01
+#             :ARG1 (c2/collapse-01 :polarity x1/-
+#                   :ARG1 (b/building
+#                         :mod (s/school)))))
+# Sentence:
+# Natural disasters cannot be predicted , but the school buildings should not have collapsed .
+# Alignments:
+# :mod n/natural ~ Natural
+# d/disaster ~ disasters
+# :domain ~ be
+# p2/predict-01 :ARG1 ~ predicted
+#  ~ ,
+# c/contrast-01 :ARG1 :ARG2 ~ but
+#  ~ the
+# :mod s/school ~ school
+# b/building ~ buildings
+# r/recommend-01 :ARG1 ~ should
+# :polarity x0/- ~ not
+# c2/collapse-01 :ARG1 ~ collapsed
+#  ~ .
+0 ~ d_mod_n n
+1 ~ d
+3 ~ p_domain_p2
+4 ~ p2 p2_ARG1_d
+5 ~ 
+6 ~ c c_ARG1_p c_ARG2_r
+7 ~ 
+8 ~ b_mod_s s
+9 ~ b
+10 ~ r r_ARG1_c2
+11 ~ p_polarity_x0 x0
+13 ~ c2 c2_ARG1_b
+14 ~ 
+
+#174
+# AMR:
+# (g/get-03
+#       :ARG1 (u/unit
+#             :ARG0-of (w/work-01))
+#       :ARG2 (a/and
+#             :op1 (o/old
+#                   :degree (m/more))
+#             :op2 (b/break-08
+#                   :ARG1 u)
+#             :manner (i/increase-01))
+#       :ARG1-of (c/cause-01
+#             :ARG0 (t/take-09
+#                   :ARG0 (u2/unit
+#                         :ARG0-of (w2/work-01)
+#                         :mod (f/formal))
+#                   :ARG1 (p/person
+#                         :ARG1-of (e/employ-01)
+#                         :mod (y/young))
+#                   :time (n/no-longer))))
+# Sentence:
+# Due to formal working units no longer taking on young employees , working units got increasingly older and broken up .
+# Alignments:
+# :mod f/formal ~ formal
+# w/work-01 ~ working
+# u/unit ~ units
+# t/take-09 :ARG0 :ARG1 ~ taking
+# :mod p/person :mod y/young ~ young
+# p/person :ARG1-of e/employ-01 ~ employees
+#  ~ ,
+# w2/work-01 ~ working
+# u2/unit ~ units
+# g/get-03 :ARG1 :ARG2 ~ got
+# :manner i/increase-01 ~ increasingly
+# o/old ~ older
+# a/and :op1 :op2 ~ and
+# b/break-08 :ARG1 ~ broken
+#  ~ .
+2 ~ u2_mod_f f
+3 ~ :ARG0-of u_ARG0-of_w w
+4 ~ u
+7 ~ t t_ARG0_u2 t_ARG1_p
+9 ~ p_mod_y p p_mod_y y
+10 ~ p p_ARG1-of_e e
+11 ~ 
+12 ~ :ARG0-of u2_ARG0-of_w2 w2
+13 ~ u2
+14 ~ g g_ARG1_u g_ARG2_a
+15 ~ a_manner_i i
+16 ~ o
+17 ~ a a_op1_o a_op2_b
+18 ~ b b_ARG1_u
+20 ~ 
+
+#175
+# AMR:
+# (o/obligate-01
+#       :ARG1 (p/person
+#             :mod (c/country :name (n/name :op1 x0/"China")))
+#       :ARG2 (a/arm-01
+#             :ARG0 p
+#             :ARG1 p)
+#       :ARG1-of (c3/cause-01
+#             :ARG0 (f/face-01
+#                   :ARG0 (a2/and
+#                         :op1 (r/rascal)
+#                         :op2 (h2/hooligan)
+#                         :example (p2/person
+#                               :mod (c4/country :name (n2/name :op1 x1/"America"))))
+#                   :ARG1 p)))
+# Sentence:
+# Faced with rascals and hooligans like the Americans , the Chinese have no choice but to arm themselves .
+# Alignments:
+# f/face-01 :ARG0 :ARG1 ~ Faced
+# r/rascal ~ rascals
+# a2/and :op1 :op2 ~ and
+# h2/hooligan ~ hooligans
+#  ~ the
+# :mod p2/person :mod c4/country :name n2/name :op1 x1/"America" ~ Americans
+#  ~ ,
+#  ~ the
+# :mod p/person :mod c/country :name n/name :op1 x0/"China" ~ Chinese
+# o/obligate-01 :ARG1 :ARG2 ~ have
+# a/arm-01 :ARG0 :ARG1 ~ arm
+#  ~ .
+0 ~ f f_ARG0_a2 f_ARG1_p
+2 ~ r
+3 ~ a2 a2_op1_r a2_op2_h2
+4 ~ h2
+6 ~ 
+7 ~ p2_mod_c4 p2 p2_mod_c4 c4 c4_name_n2 n2 n2_op1_x1 x1
+8 ~ 
+9 ~ 
+10 ~ p_mod_c p p_mod_c c c_name_n n n_op1_x0 x0
+11 ~ o o_ARG1_p o_ARG2_a
+16 ~ a a_ARG0_p a_ARG1_p
+18 ~ 
+
+#176
+# AMR:
+# (c/contrast-01
+#       :ARG1 (h/help-01
+#             :ARG0 (i/it)
+#             :ARG1 (a/and
+#                   :op1 (r/reduce-01
+#                         :ARG0 g
+#                         :ARG1 (g3/gap
+#                               :mod (w/wealth)))
+#                   :op2 (n/narrow-01
+#                         :ARG0 g
+#                         :ARG1 g3))
+#             :ARG2 (g/government-organization
+#                   :ARG0-of (g2/govern-01))))
+# Sentence:
+# On the one hand , it helps the government to reduce and narrow the gap of wealth ;
+# Alignments:
+#  ~ the
+#  ~ ,
+# i/it ~ it
+# h/help-01 :ARG0 :ARG1 :ARG2 ~ helps
+#  ~ the
+# g/government-organization ~ government
+# r/reduce-01 :ARG0 :ARG1 ~ reduce
+# a/and :op1 :op2 ~ and
+# n/narrow-01 :ARG0 :ARG1 ~ narrow
+#  ~ the
+# g3/gap ~ gap
+# :mod w/wealth ~ wealth
+#  ~ ;
+1 ~ 
+4 ~ 
+5 ~ i
+6 ~ h h_ARG0_i h_ARG1_a h_ARG2_g
+7 ~ 
+8 ~ g
+10 ~ r r_ARG0_g r_ARG1_g3
+11 ~ a a_op1_r a_op2_n
+12 ~ n n_ARG0_g n_ARG1_g3
+13 ~ 
+14 ~ g3
+16 ~ g3_mod_w w
+17 ~ 
+
+#177
+# AMR:
+# (g/go-01 :polarity x0/-
+#       :ARG1 (b/beam
+#             :mod (l/low
+#                   :degree (m/more)))
+#       :ARG4 (a/awry)
+#       :condition (p/place-01
+#             :ARG1 (b2/beam
+#                   :mod (u/up
+#                       :degree (m2/more)))
+#             :manner (c/correct)))
+# Sentence:
+# If the upper beams are correctly placed , the lower beams will not go awry .
+# Alignments:
+# :condition ~ If
+#  ~ the
+# b/beam ~ beams
+# :manner c/correct ~ correctly
+# p/place-01 :ARG1 ~ placed
+#  ~ ,
+#  ~ the
+# :mod l/low ~ lower
+# b2/beam ~ beams
+# :polarity x0/- ~ not
+# g/go-01 :ARG1 :ARG4 ~ go
+# a/awry ~ awry
+#  ~ .
+0 ~ g_condition_p
+1 ~ 
+3 ~ b
+5 ~ p_manner_c c
+6 ~ p p_ARG1_b2
+7 ~ 
+8 ~ 
+9 ~ b_mod_l l
+10 ~ b2
+12 ~ g_polarity_x0 x0
+13 ~ g g_ARG1_b g_ARG4_a
+14 ~ a
+15 ~ 
+
+#178
+# AMR:
+# (c/cause-01
+#       :ARG0 (a/and
+#             :op1 (h/highway
+#                   :ARG1-of (c2/crowd-01))
+#             :op2 (t/traffic
+#                   :mod (r/road)
+#                   :ARG1-of (c3/complicate-01)))
+#       :ARG1 (e/expect-01
+#             :ARG0 (p/person)
+#             :ARG1 (t2/thing
+#                   :mod (g/great
+#                         :degree (m/more)))
+#             :topic (d/develop-02
+#                   :ARG1 (s/subway)))
+#       :time (m2/meanwhile))
+# Sentence:
+# Meanwhile , the crowded highways and complicated road traffic cause people to have greater expectations in the development of the subway .
+# Alignments:
+# m2/meanwhile ~ Meanwhile
+#  ~ ,
+#  ~ the
+# c2/crowd-01 ~ crowded
+# h/highway ~ highways
+# a/and :op1 :op2 ~ and
+# c3/complicate-01 ~ complicated
+# :mod r/road ~ road
+# t/traffic ~ traffic
+# c/cause-01 :ARG0 :ARG1 ~ cause
+# :mod t2/thing :mod g/great ~ greater
+# e/expect-01 :ARG0 :ARG1 ~ expectations
+# :time ~ in
+#  ~ the
+# d/develop-02 :ARG1 ~ development
+#  ~ the
+# s/subway ~ subway
+#  ~ .
+0 ~ m2
+1 ~ 
+2 ~ 
+3 ~ :ARG1-of h_ARG1-of_c2 c2
+4 ~ h
+5 ~ a a_op1_h a_op2_t
+6 ~ :ARG1-of t_ARG1-of_c3 c3
+7 ~ t_mod_r r
+8 ~ t
+9 ~ c c_ARG0_a c_ARG1_e
+13 ~ t2_mod_g t2 t2_mod_g g
+14 ~ e e_ARG0_p e_ARG1_t2
+15 ~ c_time_m2
+16 ~ 
+17 ~ d d_ARG1_s
+19 ~ 
+20 ~ s
+21 ~ 
+
+#179
+# AMR:
+# (s/small
+#       :degree (t/terribly)
+#       :domain (h/horse
+#             :mod (t2/that))
+#       :beneficiary (r/ride-01
+#             :ARG0 (y/you)
+#             :ARG1 h))
+# Sentence:
+# that 's a terribly small horse for you to ride .
+# Alignments:
+# :mod t2/that ~ that
+#  ~ a
+# :degree t/terribly ~ terribly
+# s/small ~ small
+# h/horse ~ horse
+# :beneficiary ~ for
+# y/you ~ you
+# r/ride-01 :ARG0 :ARG1 ~ ride
+#  ~ .
+0 ~ h_mod_t2 t2
+2 ~ 
+3 ~ s_degree_t t
+4 ~ s
+5 ~ h
+6 ~ s_beneficiary_r
+7 ~ y
+9 ~ r r_ARG0_y r_ARG1_h
+10 ~ 
+
+#180
+# AMR:
+# (r/recommend-01
+#       :ARG1 (l/look-01
+#             :ARG0 y
+#             :ARG1 (t/toy
+#                   :mod (s/some)
+#                   :location (b/basket)))
+#       :ARG2 (y/you))
+# Sentence:
+# why do n't you look at some of the toys in the basket .
+# Alignments:
+# y/you ~ you
+# l/look-01 :ARG0 :ARG1 ~ look
+# :location ~ at
+# :mod s/some ~ some
+#  ~ the
+# t/toy ~ toys
+#  ~ the
+# b/basket ~ basket
+#  ~ .
+3 ~ y
+4 ~ l l_ARG0_y l_ARG1_t
+5 ~ t_location_b
+6 ~ t_mod_s s
+8 ~ 
+9 ~ t
+11 ~ 
+12 ~ b
+13 ~ 
+
+#181
+# AMR:
+# (m/multiple-choice-91
+#       :ARG1 (w/walk-01
+#             :ARG0 (h/he)
+#             :ARG1-of (r/resemble-01
+#                   :ARG2 (w2/walk-01
+#                         :ARG0 (y/you))))
+#       :ARG2 (g/go-05
+#             :ARG0 h
+#             :ARG1 (h2/hop-01 :mode x0/expressive)))
+# Sentence:
+# does he walk like you or does he go hop hop hop ?
+# Alignments:
+# h/he ~ he
+# w/walk-01 :ARG0 ~ walk
+# y/you ~ you
+# h/he ~ he
+# g/go-05 :ARG0 :ARG1 ~ go
+# h2/hop-01 ~ hop
+#  ~ ?
+1 ~ h
+2 ~ w w_ARG0_h
+4 ~ y
+7 ~ h
+8 ~ g g_ARG0_h g_ARG1_h2
+9 ~ h2
+12 ~ 
+
+#182
+# AMR:
+# (p/possible-01
+#       :ARG1 (s/see-01
+#             :ARG0 (y/you)
+#             :ARG1 (i/it))
+#       :condition (l/look-01
+#             :ARG0 y
+#             :direction (o/out
+#                   :op1 (w/window
+#                         :mod (o2/other)))))
+# Sentence:
+# if you look out the other window maybe you 'll see it .
+# Alignments:
+# :condition ~ if
+# y/you ~ you
+# l/look-01 :ARG0 ~ look
+# o/out :op1 ~ out
+#  ~ the
+# :mod o2/other ~ other
+# w/window ~ window
+# p/possible-01 :ARG1 ~ maybe
+# s/see-01 :ARG0 :ARG1 ~ see
+# i/it ~ it
+#  ~ .
+0 ~ p_condition_l
+1 ~ y
+2 ~ l l_ARG0_y
+3 ~ o o_op1_w
+4 ~ 
+5 ~ w_mod_o2 o2
+6 ~ w
+7 ~ p p_ARG1_s
+10 ~ s s_ARG0_y s_ARG1_i
+11 ~ i
+12 ~ 
+
+#183
+# AMR:
+# (t/think-01
+#       :ARG0 (i/i)
+#       :ARG1 (h/have-degree-91
+#             :ARG1 (l/large)
+#             :ARG2 (o/one
+#                   :mod (t2/that))
+#             :ARG3 (t3/too)
+#             :ARG5 (g/go-01
+#                   :ARG1 o
+#                   :ARG4 (w/window))))
+# Sentence:
+# I think that one 's too large to go in the window .
+# Alignments:
+# i/i ~ I
+# t/think-01 :ARG0 :ARG1 ~ think
+# :mod t2/that ~ that
+# o/one ~ one
+# t3/too ~ too
+# l/large ~ large
+# g/go-01 :ARG1 :ARG4 ~ go
+#  ~ the
+# w/window ~ window
+#  ~ .
+0 ~ i
+1 ~ t t_ARG0_i t_ARG1_h
+2 ~ o_mod_t2 t2
+3 ~ o
+5 ~ t3
+6 ~ l
+8 ~ g g_ARG1_o g_ARG4_w
+10 ~ 
+11 ~ w
+12 ~ 
+
+#184
+# AMR:
+# (i2/instead-of-91
+#       :ARG1 (k/kind-yy
+#             :ARG1-of (k2/kick-01
+#                   :ARG0 (p/person)))
+#       :ARG2 (k3/kind-yy
+#             :ARG1-of (h/hit-01
+#                   :ARG0 (p2/person))))
+# Sentence:
+# not the kind you hit but the kind you kick .
+# Alignments:
+#  ~ the
+# k/kind-yy ~ kind
+# h/hit-01 :ARG0 ~ hit
+#  ~ the
+# k3/kind-yy ~ kind
+# k2/kick-01 :ARG0 ~ kick
+#  ~ .
+1 ~ 
+2 ~ k
+4 ~ :ARG1-of k3_ARG1-of_h h h_ARG0_p2
+6 ~ 
+7 ~ k3
+9 ~ :ARG1-of k_ARG1-of_k2 k2 k2_ARG0_p
+10 ~ 
+
+#185
+# AMR:
+# (r/recommend-01
+#       :ARG1 (a/and
+#             :op1 (t/take-01
+#                   :ARG0 (y/you)
+#                   :ARG1 (t2/that)
+#                   :direction (o/over))
+#             :op2 (s/show-01
+#                   :ARG0 y
+#                   :ARG1 t2
+#                   :ARG2 (h/he))))
+# Sentence:
+# why do n't you take that over and show it to him .
+# Alignments:
+# y/you ~ you
+# t/take-01 :ARG0 :ARG1 ~ take
+# t2/that ~ that
+# o/over ~ over
+# a/and :op1 :op2 ~ and
+# s/show-01 :ARG0 :ARG1 :ARG2 ~ show
+# h/he ~ him
+#  ~ .
+3 ~ y
+4 ~ t t_ARG0_y t_ARG1_t2
+5 ~ t2
+6 ~ o
+7 ~ a a_op1_t a_op2_s
+8 ~ s s_ARG0_y s_ARG1_t2 s_ARG2_h
+11 ~ h
+12 ~ 
+
+#186
+# AMR:
+# (g/guess-01
+#       :ARG0 (i/i)
+#       :ARG1 (l/look-01
+#             :ARG0 (p/person :name (n/name :op1 x0/"Cliffy"))
+#             :ARG1 (p2/person :name (n2/name :op1 x1/"Bozo"))
+#             :location (h/house
+#                   :poss p2)))
+# Sentence:
+# I guess Cliffy looks at Bozo at her house .
+# Alignments:
+# i/i ~ I
+# g/guess-01 :ARG0 :ARG1 ~ guess
+# p/person :name n/name :op1 x0/"Cliffy" ~ Cliffy
+# l/look-01 :ARG0 :ARG1 ~ looks
+# :location ~ at
+# p2/person :name n2/name :op1 x1/"Bozo" ~ Bozo
+# h/house ~ house
+#  ~ .
+0 ~ i
+1 ~ g g_ARG0_i g_ARG1_l
+2 ~ p p_name_n n n_op1_x0 x0
+3 ~ l l_ARG0_p l_ARG1_p2
+4 ~ l_location_h
+5 ~ p2 p2_name_n2 n2 n2_op1_x1 x1
+8 ~ h
+9 ~ 
+
+#187
+# AMR:
+# (h/have-03 :polarity x0/-
+#       :ARG0 (y/you)
+#       :ARG1 (a/anything
+#             :mod (e/else)
+#             :purpose (p/put-01
+#                   :ARG1 a
+#                   :ARG2 (b/box)))
+#       :ARG1-of (r/request-confirmation-91))
+# Sentence:
+# you do n't have anything else to put in the box do you ?
+# Alignments:
+# y/you ~ you
+# :polarity x0/- ~ n't
+# h/have-03 :ARG0 :ARG1 ~ have
+# a/anything ~ anything
+# :mod e/else ~ else
+# p/put-01 :ARG1 :ARG2 ~ put
+#  ~ the
+# b/box ~ box
+#  ~ ?
+0 ~ y
+2 ~ h_polarity_x0 x0
+3 ~ h h_ARG0_y h_ARG1_a
+4 ~ a
+5 ~ a_mod_e e
+7 ~ p p_ARG1_a p_ARG2_b
+9 ~ 
+10 ~ b
+13 ~ 
+
+#188
+# AMR:
+# (r/recommend-01
+#       :ARG1 (a/and
+#             :op1 (c/come-01
+#                   :ARG1 y
+#                   :ARG4 (h/here)
+#                   :direction (o/over))
+#             :op2 (p/play-01
+#                   :ARG2 (b/ball)))
+#       :ARG2 (y/you))
+# Sentence:
+# why do n't you come over here and play with the ball ?
+# Alignments:
+# y/you ~ you
+# c/come-01 :ARG1 :ARG4 ~ come
+# o/over ~ over
+# h/here ~ here
+# a/and :op1 :op2 ~ and
+# p/play-01 :ARG2 ~ play
+#  ~ the
+# b/ball ~ ball
+#  ~ ?
+3 ~ y
+4 ~ c c_ARG1_y c_ARG4_h
+5 ~ o
+6 ~ h
+7 ~ a a_op1_c a_op2_p
+8 ~ p p_ARG2_b
+10 ~ 
+11 ~ b
+12 ~ 
+
+#189
+# AMR:
+# (p/possible
+#       :domain (w/work-01
+#             :ARG0 (i/i)
+#             :ARG1 (t/topic
+#                   :mod (r/research-01
+#                         :ARG0 i)
+#                   :mod (c/current))))
+# Sentence:
+# I can work on my current research topic .
+# Alignments:
+# i/i ~ I
+# p/possible ~ can
+# w/work-01 :ARG0 :ARG1 ~ work
+# i ~ my
+# :mod c/current ~ current
+# :mod r/research-01 :ARG0 ~ research
+# t/topic ~ topic
+#  ~ .
+0 ~ i
+1 ~ p
+2 ~ w w_ARG0_i w_ARG1_t
+4 ~ i
+5 ~ t_mod_c c
+6 ~ t_mod_r r r_ARG0_i
+7 ~ t
+8 ~ 
+
+#190
+# AMR:
+# (e/email-01
+#       :ARG0 (h/he)
+#       :ARG1 (a/ask-01
+#             :ARG0 h
+#             :ARG1 (c/cost-01
+#                   :ARG1 (i/it)
+#                   :ARG2 (a2/amr-unknown))
+#             :ARG2 f)
+#       :ARG2 (f/friend
+#             :mod (t/that))
+#      :time (j/just))
+# Sentence:
+# He just emailed that friend to ask him how much it cost .
+# Alignments:
+# h/he ~ He
+# j/just ~ just
+# e/email-01 :ARG0 :ARG1 :ARG2 ~ emailed
+# :mod t/that ~ that
+# f/friend ~ friend
+# a/ask-01 :ARG0 :ARG1 :ARG2 ~ ask
+# a2/amr-unknown ~ how
+# i/it ~ it
+# c/cost-01 :ARG1 :ARG2 ~ cost
+#  ~ .
+0 ~ h
+1 ~ j
+2 ~ e e_ARG0_h e_ARG1_a e_ARG2_f
+3 ~ f_mod_t t
+4 ~ f
+6 ~ a a_ARG0_h a_ARG1_c a_ARG2_f
+8 ~ a2
+10 ~ i
+11 ~ c c_ARG1_i c_ARG2_a2
+12 ~ 
+
+#191
+# AMR:
+# (q/quote-01
+#       :ARG0 (n/newspaper :name (n4/name :op1 x0/"The" :op2 x1/"Times"))
+#       :ARG1 (s/source
+#             :mod (g/government-organization
+#                   :ARG0-of (g2/govern-01
+#                         :ARG1 (c/country :name (n2/name :op1 x2/"Britain"))))
+#             :ARG1-of (i/identify-01 :polarity x3/-))
+#       :ARG2 (e/engage-01
+#             :ARG1 (g3/government-organization
+#                   :ARG0-of (g4/govern-01
+#                         :ARG1 (c2/country :name (n3/name :op1 x4/"China"))))
+#             :ARG2 (a/activity
+#                   :topic (i2/intelligence)
+#                   :mod (h/hostile))))
+# Sentence:
+# The Times quoted an unidentified British government source as stating that the Chinese government was engaged in hostile intelligence activities .
+# Alignments:
+#  ~ The
+# n/newspaper :name n4/name :op1 x0/"The" :op2 x1/"Times" ~ Times
+# q/quote-01 :ARG0 :ARG1 :ARG2 ~ quoted
+#  ~ an
+# i/identify-01 :polarity x3/- ~ unidentified
+# g/government-organization :ARG0-of g2/govern-01 :ARG1 c/country :name n2/name :op1 x2/"Britain" ~ British
+# :mod g/government-organization ~ government
+# s/source ~ source
+#  ~ the
+# g3/government-organization :ARG0-of g4/govern-01 :ARG1 c2/country :name n3/name :op1 x4/"China" ~ Chinese
+# g2/govern-01 :ARG1 ~ government
+# e/engage-01 :ARG1 :ARG2 ~ engaged
+# :mod h/hostile ~ hostile
+# i2/intelligence ~ intelligence
+# a/activity ~ activities
+#  ~ .
+0 ~ 
+1 ~ n n_name_n4 n4 n4_op1_x0 x0 n4_op2_x1 x1
+2 ~ q q_ARG0_n q_ARG1_s q_ARG2_e
+3 ~ 
+4 ~ :ARG1-of s_ARG1-of_i i i_polarity_x3 x3
+5 ~ g g_ARG0-of_g2 g2 g2_ARG1_c c c_name_n2 n2 n2_op1_x2 x2
+6 ~ s_mod_g g
+7 ~ s
+11 ~ 
+12 ~ g3 g3_ARG0-of_g4 g4 g4_ARG1_c2 c2 c2_name_n3 n3 n3_op1_x4 x4
+13 ~ :ARG0-of g_ARG0-of_g2 g2 g2_ARG1_c
+15 ~ e e_ARG1_g3 e_ARG2_a
+17 ~ a_mod_h h
+18 ~ i2
+19 ~ a
+20 ~ 
+
+#192
+# AMR:
+# (c/conclude-01
+#       :ARG0 (g/government-organization :name (n/name :op1 x0/"FE"))
+#       :ARG1 (l/likely
+#             :degree (m2/most)
+#             :domain (h/have-03
+#                   :ARG0 (c2/country :name (n2/name :op1 x1/"Iraq"))
+#                   :ARG1 (w2/weapon
+#                         :ARG2-of (d/destroy-01
+#                               :degree (m/mass)))))
+#       :manner (w/wrong))
+# Sentence:
+# Fe concluded wrongly that Iraq most likely had weapons of mass destruction .
+# Alignments:
+# c/conclude-01 :ARG0 :ARG1 ~ concluded
+# :manner w/wrong ~ wrongly
+# c2/country :name n2/name :op1 x1/"Iraq" ~ Iraq
+# :degree m2/most ~ most
+# l/likely ~ likely
+# h/have-03 :ARG0 :ARG1 ~ had
+# w2/weapon ~ weapons
+# h/have-03 :ARG0 :ARG1 ~ of
+# :degree m/mass ~ mass
+# d/destroy-01 ~ destruction
+#  ~ .
+1 ~ c c_ARG0_g c_ARG1_l
+2 ~ c_manner_w w
+4 ~ c2 c2_name_n2 n2 n2_op1_x1 x1
+5 ~ l_degree_m2 m2
+6 ~ l
+7 ~ h h_ARG0_c2 h_ARG1_w2
+8 ~ w2
+9 ~ h h_ARG0_c2 h_ARG1_w2
+10 ~ d_degree_m m
+11 ~ :ARG2-of w2_ARG2-of_d d
+12 ~ 
+
+#193
+# AMR:
+# (s2/say-01
+#       :ARG0 (p/person
+#             :ARG1-of (e2/expert-41))
+#       :ARG1 (p4/planet
+#             :mod (l4/large
+#                   :degree (m/most)
+#                   :compared-to (s5/system
+#                         :mod s3))
+#             :domain (p2/planet :name (n/name :op1 x0/"Jupiter")
+#                   :ARG0-of (o/orbit-01
+#                         :ARG1 (s3/star :name (n2/name :op1 x1/"Sun"))
+#                         :ARG1-of (r/resemble-01
+#                               :ARG2 (p3/planet :name (n3/name :op1 x2/"Earth")))))))
+# Sentence:
+# According to experts , Jupiter , which orbits the Sun like the Earth , is the largest planet in the solar system .
+# Alignments:
+# p/person :ARG1-of e2/expert-41 ~ experts
+#  ~ ,
+# p2/planet :name n/name :op1 x0/"Jupiter" ~ Jupiter
+#  ~ ,
+# o/orbit-01 :ARG1 ~ orbits
+#  ~ the
+# :mod s3/star :name n2/name :op1 x1/"Sun" ~ Sun
+# :compared-to ~ like
+#  ~ the
+# p3/planet :name n3/name :op1 x2/"Earth" ~ Earth
+#  ~ ,
+# :domain ~ is
+#  ~ the
+# :mod l4/large ~ largest
+# p4/planet ~ planet
+#  ~ the
+# s5/system ~ system
+#  ~ .
+2 ~ p p_ARG1-of_e2 e2
+3 ~ 
+4 ~ p2 p2_name_n n n_op1_x0 x0
+5 ~ 
+7 ~ :ARG0-of p2_ARG0-of_o o o_ARG1_s3
+8 ~ 
+9 ~ s5_mod_s3 s3 s3_name_n2 n2 n2_op1_x1 x1
+10 ~ l4_compared-to_s5
+11 ~ 
+12 ~ p3 p3_name_n3 n3 n3_op1_x2 x2
+13 ~ 
+14 ~ p4_domain_p2
+15 ~ 
+16 ~ p4_mod_l4 l4
+17 ~ p4
+19 ~ 
+21 ~ s5
+22 ~ 
+
+#194
+# AMR:
+# (d/demand-01
+#       :ARG0 (h/he)
+#       :ARG1 (h2/hold-04
+#             :ARG1 (t/talk-01
+#                   :mod (n/new)
+#                   :purpose (e/end-01
+#                         :ARG1 (w/war
+#                               :mod (c/civil)
+#                               :location (c2/country
+#                                     :name (n2/name
+#                                           :op1 x0/"Bosnia-Herzegovina"))))))
+#       :mod (a/also)
+#       :time (t2/time
+#             :ARG1-of (s/same-41)))
+# Sentence:
+# At the same time , he also demanded that new talks be held to end the civil war in Bosnia- Herzegovina .
+# Alignments:
+# :location ~ At
+#  ~ the
+# s/same-41 ~ same
+# t2/time ~ time
+#  ~ ,
+# h/he ~ he
+# :mod a/also ~ also
+# d/demand-01 :ARG0 :ARG1 ~ demanded
+# :mod n/new ~ new
+# t/talk-01 ~ talks
+# h2/hold-04 :ARG1 ~ held
+# e/end-01 :ARG1 ~ end
+#  ~ the
+# :mod c/civil ~ civil
+# w/war ~ war
+# :time ~ in
+# c2/country :name n2/name :op1 x0/"Bosnia-Herzegovina" ~ Bosnia-
+#  ~ .
+0 ~ w_location_c2
+1 ~ 
+2 ~ :ARG1-of t2_ARG1-of_s s
+3 ~ t2
+4 ~ 
+5 ~ h
+6 ~ d_mod_a a
+7 ~ d d_ARG0_h d_ARG1_h2
+9 ~ t_mod_n n
+10 ~ t
+12 ~ h2 h2_ARG1_t
+14 ~ e e_ARG1_w
+15 ~ 
+16 ~ w_mod_c c
+17 ~ w
+18 ~ d_time_t2
+19 ~ c2 c2_name_n2 n2 n2_op1_x0 x0
+21 ~ 
+
+#195
+# AMR:
+# (c/clear :polarity x0/-
+#       :time (l/late
+#             :op1 (d/date-entity :day x1/8 :month x2/8 :year x3/2008))
+#       :domain (o/or :mode x4/interrogative
+#             :op1 (c2/combat-01
+#                   :ARG0 (a3/and
+#                         :op1 (s/soldier
+#                               :mod (c3/country :name (n/name :op1 x5/"Russia")))
+#                         :op2 (s3/soldier
+#                               :mod (c4/country :name (n2/name :op1 x6/"Georgia"))))
+#                   :location (g/ground)
+#                   :ARG1-of (t/take-14
+#                         :ARG2 (p/place)))
+#             :op2 (l2/limit-01
+#                   :ARG1 c2
+#                   :ARG2 (f/fight-01
+#                         :ARG0 (b/between
+#                               :op1 (s2/separatist)
+#                               :op2 (f2/force
+#                                     :mod c4))))))
+# Sentence:
+# Late on 8 August 2008 it was unclear whether ground combat had taken place between Russian and Georgian soldiers or had been limited to fighting between separatists and Georgian forces .
+# Alignments:
+# l/late :op1 ~ Late
+# :location ~ on
+# d/date-entity :day x1/8 ~ 8
+# d/date-entity :month :month x2/8 ~ August
+# d/date-entity :year x3/2008 ~ 2008
+# :domain ~ was
+# c/clear :polarity x0/- ~ unclear
+# g/ground ~ ground
+# c2/combat-01 :ARG0 ~ combat
+# t/take-14 :ARG2 ~ taken
+# p/place ~ place
+# b/between :op1 :op2 ~ between
+# :mod c3/country :name n/name :op1 x5/"Russia" ~ Russian
+# a3/and :op1 :op2 ~ and
+# :mod c4/country :name n2/name :op1 x6/"Georgia" ~ Georgian
+# s/soldier ~ soldiers
+# o/or :op1 :op2 ~ or
+# l2/limit-01 :ARG1 :ARG2 ~ limited
+# f/fight-01 :ARG0 ~ fighting
+# s2/separatist ~ separatists
+# f2/force ~ forces
+#  ~ .
+0 ~ l l_op1_d
+1 ~ c2_location_g
+2 ~ d d_day_x1 x1
+3 ~ d d_month_x2 d_month_x2 x2
+4 ~ d d_year_x3 x3
+6 ~ c_domain_o
+7 ~ c c_polarity_x0 x0
+9 ~ g
+10 ~ c2 c2_ARG0_a3
+12 ~ :ARG1-of c2_ARG1-of_t t t_ARG2_p
+13 ~ p
+14 ~ b b_op1_s2 b_op2_f2
+15 ~ s_mod_c3 c3 c3_name_n n n_op1_x5 x5
+16 ~ a3 a3_op1_s a3_op2_s3
+17 ~ s3_mod_c4 c4 c4_name_n2 n2 n2_op1_x6 x6
+18 ~ s
+19 ~ o o_op1_c2 o_op2_l2
+22 ~ l2 l2_ARG1_c2 l2_ARG2_f
+24 ~ f f_ARG0_b
+26 ~ s2
+29 ~ f2
+30 ~ 
+
+#196
+# AMR:
+# (s/state-01
+#       :ARG0 (p/person :name (n/name :op1 x0/"Nancy" :op2 x1/"Scheper-Hughes"))
+#       :ARG1 (c2/contrast-01
+#             :ARG1 (c/coerce-01
+#                   :ARG0 (n2/need-01)
+#                   :ARG1 (v/victim
+#                         :quant (m/most)
+#                         :mod (t/traffic-00
+#                               :ARG1 (k/kidney))))
+#             :ARG2 (c3/coerce-01 :polarity x2/-
+#                   :ARG0 (f/force
+#                         :mod (p2/physical))
+#                   :ARG1 v)))
+# Sentence:
+# Nancy schepeter- Hughes stated that most victims of kidney trafficking are coerced by need and not by physical force .
+# Alignments:
+# p/person :name n/name :op1 x0/"Nancy" :op2 x1/"Scheper-Hughes" ~ Nancy
+# s/state-01 :ARG0 :ARG1 ~ stated
+# :quant m/most ~ most
+# v/victim ~ victims
+# k/kidney ~ kidney
+# :mod t/traffic-00 :ARG1 ~ trafficking
+# c/coerce-01 :ARG0 :ARG1 ~ coerced
+# n2/need-01 ~ need
+# :polarity x2/- ~ not
+# :mod p2/physical ~ physical
+# f/force ~ force
+#  ~ .
+0 ~ p p_name_n n n_op1_x0 x0 n_op2_x1 x1
+3 ~ s s_ARG0_p s_ARG1_c2
+5 ~ v_quant_m m
+6 ~ v
+8 ~ k
+9 ~ v_mod_t t t_ARG1_k
+11 ~ c c_ARG0_n2 c_ARG1_v
+13 ~ n2
+15 ~ c3_polarity_x2 x2
+17 ~ f_mod_p2 p2
+18 ~ f
+19 ~ 
+
+#197
+# AMR:
+# (c/conceal-01
+#       :ARG1 (t/traffic-00
+#             :ARG1 (d/drug)
+#             :source (c2/country :name (n/name :op1 x0/"Afghanistan")))
+#       :mod (s/secure
+#             :degree (s2/so
+#                   :ARG0-of (c3/cause-01
+#                         :ARG1 (p/possible :polarity x1/-
+#                               :domain (u/uncover-01
+#                                     :ARG1 t))))))
+# Sentence:
+# Drug trafficking from Afghanistan has been concealed so securely that it will be impossible to uncover .
+# Alignments:
+# d/drug ~ Drug
+# t/traffic-00 :ARG1 ~ trafficking
+# :source ~ from
+# c2/country :name n/name :op1 x0/"Afghanistan" ~ Afghanistan
+# c/conceal-01 :ARG1 ~ concealed
+# c3/cause-01 :ARG1 ~ so
+# :mod s/secure ~ securely
+# :domain ~ be
+# p/possible :polarity x1/- ~ uncover
+#  ~ .
+0 ~ d
+1 ~ t t_ARG1_d
+2 ~ t_source_c2
+3 ~ c2 c2_name_n n n_op1_x0 x0
+6 ~ c c_ARG1_t
+7 ~ :ARG0-of s2_ARG0-of_c3 c3 c3_ARG1_p
+8 ~ c_mod_s s
+12 ~ p_domain_u
+15 ~ p p_polarity_x1 x1
+16 ~ 
+
+#198
+# AMR:
+# (r/recommend-01
+#       :ARG1 (p/pay-01
+#             :ARG0 a
+#             :ARG1 (a2/attention)
+#             :ARG2 (p2/person
+#                   :ARG0-of (c3/capitulate-01)
+#                   :ARG0-of (b/betray-01
+#                         :ARG1 (c2/country :name (n/name :op1 x0/"China")))
+#                   :mod (k/kind
+#                         :mod (t/this)))
+#             :mod (a3/actual))
+#       :ARG2 (a/authority
+#             :ARG0-of (r2/rule-01)))
+# Sentence:
+# The ruling authorities actually should pay attention to these kinds of capitulators and traitors of China!
+# Alignments:
+#  ~ The
+# r2/rule-01 ~ ruling
+# a/authority ~ authorities
+# :mod a3/actual ~ actually
+# r/recommend-01 :ARG1 :ARG2 ~ should
+# p/pay-01 :ARG0 :ARG1 :ARG2 ~ pay
+# a2/attention ~ attention
+# :mod p2/person :mod k/kind ~ kinds
+# p2/person :ARG0-of c3/capitulate-01 ~ capitulators
+# c2/country :name n/name :op1 x0/"China" ~ China!
+0 ~ 
+1 ~ :ARG0-of a_ARG0-of_r2 r2
+2 ~ a
+3 ~ p_mod_a3 a3
+4 ~ r r_ARG1_p r_ARG2_a
+5 ~ p p_ARG0_a p_ARG1_a2 p_ARG2_p2
+6 ~ a2
+9 ~ p2_mod_k p2 p2_mod_k k
+11 ~ p2 p2_ARG0-of_c3 c3
+15 ~ c2 c2_name_n n n_op1_x0 x0
+
+#199
+# AMR:
+# (r/reveal-01 :polarity x0/-
+#       :ARG1 (i/identity
+#             :poss (p/person
+#                   :ARG0-of (t/traffic-00))))
+# Sentence:
+# The identity of the trafficker was not revealed .
+# Alignments:
+#  ~ The
+# i/identity ~ identity
+# :poss ~ of
+#  ~ the
+# p/person :ARG0-of t/traffic-00 ~ trafficker
+# :polarity x0/- ~ not
+# r/reveal-01 :ARG1 ~ revealed
+#  ~ .
+0 ~ 
+1 ~ i
+2 ~ i_poss_p
+3 ~ 
+4 ~ p p_ARG0-of_t t
+6 ~ r_polarity_x0 x0
+7 ~ r r_ARG1_i
+8 ~ 
+
+#200
+# AMR:
+# (a/attempt-01 :polarity x0/-
+#       :location (s/story)
+#       :ARG0 (p/person
+#             :ARG0-of (d/do-02 :ARG1 (t/thing :mod (e/evil)))
+#             :name (n/name :op1 x1/"Cruella" :op2 x2/"de" :op3 x3/"Vil"))
+#       :ARG1 (c/conceal-01 
+#             :ARG0 p 
+#             :ARG1 (a2/and
+#                   :op1 (g/glee :poss p)
+#                   :op2 (l/lack-01
+#                         :ARG0 p
+#                         :ARG1 (c2/conscience)))))
+# Sentence:
+# In the story , evildoer Cruella de Vil makes no attempt to conceal her glee and lack of conscience .
+# Alignments:
+# :location ~ In
+#  ~ the
+# s/story ~ story
+#  ~ ,
+# :mod t/thing :mod e/evil ~ evildoer
+# p/person :name n/name :op1 x1/"Cruella" :op2 x2/"de" :op3 x3/"Vil" ~ Cruella de Vil
+# :polarity x0/- ~ no
+# a/attempt-01 :ARG0 :ARG1 ~ attempt
+# c/conceal-01 :ARG0 :ARG1 ~ conceal
+# g/glee ~ glee
+# a2/and :op1 :op2 ~ and
+# l/lack-01 :ARG0 :ARG1 ~ lack
+# :poss ~ of
+# c2/conscience ~ conscience
+#  ~ .
+0 ~ a_location_s
+1 ~ 
+2 ~ s
+3 ~ 
+4 ~ t_mod_e t t_mod_e e
+5 6 7 ~ p p_name_n n n_op1_x1 x1 n_op2_x2 x2 n_op3_x3 x3
+9 ~ a_polarity_x0 x0
+10 ~ a a_ARG0_p a_ARG1_c
+12 ~ c c_ARG0_p c_ARG1_a2
+14 ~ g
+15 ~ a2 a2_op1_g a2_op2_l
+16 ~ l l_ARG0_p l_ARG1_c2
+17 ~ g_poss_p
+18 ~ c2
+19 ~ 
+
