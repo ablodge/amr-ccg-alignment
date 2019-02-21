@@ -156,11 +156,18 @@ function download(){
         out += '# AMR:\n'+amr;
         out += `# ${sent_type}:\n`+sent;
         out += '# Alignments:\n';
-        for (let align of aligns[amr_id]){
+        aligns_sorted = aligns[amr_id].sort(function(x, y) {
+            let num1 = x.split('~')[0];
+            num1 = parseInt(num1);
+            let num2 = y.split('~')[0];
+            num2 = parseInt(num2);
+            return num1>num2;
+        });
+        for (let align of aligns_sorted){
             let amr_alignment = new AMR_Alignment(amr_id, align);
             out += '# '+amr_alignment.readible()+'\n';
         }
-        for (let align of aligns[amr_id]){
+        for (let align of aligns_sorted){
             out += align+'\n';
         }
         out += '\n';
